@@ -1,4 +1,7 @@
 ## Program do obsługi zawodów sumo
+### W folderze dokumenty znajdują się dwa pliki:
+- Arkusz excel z przykładowymi krzyżówkami
+- Regulamin sportowo organizacyjny PZ Sumo <b> na 5 stronie znajdują się informacje odnośnie krzyżówek </b>
 
 Oczekiwane funkcjonalności:
 
