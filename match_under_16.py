@@ -7,41 +7,41 @@ class Eliminations:
     def __init__(self, competitors):
         # first match is the first node on the lvl 3
         self.actualMatchId = 8
-        self.tree = [Node(competitor=competitors[x]) for x in range(0, 32)]
-        self.tree = [] + self.tree
+        self.tree = [Node() for x in range(0, 16)]
+        self.tree = self.tree + [Node(competitor=competitors[x]) for x in range(0, 16)]
         # giving children to all nodes in tree
-        for ids, node in enumerate(self.tree[1:]):
-            node.set_left_child(self.tree[ids * 2])
-            node.set_right_child(self.tree[ids * 2 + 1])
+        for ids, node in enumerate(self.tree[1:16]):
+            node.set_left_child(self.tree[(ids + 1) * 2])
+            node.set_right_child(self.tree[(ids + 1) * 2 + 1])
 
     """" This function is returning id of next match node in tree"""
 
     def get_next_match_id(self):
-        result = self.actualMatchId
         if 8 <= self.actualMatchId < 15 or 4 <= self.actualMatchId < 7 or 2 <= self.actualMatchId < 3:
-            result += 1
+            return self.actualMatchId + 1
         if self.actualMatchId == 15:
-            result = 4
+            return 4
         if self.actualMatchId == 7:
-            result = 2
+            return 2
         if self.actualMatchId == 3:
-            result = "REPASARZE"
-        return result
+            return "REPASARZE"
 
     """" This function is returning id of previous match node in tree"""
 
     def get_prev_match_id(self):
-        result = 0
         if 8 < self.actualMatchId <= 15 or 4 < self.actualMatchId <= 7 or 2 < self.actualMatchId <= 3:
-            result -= 1
+            return self.actualMatchId - 1
         if self.actualMatchId == 2:
-            result = 7
+            return 7
         if self.actualMatchId == 4:
-            result = 15
+            return 15
         if self.actualMatchId == 8:
-            result = "To Pierwsza runda"
-        return result
+            return "To Pierwsza runda"
 
+    """"
+    This function is making match in actual node, winner competitor 
+    from children will be rewritten to actual node competitor
+    """
     def make_match(self, left_child_win):
         actual_match = self.tree[self.actualMatchId]
         actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
@@ -49,11 +49,11 @@ class Eliminations:
     def go_to_next_round(self):
         pass
 
-    def make_repassage_squad(self):
+    def get_repassage_squad(self):
         repassage_squad = []
 
         def recurrent_repassage_getter(depth, actual_node):
-            if 1 < depth <= 3:
+            if 1 < depth <= 4:
                 if actual_node.competitor == actual_node.get_left_child():
                     repassage_squad.append(actual_node.get_right_child().get_competitor())
                 else:
@@ -72,3 +72,25 @@ class Eliminations:
 
         recurrent_repassage_getter(1, self.tree[1])
         return repassage_squad
+
+    def print_actual_match(self):
+        print("Aktualne Id: ", self.actualMatchId)
+        print("zawodnik I:",
+              self.tree[self.actualMatchId].get_left_child().competitor.custom_string_repr(1, 0, 0, 0, 0))
+        print("zawodnik II:",
+              self.tree[self.actualMatchId].get_right_child().competitor.custom_string_repr(1, 0, 0, 0, 0))
+
+
+if __name__ == "__main__":
+    zawodnicy = [PersonalCompetitor(name="Kuba" + str(x)) for x in range(0, 16)]
+    match = Eliminations(zawodnicy)
+    while match.actualMatchId != "REPASARZE":
+        match.print_actual_match()
+        bool = input("czy pierwszy zawodnik wygrał? ")
+        bool = True if bool == "tak" else False
+        match.make_match(bool)
+        match.actualMatchId = match.get_next_match_id()
+
+    repassage = match.get_repassage_squad()
+    for i in repassage:
+        print(i.custom_string_repr(1, 0, 0, 0, 0))

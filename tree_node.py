@@ -30,4 +30,15 @@ class Node:
         return self.right_child
 
     def get_competitor(self):
-        return self.get_competitor()
+        return self.competitor
+
+
+if __name__ == "__main__":
+    k = Node()
+    k.set_left_child(None)
+    b = k
+    arr =  [k]
+    for i,node in enumerate(arr[:]):
+        node.set_left_child(Node())
+    print(type(b.get_left_child()))
+    print(type(k.get_left_child()))

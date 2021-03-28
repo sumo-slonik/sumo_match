@@ -42,3 +42,17 @@ class PersonalCompetitor:
 
     def __str__(self):
         return self.custom_string_repr()
+
+    def __eq__(self, other):
+
+        if type(self) != type(other):
+            return False
+        if self.name != other.name:
+            return False
+        if self.club != other.club:
+            return False
+        if self.weight != other.weight:
+            return False
+        if self.birth_year != other.birth_year:
+            return False
+        return True
