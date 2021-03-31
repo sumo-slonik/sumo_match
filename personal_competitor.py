@@ -1,5 +1,5 @@
 class PersonalCompetitor:
-    def __init__(self, name=None, club=None, weight=None, category=None, birth_year=None, is_free_fight=False):
+    def __init__(self, name="", club="", weight="", category="", birth_year=0, is_free_fight=False):
         self.name = name
         self.club = club
         self.weight = weight

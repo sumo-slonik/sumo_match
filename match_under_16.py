@@ -42,12 +42,18 @@ class Eliminations:
     This function is making match in actual node, winner competitor 
     from children will be rewritten to actual node competitor
     """
+
     def make_match(self, left_child_win):
         actual_match = self.tree[self.actualMatchId]
         actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
 
     def go_to_next_round(self):
-        pass
+        # TO DO: BRAKE RULES
+        self.actualMatchId = self.get_next_match_id()
+
+    def go_to_prev_round(self):
+        # TO DO: BRAKE RULES
+        self.actualMatchId = self.get_prev_match_id()
 
     def get_repassage_squad(self):
         repassage_squad = []
@@ -58,10 +64,7 @@ class Eliminations:
                     repassage_squad.append(actual_node.get_right_child().get_competitor())
                 else:
                     repassage_squad.append(actual_node.get_left_child().get_competitor())
-            if depth == 1:
-                recurrent_repassage_getter(depth + 1, actual_node.get_left_child())
-                recurrent_repassage_getter(depth + 1, actual_node.get_right_child())
-            if depth == 2:
+            if depth in [1, 2]:
                 recurrent_repassage_getter(depth + 1, actual_node.get_left_child())
                 recurrent_repassage_getter(depth + 1, actual_node.get_right_child())
             if depth == 3:
@@ -79,6 +82,12 @@ class Eliminations:
               self.tree[self.actualMatchId].get_left_child().competitor.custom_string_repr(1, 0, 0, 0, 0))
         print("zawodnik II:",
               self.tree[self.actualMatchId].get_right_child().competitor.custom_string_repr(1, 0, 0, 0, 0))
+
+    def get_actual_match_id(self):
+        return self.actualMatchId
+
+    def get_actual_node(self):
+        return self.tree[self.actualMatchId]
 
 
 if __name__ == "__main__":
