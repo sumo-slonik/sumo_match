@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1243</width>
-    <height>752</height>
+    <width>1012</width>
+    <height>780</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -530,36 +530,146 @@ background-position: center left;
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <widget class="QStackedWidget" name="eliminations_16">
-                <widget class="QWidget" name="page">
-                 <layout class="QVBoxLayout" name="verticalLayout_19">
-                  <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                   <widget class="QFrame" name="frame_2">
-                    <property name="enabled">
-                     <bool>false</bool>
+               <widget class="QFrame" name="frame_2">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="Top_menu_wraper">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_21">
+                    <property name="spacing">
+                     <number>0</number>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QTextEdit
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="Top_menu">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>60</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_14">
+                       <item>
+                        <widget class="QPushButton" name="Eliminations_button">
+                         <property name="text">
+                          <string>Eliminacje</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="Repechage_button">
+                         <property name="text">
+                          <string>Repasarze</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="HalfFinal_button">
+                         <property name="text">
+                          <string>Pół finały</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="Final_button">
+                         <property name="text">
+                          <string>walki medalowe</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QPushButton" name="Top_menu_slide_button">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="gui_theme.qrc">
+                        <normaloff>:/Icons/icons/cil-arrow-bottom.png</normaloff>:/Icons/icons/cil-arrow-bottom.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QStackedWidget" name="match_16">
+                   <property name="styleSheet">
+                    <string notr="true">QTextEdit
 {
 	background-color: rgb(255, 255, 255);
 	border-radius:10px;
 	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
 }</string>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_7">
-                     <item>
+                   </property>
+                   <property name="currentIndex">
+                    <number>3</number>
+                   </property>
+                   <widget class="QWidget" name="Eliminations">
+                    <layout class="QVBoxLayout" name="verticalLayout_19">
+                     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                       <widget class="QFrame" name="frame_4">
-                       <property name="minimumSize">
-                        <size>
-                         <width>250</width>
-                         <height>0</height>
-                        </size>
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QTextEdit
+{
+	background-color: rgb(255, 255, 255);
+	border-radius:10px;
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+}</string>
                        </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -567,13 +677,13 @@ background-position: center left;
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_3">
+                       <layout class="QHBoxLayout" name="horizontalLayout_7">
                         <item>
-                         <widget class="QFrame" name="frame_6">
+                         <widget class="QFrame" name="frame_5">
                           <property name="minimumSize">
                            <size>
-                            <width>0</width>
-                            <height>250</height>
+                            <width>250</width>
+                            <height>0</height>
                            </size>
                           </property>
                           <property name="frameShape">
@@ -582,13 +692,13 @@ background-position: center left;
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_8">
+                          <layout class="QVBoxLayout" name="verticalLayout_3">
                            <item>
-                            <widget class="QFrame" name="frame_8">
+                            <widget class="QFrame" name="frame_6">
                              <property name="minimumSize">
                               <size>
-                               <width>45</width>
-                               <height>0</height>
+                               <width>0</width>
+                               <height>250</height>
                               </size>
                              </property>
                              <property name="frameShape">
@@ -597,99 +707,201 @@ background-position: center left;
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_4">
+                             <layout class="QHBoxLayout" name="horizontalLayout_8">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_16">
-                                <property name="enabled">
-                                 <bool>false</bool>
-                                </property>
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_8">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
-                                <property name="readOnly">
-                                 <bool>true</bool>
-                                </property>
-                                <property name="markdown">
-                                 <string/>
-                                </property>
-                                <property name="html">
-                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                                <layout class="QVBoxLayout" name="verticalLayout_4">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_16">
+                                   <property name="enabled">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="readOnly">
+                                    <bool>true</bool>
+                                   </property>
+                                   <property name="markdown">
+                                    <string/>
+                                   </property>
+                                   <property name="html">
+                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:72; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                                </property>
-                                <property name="placeholderText">
-                                 <string/>
-                                </property>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_17">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_18">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_19">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_17">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_9">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_5">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_8">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_9">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_18">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_10">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_19">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_6">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_4">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                              </layout>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="frame_9">
+                            <widget class="QFrame" name="frame_7">
                              <property name="minimumSize">
                               <size>
-                               <width>45</width>
-                               <height>0</height>
+                               <width>0</width>
+                               <height>250</height>
                               </size>
                              </property>
                              <property name="frameShape">
@@ -698,87 +910,171 @@ p, li { white-space: pre-wrap; }
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_5">
+                             <layout class="QHBoxLayout" name="horizontalLayout_9">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_8">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_11">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_7">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_20">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_21">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_22">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_23">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_9">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_12">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_8">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_10">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_11">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_10">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_6">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_4">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_13">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_2">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_9">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_5">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                              </layout>
@@ -788,11 +1084,11 @@ p, li { white-space: pre-wrap; }
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="frame_7">
+                         <widget class="QFrame" name="frame_14">
                           <property name="minimumSize">
                            <size>
-                            <width>0</width>
-                            <height>250</height>
+                            <width>250</width>
+                            <height>0</height>
                            </size>
                           </property>
                           <property name="frameShape">
@@ -801,13 +1097,13 @@ p, li { white-space: pre-wrap; }
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_9">
+                          <layout class="QVBoxLayout" name="verticalLayout_16">
                            <item>
-                            <widget class="QFrame" name="frame_11">
+                            <widget class="QFrame" name="frame_15">
                              <property name="minimumSize">
                               <size>
-                               <width>45</width>
-                               <height>0</height>
+                               <width>0</width>
+                               <height>250</height>
                               </size>
                              </property>
                              <property name="frameShape">
@@ -816,80 +1112,198 @@ p, li { white-space: pre-wrap; }
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_7">
+                             <layout class="QHBoxLayout" name="horizontalLayout_10">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_20">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_17">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_12">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_6">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_21">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_16">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_11">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_12">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_13">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_22">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_18">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_23">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_10">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_24">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="undoRedoEnabled">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="markdown">
+                                    <string/>
+                                   </property>
+                                   <property name="html">
+                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_25">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_26">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_27">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                              </layout>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="frame_12">
+                            <widget class="QFrame" name="frame_19">
                              <property name="minimumSize">
                               <size>
-                               <width>45</width>
-                               <height>0</height>
+                               <width>0</width>
+                               <height>250</height>
                               </size>
                              </property>
                              <property name="frameShape">
@@ -898,71 +1312,174 @@ p, li { white-space: pre-wrap; }
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_8">
+                             <layout class="QHBoxLayout" name="horizontalLayout_11">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_10">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_21">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_15">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_7">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_11">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_20">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_14">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_14">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_15">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_13">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_9">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_5">
-                                <property name="maximumSize">
+                               <widget class="QFrame" name="frame_22">
+                                <property name="minimumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
+                                  <width>45</width>
+                                  <height>0</height>
                                  </size>
                                 </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
                                 </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_13">
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_28">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_29">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_30">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="el_16_node_31">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                              </layout>
@@ -974,156 +1491,42 @@ p, li { white-space: pre-wrap; }
                        </layout>
                       </widget>
                      </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="Repechage">
+                    <layout class="QHBoxLayout" name="horizontalLayout_22">
                      <item>
-                      <widget class="QFrame" name="frame_5">
-                       <property name="minimumSize">
-                        <size>
-                         <width>250</width>
-                         <height>0</height>
-                        </size>
-                       </property>
+                      <widget class="QFrame" name="frame_33">
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
                        </property>
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_16">
+                       <layout class="QVBoxLayout" name="verticalLayout_25">
                         <item>
-                         <widget class="QFrame" name="frame_14">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>250</height>
-                           </size>
-                          </property>
+                         <widget class="QFrame" name="frame_34">
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
                           </property>
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_10">
+                          <layout class="QHBoxLayout" name="horizontalLayout_23">
                            <item>
-                            <widget class="QFrame" name="frame_17">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
+                            <widget class="QFrame" name="frame_36">
                              <property name="frameShape">
                               <enum>QFrame::StyledPanel</enum>
                              </property>
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_12">
+                             <layout class="QVBoxLayout" name="verticalLayout_26">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_6">
+                               <widget class="QTextEdit" name="rep_16_node_8">
                                 <property name="maximumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_3">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_16">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_11">
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_12">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_13">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_15">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_10">
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_24">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
+                                  <width>270</width>
                                   <height>50</height>
                                  </size>
                                 </property>
@@ -1152,10 +1555,1000 @@ p, li { white-space: pre-wrap; }
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_25">
+                               <widget class="QTextEdit" name="rep_16_node_9">
                                 <property name="maximumSize">
                                  <size>
-                                  <width>16777215</width>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_10">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_11">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_37">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_27">
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_4">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_5">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_38">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_28">
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_2">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_35">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_24">
+                           <item>
+                            <widget class="QFrame" name="frame_39">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_29">
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_12">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_13">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_14">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_15">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_40">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_30">
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_6">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_7">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_41">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_31">
+                              <item>
+                               <widget class="QTextEdit" name="rep_16_node_3">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="Finals">
+                    <layout class="QHBoxLayout" name="horizontalLayout_25">
+                     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                      <widget class="QFrame" name="frame_42">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_32">
+                        <item alignment="Qt::AlignHCenter">
+                         <widget class="QFrame" name="frame_43">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_33">
+                           <item>
+                            <widget class="QFrame" name="frame_46">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_26">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_6">
+                                <property name="font">
+                                 <font>
+                                  <pointsize>18</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="text">
+                                 <string>Finał</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item alignment="Qt::AlignHCenter">
+                            <widget class="QTextEdit" name="el_16_node_1">
+                             <property name="maximumSize">
+                              <size>
+                               <width>270</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_47">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_32">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QTextEdit" name="el_16_node_2_cpy">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="el_16_node_3_cpy">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="undoRedoEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="markdown">
+                                 <string/>
+                                </property>
+                                <property name="html">
+                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_44">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_30">
+                           <item>
+                            <widget class="QFrame" name="frame_48">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_36">
+                              <item>
+                               <widget class="QFrame" name="frame_53">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_29">
+                                 <item alignment="Qt::AlignHCenter">
+                                  <widget class="QLabel" name="label_7">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>18</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Walka o pierwszy brąz</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QTextEdit" name="textEdit_4">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_54">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_35">
+                                 <item>
+                                  <widget class="QTextEdit" name="rep_16_node_2_cpy">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>270</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="undoRedoEnabled">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="markdown">
+                                    <string/>
+                                   </property>
+                                   <property name="html">
+                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="firstBronzeFinalist_16_node">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>270</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="undoRedoEnabled">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="markdown">
+                                    <string/>
+                                   </property>
+                                   <property name="html">
+                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_45">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_35">
+                              <item>
+                               <widget class="QFrame" name="frame_50">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_28">
+                                 <item alignment="Qt::AlignHCenter">
+                                  <widget class="QLabel" name="label_5">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>18</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Walka o drugi brąz</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QTextEdit" name="textEdit_5">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_51">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_34">
+                                 <item>
+                                  <widget class="QTextEdit" name="rep_16_node_2_cpy_2">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>270</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="undoRedoEnabled">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="markdown">
+                                    <string/>
+                                   </property>
+                                   <property name="html">
+                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QTextEdit" name="secondBronzeFinalist_16_node">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>270</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                   </property>
+                                   <property name="verticalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="horizontalScrollBarPolicy">
+                                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                                   </property>
+                                   <property name="undoRedoEnabled">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="markdown">
+                                    <string/>
+                                   </property>
+                                   <property name="html">
+                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="HalfFinals">
+                    <layout class="QHBoxLayout" name="horizontalLayout_15">
+                     <item>
+                      <widget class="QFrame" name="frame_24">
+                       <property name="styleSheet">
+                        <string notr="true">QTextEdit
+{
+	background-color: rgb(255, 255, 255);
+	border-radius:10px;
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_22">
+                        <item>
+                         <widget class="QFrame" name="frame_25">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_23">
+                           <item>
+                            <widget class="QFrame" name="frame_27">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_16">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label">
+                                <property name="font">
+                                 <font>
+                                  <pointsize>18</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="text">
+                                 <string>Pół Finał I</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_31">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_20">
+                              <item>
+                               <widget class="QTextEdit" name="el_16_node_2">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_28">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_18">
+                              <item>
+                               <widget class="QTextEdit" name="el_16_node_4_cpy">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>270</width>
                                   <height>50</height>
                                  </size>
                                 </property>
@@ -1168,26 +2561,10 @@ p, li { white-space: pre-wrap; }
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_26">
+                               <widget class="QTextEdit" name="el_16_node_5_cpy">
                                 <property name="maximumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_27">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
+                                  <width>270</width>
                                   <height>50</height>
                                  </size>
                                 </property>
@@ -1206,40 +2583,54 @@ p, li { white-space: pre-wrap; }
                          </widget>
                         </item>
                         <item>
-                         <widget class="QFrame" name="frame_18">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>250</height>
-                           </size>
-                          </property>
+                         <widget class="QFrame" name="frame_26">
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
                           </property>
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_11">
+                          <layout class="QVBoxLayout" name="verticalLayout_24">
                            <item>
-                            <widget class="QFrame" name="frame_21">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
+                            <widget class="QFrame" name="frame_29">
                              <property name="frameShape">
                               <enum>QFrame::StyledPanel</enum>
                              </property>
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_15">
+                             <layout class="QHBoxLayout" name="horizontalLayout_17">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_2">
+                                <property name="font">
+                                 <font>
+                                  <pointsize>18</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="text">
+                                 <string>Pół Finał II</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_32">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_21">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_7">
+                               <widget class="QTextEdit" name="el_16_node_3">
                                 <property name="maximumSize">
                                  <size>
-                                  <width>16777215</width>
+                                  <width>270</width>
                                   <height>50</height>
                                  </size>
                                 </property>
@@ -1255,25 +2646,19 @@ p, li { white-space: pre-wrap; }
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="frame_20">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
+                            <widget class="QFrame" name="frame_30">
                              <property name="frameShape">
                               <enum>QFrame::StyledPanel</enum>
                              </property>
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_14">
+                             <layout class="QHBoxLayout" name="horizontalLayout_19">
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_14">
+                               <widget class="QTextEdit" name="el_16_node_6_cpy">
                                 <property name="maximumSize">
                                  <size>
-                                  <width>16777215</width>
+                                  <width>270</width>
                                   <height>50</height>
                                  </size>
                                 </property>
@@ -1286,95 +2671,10 @@ p, li { white-space: pre-wrap; }
                                </widget>
                               </item>
                               <item>
-                               <widget class="QTextEdit" name="el_16_node_15">
+                               <widget class="QTextEdit" name="el_16_node_7_cpy">
                                 <property name="maximumSize">
                                  <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_19">
-                             <property name="minimumSize">
-                              <size>
-                               <width>45</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_13">
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_28">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true"/>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_29">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_30">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTextEdit" name="el_16_node_31">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
+                                  <width>270</width>
                                   <height>50</height>
                                  </size>
                                 </property>
@@ -1397,10 +2697,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                     </layout>
                    </widget>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QWidget" name="page_2"/>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -1434,28 +2733,16 @@ p, li { white-space: pre-wrap; }
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_18">
                     <item>
-                     <widget class="QTextEdit" name="textEdit_3">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>40</height>
-                       </size>
+                     <widget class="QPushButton" name="pushButton">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
                       </property>
-                      <property name="verticalScrollBarPolicy">
-                       <enum>Qt::ScrollBarAlwaysOff</enum>
-                      </property>
-                      <property name="horizontalScrollBarPolicy">
-                       <enum>Qt::ScrollBarAlwaysOff</enum>
-                      </property>
-                      <property name="readOnly">
-                       <bool>true</bool>
-                      </property>
-                      <property name="html">
-                       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Zawodnik I&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <property name="text">
+                       <string>Zawodnik I</string>
                       </property>
                      </widget>
                     </item>
@@ -1485,28 +2772,16 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTextEdit" name="textEdit_4">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>40</height>
-                       </size>
+                     <widget class="QPushButton" name="pushButton_2">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
                       </property>
-                      <property name="verticalScrollBarPolicy">
-                       <enum>Qt::ScrollBarAlwaysOff</enum>
-                      </property>
-                      <property name="horizontalScrollBarPolicy">
-                       <enum>Qt::ScrollBarAlwaysOff</enum>
-                      </property>
-                      <property name="readOnly">
-                       <bool>true</bool>
-                      </property>
-                      <property name="html">
-                       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Zawodnik II&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <property name="text">
+                       <string>Zawodnik II</string>
                       </property>
                      </widget>
                     </item>

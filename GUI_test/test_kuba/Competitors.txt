@@ -1,0 +1,16 @@
+Konieczny  Mateusz;TAR Krotoszyn;
+Spruta  Zachariasz;UKS Samson Kobylin;
+Ziarnik Marcin;UKS Lubzina;
+WOLNY LOS;
+Diaczek  Amadeusz;MKS Rokita Brzeg Dolny;
+Piliszczuk  Przemysław;KS Agros Zamość;
+Skrzyński Michał;UKS Sorga Zamość;
+WOLNY LOS;
+Miżejewski Piotr;UKS Niedźwiadek Wars;
+Zawieja  Filip;TAR Krotoszyn;
+Ratjczak Jakub;UKS Samson Kobylin;
+WOLNY LOS;
+Wiktor Tomasz;UKS Lubzina;
+Rosiński  Szymon;UKS Fuks Warszawa;
+Wiszowaty  Przemysław;UAKS Podlasie Białysto;
+WOLNY LOS;

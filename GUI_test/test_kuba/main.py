@@ -12,6 +12,7 @@ import itertools
 from GUI_test.test_kuba.ui_main_window import *
 from match_under_16 import *
 from GUI_test.test_kuba.functionality.GUI_manipulation import *
+from competitors_txt_input import personal_competitor_txt_input
 
 WINDOW_SIZE = 0
 
@@ -22,7 +23,8 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.animation = None
+        self.leftMenuAnimation = None
+        self.topMenuAnimation = None
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
@@ -47,10 +49,17 @@ class MainWindow(QMainWindow):
         # Restore/Maximize window
         self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
 
+        self.ui.Top_menu_slide_button.clicked.connect(lambda: self.slide_upper_menu())
         self.ui.left_menu_toggle_button.clicked.connect(lambda: self.slide_left_menu())
         self.ui.HomeButton.clicked.connect(lambda: self.menu_button_function("HomePage"))
         self.ui.AccountButton.clicked.connect(lambda: self.menu_button_function("AccountPage"))
         self.ui.SettingsButton.clicked.connect(lambda: self.menu_button_function("SettingsPage"))
+
+        #top menu buttons
+        self.ui.HalfFinal_button.clicked.connect(lambda: self.top_menu_function("HalfFinals"))
+        self.ui.Eliminations_button.clicked.connect(lambda: self.top_menu_function("Eliminations"))
+        self.ui.Final_button.clicked.connect(lambda: self.top_menu_function("Finals"))
+        self.ui.Repechage_button.clicked.connect(lambda: self.top_menu_function("Repechage"))
         # Show window
         self.showFullScreen();
         self.show()
@@ -73,6 +82,21 @@ class MainWindow(QMainWindow):
             # Update button icon
             self.ui.restoreButton.setIcon(QtGui.QIcon(u":/Icons/icons/cil-window-restore.png"))  # Show minized icon
 
+    def slide_upper_menu(self):
+        actual_menu_size = self.ui.Top_menu.height()
+        if actual_menu_size == 0:
+            self.ui.Top_menu_slide_button.setIcon(QtGui.QIcon(u":/Icons/icons/cil-arrow-top.png"))
+            new_menu_size = 60
+        else:
+            self.ui.Top_menu_slide_button.setIcon(QtGui.QIcon(u":/Icons/icons/cil-arrow-bottom.png"))
+            new_menu_size = 0
+        self.topMenuAnimation = QPropertyAnimation(self.ui.Top_menu, b"maximumHeight")
+        self.topMenuAnimation.setDuration(350)
+        self.topMenuAnimation.setStartValue(actual_menu_size)
+        self.topMenuAnimation.setEndValue(new_menu_size)
+        self.topMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.topMenuAnimation.start()
+
     def slide_left_menu(self):
         actual_menu_size = self.ui.left_menu.width()
         new_menu_size = 0
@@ -80,12 +104,12 @@ class MainWindow(QMainWindow):
             new_menu_size = 125
         else:
             new_menu_size = 50
-        self.animation = QPropertyAnimation(self.ui.left_menu, b"minimumWidth")
-        self.animation.setDuration(250)
-        self.animation.setStartValue(actual_menu_size)
-        self.animation.setEndValue(new_menu_size)
-        self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
-        self.animation.start()
+        self.leftMenuAnimation = QPropertyAnimation(self.ui.left_menu, b"minimumWidth")
+        self.leftMenuAnimation.setDuration(450)
+        self.leftMenuAnimation.setStartValue(actual_menu_size)
+        self.leftMenuAnimation.setEndValue(new_menu_size)
+        self.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.leftMenuAnimation.start()
 
     def menu_button_function(self, go_to):
         if go_to == "HomePage":
@@ -95,22 +119,23 @@ class MainWindow(QMainWindow):
         if go_to == "AccountPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.AcountPage)
 
+    def top_menu_function(self, go_to):
+        if go_to == "Eliminations":
+            self.ui.match_16.setCurrentWidget(self.ui.Eliminations)
+        if go_to == "HalfFinals":
+            self.ui.match_16.setCurrentWidget(self.ui.HalfFinals)
+        if go_to == "Finals":
+            self.ui.match_16.setCurrentWidget(self.ui.Finals)
+        if go_to == "Repechage":
+            self.ui.match_16.setCurrentWidget(self.ui.Repechage)
 
 # Execute app
 
 def make_match_16(main_window):
-    # main_window = MainWindow()
-    competitors = [PersonalCompetitor(name="Kuba Nowakowski" + str(x),
-                                      club="LUKS Lubzina",
-                                      weight=105,
-                                      is_free_fight=False,
-                                      category=100,
-                                      birth_year=2000) for x in range(0, 16)]
+    competitors = personal_competitor_txt_input("Competitors.txt")
     matches = Eliminations(competitors)
     all_nodes = ["el_16_node_" + str(x) for x in range(4, 32)]
-    v_lvl_nodes = ["el_16_node_" + str(x) for x in range(16, 32)]
     print_eliminations_16(matches, main_window)
-    # load_competitors_to_nodes(v_lvl_nodes,competitors,main_window)
     main_window.ui.next_match.clicked.connect(lambda: go_to_next_round(all_nodes, matches, main_window))
     main_window.ui.prev_match.clicked.connect(lambda: matches.go_to_prev_round())
     main_window.ui.win_left.clicked.connect(lambda: make_match(True, matches, main_window))
@@ -118,6 +143,7 @@ def make_match_16(main_window):
 
 
 def make_match(left_child_win, matches, main_window):
+    print_eliminations_16(matches, main_window)
     matches.make_match(left_child_win)
     print_eliminations_16(matches, main_window)
 
@@ -125,7 +151,6 @@ def make_match(left_child_win, matches, main_window):
 def go_to_next_round(all_nodes, matches, main_window):
     matches.go_to_next_round()
     print_eliminations_16(matches, main_window)
-    #colorNodeBorder(matches.actualMatchId, main_window)
 
 
 if __name__ == "__main__":

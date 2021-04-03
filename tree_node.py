@@ -1,4 +1,6 @@
 import personal_competitor
+
+
 class Node:
     def __init__(self, competitor=personal_competitor.PersonalCompetitor(), left_child=None, right_child=None):
         self.right_child = right_child
@@ -33,13 +35,16 @@ class Node:
     def get_competitor(self):
         return self.competitor
 
+    def set_competitor(self, competitor):
+        self.competitor = competitor
+
 
 if __name__ == "__main__":
     k = Node()
     k.set_left_child(None)
     b = k
-    arr =  [k]
-    for i,node in enumerate(arr[:]):
+    arr = [k]
+    for i, node in enumerate(arr[:]):
         node.set_left_child(Node())
     print(type(b.get_left_child()))
     print(type(k.get_left_child()))

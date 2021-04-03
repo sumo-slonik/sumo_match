@@ -28,23 +28,27 @@ class PersonalCompetitor:
     def custom_string_repr(self, show_first_name=True, show_surname_name=True, show_club=True, show_birth_year=True,
                            show_weight=True):
         result = ""
+        if self.is_free_fight:
+            return "WOLNY LOS"
         if show_first_name:
-            result += self.get_first_name()
+            result += self.get_first_name()+' '
         if show_surname_name:
-            result += self.get_surname()
+            result += self.get_surname()+' '
         if show_club:
-            result += self.get_club()
+            result += self.get_club()+' '
         if show_birth_year:
-            result += self.get_birth_year()
+            result += str(self.get_birth_year())+' '
         if show_weight:
-            result += self.get_weight()
+            result += str(self.get_weight())+' '
         return result
 
+    def get_is_free_fight(self):
+        return self.is_free_fight
+
     def __str__(self):
-        return self.custom_string_repr()
+        return self.custom_string_repr(1,1,1,0,0)
 
     def __eq__(self, other):
-
         if type(self) != type(other):
             return False
         if self.name != other.name:
