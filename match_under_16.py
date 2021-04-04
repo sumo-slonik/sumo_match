@@ -48,7 +48,7 @@ class Eliminations:
     """
 
     def make_match(self, left_child_win):
-        print("ID z eliminacji:",self.actualMatchId)
+        print("ID z eliminacji:", self.actualMatchId)
         actual_match = self.tree[self.actualMatchId]
         actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
         # testowo
@@ -197,13 +197,13 @@ class MatchUnder16:
             self.repechage.make_match(left_win)
             self.go_to_next_mach()
         elif self.actualMatchId in [21, 22]:
-            self.bronzeFights[self.actualMatchId-21].make_match(left_win)
+            self.bronzeFights[self.actualMatchId - 21].make_match(left_win)
             self.go_to_next_mach()
         else:
             self.eliminations.go_to_next_round()
             print("Finały")
             self.eliminations.make_match(left_win)
-            #print(self.eliminations.tree[1].get_competitor())
+            # print(self.eliminations.tree[1].get_competitor())
             print(self.eliminations.tree[1].get_competitor().get_name())
             self.get_places()
 
@@ -231,7 +231,6 @@ class MatchUnder16:
         elif self.actualMatchId in [21, 22]:
             self.actualMatchId += 1
 
-
     def go_to_prev_round(self):
         pass  # TO DO
 
@@ -245,18 +244,70 @@ class MatchUnder16:
         return self.repechage
 
     def get_places(self):
-        results = []*16
+        results = []
+        last_place = []
+        prev_last = []
+        seventh_place = []
+        fifth_place = []
+        third_place = []
+        first_place = []
+        second_place = []
+
         all_competitors = [x.get_competitor() for x in self.eliminations.tree[16:]]
         repasage_competitors = [x.get_competitor() for x in self.repechage.tree[8:]]
         finalists = [x.get_competitor() for x in self.eliminations.tree[4:8]]
-
         for x in all_competitors:
-            if x not in repasage_competitors+finalists:
-                print("losser ",x.get_name())
+            if x not in repasage_competitors + finalists:
+                last_place.append(x)
+                print("losser ", x.get_name())
+
+        for x in [x.get_competitor() for x in self.repechage.tree[8:]]:
+            if x not in [x.get_competitor() for x in self.repechage.tree[4:8]]:
+                prev_last.append(x)
+                print("losser ", x.get_name())
+
+        for x in [x.get_competitor() for x in self.repechage.tree[4:8]]:
+            if x not in [x.get_competitor() for x in self.repechage.tree[2:4]]:
+                seventh_place.append(x)
+                print("losser ", x.get_name())
+
+        fifth_place.append(
+            self.bronzeFights[0].get_left_child() if self.bronzeFights[0].get_left_child() != self.bronzeFights[
+                0].get_competitor else self.bronzeFights[0].get_right_child())
+        fifth_place.append(
+            self.bronzeFights[1].get_left_child() if self.bronzeFights[1].get_left_child() != self.bronzeFights[
+                1].get_competitor else self.bronzeFights[1].get_right_child())
+
+        third_place.append(
+            self.bronzeFights[0].get_left_child() if self.bronzeFights[0].get_left_child() == self.bronzeFights[
+                0].get_competitor else self.bronzeFights[0].get_right_child())
+        third_place.append(
+            self.bronzeFights[1].get_left_child() if self.bronzeFights[1].get_left_child() == self.bronzeFights[
+                1].get_competitor else self.bronzeFights[1].get_right_child())
+        first_place.append(self.eliminations.tree[1].get_competitor())
+        second_place.append(self.eliminations.tree[1].get_left_child().get_competitor() if self.eliminations.tree[
+                                                                                               1].get_left_child().get_competitor() !=
+                                                                                           first_place[0] else
+                            self.eliminations.tree[1].get_right_child().get_competitor())
+
+        results.append(first_place)
+        results.append(second_place)
+        results.append(third_place)
+        results.append(fifth_place)
+        results.append(seventh_place)
+        results.append(prev_last)
+        results.append(last_place)
+        print("_________________________________________________________________")
+        for id, x in enumerate(results):
+            print(id)
+            for comp in x:
+                print(comp.get_name())
+
 
 if __name__ == "__main__":
     zawodnicy = [PersonalCompetitor(name="Kuba" + str(x)) for x in range(0, 16)]
     match = Eliminations(zawodnicy)
+
     while match.actualMatchId != "REPASARZE":
         match.print_actual_match()
         bool = input("czy pierwszy zawodnik wygrał? ")
