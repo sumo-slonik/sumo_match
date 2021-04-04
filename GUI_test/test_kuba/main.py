@@ -55,7 +55,7 @@ class MainWindow(QMainWindow):
         self.ui.AccountButton.clicked.connect(lambda: self.menu_button_function("AccountPage"))
         self.ui.SettingsButton.clicked.connect(lambda: self.menu_button_function("SettingsPage"))
 
-        #top menu buttons
+        # top menu buttons
         self.ui.HalfFinal_button.clicked.connect(lambda: self.top_menu_function("HalfFinals"))
         self.ui.Eliminations_button.clicked.connect(lambda: self.top_menu_function("Eliminations"))
         self.ui.Final_button.clicked.connect(lambda: self.top_menu_function("Finals"))
@@ -129,13 +129,16 @@ class MainWindow(QMainWindow):
         if go_to == "Repechage":
             self.ui.match_16.setCurrentWidget(self.ui.Repechage)
 
+
 # Execute app
 
 def make_match_16(main_window):
     competitors = personal_competitor_txt_input("Competitors.txt")
-    matches = Eliminations(competitors)
+    # matches = Eliminations(competitors)
+    matches = MatchUnder16(competitors)
     all_nodes = ["el_16_node_" + str(x) for x in range(4, 32)]
-    print_eliminations_16(matches, main_window)
+    # print_eliminations_16(matches, main_window)
+    print_match_under_16(matches, main_window)
     main_window.ui.next_match.clicked.connect(lambda: go_to_next_round(all_nodes, matches, main_window))
     main_window.ui.prev_match.clicked.connect(lambda: matches.go_to_prev_round())
     main_window.ui.win_left.clicked.connect(lambda: make_match(True, matches, main_window))
@@ -143,14 +146,17 @@ def make_match_16(main_window):
 
 
 def make_match(left_child_win, matches, main_window):
-    print_eliminations_16(matches, main_window)
+    # print_eliminations_16(matches, main_window)
+    # matches.make_match(left_child_win)
+    # print_eliminations_16(matches, main_window)
+    print_match_under_16(matches, main_window)
     matches.make_match(left_child_win)
-    print_eliminations_16(matches, main_window)
+    print_match_under_16(matches, main_window)
 
 
 def go_to_next_round(all_nodes, matches, main_window):
     matches.go_to_next_round()
-    print_eliminations_16(matches, main_window)
+    print_match_under_16(matches, main_window)
 
 
 if __name__ == "__main__":

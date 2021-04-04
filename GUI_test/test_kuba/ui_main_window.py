@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowHVHwuq.ui'
+## Form generated from reading UI file 'main_windowlLbaUM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1012, 780)
+        MainWindow.resize(1165, 780)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -1162,15 +1162,15 @@ class Ui_MainWindow(object):
         self.frame_51.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_34 = QHBoxLayout(self.frame_51)
         self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
-        self.rep_16_node_2_cpy_2 = QTextEdit(self.frame_51)
-        self.rep_16_node_2_cpy_2.setObjectName(u"rep_16_node_2_cpy_2")
-        self.rep_16_node_2_cpy_2.setMaximumSize(QSize(270, 50))
-        self.rep_16_node_2_cpy_2.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
-        self.rep_16_node_2_cpy_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.rep_16_node_2_cpy_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.rep_16_node_2_cpy_2.setUndoRedoEnabled(False)
+        self.rep_16_node_3_cpy = QTextEdit(self.frame_51)
+        self.rep_16_node_3_cpy.setObjectName(u"rep_16_node_3_cpy")
+        self.rep_16_node_3_cpy.setMaximumSize(QSize(270, 50))
+        self.rep_16_node_3_cpy.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.rep_16_node_3_cpy.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.rep_16_node_3_cpy.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.rep_16_node_3_cpy.setUndoRedoEnabled(False)
 
-        self.horizontalLayout_34.addWidget(self.rep_16_node_2_cpy_2)
+        self.horizontalLayout_34.addWidget(self.rep_16_node_3_cpy)
 
         self.secondBronzeFinalist_16_node = QTextEdit(self.frame_51)
         self.secondBronzeFinalist_16_node.setObjectName(u"secondBronzeFinalist_16_node")
@@ -1619,8 +1619,8 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Walka o drugi br\u0105z", None))
-        self.rep_16_node_2_cpy_2.setMarkdown("")
-        self.rep_16_node_2_cpy_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.rep_16_node_3_cpy.setMarkdown("")
+        self.rep_16_node_3_cpy.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"

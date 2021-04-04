@@ -48,11 +48,12 @@ class Eliminations:
     """
 
     def make_match(self, left_child_win):
+        print("ID z eliminacji:",self.actualMatchId)
         actual_match = self.tree[self.actualMatchId]
         actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
         # testowo
-        if self.actualMatchId!=1:
-            self.actualMatchId = self.get_next_match_id()
+        # if self.actualMatchId != 1:
+        #     self.actualMatchId = self.get_next_match_id()
 
     def go_to_next_round(self):
         # TO DO: BRAKE RULES
@@ -117,11 +118,11 @@ class Repechage:
         self.halfFinalist = [competitors[0]] + [competitors[5]]
         self.actualMatchId = 4
         # build tree for with repechages
-        self.tree = [] + [Node() for x in range(0, 16)]
+        self.tree = [Node() for x in range(0, 16)]
         for ids, node in enumerate(self.tree[1:8]):
             node.set_left_child(self.tree[(ids + 1) * 2])
             node.set_right_child(self.tree[(ids + 1) * 2 + 1])
-        for competitor, node in zip(competitors[1:5] + competitors[5:], self.tree):
+        for competitor, node in zip(competitors[1:5] + competitors[6:], self.tree[8:]):
             node.set_competitor(competitor)
 
     def get_next_match_id(self):
@@ -179,40 +180,79 @@ class MatchUnder16:
         # we will get repechages after playing eliminations
         self.repechage = None
         # and we will get finals after playing repechages and eliminations
-        self.finalist = []
+        self.bronzeFights = []
         # in this array we will be having places of all competitors
         self.results = []
         # eliminations matches (with half finals) [1,14], repechages [15,20], finals (with bronzes) [21,22,23]
         self.actualMatchId = 1
 
     def make_match(self, left_win):
+        print(self.actualMatchId)
         if 1 <= self.actualMatchId <= 14:
             self.eliminations.make_match(left_win)
-        elif 15 <= self.repechage.actualMatchId <= 20:
+            self.go_to_next_mach()
+
+        elif 15 <= self.actualMatchId <= 20:
+            print("repasarze")
             self.repechage.make_match(left_win)
-        # To do add repasages and finals
+            self.go_to_next_mach()
+        elif self.actualMatchId in [21, 22]:
+            self.bronzeFights[self.actualMatchId-21].make_match(left_win)
+            self.go_to_next_mach()
+        else:
+            self.eliminations.go_to_next_round()
+            print("Finały")
+            self.eliminations.make_match(left_win)
+            #print(self.eliminations.tree[1].get_competitor())
+            print(self.eliminations.tree[1].get_competitor().get_name())
+            self.get_places()
 
     def go_to_next_mach(self):
         if 1 <= self.actualMatchId <= 13:
             self.eliminations.go_to_next_round()
             self.actualMatchId += 1
-        if self.actualMatchId == 14:
+        elif self.actualMatchId == 14:
             competitors = self.eliminations.get_repassage_squad()
             self.repechage = Repechage(competitors)
             self.actualMatchId += 1
-        if 15 <= self.actualMatchId <= 19:
+        elif 15 <= self.actualMatchId <= 19:
             self.repechage.go_to_next_round()
             self.actualMatchId += 1
-        if self.actualMatchId == 20:
-            self.finalist = {}
-            tmp = (self.eliminations.tree[2].get_competitor(), self.eliminations.tree[3].get_competitor())
-            self.finalist["Final"] = tmp[:]
-            tmp = (self.repechage.halfFinalist[0], self.repechage.tree[2].get_competitor())
-            self.finalist["Bronze_I"] = tmp[:]
-            tmp = (self.repechage.halfFinalist[1], self.repechage.tree[3].get_competitor())
-            self.finalist["Bronze_I"] = tmp[:]
+        elif self.actualMatchId == 20:
+            tmp = Node()
+            tmp.set_left_child(self.repechage.halfFinalist[0])
+            tmp.set_right_child(self.repechage.tree[2].get_competitor())
+            self.bronzeFights.append(tmp)
+            tmp = Node()
+            tmp.set_left_child(self.repechage.halfFinalist[1])
+            tmp.set_right_child(self.repechage.tree[3].get_competitor())
+            self.bronzeFights.append(tmp)
+            self.actualMatchId += 1
+        elif self.actualMatchId in [21, 22]:
             self.actualMatchId += 1
 
+
+    def go_to_prev_round(self):
+        pass  # TO DO
+
+    def get_actual_match_id(self):
+        return self.actualMatchId
+
+    def get_eliminations(self):
+        return self.eliminations
+
+    def get_repechage(self):
+        return self.repechage
+
+    def get_places(self):
+        results = []*16
+        all_competitors = [x.get_competitor() for x in self.eliminations.tree[16:]]
+        repasage_competitors = [x.get_competitor() for x in self.repechage.tree[8:]]
+        finalists = [x.get_competitor() for x in self.eliminations.tree[4:8]]
+
+        for x in all_competitors:
+            if x not in repasage_competitors+finalists:
+                print("losser ",x.get_name())
 
 if __name__ == "__main__":
     zawodnicy = [PersonalCompetitor(name="Kuba" + str(x)) for x in range(0, 16)]

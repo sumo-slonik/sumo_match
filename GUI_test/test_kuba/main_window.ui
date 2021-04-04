@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1012</width>
+    <width>1165</width>
     <height>780</height>
    </rect>
   </property>
@@ -654,7 +654,7 @@ background-position: center left;
 }</string>
                    </property>
                    <property name="currentIndex">
-                    <number>3</number>
+                    <number>2</number>
                    </property>
                    <widget class="QWidget" name="Eliminations">
                     <layout class="QVBoxLayout" name="verticalLayout_19">
