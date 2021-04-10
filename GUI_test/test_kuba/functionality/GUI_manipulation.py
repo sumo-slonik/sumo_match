@@ -128,7 +128,8 @@ def print_bronze_medals(bronze_fights, main_window):
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].append(bronze_fights[0].get_right_child().get_name())
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].append(bronze_fights[0].get_right_child().get_club())
-    main_window.ui.__dict__["firstBronzeFinalist_16_node"].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+    main_window.ui.__dict__["firstBronzeFinalist_16_node"].setStyleSheet(
+        "font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["textEdit_4"].clear()
     main_window.ui.__dict__["textEdit_4"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["textEdit_4"].append(bronze_fights[0].get_competitor().get_name())
@@ -145,7 +146,8 @@ def print_bronze_medals(bronze_fights, main_window):
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].append(bronze_fights[1].get_right_child().get_name())
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].append(bronze_fights[1].get_right_child().get_club())
-    main_window.ui.__dict__["secondBronzeFinalist_16_node"].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+    main_window.ui.__dict__["secondBronzeFinalist_16_node"].setStyleSheet(
+        "font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["textEdit_5"].clear()
     main_window.ui.__dict__["textEdit_5"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["textEdit_5"].append(bronze_fights[1].get_competitor().get_name())
@@ -159,7 +161,25 @@ def print_match_under_16(match_under_16, main_window):
     if match_under_16.get_actual_match_id() >= 15:
         print_repechage_16(match_under_16.get_repechage(), main_window)
     if match_under_16.get_actual_match_id() > 20:
-        print_bronze_medals(match_under_16.bronzeFights,main_window)
+        print_bronze_medals(match_under_16.bronzeFights, main_window)
+    elements = ["Eliminations_button", "HalfFinal_button", "Repechage_button", "Final_button"]
+    # eliminations matches (with half finals) [1,14], repechages [15,20], finals (with bronzes) [21,22,23]
+    id = match_under_16.get_actual_match_id()
+    colors = []
+    if 1 <= id <= 12:
+        colors = ["Lime", "Black", "Black", "Black"]
+        main_window.ui.match_16.setCurrentWidget(main_window.ui.Eliminations)
+    if 13 <= id <= 14:
+        colors = ["Black", "Lime", "Black", "Black"]
+        main_window.ui.match_16.setCurrentWidget(main_window.ui.HalfFinals)
+    if 15 <= id <= 20:
+        colors = ["Black", "Black", "Lime", "Black"]
+        main_window.ui.match_16.setCurrentWidget(main_window.ui.Repechage)
+    if 21 <= id <= 23:
+        colors = ["Black", "Black", "Black", "Lime"]
+        main_window.ui.match_16.setCurrentWidget(main_window.ui.Finals)
+    color_borders(elements, colors, main_window)
+
 
 def clearNodes(nodes, main_window):
     for i in nodes:
@@ -168,3 +188,11 @@ def clearNodes(nodes, main_window):
 
 def colorNodeBorder(node_number, main_window):
     main_window.ui.__dict__["el_16_node_" + str(node_number)].setStyleSheet("border: 2px solid red;")
+
+
+def color_borders(elements, colors, main_window):
+    for color, element in zip(colors, elements):
+        main_window.ui.__dict__[element].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+                                                       "text-align: center;"
+                                                       "border: 3px solid " + color + ";"
+                                                       )

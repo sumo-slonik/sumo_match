@@ -503,7 +503,7 @@ background-position: center left;
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="0" column="0">
+          <item row="0" column="1">
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="minimumSize">
              <size>
@@ -576,7 +576,7 @@ background-position: center left;
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>60</height>
+                        <height>0</height>
                        </size>
                       </property>
                       <property name="frameShape">
@@ -594,16 +594,16 @@ background-position: center left;
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="Repechage_button">
+                        <widget class="QPushButton" name="HalfFinal_button">
                          <property name="text">
-                          <string>Repasarze</string>
+                          <string>Pół finały</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="HalfFinal_button">
+                        <widget class="QPushButton" name="Repechage_button">
                          <property name="text">
-                          <string>Pół finały</string>
+                          <string>Repasarze</string>
                          </property>
                         </widget>
                        </item>
@@ -654,7 +654,7 @@ background-position: center left;
 }</string>
                    </property>
                    <property name="currentIndex">
-                    <number>2</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="Eliminations">
                     <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -2376,7 +2376,7 @@ p, li { white-space: pre-wrap; }
                                 </property>
                                 <layout class="QHBoxLayout" name="horizontalLayout_34">
                                  <item>
-                                  <widget class="QTextEdit" name="rep_16_node_2_cpy_2">
+                                  <widget class="QTextEdit" name="rep_16_node_3_cpy">
                                    <property name="maximumSize">
                                     <size>
                                      <width>270</width>
@@ -2870,6 +2870,16 @@ p, li { white-space: pre-wrap; }
               </item>
              </layout>
             </widget>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QFrame" name="Second_left_menu">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
            </widget>
           </item>
          </layout>

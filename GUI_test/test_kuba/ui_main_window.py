@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowlLbaUM.ui'
+## Form generated from reading UI file 'main_windowFDbSyd.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -286,7 +286,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
         self.Top_menu = QFrame(self.Top_menu_wraper)
         self.Top_menu.setObjectName(u"Top_menu")
-        self.Top_menu.setMaximumSize(QSize(16777215, 60))
+        self.Top_menu.setMaximumSize(QSize(16777215, 0))
         self.Top_menu.setFrameShape(QFrame.StyledPanel)
         self.Top_menu.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_14 = QHBoxLayout(self.Top_menu)
@@ -296,15 +296,15 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.Eliminations_button)
 
-        self.Repechage_button = QPushButton(self.Top_menu)
-        self.Repechage_button.setObjectName(u"Repechage_button")
-
-        self.horizontalLayout_14.addWidget(self.Repechage_button)
-
         self.HalfFinal_button = QPushButton(self.Top_menu)
         self.HalfFinal_button.setObjectName(u"HalfFinal_button")
 
         self.horizontalLayout_14.addWidget(self.HalfFinal_button)
+
+        self.Repechage_button = QPushButton(self.Top_menu)
+        self.Repechage_button.setObjectName(u"Repechage_button")
+
+        self.horizontalLayout_14.addWidget(self.Repechage_button)
 
         self.Final_button = QPushButton(self.Top_menu)
         self.Final_button.setObjectName(u"Final_button")
@@ -1443,7 +1443,14 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.addWidget(self.AcountPage)
 
-        self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.stackedWidget, 0, 1, 1, 1)
+
+        self.Second_left_menu = QFrame(self.center_main_items)
+        self.Second_left_menu.setObjectName(u"Second_left_menu")
+        self.Second_left_menu.setFrameShape(QFrame.StyledPanel)
+        self.Second_left_menu.setFrameShadow(QFrame.Raised)
+
+        self.gridLayout.addWidget(self.Second_left_menu, 0, 0, 1, 1)
 
 
         self.horizontalLayout.addWidget(self.center_main_items)
@@ -1475,7 +1482,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(2)
-        self.match_16.setCurrentIndex(2)
+        self.match_16.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1491,8 +1498,8 @@ class Ui_MainWindow(object):
         self.AccountButton.setText(QCoreApplication.translate("MainWindow", u"Acount", None))
         self.SettingsButton.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.Eliminations_button.setText(QCoreApplication.translate("MainWindow", u"Eliminacje", None))
-        self.Repechage_button.setText(QCoreApplication.translate("MainWindow", u"Repasarze", None))
         self.HalfFinal_button.setText(QCoreApplication.translate("MainWindow", u"P\u00f3\u0142 fina\u0142y", None))
+        self.Repechage_button.setText(QCoreApplication.translate("MainWindow", u"Repasarze", None))
         self.Final_button.setText(QCoreApplication.translate("MainWindow", u"walki medalowe", None))
         self.Top_menu_slide_button.setText("")
         self.el_16_node_16.setMarkdown("")

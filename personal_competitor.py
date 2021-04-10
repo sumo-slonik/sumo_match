@@ -6,7 +6,8 @@ class PersonalCompetitor:
         self.is_free_fight = is_free_fight
         self.category = category
         self.birth_year = birth_year
-
+        self.losses = 0
+        self.wins = 0
     def get_name(self):
         return self.name
 
@@ -50,6 +51,8 @@ class PersonalCompetitor:
 
     def __eq__(self, other):
         if type(self) != type(other):
+            return False
+        if self.is_free_fight != other.is_free_fight:
             return False
         if self.name != other.name:
             return False
