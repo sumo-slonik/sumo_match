@@ -6,7 +6,8 @@ from PySide2.QtGui import (QColor)
 from Program_GUI.ui_main_window import *
 from match_under_16 import *
 from Program_GUI.functionality.GUI_manipulation import *
-from competitors_txt_input import personal_competitor_txt_input
+from competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
+from random_functions import random_function_16
 
 WINDOW_SIZE = 0
 
@@ -128,8 +129,13 @@ class MainWindow(QMainWindow):
 
 def make_match_16(main_window):
     competitors = personal_competitor_txt_input("Competitors.txt")
+
+    #test funkcji losującej
+    teams = divide_competitors_to_teams(competitors)
+    contestants = random_function_16.random_function_16(teams, len(competitors)-4)
+
     # matches = Eliminations(competitors)
-    matches = MatchUnder16(competitors)
+    matches = MatchUnder16(contestants)
     all_nodes = ["el_16_node_" + str(x) for x in range(4, 32)]
     # print_eliminations_16(matches, main_window)
     print_match_under_16(matches, main_window)

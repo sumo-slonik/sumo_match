@@ -2,7 +2,7 @@ import personal_competitor
 import random
 
 
-def choose_place_in_order(half, team_number, free_places):
+def choose_place_in_order(half, team_number, free_places, competitors):
     if len(competitors[team_number]) != 0:
         chosen = random.choice(competitors[team_number])
         competitors[team_number].remove(chosen)
@@ -33,6 +33,7 @@ def choose_place_in_order(half, team_number, free_places):
                     quarter = 1
 
         place_in_order = random.choice(free_places[quarter])
+
         free_places[quarter].remove(place_in_order)
 
         return place_in_order, chosen
@@ -42,6 +43,8 @@ def choose_place_in_order(half, team_number, free_places):
 def random_function_16(competitors, number_of_competitors, master = None, runner_up = None):
     free_places = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
     order = {}
+    one_half = 2
+    second_half = 1
 
     number_of_contestants = 0
 
@@ -79,36 +82,43 @@ def random_function_16(competitors, number_of_competitors, master = None, runner
             if number_of_competitors == 1:
                 break
 
-            place_in_order, chosen = choose_place_in_order(1, i, free_places)
+            if len(competitors[i]) == 1:
+                one_half, second_half = second_half, one_half
+
+            place_in_order, chosen = choose_place_in_order(one_half, i, free_places, competitors)
             if place_in_order is None:
                 continue
             order[place_in_order] = chosen
             number_of_competitors -= 1
 
-            place_in_order, chosen = choose_place_in_order(2, i, free_places)
+            place_in_order, chosen = choose_place_in_order(second_half, i, free_places, competitors)
             if place_in_order is None:
                 continue
             order[place_in_order] = chosen
             number_of_competitors -= 1
 
-    return order
+    order[[place[0] for place in free_places if place][0]] = [competitor[0] for competitor in competitors if competitor][0]
+
+    order = sorted(list(order.items()), key=lambda x: x[0])
+
+    return [competitor[1] for competitor in order]
 
 
 if __name__ == "__main__":
     competitors = [
-        [personal_competitor.PersonalCompetitor("Kuba1"), personal_competitor.PersonalCompetitor("Kuba2"), personal_competitor.PersonalCompetitor("Kuba3"), personal_competitor.PersonalCompetitor("Kuba4")],
-        [personal_competitor.PersonalCompetitor("Marcin1"), personal_competitor.PersonalCompetitor("Marcin2"), personal_competitor.PersonalCompetitor("Marcin3")],
-        [personal_competitor.PersonalCompetitor("Adas1"), personal_competitor.PersonalCompetitor("Adas2"), personal_competitor.PersonalCompetitor("Adas3")],
-        [personal_competitor.PersonalCompetitor("Gabi1"), personal_competitor.PersonalCompetitor("Gabi2")],
-        [personal_competitor.PersonalCompetitor("Piotrek1")],
-        [personal_competitor.PersonalCompetitor("Piotrek2")],
-        [personal_competitor.PersonalCompetitor("Piotrek3")],
+        [personal_competitor.PersonalCompetitor("Kuba1"), personal_competitor.PersonalCompetitor("Kuba2"), personal_competitor.PersonalCompetitor("Kuba3"), personal_competitor.PersonalCompetitor("Kuba4"), personal_competitor.PersonalCompetitor("Marcin1"), personal_competitor.PersonalCompetitor("Marcin2"), personal_competitor.PersonalCompetitor("Marcin3")],
+        [personal_competitor.PersonalCompetitor("pojedynczy1")],
+        [personal_competitor.PersonalCompetitor("pojedynczy2")],
+        [personal_competitor.PersonalCompetitor("pojedynczy3")],
+        [personal_competitor.PersonalCompetitor("pojedynczy4")],
+        [personal_competitor.PersonalCompetitor("pojedynczy5")],
+        [personal_competitor.PersonalCompetitor("pojedynczy6")]
     ]
     master = personal_competitor.PersonalCompetitor(name="Marcin")
     runner_up = personal_competitor.PersonalCompetitor(name="Adas")
 
-    order = random_function_16(competitors, 15, None, runner_up)
+    order = random_function_16(competitors, 13, master, runner_up)
 
-    for competitor in sorted(list(order.items()), key=lambda x: x[0]):
-        print(competitor[0], competitor[1].get_name())
+    for competitor in order:
+        print(competitor.get_name())
     print()
