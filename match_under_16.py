@@ -243,6 +243,7 @@ class MatchUnder16:
     def get_repechage(self):
         return self.repechage
 
+    #do poprawy zle przyporzadkowuje trzecie miejsca
     def get_places(self):
         results = []
         last_place = []

@@ -17,5 +17,25 @@ def personal_competitor_txt_input(source):
     return results
 
 
+def divide_competitors_to_teams(competitors):
+    teams = {}
+
+    for competitor in competitors:
+        if competitor.club == '':
+            continue
+        if teams.get(competitor.club, None) is not None:
+            teams[competitor.club].append(competitor)
+        else:
+            teams[competitor.club] = [competitor]
+
+    teams = list(teams.values())
+    teams.sort(key=lambda x: len(x), reverse=True)
+
+    return teams
+
+
 if __name__ == '__main__':
-    personal_competitor_txt_input("Competitors.txt")
+    competitors = personal_competitor_txt_input("Competitors.txt")
+    teams = divide_competitors_to_teams(competitors)
+
+    print(teams)
