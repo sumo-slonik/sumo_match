@@ -12,7 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import gui_theme_rc
+import Program_GUI.gui_theme
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

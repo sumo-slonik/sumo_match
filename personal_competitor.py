@@ -63,3 +63,7 @@ class PersonalCompetitor:
         if self.birth_year != other.birth_year:
             return False
         return True
+
+    def __hash__(self):
+        self.name = name
+        self.club = club
