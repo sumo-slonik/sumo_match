@@ -4,7 +4,7 @@ from PySide2.QtWidgets import *
 from personal_competitor import *
 
 
-def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=None):
+def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[]):
     for node, competitor in zip(nodes_names, competitors_list):
         main_window.ui.__dict__[node].clear()
         main_window.ui.__dict__[node].setAlignment(Qt.AlignCenter)
@@ -196,3 +196,13 @@ def color_borders(elements, colors, main_window):
                                                        "text-align: center;"
                                                        "border: 3px solid " + color + ";"
                                                        )
+
+
+def print_match_under_5(match_under_5, main_window):
+    node_names = ["un_5_competitor_node_" + str(x) for x in range(1,26)]
+    competitors_list = match_under_5.competitors
+    for match in match_under_5.matches:
+        competitors_list.append(match.get_left_child())
+        competitors_list.append(match.get_right_child())
+
+    load_competitors_to_nodes(node_names, competitors_list, main_window)

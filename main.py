@@ -8,7 +8,7 @@ from match_under_16 import *
 from Program_GUI.functionality.GUI_manipulation import *
 from competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
 from random_functions import random_function_16
-
+from match_under_5 import Under5
 WINDOW_SIZE = 0
 
 
@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         self.leftMenuAnimation = None
         self.topMenuAnimation = None
+        self.SecondLeftMenuAnimation = None
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
@@ -55,6 +56,12 @@ class MainWindow(QMainWindow):
         self.ui.Eliminations_button.clicked.connect(lambda: self.top_menu_function("Eliminations"))
         self.ui.Final_button.clicked.connect(lambda: self.top_menu_function("Finals"))
         self.ui.Repechage_button.clicked.connect(lambda: self.top_menu_function("Repechage"))
+
+        # category_menu
+        self.ui.Hide_category_menu.clicked.connect(lambda: self.slide_second_left_menu())
+        self.ui.Button_16_competitors.clicked.connect(lambda: self.category_menu_button_function("16"))
+        self.ui.Button_5_competitors.clicked.connect(lambda: self.category_menu_button_function("5"))
+        self.ui.Button_2_competitors.clicked.connect(lambda: self.category_menu_button_function("2"))
         # Show window
         self.showFullScreen()
         self.show()
@@ -106,6 +113,20 @@ class MainWindow(QMainWindow):
         self.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.leftMenuAnimation.start()
 
+    def slide_second_left_menu(self):
+        actual_menu_size = self.ui.Second_left_menu.width()
+        new_menu_size = 0
+        if actual_menu_size == 0:
+            new_menu_size = 60
+        else:
+            new_menu_size = 0
+        self.SecondLeftMenuAnimation = QPropertyAnimation(self.ui.Second_left_menu, b"minimumWidth")
+        self.SecondLeftMenuAnimation.setDuration(450)
+        self.SecondLeftMenuAnimation.setStartValue(actual_menu_size)
+        self.SecondLeftMenuAnimation.setEndValue(new_menu_size)
+        self.SecondLeftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.SecondLeftMenuAnimation.start()
+
     def menu_button_function(self, go_to):
         if go_to == "HomePage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.HomePage)
@@ -113,6 +134,7 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentWidget(self.ui.SettingsPage)
         if go_to == "AccountPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.AcountPage)
+            self.slide_second_left_menu()
 
     def top_menu_function(self, go_to):
         if go_to == "Eliminations":
@@ -124,15 +146,23 @@ class MainWindow(QMainWindow):
         if go_to == "Repechage":
             self.ui.match_16.setCurrentWidget(self.ui.Repechage)
 
+    def category_menu_button_function(self, go_to):
+        if go_to == "16":
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder16)
+        if go_to == "5":
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
+        if go_to == "2":
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder2)
+
 
 # Execute app
 
 def make_match_16(main_window):
     competitors = personal_competitor_txt_input("Competitors.txt")
 
-    #test funkcji losującej
+    # test funkcji losującej
     teams = divide_competitors_to_teams(competitors)
-    contestants = random_function_16.random_function_16(teams, len(competitors)-4)
+    contestants = random_function_16.random_function_16(teams, len(competitors) - 4)
 
     # matches = Eliminations(competitors)
     matches = MatchUnder16(contestants)
@@ -163,6 +193,11 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     make_match_16(window)
+    #testowanie do 5 zawodników
+    Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
+    matches = Under5(Competitors)
+    print_match_under_5(matches,window)
+    #koniec testowania do 5 zawodników
     sys.exit(app.exec_())
 else:
     print(__name__, "hh")

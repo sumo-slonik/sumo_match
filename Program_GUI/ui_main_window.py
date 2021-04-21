@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowMmZICl.ui'
+## Form generated from reading UI file 'main_windowqoddoW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1179, 789)
+        MainWindow.resize(1197, 789)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -254,8 +254,52 @@ class Ui_MainWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.Second_left_menu = QFrame(self.center_main_items)
         self.Second_left_menu.setObjectName(u"Second_left_menu")
+        self.Second_left_menu.setMinimumSize(QSize(0, 0))
+        self.Second_left_menu.setMaximumSize(QSize(0, 16777215))
         self.Second_left_menu.setFrameShape(QFrame.StyledPanel)
         self.Second_left_menu.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_41 = QVBoxLayout(self.Second_left_menu)
+        self.verticalLayout_41.setSpacing(0)
+        self.verticalLayout_41.setObjectName(u"verticalLayout_41")
+        self.verticalLayout_41.setContentsMargins(0, 0, 0, 0)
+        self.Hide_category_menu = QPushButton(self.Second_left_menu)
+        self.Hide_category_menu.setObjectName(u"Hide_category_menu")
+        self.Hide_category_menu.setMinimumSize(QSize(0, 50))
+        self.Hide_category_menu.setMaximumSize(QSize(50, 50))
+        icon4 = QIcon()
+        icon4.addFile(u":/Icons/icons/cil-arrow-left.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Hide_category_menu.setIcon(icon4)
+
+        self.verticalLayout_41.addWidget(self.Hide_category_menu)
+
+        self.verticalSpacer = QSpacerItem(20, 100, QSizePolicy.Minimum, QSizePolicy.Preferred)
+
+        self.verticalLayout_41.addItem(self.verticalSpacer)
+
+        self.Button_16_competitors = QPushButton(self.Second_left_menu)
+        self.Button_16_competitors.setObjectName(u"Button_16_competitors")
+
+        self.verticalLayout_41.addWidget(self.Button_16_competitors)
+
+        self.Button_5_competitors = QPushButton(self.Second_left_menu)
+        self.Button_5_competitors.setObjectName(u"Button_5_competitors")
+
+        self.verticalLayout_41.addWidget(self.Button_5_competitors)
+
+        self.Button_2_competitors = QPushButton(self.Second_left_menu)
+        self.Button_2_competitors.setObjectName(u"Button_2_competitors")
+
+        self.verticalLayout_41.addWidget(self.Button_2_competitors)
+
+        self.pushButton_7 = QPushButton(self.Second_left_menu)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+
+        self.verticalLayout_41.addWidget(self.pushButton_7)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 486, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_41.addItem(self.verticalSpacer_2)
+
 
         self.gridLayout.addWidget(self.Second_left_menu, 0, 0, 1, 1)
 
@@ -282,7 +326,19 @@ class Ui_MainWindow(object):
         self.verticalLayout_20 = QVBoxLayout(self.Content_wraper)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
         self.verticalLayout_20.setContentsMargins(-1, 0, -1, -1)
-        self.Top_menu_wraper = QFrame(self.Content_wraper)
+        self.AllMatchesWraper = QStackedWidget(self.Content_wraper)
+        self.AllMatchesWraper.setObjectName(u"AllMatchesWraper")
+        self.AllMatchesWraper.setStyleSheet(u"QTextEdit\n"
+"{\n"
+"	background-color: rgb(255, 255, 255);\n"
+"	border-radius:10px;\n"
+"	font: 75 14pt \"MS Shell Dlg 2\";\n"
+"}")
+        self.MatchUnder16 = QWidget()
+        self.MatchUnder16.setObjectName(u"MatchUnder16")
+        self.verticalLayout_118 = QVBoxLayout(self.MatchUnder16)
+        self.verticalLayout_118.setObjectName(u"verticalLayout_118")
+        self.Top_menu_wraper = QFrame(self.MatchUnder16)
         self.Top_menu_wraper.setObjectName(u"Top_menu_wraper")
         self.Top_menu_wraper.setMaximumSize(QSize(16777215, 100))
         self.Top_menu_wraper.setFrameShape(QFrame.StyledPanel)
@@ -325,27 +381,15 @@ class Ui_MainWindow(object):
         self.Top_menu_slide_button.setObjectName(u"Top_menu_slide_button")
         self.Top_menu_slide_button.setMinimumSize(QSize(40, 40))
         self.Top_menu_slide_button.setMaximumSize(QSize(40, 40))
-        icon4 = QIcon()
-        icon4.addFile(u":/Icons/icons/cil-arrow-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Top_menu_slide_button.setIcon(icon4)
+        icon5 = QIcon()
+        icon5.addFile(u":/Icons/icons/cil-arrow-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Top_menu_slide_button.setIcon(icon5)
 
         self.verticalLayout_21.addWidget(self.Top_menu_slide_button, 0, Qt.AlignHCenter)
 
 
-        self.verticalLayout_20.addWidget(self.Top_menu_wraper)
+        self.verticalLayout_118.addWidget(self.Top_menu_wraper)
 
-        self.AllMatchesWraper = QStackedWidget(self.Content_wraper)
-        self.AllMatchesWraper.setObjectName(u"AllMatchesWraper")
-        self.AllMatchesWraper.setStyleSheet(u"QTextEdit\n"
-"{\n"
-"	background-color: rgb(255, 255, 255);\n"
-"	border-radius:10px;\n"
-"	font: 75 14pt \"MS Shell Dlg 2\";\n"
-"}")
-        self.MatchUnder16 = QWidget()
-        self.MatchUnder16.setObjectName(u"MatchUnder16")
-        self.horizontalLayout_27 = QHBoxLayout(self.MatchUnder16)
-        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
         self.match_16 = QStackedWidget(self.MatchUnder16)
         self.match_16.setObjectName(u"match_16")
         self.match_16.setStyleSheet(u"QTextEdit\n"
@@ -781,7 +825,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.addWidget(self.frame_14)
 
 
-        self.verticalLayout_19.addWidget(self.frame_4, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.verticalLayout_19.addWidget(self.frame_4)
 
         self.match_16.addWidget(self.Eliminations)
         self.Repechage = QWidget()
@@ -1367,7 +1411,7 @@ class Ui_MainWindow(object):
 
         self.match_16.addWidget(self.HalfFinals)
 
-        self.horizontalLayout_27.addWidget(self.match_16)
+        self.verticalLayout_118.addWidget(self.match_16)
 
         self.AllMatchesWraper.addWidget(self.MatchUnder16)
         self.MatchUnder5 = QWidget()
@@ -1468,45 +1512,45 @@ class Ui_MainWindow(object):
         self.frame_67.setFrameShadow(QFrame.Raised)
         self.verticalLayout_52 = QVBoxLayout(self.frame_67)
         self.verticalLayout_52.setObjectName(u"verticalLayout_52")
-        self.el_16_node_66 = QTextEdit(self.frame_67)
-        self.el_16_node_66.setObjectName(u"el_16_node_66")
-        self.el_16_node_66.setMaximumSize(QSize(16777215, 50))
-        self.el_16_node_66.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.el_16_node_66.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_1 = QTextEdit(self.frame_67)
+        self.un_5_point_node_1.setObjectName(u"un_5_point_node_1")
+        self.un_5_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_5_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_52.addWidget(self.el_16_node_66)
+        self.verticalLayout_52.addWidget(self.un_5_point_node_1)
 
-        self.el_16_node_61 = QTextEdit(self.frame_67)
-        self.el_16_node_61.setObjectName(u"el_16_node_61")
-        self.el_16_node_61.setMaximumSize(QSize(16777215, 50))
-        self.el_16_node_61.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.el_16_node_61.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_2 = QTextEdit(self.frame_67)
+        self.un_5_point_node_2.setObjectName(u"un_5_point_node_2")
+        self.un_5_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_5_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_52.addWidget(self.el_16_node_61)
+        self.verticalLayout_52.addWidget(self.un_5_point_node_2)
 
-        self.el_16_node_65 = QTextEdit(self.frame_67)
-        self.el_16_node_65.setObjectName(u"el_16_node_65")
-        self.el_16_node_65.setMaximumSize(QSize(16777215, 50))
-        self.el_16_node_65.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.el_16_node_65.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_3 = QTextEdit(self.frame_67)
+        self.un_5_point_node_3.setObjectName(u"un_5_point_node_3")
+        self.un_5_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_5_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_52.addWidget(self.el_16_node_65)
+        self.verticalLayout_52.addWidget(self.un_5_point_node_3)
 
-        self.el_16_node_67 = QTextEdit(self.frame_67)
-        self.el_16_node_67.setObjectName(u"el_16_node_67")
-        self.el_16_node_67.setMaximumSize(QSize(16777215, 50))
-        self.el_16_node_67.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.el_16_node_67.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_4 = QTextEdit(self.frame_67)
+        self.un_5_point_node_4.setObjectName(u"un_5_point_node_4")
+        self.un_5_point_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_5_point_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_52.addWidget(self.el_16_node_67)
+        self.verticalLayout_52.addWidget(self.un_5_point_node_4)
 
-        self.el_16_node_41 = QTextEdit(self.frame_67)
-        self.el_16_node_41.setObjectName(u"el_16_node_41")
-        self.el_16_node_41.setMaximumSize(QSize(16777215, 50))
-        self.el_16_node_41.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.el_16_node_41.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_5 = QTextEdit(self.frame_67)
+        self.un_5_point_node_5.setObjectName(u"un_5_point_node_5")
+        self.un_5_point_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_5_point_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_point_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_52.addWidget(self.el_16_node_41)
+        self.verticalLayout_52.addWidget(self.un_5_point_node_5)
 
 
         self.horizontalLayout_39.addWidget(self.frame_67)
@@ -1540,21 +1584,21 @@ class Ui_MainWindow(object):
         self.vboxLayout.setSpacing(0)
         self.vboxLayout.setObjectName(u"vboxLayout")
         self.vboxLayout.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_1 = QTextEdit(self.frame_71)
-        self.un_5_node_1.setObjectName(u"un_5_node_1")
-        self.un_5_node_1.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_6 = QTextEdit(self.frame_71)
+        self.un_5_competitor_node_6.setObjectName(u"un_5_competitor_node_6")
+        self.un_5_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.vboxLayout.addWidget(self.un_5_node_1)
+        self.vboxLayout.addWidget(self.un_5_competitor_node_6)
 
-        self.un_5_node_2 = QTextEdit(self.frame_71)
-        self.un_5_node_2.setObjectName(u"un_5_node_2")
-        self.un_5_node_2.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_7 = QTextEdit(self.frame_71)
+        self.un_5_competitor_node_7.setObjectName(u"un_5_competitor_node_7")
+        self.un_5_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.vboxLayout.addWidget(self.un_5_node_2)
+        self.vboxLayout.addWidget(self.un_5_competitor_node_7)
 
 
         self.verticalLayout_37.addWidget(self.frame_71)
@@ -1567,21 +1611,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_55.setSpacing(0)
         self.verticalLayout_55.setObjectName(u"verticalLayout_55")
         self.verticalLayout_55.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_3 = QTextEdit(self.frame_69)
-        self.un_5_node_3.setObjectName(u"un_5_node_3")
-        self.un_5_node_3.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_8 = QTextEdit(self.frame_69)
+        self.un_5_competitor_node_8.setObjectName(u"un_5_competitor_node_8")
+        self.un_5_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_55.addWidget(self.un_5_node_3)
+        self.verticalLayout_55.addWidget(self.un_5_competitor_node_8)
 
-        self.un_5_node_4 = QTextEdit(self.frame_69)
-        self.un_5_node_4.setObjectName(u"un_5_node_4")
-        self.un_5_node_4.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_9 = QTextEdit(self.frame_69)
+        self.un_5_competitor_node_9.setObjectName(u"un_5_competitor_node_9")
+        self.un_5_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_55.addWidget(self.un_5_node_4)
+        self.verticalLayout_55.addWidget(self.un_5_competitor_node_9)
 
 
         self.verticalLayout_37.addWidget(self.frame_69)
@@ -1611,21 +1655,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_57.setSpacing(0)
         self.verticalLayout_57.setObjectName(u"verticalLayout_57")
         self.verticalLayout_57.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_5 = QTextEdit(self.frame_73)
-        self.un_5_node_5.setObjectName(u"un_5_node_5")
-        self.un_5_node_5.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_10 = QTextEdit(self.frame_73)
+        self.un_5_competitor_node_10.setObjectName(u"un_5_competitor_node_10")
+        self.un_5_competitor_node_10.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_10.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_10.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_57.addWidget(self.un_5_node_5)
+        self.verticalLayout_57.addWidget(self.un_5_competitor_node_10)
 
-        self.un_5_node_6 = QTextEdit(self.frame_73)
-        self.un_5_node_6.setObjectName(u"un_5_node_6")
-        self.un_5_node_6.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_11 = QTextEdit(self.frame_73)
+        self.un_5_competitor_node_11.setObjectName(u"un_5_competitor_node_11")
+        self.un_5_competitor_node_11.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_11.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_11.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_57.addWidget(self.un_5_node_6)
+        self.verticalLayout_57.addWidget(self.un_5_competitor_node_11)
 
 
         self.verticalLayout_38.addWidget(self.frame_73)
@@ -1638,21 +1682,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_62.setSpacing(0)
         self.verticalLayout_62.setObjectName(u"verticalLayout_62")
         self.verticalLayout_62.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_7 = QTextEdit(self.frame_70)
-        self.un_5_node_7.setObjectName(u"un_5_node_7")
-        self.un_5_node_7.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_12 = QTextEdit(self.frame_70)
+        self.un_5_competitor_node_12.setObjectName(u"un_5_competitor_node_12")
+        self.un_5_competitor_node_12.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_12.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_12.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_62.addWidget(self.un_5_node_7)
+        self.verticalLayout_62.addWidget(self.un_5_competitor_node_12)
 
-        self.un_5_node_8 = QTextEdit(self.frame_70)
-        self.un_5_node_8.setObjectName(u"un_5_node_8")
-        self.un_5_node_8.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_13 = QTextEdit(self.frame_70)
+        self.un_5_competitor_node_13.setObjectName(u"un_5_competitor_node_13")
+        self.un_5_competitor_node_13.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_13.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_13.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_62.addWidget(self.un_5_node_8)
+        self.verticalLayout_62.addWidget(self.un_5_competitor_node_13)
 
 
         self.verticalLayout_38.addWidget(self.frame_70)
@@ -1683,21 +1727,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_58.setSpacing(0)
         self.verticalLayout_58.setObjectName(u"verticalLayout_58")
         self.verticalLayout_58.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_9 = QTextEdit(self.frame_75)
-        self.un_5_node_9.setObjectName(u"un_5_node_9")
-        self.un_5_node_9.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_14 = QTextEdit(self.frame_75)
+        self.un_5_competitor_node_14.setObjectName(u"un_5_competitor_node_14")
+        self.un_5_competitor_node_14.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_14.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_14.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_58.addWidget(self.un_5_node_9)
+        self.verticalLayout_58.addWidget(self.un_5_competitor_node_14)
 
-        self.un_5_node_10 = QTextEdit(self.frame_75)
-        self.un_5_node_10.setObjectName(u"un_5_node_10")
-        self.un_5_node_10.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_10.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_10.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_15 = QTextEdit(self.frame_75)
+        self.un_5_competitor_node_15.setObjectName(u"un_5_competitor_node_15")
+        self.un_5_competitor_node_15.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_15.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_15.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_58.addWidget(self.un_5_node_10)
+        self.verticalLayout_58.addWidget(self.un_5_competitor_node_15)
 
 
         self.verticalLayout_39.addWidget(self.frame_75)
@@ -1710,21 +1754,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_63.setSpacing(0)
         self.verticalLayout_63.setObjectName(u"verticalLayout_63")
         self.verticalLayout_63.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_11 = QTextEdit(self.frame_72)
-        self.un_5_node_11.setObjectName(u"un_5_node_11")
-        self.un_5_node_11.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_11.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_11.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_16 = QTextEdit(self.frame_72)
+        self.un_5_competitor_node_16.setObjectName(u"un_5_competitor_node_16")
+        self.un_5_competitor_node_16.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_16.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_16.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_63.addWidget(self.un_5_node_11)
+        self.verticalLayout_63.addWidget(self.un_5_competitor_node_16)
 
-        self.un_5_node_12 = QTextEdit(self.frame_72)
-        self.un_5_node_12.setObjectName(u"un_5_node_12")
-        self.un_5_node_12.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_12.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_12.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_17 = QTextEdit(self.frame_72)
+        self.un_5_competitor_node_17.setObjectName(u"un_5_competitor_node_17")
+        self.un_5_competitor_node_17.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_17.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_17.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_63.addWidget(self.un_5_node_12)
+        self.verticalLayout_63.addWidget(self.un_5_competitor_node_17)
 
 
         self.verticalLayout_39.addWidget(self.frame_72)
@@ -1754,21 +1798,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_59.setSpacing(0)
         self.verticalLayout_59.setObjectName(u"verticalLayout_59")
         self.verticalLayout_59.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_13 = QTextEdit(self.frame_76)
-        self.un_5_node_13.setObjectName(u"un_5_node_13")
-        self.un_5_node_13.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_13.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_13.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_18 = QTextEdit(self.frame_76)
+        self.un_5_competitor_node_18.setObjectName(u"un_5_competitor_node_18")
+        self.un_5_competitor_node_18.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_18.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_18.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_59.addWidget(self.un_5_node_13)
+        self.verticalLayout_59.addWidget(self.un_5_competitor_node_18)
 
-        self.un_5_node_14 = QTextEdit(self.frame_76)
-        self.un_5_node_14.setObjectName(u"un_5_node_14")
-        self.un_5_node_14.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_14.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_14.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_19 = QTextEdit(self.frame_76)
+        self.un_5_competitor_node_19.setObjectName(u"un_5_competitor_node_19")
+        self.un_5_competitor_node_19.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_19.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_19.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_59.addWidget(self.un_5_node_14)
+        self.verticalLayout_59.addWidget(self.un_5_competitor_node_19)
 
 
         self.verticalLayout_40.addWidget(self.frame_76)
@@ -1781,21 +1825,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_60.setSpacing(0)
         self.verticalLayout_60.setObjectName(u"verticalLayout_60")
         self.verticalLayout_60.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_15 = QTextEdit(self.frame_74)
-        self.un_5_node_15.setObjectName(u"un_5_node_15")
-        self.un_5_node_15.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_15.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_15.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_20 = QTextEdit(self.frame_74)
+        self.un_5_competitor_node_20.setObjectName(u"un_5_competitor_node_20")
+        self.un_5_competitor_node_20.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_20.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_20.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_60.addWidget(self.un_5_node_15)
+        self.verticalLayout_60.addWidget(self.un_5_competitor_node_20)
 
-        self.un_5_node_16 = QTextEdit(self.frame_74)
-        self.un_5_node_16.setObjectName(u"un_5_node_16")
-        self.un_5_node_16.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_16.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_16.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_21 = QTextEdit(self.frame_74)
+        self.un_5_competitor_node_21.setObjectName(u"un_5_competitor_node_21")
+        self.un_5_competitor_node_21.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_21.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_21.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_60.addWidget(self.un_5_node_16)
+        self.verticalLayout_60.addWidget(self.un_5_competitor_node_21)
 
 
         self.verticalLayout_40.addWidget(self.frame_74)
@@ -1826,21 +1870,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_64.setSpacing(0)
         self.verticalLayout_64.setObjectName(u"verticalLayout_64")
         self.verticalLayout_64.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_17 = QTextEdit(self.frame_78)
-        self.un_5_node_17.setObjectName(u"un_5_node_17")
-        self.un_5_node_17.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_17.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_17.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_22 = QTextEdit(self.frame_78)
+        self.un_5_competitor_node_22.setObjectName(u"un_5_competitor_node_22")
+        self.un_5_competitor_node_22.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_22.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_22.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_64.addWidget(self.un_5_node_17)
+        self.verticalLayout_64.addWidget(self.un_5_competitor_node_22)
 
-        self.un_5_node_18 = QTextEdit(self.frame_78)
-        self.un_5_node_18.setObjectName(u"un_5_node_18")
-        self.un_5_node_18.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_18.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_18.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_23 = QTextEdit(self.frame_78)
+        self.un_5_competitor_node_23.setObjectName(u"un_5_competitor_node_23")
+        self.un_5_competitor_node_23.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_23.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_23.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_64.addWidget(self.un_5_node_18)
+        self.verticalLayout_64.addWidget(self.un_5_competitor_node_23)
 
 
         self.verticalLayout_50.addWidget(self.frame_78)
@@ -1853,21 +1897,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_61.setSpacing(0)
         self.verticalLayout_61.setObjectName(u"verticalLayout_61")
         self.verticalLayout_61.setContentsMargins(0, 0, 0, 0)
-        self.un_5_node_19 = QTextEdit(self.frame_77)
-        self.un_5_node_19.setObjectName(u"un_5_node_19")
-        self.un_5_node_19.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_19.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_19.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_24 = QTextEdit(self.frame_77)
+        self.un_5_competitor_node_24.setObjectName(u"un_5_competitor_node_24")
+        self.un_5_competitor_node_24.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_24.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_24.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_61.addWidget(self.un_5_node_19)
+        self.verticalLayout_61.addWidget(self.un_5_competitor_node_24)
 
-        self.un_5_node_20 = QTextEdit(self.frame_77)
-        self.un_5_node_20.setObjectName(u"un_5_node_20")
-        self.un_5_node_20.setMaximumSize(QSize(16777215, 50))
-        self.un_5_node_20.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.un_5_node_20.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_25 = QTextEdit(self.frame_77)
+        self.un_5_competitor_node_25.setObjectName(u"un_5_competitor_node_25")
+        self.un_5_competitor_node_25.setMaximumSize(QSize(16777215, 50))
+        self.un_5_competitor_node_25.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_5_competitor_node_25.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
-        self.verticalLayout_61.addWidget(self.un_5_node_20)
+        self.verticalLayout_61.addWidget(self.un_5_competitor_node_25)
 
 
         self.verticalLayout_50.addWidget(self.frame_77)
@@ -2297,7 +2341,7 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.setCurrentIndex(2)
         self.AllMatchesWraper.setCurrentIndex(1)
-        self.match_16.setCurrentIndex(0)
+        self.match_16.setCurrentIndex(1)
         self.match_5.setCurrentIndex(0)
 
 
@@ -2313,6 +2357,11 @@ class Ui_MainWindow(object):
         self.HomeButton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.AccountButton.setText(QCoreApplication.translate("MainWindow", u"Acount", None))
         self.SettingsButton.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.Hide_category_menu.setText("")
+        self.Button_16_competitors.setText(QCoreApplication.translate("MainWindow", u"16", None))
+        self.Button_5_competitors.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.Button_2_competitors.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.Eliminations_button.setText(QCoreApplication.translate("MainWindow", u"Eliminacje", None))
         self.HalfFinal_button.setText(QCoreApplication.translate("MainWindow", u"P\u00f3\u0142 fina\u0142y", None))
         self.Repechage_button.setText(QCoreApplication.translate("MainWindow", u"Repasarze", None))

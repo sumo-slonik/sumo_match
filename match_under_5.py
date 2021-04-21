@@ -40,8 +40,11 @@ class Under5(AbstractMatchesMaker):
         print("Winner: ", self.matches[self.actualMatchId].get_competitor().name)
 
     def get_results(self):
-        competitors_points = {comptitor: 0 for competitor in self.competitors}
-
+        competitors_points = {competitor: 0 for competitor in self.competitors}
+        for match in self.matches:
+            actual = competitors_points.get(match.get_competitor(), 0)
+            competitors_points[match.get_competitor()] = actual+1
+        print(competitors_points)
 
 
 if __name__ == '__main__':
@@ -54,3 +57,4 @@ if __name__ == '__main__':
         matches.make_match(result)
         matches.print_actual_match()
         matches.go_to_next_round()
+    matches.get_results()

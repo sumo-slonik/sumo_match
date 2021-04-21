@@ -8,6 +8,7 @@ class PersonalCompetitor:
         self.birth_year = birth_year
         self.losses = 0
         self.wins = 0
+
     def get_name(self):
         return self.name
 
@@ -32,22 +33,22 @@ class PersonalCompetitor:
         if self.is_free_fight:
             return "WOLNY LOS"
         if show_first_name:
-            result += self.get_first_name()+' '
+            result += self.get_first_name() + ' '
         if show_surname_name:
-            result += self.get_surname()+' '
+            result += self.get_surname() + ' '
         if show_club:
-            result += self.get_club()+' '
+            result += self.get_club() + ' '
         if show_birth_year:
-            result += str(self.get_birth_year())+' '
+            result += str(self.get_birth_year()) + ' '
         if show_weight:
-            result += str(self.get_weight())+' '
+            result += str(self.get_weight()) + ' '
         return result
 
     def get_is_free_fight(self):
         return self.is_free_fight
 
     def __str__(self):
-        return self.custom_string_repr(1,1,1,0,0)
+        return self.custom_string_repr(1, 1, 1, 0, 0)
 
     def __eq__(self, other):
         if type(self) != type(other):
@@ -65,5 +66,4 @@ class PersonalCompetitor:
         return True
 
     def __hash__(self):
-        self.name = name
-        self.club = club
+        return hash(self.name + self.club + str(self.birth_year))
