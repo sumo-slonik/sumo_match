@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class AbstractMatchesMaker(ABC):
     @abstractmethod
-    def make_match(self):
+    def make_match(self, left_win):
         pass
 
     @abstractmethod

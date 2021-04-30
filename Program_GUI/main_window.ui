@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1197</width>
+    <width>1229</width>
     <height>789</height>
    </rect>
   </property>
@@ -513,7 +513,7 @@ background-position: center left;
             </property>
             <property name="maximumSize">
              <size>
-              <width>0</width>
+              <width>50</width>
               <height>16777215</height>
              </size>
             </property>
@@ -589,6 +589,20 @@ background-position: center left;
               <widget class="QPushButton" name="Button_5_competitors">
                <property name="text">
                 <string>5</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Button_4_competitors">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Button_3_competitors">
+               <property name="text">
+                <string>3</string>
                </property>
               </widget>
              </item>
@@ -788,7 +802,7 @@ background-position: center left;
 }</string>
                        </property>
                        <property name="currentIndex">
-                        <number>1</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="Eliminations">
                         <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -2840,7 +2854,7 @@ p, li { white-space: pre-wrap; }
                      <item>
                       <widget class="QStackedWidget" name="match_5">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="under_5">
                         <layout class="QHBoxLayout" name="horizontalLayout_36">
@@ -3870,99 +3884,211 @@ p, li { white-space: pre-wrap; }
                         </layout>
                        </widget>
                        <widget class="QWidget" name="under_4">
-                        <layout class="QHBoxLayout" name="horizontalLayout_38">
+                        <layout class="QHBoxLayout" name="horizontalLayout_27">
                          <item>
-                          <widget class="QFrame" name="frame_60">
+                          <widget class="QFrame" name="frame_90">
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_47">
+                           <layout class="QVBoxLayout" name="verticalLayout_49">
                             <item>
-                             <widget class="QLabel" name="label_11">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_91">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="font">
-                               <font>
-                                <family>Calibri</family>
-                                <pointsize>20</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
-                               </font>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="text">
-                               <string>Runda I</string>
-                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_73">
+                               <item>
+                                <widget class="QLabel" name="label_20">
+                                 <property name="font">
+                                  <font>
+                                   <family>Calibri</family>
+                                   <pointsize>16</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="text">
+                                  <string>Zawodnicy</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_4_node_1">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_92">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_2">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_3">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_4">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_40">
+                               <item>
+                                <widget class="QFrame" name="frame_93">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_74">
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_competitor_node_1">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_competitor_node_2">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_competitor_node_3">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_competitor_node_4">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_94">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>50</width>
+                                   <height>16777215</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_75">
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_point_node_1">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_point_node_2">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_point_node_3">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_4_point_node_4">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                            </layout>
@@ -3972,7 +4098,164 @@ p, li { white-space: pre-wrap; }
                           <widget class="QFrame" name="frame_63">
                            <property name="minimumSize">
                             <size>
-                             <width>100</width>
+                             <width>25</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_45">
+                            <item>
+                             <widget class="QLabel" name="label_12">
+                              <property name="font">
+                               <font>
+                                <family>Calibri</family>
+                                <pointsize>16</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Runda I</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_81">
+                              <property name="enabled">
+                               <bool>true</bool>
+                              </property>
+                              <property name="frameShape">
+                               <enum>QFrame::NoFrame</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="_2">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_5">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_6">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_82">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_56">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_7">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_8">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_68">
+                           <property name="minimumSize">
+                            <size>
+                             <width>25</width>
                              <height>0</height>
                             </size>
                            </property>
@@ -3984,17 +4267,11 @@ p, li { white-space: pre-wrap; }
                            </property>
                            <layout class="QVBoxLayout" name="verticalLayout_48">
                             <item>
-                             <widget class="QLabel" name="label_12">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
+                             <widget class="QLabel" name="label_18">
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>20</pointsize>
+                                <pointsize>16</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -4002,70 +4279,127 @@ p, li { white-space: pre-wrap; }
                               <property name="text">
                                <string>Runda II</string>
                               </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_5">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                               </property>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_4_node_6">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_85">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_69">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_9">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_10">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_4_node_7">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_86">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_8">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_70">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_11">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_12">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                            </layout>
@@ -4075,7 +4409,7 @@ p, li { white-space: pre-wrap; }
                           <widget class="QFrame" name="frame_65">
                            <property name="minimumSize">
                             <size>
-                             <width>100</width>
+                             <width>25</width>
                              <height>0</height>
                             </size>
                            </property>
@@ -4085,19 +4419,16 @@ p, li { white-space: pre-wrap; }
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_49">
+                           <layout class="QVBoxLayout" name="verticalLayout_47">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
                             <item>
                              <widget class="QLabel" name="label_13">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>20</pointsize>
+                                <pointsize>16</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -4105,70 +4436,127 @@ p, li { white-space: pre-wrap; }
                               <property name="text">
                                <string>Runda III</string>
                               </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_9">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                               </property>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_4_node_10">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_83">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_67">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_13">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_14">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_4_node_11">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_84">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_4_node_12">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_68">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_15">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_4_competitor_node_16">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                            </layout>
@@ -4179,178 +4567,187 @@ p, li { white-space: pre-wrap; }
                        <widget class="QWidget" name="under_3">
                         <layout class="QHBoxLayout" name="horizontalLayout_37">
                          <item>
-                          <widget class="QFrame" name="frame_62">
+                          <widget class="QFrame" name="frame_99">
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_43">
+                           <layout class="QVBoxLayout" name="verticalLayout_78">
                             <item>
-                             <widget class="QLabel" name="label_14">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_100">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="font">
-                               <font>
-                                <family>Calibri</family>
-                                <pointsize>20</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
-                               </font>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="text">
-                               <string>Runda I</string>
-                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_79">
+                               <item>
+                                <widget class="QLabel" name="label_21">
+                                 <property name="font">
+                                  <font>
+                                   <family>Calibri</family>
+                                   <pointsize>16</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="text">
+                                  <string>Zawodnicy</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_3_node_1">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_101">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_3_node_2">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_3_node_3">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_41">
+                               <item>
+                                <widget class="QFrame" name="frame_102">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_80">
+                                  <item>
+                                   <widget class="QTextEdit" name="un_3_competitor_node_1">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_3_competitor_node_2">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_3_competitor_node_3">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_103">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>50</width>
+                                   <height>16777215</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_81">
+                                  <item>
+                                   <widget class="QTextEdit" name="un_3_point_node_1">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_3_point_node_2">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_3_point_node_3">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="frame_59">
+                          <widget class="QFrame" name="frame_96">
                            <property name="minimumSize">
                             <size>
-                             <width>100</width>
-                             <height>0</height>
-                            </size>
-                           </property>
-                           <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
-                           </property>
-                           <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
-                           </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_44">
-                            <item>
-                             <widget class="QLabel" name="label_15">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="font">
-                               <font>
-                                <family>Calibri</family>
-                                <pointsize>20</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
-                               </font>
-                              </property>
-                              <property name="text">
-                               <string>Runda II</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_3_node_4">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_3_node_5">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_3_node_6">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="frame_58">
-                           <property name="minimumSize">
-                            <size>
-                             <width>100</width>
+                             <width>25</width>
                              <height>0</height>
                             </size>
                            </property>
@@ -4362,17 +4759,207 @@ p, li { white-space: pre-wrap; }
                            </property>
                            <layout class="QVBoxLayout" name="verticalLayout_46">
                             <item>
-                             <widget class="QLabel" name="label_16">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
+                             <widget class="QLabel" name="label_15">
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>20</pointsize>
+                                <pointsize>16</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Runda I</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_97">
+                              <property name="enabled">
+                               <bool>true</bool>
+                              </property>
+                              <property name="frameShape">
+                               <enum>QFrame::NoFrame</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="_3">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_3_competitor_node_4">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_3_competitor_node_5">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_80">
+                           <property name="minimumSize">
+                            <size>
+                             <width>25</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_65">
+                            <item>
+                             <widget class="QLabel" name="label_19">
+                              <property name="font">
+                               <font>
+                                <family>Calibri</family>
+                                <pointsize>16</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Runda II</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_89">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_76">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_3_competitor_node_6">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_3_competitor_node_7">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_79">
+                           <property name="minimumSize">
+                            <size>
+                             <width>25</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_54">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_14">
+                              <property name="font">
+                               <font>
+                                <family>Calibri</family>
+                                <pointsize>16</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -4380,54 +4967,508 @@ p, li { white-space: pre-wrap; }
                               <property name="text">
                                <string>Runda III</string>
                               </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QTextEdit" name="un_3_node_7">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
-                              </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
-                              </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                               </property>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_3_node_8">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_87">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <layout class="QVBoxLayout" name="verticalLayout_71">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_3_competitor_node_8">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_3_competitor_node_9">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="Under2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_38">
+                         <item>
+                          <widget class="QFrame" name="frame_105">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_82">
+                            <item>
+                             <widget class="QFrame" name="frame_106">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_83">
+                               <item>
+                                <widget class="QLabel" name="label_23">
+                                 <property name="font">
+                                  <font>
+                                   <family>Calibri</family>
+                                   <pointsize>16</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="text">
+                                  <string>Zawodnicy</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_107">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_42">
+                               <item>
+                                <widget class="QFrame" name="frame_108">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_84">
+                                  <item>
+                                   <widget class="QTextEdit" name="un_2_competitor_node_1">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_2_competitor_node_2">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_109">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>50</width>
+                                   <height>16777215</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_85">
+                                  <item>
+                                   <widget class="QTextEdit" name="un_2_point_node_1">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextEdit" name="un_2_point_node_2">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_98">
+                           <property name="minimumSize">
+                            <size>
+                             <width>25</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_77">
+                            <item>
+                             <widget class="QLabel" name="label_22">
+                              <property name="font">
+                               <font>
+                                <family>Calibri</family>
+                                <pointsize>16</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Runda I</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                               </property>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QTextEdit" name="un_3_node_9">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>50</height>
-                               </size>
+                             <widget class="QFrame" name="frame_104">
+                              <property name="enabled">
+                               <bool>true</bool>
                               </property>
-                              <property name="verticalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShape">
+                               <enum>QFrame::NoFrame</enum>
                               </property>
-                              <property name="horizontalScrollBarPolicy">
-                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
                               </property>
+                              <layout class="QVBoxLayout" name="_4">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_2_competitor_node_3">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_2_competitor_node_4">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_110">
+                           <property name="minimumSize">
+                            <size>
+                             <width>25</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_86">
+                            <item>
+                             <widget class="QLabel" name="label_24">
+                              <property name="font">
+                               <font>
+                                <family>Calibri</family>
+                                <pointsize>16</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Runda II</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_111">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_87">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_2_competitor_node_5">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_2_competitor_node_6">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_88">
+                           <property name="minimumSize">
+                            <size>
+                             <width>25</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_66">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_16">
+                              <property name="font">
+                               <font>
+                                <family>Calibri</family>
+                                <pointsize>16</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Runda III</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_95">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_72">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QTextEdit" name="un_2_competitor_node_7">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextEdit" name="un_2_competitor_node_8">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                            </layout>

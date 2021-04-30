@@ -8,7 +8,9 @@ from match_under_16 import *
 from Program_GUI.functionality.GUI_manipulation import *
 from competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
 from random_functions import random_function_16
-from match_under_5 import Under5
+from all_match_engine import AllMatchEngine
+from match_under_5 import MatchUnder5 as Under5
+from category_opener import Opener
 WINDOW_SIZE = 0
 
 
@@ -61,6 +63,8 @@ class MainWindow(QMainWindow):
         self.ui.Hide_category_menu.clicked.connect(lambda: self.slide_second_left_menu())
         self.ui.Button_16_competitors.clicked.connect(lambda: self.category_menu_button_function("16"))
         self.ui.Button_5_competitors.clicked.connect(lambda: self.category_menu_button_function("5"))
+        self.ui.Button_4_competitors.clicked.connect(lambda: self.category_menu_button_function("4"))
+        self.ui.Button_3_competitors.clicked.connect(lambda: self.category_menu_button_function("3"))
         self.ui.Button_2_competitors.clicked.connect(lambda: self.category_menu_button_function("2"))
         # Show window
         self.showFullScreen()
@@ -149,56 +153,65 @@ class MainWindow(QMainWindow):
     def category_menu_button_function(self, go_to):
         if go_to == "16":
             self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder16)
+            self.ui.match_16.setCurrentWidget(self.ui.Eliminations)
         if go_to == "5":
             self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
+            self.ui.match_5.setCurrentWidget(self.ui.under_5)
+        if go_to == "4":
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
+            self.ui.match_5.setCurrentWidget(self.ui.under_4)
+        if go_to == "3":
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
+            self.ui.match_5.setCurrentWidget(self.ui.under_3)
         if go_to == "2":
-            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder2)
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
+            self.ui.match_5.setCurrentWidget(self.ui.Under2)
 
 
-# Execute app
-
-def make_match_16(main_window):
-    competitors = personal_competitor_txt_input("Competitors.txt")
-
-    # test funkcji losującej
-    teams = divide_competitors_to_teams(competitors)
-    contestants = random_function_16.random_function_16(teams, len(competitors) - 4)
-
-    # matches = Eliminations(competitors)
-    matches = MatchUnder16(contestants)
-    all_nodes = ["el_16_node_" + str(x) for x in range(4, 32)]
-    # print_eliminations_16(matches, main_window)
-    print_match_under_16(matches, main_window)
-    main_window.ui.next_match.clicked.connect(lambda: go_to_next_round(all_nodes, matches, main_window))
-    main_window.ui.prev_match.clicked.connect(lambda: matches.go_to_prev_round())
-    main_window.ui.win_left.clicked.connect(lambda: make_match(True, matches, main_window))
-    main_window.ui.win_right.clicked.connect(lambda: make_match(False, matches, main_window))
+# # Execute app
+#
+# def make_match_16(main_window):
+#     competitors = personal_competitor_txt_input("Competitors.txt")
+#
+#     # test funkcji losującej
+#     teams = divide_competitors_to_teams(competitors)
+#     contestants = random_function_16.random_function_16(teams, len(competitors) - 4)
+#
+#     # matches = Eliminations(competitors)
+#     matches = MatchUnder16(contestants)
+#     # print_eliminations_16(matches, main_window)
+#     print_match_under_16(matches, main_window)
 
 
-def make_match(left_child_win, matches, main_window):
-    # print_eliminations_16(matches, main_window)
-    # matches.make_match(left_child_win)
-    # print_eliminations_16(matches, main_window)
-    print_match_under_16(matches, main_window)
-    matches.make_match(left_child_win)
-    print_match_under_16(matches, main_window)
+def connect_gui_to_engine(main_window, all_match_engine):
+    def make_match(left_child_win, engine, window):
+        engine.print_match(window)
+        engine.make_match(left_child_win)
+        engine.print_match(window)
 
+    def go_to_next_round(engine, window):
+        engine.go_to_next_round()
+        engine.print_match(window)
 
-def go_to_next_round(all_nodes, matches, main_window):
-    matches.go_to_next_round()
-    print_match_under_16(matches, main_window)
+    main_window.ui.next_match.clicked.connect(lambda: go_to_next_round(all_match_engine, main_window))
+    main_window.ui.prev_match.clicked.connect(lambda: all_match_engine.go_to_prev_round())
+    main_window.ui.win_left.clicked.connect(lambda: make_match(True, all_match_engine, main_window))
+    main_window.ui.win_right.clicked.connect(lambda: make_match(False, all_match_engine, main_window))
+    engine.print_match(window)
 
 
 if __name__ == "__main__":
+
     app = QApplication(sys.argv)
+    # competitors = personal_competitor_txt_input("Competitors.txt")
+    # teams = divide_competitors_to_teams(competitors)
+    # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
+    competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(3)]
     window = MainWindow()
-    make_match_16(window)
-    #testowanie do 5 zawodników
-    Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
-    matches = Under5(Competitors)
-    print_match_under_5(matches,window)
-    #koniec testowania do 5 zawodników
+    Opener("Categories",window).add_category_buttons()
+    engine = AllMatchEngine(competitors)
+    connect_gui_to_engine(window, engine)
     sys.exit(app.exec_())
+
 else:
     print(__name__, "hh")
-# press ctrl+b in sublime to run

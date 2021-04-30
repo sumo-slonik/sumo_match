@@ -4,19 +4,18 @@ from abstractMatchesMaker import AbstractMatchesMaker
 from random import choice
 
 
-class MatchUnder5(AbstractMatchesMaker):
+class MatchUnder4(AbstractMatchesMaker):
 
     def __init__(self, competitors):
         self.competitors = competitors
-        self.matches = [Match() for _ in range(10)]
+        self.matches = [Match() for _ in range(6)]
         self.actualMatchId = 0
 
         # in the documents directory there is
         # a visualisation of the players' order, the player
         # number in matches is an index in the competitors table increased by one
-        self.__matchOrder = [(1, 2), (3, 4), (1, 3), (2, 5), (1, 4), (2, 5), (1, 5), (3, 4), (2, 3), (4, 5)]
+        self.__matchOrder = [(1, 2), (3, 4), (1, 3), (4, 2), (1, 4), (2, 3)]
         for competitors_id, match in zip(self.__matchOrder, self.matches):
-            print(competitors_id, match)
             match.set_left_child(self.competitors[competitors_id[0] - 1])
             match.set_right_child(self.competitors[competitors_id[1] - 1])
 
@@ -59,7 +58,7 @@ class MatchUnder5(AbstractMatchesMaker):
 if __name__ == '__main__':
 
     Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
-    matches = MatchUnder5(Competitors)
+    matches = MatchUnder4(Competitors)
     for _ in range(10):
         result = choice([True, False])
         print("Left Win:", result)
