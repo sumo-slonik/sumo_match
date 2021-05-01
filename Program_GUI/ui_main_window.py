@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowrKvtKL.ui'
+## Form generated from reading UI file 'main_windowhLtDvf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -189,19 +189,15 @@ class Ui_MainWindow(object):
         self.left_menu.setFrameShape(QFrame.StyledPanel)
         self.left_menu.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.left_menu)
-        self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(7, 0, 0, 0)
         self.frame = QFrame(self.left_menu)
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(100, 0))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.formLayout = QFormLayout(self.frame)
-        self.formLayout.setObjectName(u"formLayout")
-        self.formLayout.setHorizontalSpacing(0)
-        self.formLayout.setVerticalSpacing(0)
-        self.formLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_42 = QVBoxLayout(self.frame)
+        self.verticalLayout_42.setObjectName(u"verticalLayout_42")
+        self.verticalLayout_42.setContentsMargins(0, 0, -1, 11)
         self.HomeButton = QPushButton(self.frame)
         self.HomeButton.setObjectName(u"HomeButton")
         self.HomeButton.setMinimumSize(QSize(100, 0))
@@ -212,21 +208,55 @@ class Ui_MainWindow(object):
 "\n"
 "")
 
-        self.formLayout.setWidget(0, QFormLayout.SpanningRole, self.HomeButton)
+        self.verticalLayout_42.addWidget(self.HomeButton)
 
         self.AccountButton = QPushButton(self.frame)
         self.AccountButton.setObjectName(u"AccountButton")
-        self.AccountButton.setStyleSheet(u"background-image: url(:/Icons/icons/cil-user.png);\n"
+        self.AccountButton.setStyleSheet(u"background-image: url(:/Icons/icons/cil-folder-open.png);\n"
 "background-repeat:none;\n"
 "background-position: center left;\n"
 "\n"
 "padding-left: 50px;\n"
 "")
 
-        self.formLayout.setWidget(1, QFormLayout.SpanningRole, self.AccountButton)
+        self.verticalLayout_42.addWidget(self.AccountButton)
+
+        self.AccountButton_2 = QPushButton(self.frame)
+        self.AccountButton_2.setObjectName(u"AccountButton_2")
+        self.AccountButton_2.setStyleSheet(u"background-image: url(:/Icons/icons/cil-user-follow.png);\n"
+"background-repeat:none;\n"
+"background-position: center left;\n"
+"\n"
+"padding-left: 50px;\n"
+"")
+
+        self.verticalLayout_42.addWidget(self.AccountButton_2)
+
+        self.AccountButton_3 = QPushButton(self.frame)
+        self.AccountButton_3.setObjectName(u"AccountButton_3")
+        self.AccountButton_3.setStyleSheet(u"background-image: url(:/Icons/icons/cil-description.png);\n"
+"background-repeat:none;\n"
+"background-position: center left;\n"
+"\n"
+"padding-left: 50px;\n"
+"")
+
+        self.verticalLayout_42.addWidget(self.AccountButton_3)
 
 
         self.verticalLayout_2.addWidget(self.frame, 0, Qt.AlignTop)
+
+        self.InfoButton = QPushButton(self.left_menu)
+        self.InfoButton.setObjectName(u"InfoButton")
+        self.InfoButton.setMinimumSize(QSize(100, 0))
+        self.InfoButton.setStyleSheet(u"background-image: url(:/Icons/icons/cil-comment-square.png);\n"
+"background-repeat:none;\n"
+"padding-left: 50px;\n"
+"background-position: center left;\n"
+"\n"
+"")
+
+        self.verticalLayout_2.addWidget(self.InfoButton)
 
         self.SettingsButton = QPushButton(self.left_menu)
         self.SettingsButton.setObjectName(u"SettingsButton")
@@ -315,7 +345,7 @@ class Ui_MainWindow(object):
 
         self.stackedWidget = QStackedWidget(self.center_main_items)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setMinimumSize(QSize(0, 0))
+        self.stackedWidget.setMinimumSize(QSize(0, 50))
         self.HomePage = QWidget()
         self.HomePage.setObjectName(u"HomePage")
         self.HomePage.setStyleSheet(u"background-color: rgb(85, 170, 0);")
@@ -2767,12 +2797,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_18.addWidget(self.pushButton)
 
-        self.textEdit = QTextEdit(self.DisplayCompetitors)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setMaximumSize(QSize(16777215, 160))
-        self.textEdit.setReadOnly(True)
+        self.Competitor_1 = QTextEdit(self.DisplayCompetitors)
+        self.Competitor_1.setObjectName(u"Competitor_1")
+        self.Competitor_1.setMaximumSize(QSize(16777215, 160))
+        self.Competitor_1.setReadOnly(True)
 
-        self.verticalLayout_18.addWidget(self.textEdit)
+        self.verticalLayout_18.addWidget(self.Competitor_1)
 
         self.pushButton_2 = QPushButton(self.DisplayCompetitors)
         self.pushButton_2.setObjectName(u"pushButton_2")
@@ -2780,12 +2810,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_18.addWidget(self.pushButton_2)
 
-        self.textEdit_2 = QTextEdit(self.DisplayCompetitors)
-        self.textEdit_2.setObjectName(u"textEdit_2")
-        self.textEdit_2.setMaximumSize(QSize(16777215, 160))
-        self.textEdit_2.setReadOnly(True)
+        self.Competitor_2 = QTextEdit(self.DisplayCompetitors)
+        self.Competitor_2.setObjectName(u"Competitor_2")
+        self.Competitor_2.setMaximumSize(QSize(16777215, 160))
+        self.Competitor_2.setReadOnly(True)
 
-        self.verticalLayout_18.addWidget(self.textEdit_2)
+        self.verticalLayout_18.addWidget(self.Competitor_2)
 
         self.frame_3 = QFrame(self.DisplayCompetitors)
         self.frame_3.setObjectName(u"frame_3")
@@ -2841,10 +2871,27 @@ class Ui_MainWindow(object):
         self.right_menu = QFrame(self.main_body)
         self.right_menu.setObjectName(u"right_menu")
         self.right_menu.setMinimumSize(QSize(0, 0))
-        self.right_menu.setMaximumSize(QSize(100, 16777215))
+        self.right_menu.setMaximumSize(QSize(0, 16777215))
         self.right_menu.setStyleSheet(u"background-color: rgb(0, 170, 255);")
         self.right_menu.setFrameShape(QFrame.StyledPanel)
         self.right_menu.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_43 = QVBoxLayout(self.right_menu)
+        self.verticalLayout_43.setObjectName(u"verticalLayout_43")
+        self.CloseCommunicateButton = QPushButton(self.right_menu)
+        self.CloseCommunicateButton.setObjectName(u"CloseCommunicateButton")
+        self.CloseCommunicateButton.setMaximumSize(QSize(25, 25))
+        self.CloseCommunicateButton.setStyleSheet(u"")
+        icon6 = QIcon()
+        icon6.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.CloseCommunicateButton.setIcon(icon6)
+
+        self.verticalLayout_43.addWidget(self.CloseCommunicateButton)
+
+        self.Communicate = QTextEdit(self.right_menu)
+        self.Communicate.setObjectName(u"Communicate")
+
+        self.verticalLayout_43.addWidget(self.Communicate)
+
 
         self.horizontalLayout.addWidget(self.right_menu)
 
@@ -2853,10 +2900,13 @@ class Ui_MainWindow(object):
 
         self.main_footer = QFrame(self.centralwidget)
         self.main_footer.setObjectName(u"main_footer")
-        self.main_footer.setMaximumSize(QSize(16777215, 50))
+        self.main_footer.setMinimumSize(QSize(0, 10))
+        self.main_footer.setMaximumSize(QSize(16777215, 0))
         self.main_footer.setStyleSheet(u"background-color: rgb(170, 85, 127);")
         self.main_footer.setFrameShape(QFrame.StyledPanel)
         self.main_footer.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_43 = QHBoxLayout(self.main_footer)
+        self.horizontalLayout_43.setObjectName(u"horizontalLayout_43")
 
         self.verticalLayout.addWidget(self.main_footer)
 
@@ -2865,7 +2915,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(2)
-        self.AllMatchesWraper.setCurrentIndex(1)
+        self.AllMatchesWraper.setCurrentIndex(0)
         self.match_16.setCurrentIndex(0)
         self.match_5.setCurrentIndex(2)
 
@@ -2879,9 +2929,12 @@ class Ui_MainWindow(object):
         self.minimizeButton.setText("")
         self.restoreButton.setText("")
         self.closeButton.setText("")
-        self.HomeButton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.AccountButton.setText(QCoreApplication.translate("MainWindow", u"Acount", None))
-        self.SettingsButton.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.HomeButton.setText(QCoreApplication.translate("MainWindow", u"Strona g\u0142\u00f3wna", None))
+        self.AccountButton.setText(QCoreApplication.translate("MainWindow", u"Kategorie", None))
+        self.AccountButton_2.setText(QCoreApplication.translate("MainWindow", u"Wprowadzanie zawodnik\u00f3w", None))
+        self.AccountButton_3.setText(QCoreApplication.translate("MainWindow", u"Raporty", None))
+        self.InfoButton.setText(QCoreApplication.translate("MainWindow", u"Komunikaty", None))
+        self.SettingsButton.setText(QCoreApplication.translate("MainWindow", u"Ustawienia", None))
         self.Hide_category_menu.setText("")
         self.Button_16_competitors.setText(QCoreApplication.translate("MainWindow", u"16", None))
         self.Button_5_competitors.setText(QCoreApplication.translate("MainWindow", u"5", None))
@@ -3051,7 +3104,7 @@ class Ui_MainWindow(object):
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Zawodnik I", None))
-        self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.Competitor_1.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
@@ -3063,7 +3116,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Wygrane:</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Przegrane:</span></p></body></html>", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Zawodnik II", None))
-        self.textEdit_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.Competitor_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
@@ -3078,5 +3131,6 @@ class Ui_MainWindow(object):
         self.win_right.setText(QCoreApplication.translate("MainWindow", u"Wygra\u0142 II", None))
         self.prev_match.setText(QCoreApplication.translate("MainWindow", u"Poprzedni Mecz", None))
         self.next_match.setText(QCoreApplication.translate("MainWindow", u"Nast\u0119pny Mecz", None))
+        self.CloseCommunicateButton.setText("")
     # retranslateUi
 

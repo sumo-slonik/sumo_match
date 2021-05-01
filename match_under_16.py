@@ -50,7 +50,8 @@ class Eliminations:
     def make_match(self, left_child_win):
         print("ID z eliminacji:", self.actualMatchId)
         actual_match = self.tree[self.actualMatchId]
-        actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
+        actual_match.make_match(left_child_win)
+        #actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
         # testowo
         # if self.actualMatchId != 1:
         #     self.actualMatchId = self.get_next_match_id()
@@ -171,7 +172,8 @@ class Repechage:
 
     def make_match(self, left_child_win):
         actual_match = self.tree[self.actualMatchId]
-        actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
+        actual_match.make_match(left_child_win)
+        #actual_match.left_child_win() if left_child_win else actual_match.right_child_win()
 
 
 class MatchUnder16:
@@ -243,7 +245,20 @@ class MatchUnder16:
     def get_repechage(self):
         return self.repechage
 
-    #do poprawy zle przyporzadkowuje trzecie miejsca
+    def get_actual_fighters(self):
+        actual_match = None
+        if 1 <= self.actualMatchId <= 14:
+            actual_match = self.eliminations.get_actual_node()
+        elif 15 <= self.actualMatchId <= 20:
+            actual_match = self.repechage.get_actual_node()
+        elif self.actualMatchId in [21, 22]:
+            actual_match = self.bronzeFights[self.actualMatchId - 21]
+        else:
+            actual_match = self.eliminations.get_actual_node()
+
+        return [actual_match.left_child.competitor, actual_match.right_child.competitor]
+
+    # do poprawy zle przyporzadkowuje trzecie miejsca
     def get_places(self):
         results = []
         last_place = []

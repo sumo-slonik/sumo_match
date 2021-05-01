@@ -10,9 +10,17 @@ class Node:
 
     def make_match(self, left_child_win):
         if left_child_win:
-            self.competitor = self.left_child
+            if isinstance(self.left_child, Node):
+                self.competitor = self.left_child.competitor
+            else:
+                self.competitor = self.left_child
         else:
-            self.competitor = self.right_child
+            if isinstance(self.right_child, Node):
+                self.competitor = self.right_child.competitor
+            else:
+                self.competitor = self.right_child
+        self.competitor.win()
+        print(self.competitor.name, self.competitor.wins)
 
     def set_left_child(self, child):
         self.left_child = child

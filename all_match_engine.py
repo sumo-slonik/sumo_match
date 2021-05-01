@@ -1,16 +1,11 @@
 from abstractMatchesMaker import AbstractMatchesMaker
-from enum import Enum, auto
+from enum import Enum
 from match_under_16 import MatchUnder16
-from match_under_3 import MatchUnder3
-from match_under_5 import MatchUnder5
-from match_under_4 import MatchUnder4
+from match_under_5 import MatchUnder5Wrapper
 from Program_GUI.functionality.GUI_manipulation import *
 
 
 class TypeOFMatch(Enum):
-    Under2 = 2
-    Under3 = 3
-    Under4 = 4
     Under5 = 5
     Under10 = 10
     Under16 = 16
@@ -21,11 +16,7 @@ class TypeOFMatch(Enum):
 def correctTypeFromLength(length):
     if length == 2:
         return TypeOFMatch(2)
-    if length == 3:
-        return TypeOFMatch(3)
-    if length == 4:
-        return TypeOFMatch(4)
-    if length == 5:
+    if length <= 5:
         return TypeOFMatch(5)
     if length <= 10:  # (5,10]
         return TypeOFMatch(10)
@@ -46,11 +37,7 @@ class AllMatchEngine(AbstractMatchesMaker):
         if self.match_type == TypeOFMatch.Under16:
             self.engine = MatchUnder16(self.competitors)
         elif self.match_type == TypeOFMatch.Under5:
-            self.engine = MatchUnder5(self.competitors)
-        elif self.match_type == TypeOFMatch.Under4:
-            self.engine = MatchUnder4(self.competitors)
-        elif self.match_type == TypeOFMatch.Under3:
-            self.engine = MatchUnder3(self.competitors)
+            self.engine = MatchUnder5Wrapper(self.competitors)
 
     # TO DO
     def randomize_competitors(self, competitors):
@@ -68,15 +55,19 @@ class AllMatchEngine(AbstractMatchesMaker):
     def get_actual_match_id(self):
         self.engine.get_actual_match_id()
 
+    def print_fighters(self,window):
+        competitors = self.engine.get_actual_fighters()
+        print_actual_competitors(*competitors,window)
+
+
+
     def print_match(self, window):
         if self.match_type == TypeOFMatch.Under16:
             print_match_under_16(self.engine, window)
+            self.print_fighters(window)
         elif self.match_type == TypeOFMatch.Under5:
-            print_match_under_5(self.engine, window)
-        elif self.match_type == TypeOFMatch.Under4:
-            print_match_under_4(self.engine, window)
-        elif self.match_type == TypeOFMatch.Under3:
-            print_match_under_3(self.engine, window)
+            print_match_under_5_wrapper(self.engine, window)
+
 
 if __name__ == '__main__':
     for i in range(2, 34):

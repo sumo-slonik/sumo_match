@@ -365,21 +365,6 @@ QPushButton:hover{
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
-          <property name="spacing">
-           <number>0</number>
-          </property>
-          <property name="leftMargin">
-           <number>7</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <item alignment="Qt::AlignTop">
            <widget class="QFrame" name="frame">
             <property name="minimumSize">
@@ -394,26 +379,17 @@ QPushButton:hover{
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QFormLayout" name="formLayout">
-             <property name="horizontalSpacing">
-              <number>0</number>
-             </property>
-             <property name="verticalSpacing">
-              <number>0</number>
-             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_42">
              <property name="leftMargin">
               <number>0</number>
              </property>
              <property name="topMargin">
               <number>0</number>
              </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
              <property name="bottomMargin">
-              <number>0</number>
+              <number>11</number>
              </property>
-             <item row="0" column="0" colspan="2">
+             <item>
               <widget class="QPushButton" name="HomeButton">
                <property name="minimumSize">
                 <size>
@@ -430,14 +406,14 @@ padding-left: 50px;
 </string>
                </property>
                <property name="text">
-                <string>Home</string>
+                <string>Strona główna</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="0" colspan="2">
+             <item>
               <widget class="QPushButton" name="AccountButton">
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/Icons/icons/cil-user.png);
+                <string notr="true">background-image: url(:/Icons/icons/cil-folder-open.png);
 background-repeat:none;
 background-position: center left;
 
@@ -445,11 +421,62 @@ padding-left: 50px;
 </string>
                </property>
                <property name="text">
-                <string>Acount</string>
+                <string>Kategorie</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AccountButton_2">
+               <property name="styleSheet">
+                <string notr="true">background-image: url(:/Icons/icons/cil-user-follow.png);
+background-repeat:none;
+background-position: center left;
+
+padding-left: 50px;
+</string>
+               </property>
+               <property name="text">
+                <string>Wprowadzanie zawodników</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AccountButton_3">
+               <property name="styleSheet">
+                <string notr="true">background-image: url(:/Icons/icons/cil-description.png);
+background-repeat:none;
+background-position: center left;
+
+padding-left: 50px;
+</string>
+               </property>
+               <property name="text">
+                <string>Raporty</string>
                </property>
               </widget>
              </item>
             </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="InfoButton">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/Icons/icons/cil-comment-square.png);
+background-repeat:none;
+padding-left: 50px;
+background-position: center left;
+
+</string>
+            </property>
+            <property name="text">
+             <string>Komunikaty</string>
+            </property>
            </widget>
           </item>
           <item>
@@ -469,7 +496,7 @@ background-position: center left;
 </string>
             </property>
             <property name="text">
-             <string>Settings</string>
+             <string>Ustawienia</string>
             </property>
            </widget>
           </item>
@@ -503,7 +530,7 @@ background-position: center left;
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="0" column="0">
+          <item row="0" column="0" alignment="Qt::AlignTop">
            <widget class="QFrame" name="Second_left_menu">
             <property name="minimumSize">
              <size>
@@ -513,7 +540,7 @@ background-position: center left;
             </property>
             <property name="maximumSize">
              <size>
-              <width>50</width>
+              <width>0</width>
               <height>16777215</height>
              </size>
             </property>
@@ -641,7 +668,7 @@ background-position: center left;
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>0</height>
+              <height>50</height>
              </size>
             </property>
             <property name="currentIndex">
@@ -685,7 +712,7 @@ background-position: center left;
 }</string>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="MatchUnder16">
                     <layout class="QVBoxLayout" name="verticalLayout_118">
@@ -802,7 +829,7 @@ background-position: center left;
 }</string>
                        </property>
                        <property name="currentIndex">
-                        <number>3</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="Eliminations">
                         <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -2854,7 +2881,7 @@ p, li { white-space: pre-wrap; }
                      <item>
                       <widget class="QStackedWidget" name="match_5">
                        <property name="currentIndex">
-                        <number>3</number>
+                        <number>2</number>
                        </property>
                        <widget class="QWidget" name="under_5">
                         <layout class="QHBoxLayout" name="horizontalLayout_36">
@@ -5533,7 +5560,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTextEdit" name="textEdit">
+                     <widget class="QTextEdit" name="Competitor_1">
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
@@ -5572,7 +5599,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTextEdit" name="textEdit_2">
+                     <widget class="QTextEdit" name="Competitor_2">
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
@@ -5671,7 +5698,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="maximumSize">
           <size>
-           <width>100</width>
+           <width>0</width>
            <height>16777215</height>
           </size>
          </property>
@@ -5684,6 +5711,31 @@ p, li { white-space: pre-wrap; }
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QVBoxLayout" name="verticalLayout_43">
+          <item>
+           <widget class="QPushButton" name="CloseCommunicateButton">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="gui_theme.qrc">
+              <normaloff>:/Icons/icons/cil-x-circle.png</normaloff>:/Icons/icons/cil-x-circle.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="Communicate"/>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -5691,10 +5743,16 @@ p, li { white-space: pre-wrap; }
     </item>
     <item>
      <widget class="QFrame" name="main_footer">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>10</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>50</height>
+        <height>0</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -5706,6 +5764,7 @@ p, li { white-space: pre-wrap; }
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_43"/>
      </widget>
     </item>
    </layout>

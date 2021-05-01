@@ -47,11 +47,16 @@ class MainWindow(QMainWindow):
         # Restore/Maximize window
         self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
 
+        #left menu buttons
         self.ui.Top_menu_slide_button.clicked.connect(lambda: self.slide_upper_menu())
         self.ui.left_menu_toggle_button.clicked.connect(lambda: self.slide_left_menu())
         self.ui.HomeButton.clicked.connect(lambda: self.menu_button_function("HomePage"))
         self.ui.AccountButton.clicked.connect(lambda: self.menu_button_function("AccountPage"))
         self.ui.SettingsButton.clicked.connect(lambda: self.menu_button_function("SettingsPage"))
+        self.ui.InfoButton.clicked.connect(lambda: self.slide_communicate())
+
+        # close communicate
+        self.ui.CloseCommunicateButton.clicked.connect(lambda: self.slide_communicate())
 
         # top menu buttons
         self.ui.HalfFinal_button.clicked.connect(lambda: self.top_menu_function("HalfFinals"))
@@ -107,13 +112,27 @@ class MainWindow(QMainWindow):
         actual_menu_size = self.ui.left_menu.width()
         new_menu_size = 0
         if actual_menu_size == 50:
-            new_menu_size = 125
+            new_menu_size = 225
         else:
             new_menu_size = 50
         self.leftMenuAnimation = QPropertyAnimation(self.ui.left_menu, b"minimumWidth")
         self.leftMenuAnimation.setDuration(450)
         self.leftMenuAnimation.setStartValue(actual_menu_size)
         self.leftMenuAnimation.setEndValue(new_menu_size)
+        self.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.leftMenuAnimation.start()
+
+
+    def slide_communicate(self):
+        actual_size= self.ui.right_menu.width()
+        if actual_size == 0:
+            new_size = 250
+        else:
+            new_size = 0
+        self.leftMenuAnimation = QPropertyAnimation(self.ui.right_menu, b"minimumWidth")
+        self.leftMenuAnimation.setDuration(450)
+        self.leftMenuAnimation.setStartValue(actual_size)
+        self.leftMenuAnimation.setEndValue(new_size)
         self.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.leftMenuAnimation.start()
 
@@ -206,7 +225,7 @@ if __name__ == "__main__":
     # competitors = personal_competitor_txt_input("Competitors.txt")
     # teams = divide_competitors_to_teams(competitors)
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
-    competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(3)]
+    competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(4)]
     window = MainWindow()
     Opener("Categories",window).add_category_buttons()
     engine = AllMatchEngine(competitors)

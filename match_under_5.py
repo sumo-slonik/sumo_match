@@ -1,7 +1,10 @@
+from abc import ABC
 from personal_competitor import *
 from tree_node import Node as Match
 from abstractMatchesMaker import AbstractMatchesMaker
 from random import choice
+from match_under_4 import MatchUnder4
+from match_under_3 import MatchUnder3
 
 
 class MatchUnder5(AbstractMatchesMaker):
@@ -10,6 +13,7 @@ class MatchUnder5(AbstractMatchesMaker):
         self.competitors = competitors
         self.matches = [Match() for _ in range(10)]
         self.actualMatchId = 0
+        self.is_end = False
 
         # in the documents directory there is
         # a visualisation of the players' order, the player
@@ -23,7 +27,10 @@ class MatchUnder5(AbstractMatchesMaker):
     def make_match(self, left_win):
         self.matches[self.actualMatchId].make_match(left_win)
         self.print_actual_match()
-        self.go_to_next_round()
+        if self.actualMatchId == 9:
+            self.is_end = True
+        else:
+            self.go_to_next_round()
 
     def go_to_next_round(self):
         if self.actualMatchId < 10:
@@ -53,7 +60,97 @@ class MatchUnder5(AbstractMatchesMaker):
         return competitors_points
 
     def get_competitors(self):
-        return self.competitors
+        return self.competitors[:]
+
+
+class MatchUnder5Wrapper:
+    def __init__(self, competitors):
+        self.results = []
+        self.losers = []
+        self.actual_state = len(competitors)
+        self.competitors = competitors
+        if self.actual_state == 5:
+            self.engine = MatchUnder5(competitors)
+        if self.actual_state == 4:
+            self.engine = MatchUnder4(competitors)
+        if self.actual_state == 3:
+            self.engine = MatchUnder3(competitors)
+
+
+    def check_if_two_competitors_get_the_same_result(self):
+        if len(self.competitors) == 2 or (
+                len(self.competitors) >= 3 and self.competitors[0].get_wins() == self.competitors[1].get_wins() !=
+                self.competitors[2].get_wins()):
+            for match in self.engine.matches:
+                if (match.left_child == self.competitors[0] and match.right_child == self.competitors[1]) or (
+                        match.left_child == self.competitors[1] and match.right_child == self.competitors[0]):
+                    if match.competitor == self.competitors[0]:
+                        self.results.append(self.competitors[0])
+                        self.results.append(self.competitors[1])
+                    else:
+                        self.results.append(self.competitors[1])
+                        self.results.append(self.competitors[0])
+            del self.competitors[0]
+            del self.competitors[1]
+
+    def get_bests_competitors_to_results(self):
+        while len(self.competitors) > 1 and self.competitors[0].get_wins() != self.competitors[1].get_wins():
+            self.results.append(self.competitors[0])
+            del self.competitors[0]
+        if len(self.competitors) == 1:
+            self.results.append(self.competitors[0])
+            del self.competitors[0]
+
+    def make_match(self, left_wins):
+        print("______________________")
+        print("______________________")
+        for i in self.competitors:
+            print(i.name)
+        print("______________________")
+        print("______________________")
+
+        if not self.engine.is_end:
+            self.engine.make_match(left_wins)
+        elif self.competitors:
+            print("tworzenie meczu")
+            self.competitors.sort(key=lambda x: x.get_wins(), reverse=True)
+            # here we deleting person with the best results
+            # and we adding this person to our results list
+            # only when  we have only one person with the best result
+            # and all is clear
+            self.get_bests_competitors_to_results()
+            # not clear situation
+            if self.competitors:
+                # we only have two best results
+                self.check_if_two_competitors_get_the_same_result()
+                self.get_bests_competitors_to_results()
+                self.check_if_two_competitors_get_the_same_result()
+                self.get_bests_competitors_to_results()
+                # we have more than two competitors with the same result
+                if self.competitors:
+                    max_points = self.competitors[0].get_wins()
+                    to_rematch = []
+                    for i in range(len(self.competitors)):
+                        if self.competitors[i].get_wins() == max_points:
+                            # print(i)
+                            to_rematch.append(self.competitors[i])
+                    # for i in to_rematch:
+                    #     print(i.name)
+                    for to_del in to_rematch:
+                        print(to_del.name)
+                        self.competitors.remove(to_del)
+
+                    new_losers = self.competitors
+                    self.losers = new_losers+self.losers
+                    self.competitors = to_rematch
+                    self.actual_state = len(self.competitors)
+                    if self.actual_state == 5:
+                        self.engine = MatchUnder5(self.competitors)
+                    if self.actual_state == 4:
+                        self.engine = MatchUnder4(self.competitors)
+                    if self.actual_state == 3:
+                        print("tutaj weszło")
+                        self.engine = MatchUnder3(self.competitors)
 
 
 if __name__ == '__main__':
@@ -64,6 +161,5 @@ if __name__ == '__main__':
         result = choice([True, False])
         print("Left Win:", result)
         matches.make_match(result)
-        matches.print_actual_match()
-        matches.go_to_next_round()
+
     matches.get_results()

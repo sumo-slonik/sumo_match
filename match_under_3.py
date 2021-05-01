@@ -11,6 +11,7 @@ class MatchUnder3(AbstractMatchesMaker, ABC):
         self.competitors = competitors
         self.matches = [Match() for _ in range(3)]
         self.actual_match_id = 0
+        self.is_end = False
 
         self._match_order = [(1, 2), (2, 3), (1, 3)]
         for competitor_id, match in zip(self._match_order, self.matches):
@@ -18,12 +19,12 @@ class MatchUnder3(AbstractMatchesMaker, ABC):
             match.set_right_child(self.competitors[competitor_id[1] - 1])
 
     def make_match(self, left_wins):
-        if left_wins:
-            self.matches[self.actual_match_id].left_child.wins += 1
-        else:
-            self.matches[self.actual_match_id].right_child.wins += 1
         self.matches[self.actual_match_id].make_match(left_wins)
-        self.go_to_next_round()
+        if self.actual_match_id == 2:
+            self.is_end = True
+        else:
+            self.go_to_next_round()
+
     def go_to_next_round(self):
         if self.actual_match_id < 2:
             self.actual_match_id += 1
@@ -53,7 +54,7 @@ class MatchUnder3(AbstractMatchesMaker, ABC):
         return self.competitors[0].wins == self.competitors[1].wins == self.competitors[2].wins
 
     def get_competitors(self):
-        return self.competitors
+        return self.competitors[:]
 
 
 if __name__ == "__main__":

@@ -13,10 +13,10 @@ class PersonalCompetitor:
         return self.name
 
     def get_first_name(self):
-        return self.name.split()[0]
+        return self.name.split()[1]
 
     def get_surname(self):
-        return self.name.split()[1]
+        return self.name.split()[0]
 
     def get_weight(self):
         return self.weight
@@ -26,6 +26,15 @@ class PersonalCompetitor:
 
     def get_birth_year(self):
         return self.birth_year
+
+    def get_wins(self):
+        return self.wins
+
+    def win(self):
+        self.wins += 1
+
+    def lose(self):
+        self.losses += 1
 
     def custom_string_repr(self, show_first_name=True, show_surname_name=True, show_club=True, show_birth_year=True,
                            show_weight=True):

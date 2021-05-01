@@ -10,6 +10,7 @@ class MatchUnder4(AbstractMatchesMaker):
         self.competitors = competitors
         self.matches = [Match() for _ in range(6)]
         self.actualMatchId = 0
+        self.is_end = False
 
         # in the documents directory there is
         # a visualisation of the players' order, the player
@@ -22,7 +23,10 @@ class MatchUnder4(AbstractMatchesMaker):
     def make_match(self, left_win):
         self.matches[self.actualMatchId].make_match(left_win)
         self.print_actual_match()
-        self.go_to_next_round()
+        if self.actualMatchId == 5:
+            self.is_end = True
+        else:
+            self.go_to_next_round()
 
     def go_to_next_round(self):
         if self.actualMatchId < 10:
@@ -52,7 +56,7 @@ class MatchUnder4(AbstractMatchesMaker):
         return competitors_points
 
     def get_competitors(self):
-        return self.competitors
+        return self.competitors[:]
 
 
 if __name__ == '__main__':

@@ -306,3 +306,36 @@ def print_match_under_3(match_under_3, main_window):
     load_competitors_to_nodes(node_names, competitors_list, main_window)
     print_match_under_3_points(match_under_3, main_window)
     print_actual_match_under_3(match_under_3, main_window)
+
+
+def print_match_under_5_wrapper(match_under_5_wrapper, main_window):
+    if match_under_5_wrapper.actual_state == 5:
+        print_match_under_5(match_under_5_wrapper.engine, main_window)
+    if match_under_5_wrapper.actual_state == 4:
+        print_match_under_4(match_under_5_wrapper.engine, main_window)
+    if match_under_5_wrapper.actual_state == 3:
+        print_match_under_3(match_under_5_wrapper.engine, main_window)
+
+
+def print_actual_competitors(competitor1, competitor2, window):
+    def competitor_to_description(competitor):
+        result = ''
+        result += 'Imię:'
+        result += competitor.get_first_name()
+        result += '\n'
+        result += 'Nazwisko:'
+        result += competitor.get_surname()
+        result += '\n'
+        result += 'Klub:'
+        result += competitor.get_club()
+        result += '\n'
+        result += 'Waga:'
+        result += competitor.get_weight()
+        result += '\n'
+        result += 'Wygrane:'
+        result += str(competitor.get_wins())
+        result += '\n'
+        return result
+
+    window.ui.Competitor_1.setPlainText(competitor_to_description(competitor1))
+    window.ui.Competitor_2.setPlainText(competitor_to_description(competitor2))
