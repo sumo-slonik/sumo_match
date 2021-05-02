@@ -4,7 +4,7 @@ from PySide2.QtCore import QCoreApplication
 from PySide2.QtWidgets import QPushButton
 
 
-class Opener():
+class Opener:
     def __init__(self, path, window):
         self.window = window
         self.path = path

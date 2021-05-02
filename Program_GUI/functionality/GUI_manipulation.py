@@ -1,3 +1,4 @@
+from PySide2 import QtCore
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
@@ -339,3 +340,17 @@ def print_actual_competitors(competitor1, competitor2, window):
 
     window.ui.Competitor_1.setPlainText(competitor_to_description(competitor1))
     window.ui.Competitor_2.setPlainText(competitor_to_description(competitor2))
+
+
+def show_message(window, message, slide=False):
+    window.ui.Communicate.setPlainText(message)
+    if slide:
+        actual_size = window.ui.right_menu.width()
+        if actual_size == 0:
+            new_size = 250
+            window.leftMenuAnimation = QPropertyAnimation(window.ui.right_menu, b"minimumWidth")
+            window.leftMenuAnimation.setDuration(450)
+            window.leftMenuAnimation.setStartValue(actual_size)
+            window.leftMenuAnimation.setEndValue(new_size)
+            window.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            window.leftMenuAnimation.start()

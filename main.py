@@ -11,6 +11,8 @@ from random_functions import random_function_16
 from all_match_engine import AllMatchEngine
 from match_under_5 import MatchUnder5 as Under5
 from category_opener import Opener
+from category_adder import CategoryAdder
+
 WINDOW_SIZE = 0
 
 
@@ -22,7 +24,9 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         self.leftMenuAnimation = None
         self.topMenuAnimation = None
+        self.rightMenuAnimation = None
         self.SecondLeftMenuAnimation = None
+        self.categories_adder = CategoryAdder(self)
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
@@ -47,13 +51,14 @@ class MainWindow(QMainWindow):
         # Restore/Maximize window
         self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
 
-        #left menu buttons
+        # left menu buttons
         self.ui.Top_menu_slide_button.clicked.connect(lambda: self.slide_upper_menu())
         self.ui.left_menu_toggle_button.clicked.connect(lambda: self.slide_left_menu())
         self.ui.HomeButton.clicked.connect(lambda: self.menu_button_function("HomePage"))
         self.ui.AccountButton.clicked.connect(lambda: self.menu_button_function("AccountPage"))
         self.ui.SettingsButton.clicked.connect(lambda: self.menu_button_function("SettingsPage"))
         self.ui.InfoButton.clicked.connect(lambda: self.slide_communicate())
+        self.ui.AddCategoriesButton.clicked.connect(lambda: self.menu_button_function("CompetitorInputPage"))
 
         # close communicate
         self.ui.CloseCommunicateButton.clicked.connect(lambda: self.slide_communicate())
@@ -71,6 +76,11 @@ class MainWindow(QMainWindow):
         self.ui.Button_4_competitors.clicked.connect(lambda: self.category_menu_button_function("4"))
         self.ui.Button_3_competitors.clicked.connect(lambda: self.category_menu_button_function("3"))
         self.ui.Button_2_competitors.clicked.connect(lambda: self.category_menu_button_function("2"))
+
+        # adding_competitor
+        self.ui.CategoriesBrowseButton.clicked.connect(lambda: self.categories_adder.add_category())
+        self.ui.AddCategoriesButton_2.clicked.connect(lambda: self.categories_adder.confirm_categories())
+
         # Show window
         self.showFullScreen()
         self.show()
@@ -122,19 +132,18 @@ class MainWindow(QMainWindow):
         self.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.leftMenuAnimation.start()
 
-
     def slide_communicate(self):
-        actual_size= self.ui.right_menu.width()
+        actual_size = self.ui.right_menu.width()
         if actual_size == 0:
             new_size = 250
         else:
             new_size = 0
-        self.leftMenuAnimation = QPropertyAnimation(self.ui.right_menu, b"minimumWidth")
-        self.leftMenuAnimation.setDuration(450)
-        self.leftMenuAnimation.setStartValue(actual_size)
-        self.leftMenuAnimation.setEndValue(new_size)
-        self.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
-        self.leftMenuAnimation.start()
+        self.rightMenuAnimation = QPropertyAnimation(self.ui.right_menu, b"minimumWidth")
+        self.rightMenuAnimation.setDuration(450)
+        self.rightMenuAnimation.setStartValue(actual_size)
+        self.rightMenuAnimation.setEndValue(new_size)
+        self.rightMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.rightMenuAnimation.start()
 
     def slide_second_left_menu(self):
         actual_menu_size = self.ui.Second_left_menu.width()
@@ -158,6 +167,8 @@ class MainWindow(QMainWindow):
         if go_to == "AccountPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.AcountPage)
             self.slide_second_left_menu()
+        if go_to == 'CompetitorInputPage':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.CompetitorInputPage)
 
     def top_menu_function(self, go_to):
         if go_to == "Eliminations":
@@ -227,7 +238,8 @@ if __name__ == "__main__":
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
     competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(4)]
     window = MainWindow()
-    Opener("Categories",window).add_category_buttons()
+    adder = CategoryAdder(window)
+    Opener("Categories", window).add_category_buttons()
     engine = AllMatchEngine(competitors)
     connect_gui_to_engine(window, engine)
     sys.exit(app.exec_())
