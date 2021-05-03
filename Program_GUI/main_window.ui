@@ -900,6 +900,18 @@ background-position: center left;
                        </item>
                        <item>
                         <widget class="QScrollArea" name="AddedCategories">
+                         <property name="minimumSize">
+                          <size>
+                           <width>250</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>250</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
                          <property name="widgetResizable">
                           <bool>true</bool>
                          </property>
@@ -908,7 +920,7 @@ background-position: center left;
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>250</width>
+                            <width>248</width>
                             <height>253</height>
                            </rect>
                           </property>
@@ -987,7 +999,193 @@ background-position: center left;
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_92">
                        <item>
-                        <widget class="QTableWidget" name="tableWidget"/>
+                        <widget class="QTableWidget" name="CompetitorsTable">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>250</height>
+                          </size>
+                         </property>
+                         <column>
+                          <property name="text">
+                           <string>Imię</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Nazwisko</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Klub</string>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_120">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_51">
+                          <item>
+                           <widget class="QFrame" name="frame_122">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_52">
+                             <item>
+                              <widget class="QFrame" name="frame_121">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_94">
+                                <item>
+                                 <widget class="QFrame" name="frame_123">
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>330</width>
+                                    <height>140</height>
+                                   </size>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_96">
+                                   <item>
+                                    <widget class="QLabel" name="label_29">
+                                     <property name="text">
+                                      <string>Imię:</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_27">
+                                     <property name="text">
+                                      <string>Nazwisko:</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_30">
+                                     <property name="text">
+                                      <string>Klub:</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_31">
+                                     <property name="text">
+                                      <string>Rok urodzenia:</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_28">
+                                     <property name="text">
+                                      <string>Nr licencji:</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_124">
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>330</width>
+                                    <height>140</height>
+                                   </size>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_95">
+                                   <item>
+                                    <widget class="QTextEdit" name="textEdit"/>
+                                   </item>
+                                   <item>
+                                    <widget class="QPushButton" name="pushButton_3">
+                                     <property name="text">
+                                      <string>Zatwierdź</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_125">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_97">
+                                <item>
+                                 <widget class="QFrame" name="frame_126">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_98">
+                                   <item>
+                                    <widget class="QLabel" name="label_32">
+                                     <property name="text">
+                                      <string>Kategorie</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_127">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
                        </item>
                       </layout>
                      </widget>

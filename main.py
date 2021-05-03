@@ -29,7 +29,6 @@ class MainWindow(QMainWindow):
         self.categories_adder = CategoryAdder(self)
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-
         # Set main background to transparent
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
@@ -80,7 +79,7 @@ class MainWindow(QMainWindow):
         # adding_competitor
         self.ui.CategoriesBrowseButton.clicked.connect(lambda: self.categories_adder.add_category())
         self.ui.AddCategoriesButton_2.clicked.connect(lambda: self.categories_adder.confirm_categories())
-
+        self.ui.CompetitorsTable.clicked.connect(lambda: self.table_clicked())
         # Show window
         self.showFullScreen()
         self.show()
@@ -197,6 +196,15 @@ class MainWindow(QMainWindow):
             self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
             self.ui.match_5.setCurrentWidget(self.ui.Under2)
 
+    def table_clicked(self):
+        # #selected cell value.
+        index=(self.ui.CompetitorsTable.selectionModel().currentIndex())
+        # print(index)
+        value=index.sibling(index.row(),3).data()
+        print("to leci do addera: ",value)
+        self.categories_adder.process_competitor(value)
+
+
 
 # # Execute app
 #
@@ -238,7 +246,6 @@ if __name__ == "__main__":
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
     competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(4)]
     window = MainWindow()
-    adder = CategoryAdder(window)
     Opener("Categories", window).add_category_buttons()
     engine = AllMatchEngine(competitors)
     connect_gui_to_engine(window, engine)
