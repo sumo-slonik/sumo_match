@@ -67,6 +67,7 @@ class MatchUnder5Wrapper:
     def __init__(self, competitors):
         self.results = []
         self.losers = []
+        self.is_end = False
         self.actual_state = len(competitors)
         self.competitors = competitors
         if self.actual_state == 5:
@@ -75,7 +76,6 @@ class MatchUnder5Wrapper:
             self.engine = MatchUnder4(competitors)
         if self.actual_state == 3:
             self.engine = MatchUnder3(competitors)
-
 
     def check_if_two_competitors_get_the_same_result(self):
         if len(self.competitors) == 2 or (
@@ -91,7 +91,7 @@ class MatchUnder5Wrapper:
                         self.results.append(self.competitors[1])
                         self.results.append(self.competitors[0])
             del self.competitors[0]
-            del self.competitors[1]
+            del self.competitors[0]
 
     def get_bests_competitors_to_results(self):
         while len(self.competitors) > 1 and self.competitors[0].get_wins() != self.competitors[1].get_wins():
@@ -108,58 +108,62 @@ class MatchUnder5Wrapper:
             print(i.name)
         print("______________________")
         print("______________________")
-
-        if not self.engine.is_end:
-            self.engine.make_match(left_wins)
-        elif self.competitors:
-            print("tworzenie meczu")
-            self.competitors.sort(key=lambda x: x.get_wins(), reverse=True)
-            # here we deleting person with the best results
-            # and we adding this person to our results list
-            # only when  we have only one person with the best result
-            # and all is clear
-            self.get_bests_competitors_to_results()
-            # not clear situation
-            if self.competitors:
-                # we only have two best results
-                self.check_if_two_competitors_get_the_same_result()
+        if not self.is_end:
+            if not self.engine.is_end:
+                self.engine.make_match(left_wins)
+            elif self.competitors:
+                print("tworzenie meczu")
+                self.competitors.sort(key=lambda x: x.get_wins(), reverse=True)
+                # here we deleting person with the best results
+                # and we adding this person to our results list
+                # only when  we have only one person with the best result
+                # and all is clear
                 self.get_bests_competitors_to_results()
-                self.check_if_two_competitors_get_the_same_result()
-                self.get_bests_competitors_to_results()
-                # we have more than two competitors with the same result
+                # not clear situation
                 if self.competitors:
-                    max_points = self.competitors[0].get_wins()
-                    to_rematch = []
-                    for i in range(len(self.competitors)):
-                        if self.competitors[i].get_wins() == max_points:
-                            # print(i)
-                            to_rematch.append(self.competitors[i])
-                    # for i in to_rematch:
-                    #     print(i.name)
-                    for to_del in to_rematch:
-                        print(to_del.name)
-                        self.competitors.remove(to_del)
+                    # we only have two best results
+                    self.check_if_two_competitors_get_the_same_result()
+                    self.get_bests_competitors_to_results()
+                    self.check_if_two_competitors_get_the_same_result()
+                    self.get_bests_competitors_to_results()
+                    # we have more than two competitors with the same result
+                    if self.competitors:
+                        max_points = self.competitors[0].get_wins()
+                        to_rematch = []
+                        for i in range(len(self.competitors)):
+                            if self.competitors[i].get_wins() == max_points:
+                                # print(i)
+                                to_rematch.append(self.competitors[i])
+                        # for i in to_rematch:
+                        #     print(i.name)
+                        for to_del in to_rematch:
+                            print(to_del.name)
+                            self.competitors.remove(to_del)
 
-                    new_losers = self.competitors
-                    self.losers = new_losers+self.losers
-                    self.competitors = to_rematch
-                    self.actual_state = len(self.competitors)
-                    if self.actual_state == 5:
-                        self.engine = MatchUnder5(self.competitors)
-                    if self.actual_state == 4:
-                        self.engine = MatchUnder4(self.competitors)
-                    if self.actual_state == 3:
-                        print("tutaj weszło")
-                        self.engine = MatchUnder3(self.competitors)
+                        new_losers = self.competitors
+                        self.losers = new_losers + self.losers
+                        self.competitors = to_rematch
+                        self.actual_state = len(self.competitors)
+                        if self.actual_state == 5:
+                            self.engine = MatchUnder5(self.competitors)
+                        if self.actual_state == 4:
+                            self.engine = MatchUnder4(self.competitors)
+                        if self.actual_state == 3:
+                            print("tutaj weszło")
+                            self.engine = MatchUnder3(self.competitors)
+        if not self.competitors:
+            self.is_end = True
 
 
 if __name__ == '__main__':
 
     Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
-    matches = MatchUnder5(Competitors)
-    for _ in range(10):
+    matches = MatchUnder5Wrapper(Competitors)
+
+    while not matches.is_end:
         result = choice([True, False])
         print("Left Win:", result)
         matches.make_match(result)
 
-    matches.get_results()
+    for i in matches.results:
+        print(i,i.get_wins())
