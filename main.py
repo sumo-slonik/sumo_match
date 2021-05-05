@@ -12,6 +12,7 @@ from all_match_engine import AllMatchEngine
 from match_under_5 import MatchUnder5 as Under5
 from category_opener import Opener
 from category_adder import CategoryAdder
+from settings import Settings
 
 WINDOW_SIZE = 0
 
@@ -27,6 +28,7 @@ class MainWindow(QMainWindow):
         self.rightMenuAnimation = None
         self.SecondLeftMenuAnimation = None
         self.categories_adder = CategoryAdder(self)
+        self.settings = Settings(self)
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         # Set main background to transparent
@@ -80,6 +82,13 @@ class MainWindow(QMainWindow):
         self.ui.CategoriesBrowseButton.clicked.connect(lambda: self.categories_adder.add_category())
         self.ui.AddCategoriesButton_2.clicked.connect(lambda: self.categories_adder.confirm_categories())
         self.ui.CompetitorsTable.clicked.connect(lambda: self.table_clicked())
+        self.ui.DeleteCompetitorCategoryButton.clicked.connect(
+            (lambda: self.categories_adder.remove_category_from_competitor()))
+        self.ui.AddCompetitorCategoryButton.clicked.connect(
+            (lambda: self.categories_adder.add_category_to_competitor()))
+        self.ui.SaveCompetitorButton.clicked.connect(
+            (lambda: self.categories_adder.save_competitor_changes()))
+
         # Show window
         self.showFullScreen()
         self.show()
@@ -163,6 +172,7 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentWidget(self.ui.HomePage)
         if go_to == "SettingsPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.SettingsPage)
+            self.settings.show_values()
         if go_to == "AccountPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.AcountPage)
             self.slide_second_left_menu()
@@ -198,12 +208,11 @@ class MainWindow(QMainWindow):
 
     def table_clicked(self):
         # #selected cell value.
-        index=(self.ui.CompetitorsTable.selectionModel().currentIndex())
+        index = (self.ui.CompetitorsTable.selectionModel().currentIndex())
         # print(index)
-        value=index.sibling(index.row(),3).data()
-        print("to leci do addera: ",value)
+        value = index.sibling(index.row(), 3).data()
+        print("to leci do addera: ", value)
         self.categories_adder.process_competitor(value)
-
 
 
 # # Execute app

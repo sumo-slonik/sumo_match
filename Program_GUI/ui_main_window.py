@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowBfPnEE.ui'
+## Form generated from reading UI file 'main_windowOgbvjq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -528,25 +528,30 @@ class Ui_MainWindow(object):
         self.frame_118.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_50 = QHBoxLayout(self.frame_118)
         self.horizontalLayout_50.setObjectName(u"horizontalLayout_50")
-        self.comboBox_2 = QComboBox(self.frame_118)
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.GenderComboBox = QComboBox(self.frame_118)
+        self.GenderComboBox.setObjectName(u"GenderComboBox")
 
-        self.horizontalLayout_50.addWidget(self.comboBox_2)
+        self.horizontalLayout_50.addWidget(self.GenderComboBox)
 
-        self.comboBox_3 = QComboBox(self.frame_118)
-        self.comboBox_3.setObjectName(u"comboBox_3")
+        self.AgeComboBox = QComboBox(self.frame_118)
+        self.AgeComboBox.setObjectName(u"AgeComboBox")
 
-        self.horizontalLayout_50.addWidget(self.comboBox_3)
+        self.horizontalLayout_50.addWidget(self.AgeComboBox)
 
-        self.comboBox_4 = QComboBox(self.frame_118)
-        self.comboBox_4.setObjectName(u"comboBox_4")
+        self.CategoryComboBox = QComboBox(self.frame_118)
+        self.CategoryComboBox.setObjectName(u"CategoryComboBox")
 
-        self.horizontalLayout_50.addWidget(self.comboBox_4)
+        self.horizontalLayout_50.addWidget(self.CategoryComboBox)
 
-        self.pushButton_5 = QPushButton(self.frame_118)
-        self.pushButton_5.setObjectName(u"pushButton_5")
+        self.ClubComboBox = QComboBox(self.frame_118)
+        self.ClubComboBox.setObjectName(u"ClubComboBox")
 
-        self.horizontalLayout_50.addWidget(self.pushButton_5)
+        self.horizontalLayout_50.addWidget(self.ClubComboBox)
+
+        self.FilterCattegoryButton = QPushButton(self.frame_118)
+        self.FilterCattegoryButton.setObjectName(u"FilterCattegoryButton")
+
+        self.horizontalLayout_50.addWidget(self.FilterCattegoryButton)
 
 
         self.verticalLayout_91.addWidget(self.frame_118)
@@ -557,7 +562,13 @@ class Ui_MainWindow(object):
         self.frame_119.setFrameShadow(QFrame.Raised)
         self.verticalLayout_92 = QVBoxLayout(self.frame_119)
         self.verticalLayout_92.setObjectName(u"verticalLayout_92")
-        self.CompetitorsTable = QTableWidget(self.frame_119)
+        self.frame_131 = QFrame(self.frame_119)
+        self.frame_131.setObjectName(u"frame_131")
+        self.frame_131.setFrameShape(QFrame.StyledPanel)
+        self.frame_131.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_56 = QHBoxLayout(self.frame_131)
+        self.horizontalLayout_56.setObjectName(u"horizontalLayout_56")
+        self.CompetitorsTable = QTableWidget(self.frame_131)
         if (self.CompetitorsTable.columnCount() < 4):
             self.CompetitorsTable.setColumnCount(4)
         __qtablewidgetitem = QTableWidgetItem()
@@ -571,7 +582,43 @@ class Ui_MainWindow(object):
         self.CompetitorsTable.setObjectName(u"CompetitorsTable")
         self.CompetitorsTable.setMaximumSize(QSize(16777215, 250))
 
-        self.verticalLayout_92.addWidget(self.CompetitorsTable)
+        self.horizontalLayout_56.addWidget(self.CompetitorsTable)
+
+        self.frame_132 = QFrame(self.frame_131)
+        self.frame_132.setObjectName(u"frame_132")
+        self.frame_132.setFrameShape(QFrame.StyledPanel)
+        self.frame_132.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_100 = QVBoxLayout(self.frame_132)
+        self.verticalLayout_100.setObjectName(u"verticalLayout_100")
+        self.DeleteCompetitorCategoryButton_2 = QPushButton(self.frame_132)
+        self.DeleteCompetitorCategoryButton_2.setObjectName(u"DeleteCompetitorCategoryButton_2")
+        icon5 = QIcon()
+        icon5.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DeleteCompetitorCategoryButton_2.setIcon(icon5)
+
+        self.verticalLayout_100.addWidget(self.DeleteCompetitorCategoryButton_2)
+
+        self.AddCompetitorCategoryButton_3 = QPushButton(self.frame_132)
+        self.AddCompetitorCategoryButton_3.setObjectName(u"AddCompetitorCategoryButton_3")
+        icon6 = QIcon()
+        icon6.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton_3.setIcon(icon6)
+
+        self.verticalLayout_100.addWidget(self.AddCompetitorCategoryButton_3)
+
+        self.AddCompetitorCategoryButton_2 = QPushButton(self.frame_132)
+        self.AddCompetitorCategoryButton_2.setObjectName(u"AddCompetitorCategoryButton_2")
+        icon7 = QIcon()
+        icon7.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton_2.setIcon(icon7)
+
+        self.verticalLayout_100.addWidget(self.AddCompetitorCategoryButton_2)
+
+
+        self.horizontalLayout_56.addWidget(self.frame_132)
+
+
+        self.verticalLayout_92.addWidget(self.frame_131)
 
         self.frame_120 = QFrame(self.frame_119)
         self.frame_120.setObjectName(u"frame_120")
@@ -658,15 +705,12 @@ class Ui_MainWindow(object):
         self.frame_129.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_54 = QHBoxLayout(self.frame_129)
         self.horizontalLayout_54.setObjectName(u"horizontalLayout_54")
-        self.pushButton_4 = QPushButton(self.frame_129)
-        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.SaveCompetitorButton = QPushButton(self.frame_129)
+        self.SaveCompetitorButton.setObjectName(u"SaveCompetitorButton")
+        self.SaveCompetitorButton.setMaximumSize(QSize(16777215, 40))
+        self.SaveCompetitorButton.setIcon(icon7)
 
-        self.horizontalLayout_54.addWidget(self.pushButton_4)
-
-        self.pushButton_3 = QPushButton(self.frame_129)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-
-        self.horizontalLayout_54.addWidget(self.pushButton_3)
+        self.horizontalLayout_54.addWidget(self.SaveCompetitorButton)
 
 
         self.verticalLayout_95.addWidget(self.frame_129)
@@ -717,6 +761,27 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_55.addWidget(self.CompetitorCategories)
 
+        self.frame_130 = QFrame(self.frame_127)
+        self.frame_130.setObjectName(u"frame_130")
+        self.frame_130.setFrameShape(QFrame.StyledPanel)
+        self.frame_130.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_99 = QVBoxLayout(self.frame_130)
+        self.verticalLayout_99.setObjectName(u"verticalLayout_99")
+        self.DeleteCompetitorCategoryButton = QPushButton(self.frame_130)
+        self.DeleteCompetitorCategoryButton.setObjectName(u"DeleteCompetitorCategoryButton")
+        self.DeleteCompetitorCategoryButton.setIcon(icon5)
+
+        self.verticalLayout_99.addWidget(self.DeleteCompetitorCategoryButton)
+
+        self.AddCompetitorCategoryButton = QPushButton(self.frame_130)
+        self.AddCompetitorCategoryButton.setObjectName(u"AddCompetitorCategoryButton")
+        self.AddCompetitorCategoryButton.setIcon(icon6)
+
+        self.verticalLayout_99.addWidget(self.AddCompetitorCategoryButton)
+
+
+        self.horizontalLayout_55.addWidget(self.frame_130)
+
 
         self.verticalLayout_97.addWidget(self.frame_127)
 
@@ -742,6 +807,517 @@ class Ui_MainWindow(object):
         self.SettingsPage = QWidget()
         self.SettingsPage.setObjectName(u"SettingsPage")
         self.SettingsPage.setStyleSheet(u"background-color: rgb(255, 170, 255);")
+        self.verticalLayout_101 = QVBoxLayout(self.SettingsPage)
+        self.verticalLayout_101.setObjectName(u"verticalLayout_101")
+        self.frame_133 = QFrame(self.SettingsPage)
+        self.frame_133.setObjectName(u"frame_133")
+        self.frame_133.setFrameShape(QFrame.StyledPanel)
+        self.frame_133.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_58 = QHBoxLayout(self.frame_133)
+        self.horizontalLayout_58.setObjectName(u"horizontalLayout_58")
+        self.frame_135 = QFrame(self.frame_133)
+        self.frame_135.setObjectName(u"frame_135")
+        self.frame_135.setFrameShape(QFrame.StyledPanel)
+        self.frame_135.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_102 = QVBoxLayout(self.frame_135)
+        self.verticalLayout_102.setSpacing(0)
+        self.verticalLayout_102.setObjectName(u"verticalLayout_102")
+        self.verticalLayout_102.setContentsMargins(0, 0, 0, 0)
+        self.label_28 = QLabel(self.frame_135)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_28)
+
+        self.label_29 = QLabel(self.frame_135)
+        self.label_29.setObjectName(u"label_29")
+        self.label_29.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_29)
+
+        self.label_30 = QLabel(self.frame_135)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_30)
+
+        self.label_31 = QLabel(self.frame_135)
+        self.label_31.setObjectName(u"label_31")
+        self.label_31.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_31)
+
+        self.label_33 = QLabel(self.frame_135)
+        self.label_33.setObjectName(u"label_33")
+        self.label_33.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_33)
+
+        self.label_34 = QLabel(self.frame_135)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_34)
+
+        self.label_35 = QLabel(self.frame_135)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setMinimumSize(QSize(0, 96))
+
+        self.verticalLayout_102.addWidget(self.label_35)
+
+
+        self.horizontalLayout_58.addWidget(self.frame_135)
+
+        self.frame_136 = QFrame(self.frame_133)
+        self.frame_136.setObjectName(u"frame_136")
+        self.frame_136.setFrameShape(QFrame.StyledPanel)
+        self.frame_136.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_103 = QVBoxLayout(self.frame_136)
+        self.verticalLayout_103.setObjectName(u"verticalLayout_103")
+        self.frame_151 = QFrame(self.frame_136)
+        self.frame_151.setObjectName(u"frame_151")
+        self.frame_151.setMaximumSize(QSize(650, 100))
+        self.frame_151.setFrameShape(QFrame.StyledPanel)
+        self.frame_151.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_67 = QHBoxLayout(self.frame_151)
+        self.horizontalLayout_67.setObjectName(u"horizontalLayout_67")
+        self.frame_172 = QFrame(self.frame_151)
+        self.frame_172.setObjectName(u"frame_172")
+        self.frame_172.setMaximumSize(QSize(300, 100))
+        self.frame_172.setFrameShape(QFrame.StyledPanel)
+        self.frame_172.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_133 = QVBoxLayout(self.frame_172)
+        self.verticalLayout_133.setSpacing(0)
+        self.verticalLayout_133.setObjectName(u"verticalLayout_133")
+        self.verticalLayout_133.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_1 = QTextEdit(self.frame_172)
+        self.age_textEdit_1.setObjectName(u"age_textEdit_1")
+        self.age_textEdit_1.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_133.addWidget(self.age_textEdit_1)
+
+        self.age_slider_1 = QSlider(self.frame_172)
+        self.age_slider_1.setObjectName(u"age_slider_1")
+        self.age_slider_1.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_133.addWidget(self.age_slider_1)
+
+
+        self.horizontalLayout_67.addWidget(self.frame_172)
+
+        self.frame_173 = QFrame(self.frame_151)
+        self.frame_173.setObjectName(u"frame_173")
+        self.frame_173.setMaximumSize(QSize(300, 100))
+        self.frame_173.setFrameShape(QFrame.StyledPanel)
+        self.frame_173.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_134 = QVBoxLayout(self.frame_173)
+        self.verticalLayout_134.setSpacing(0)
+        self.verticalLayout_134.setObjectName(u"verticalLayout_134")
+        self.verticalLayout_134.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_2 = QTextEdit(self.frame_173)
+        self.age_textEdit_2.setObjectName(u"age_textEdit_2")
+        self.age_textEdit_2.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_134.addWidget(self.age_textEdit_2)
+
+        self.age_slider_2 = QSlider(self.frame_173)
+        self.age_slider_2.setObjectName(u"age_slider_2")
+        self.age_slider_2.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_134.addWidget(self.age_slider_2)
+
+
+        self.horizontalLayout_67.addWidget(self.frame_173)
+
+
+        self.verticalLayout_103.addWidget(self.frame_151)
+
+        self.frame_145 = QFrame(self.frame_136)
+        self.frame_145.setObjectName(u"frame_145")
+        self.frame_145.setMaximumSize(QSize(650, 100))
+        self.frame_145.setFrameShape(QFrame.StyledPanel)
+        self.frame_145.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_61 = QHBoxLayout(self.frame_145)
+        self.horizontalLayout_61.setObjectName(u"horizontalLayout_61")
+        self.frame_161 = QFrame(self.frame_145)
+        self.frame_161.setObjectName(u"frame_161")
+        self.frame_161.setMaximumSize(QSize(300, 100))
+        self.frame_161.setFrameShape(QFrame.StyledPanel)
+        self.frame_161.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_122 = QVBoxLayout(self.frame_161)
+        self.verticalLayout_122.setSpacing(0)
+        self.verticalLayout_122.setObjectName(u"verticalLayout_122")
+        self.verticalLayout_122.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_3 = QTextEdit(self.frame_161)
+        self.age_textEdit_3.setObjectName(u"age_textEdit_3")
+        self.age_textEdit_3.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_122.addWidget(self.age_textEdit_3)
+
+        self.age_slider_3 = QSlider(self.frame_161)
+        self.age_slider_3.setObjectName(u"age_slider_3")
+        self.age_slider_3.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_122.addWidget(self.age_slider_3)
+
+
+        self.horizontalLayout_61.addWidget(self.frame_161)
+
+        self.frame_160 = QFrame(self.frame_145)
+        self.frame_160.setObjectName(u"frame_160")
+        self.frame_160.setMaximumSize(QSize(300, 100))
+        self.frame_160.setFrameShape(QFrame.StyledPanel)
+        self.frame_160.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_121 = QVBoxLayout(self.frame_160)
+        self.verticalLayout_121.setSpacing(0)
+        self.verticalLayout_121.setObjectName(u"verticalLayout_121")
+        self.verticalLayout_121.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_4 = QTextEdit(self.frame_160)
+        self.age_textEdit_4.setObjectName(u"age_textEdit_4")
+        self.age_textEdit_4.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_121.addWidget(self.age_textEdit_4)
+
+        self.age_slider_4 = QSlider(self.frame_160)
+        self.age_slider_4.setObjectName(u"age_slider_4")
+        self.age_slider_4.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_121.addWidget(self.age_slider_4)
+
+
+        self.horizontalLayout_61.addWidget(self.frame_160)
+
+
+        self.verticalLayout_103.addWidget(self.frame_145)
+
+        self.frame_150 = QFrame(self.frame_136)
+        self.frame_150.setObjectName(u"frame_150")
+        self.frame_150.setMaximumSize(QSize(650, 100))
+        self.frame_150.setFrameShape(QFrame.StyledPanel)
+        self.frame_150.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_66 = QHBoxLayout(self.frame_150)
+        self.horizontalLayout_66.setObjectName(u"horizontalLayout_66")
+        self.frame_170 = QFrame(self.frame_150)
+        self.frame_170.setObjectName(u"frame_170")
+        self.frame_170.setMaximumSize(QSize(300, 100))
+        self.frame_170.setFrameShape(QFrame.StyledPanel)
+        self.frame_170.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_131 = QVBoxLayout(self.frame_170)
+        self.verticalLayout_131.setSpacing(0)
+        self.verticalLayout_131.setObjectName(u"verticalLayout_131")
+        self.verticalLayout_131.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_5 = QTextEdit(self.frame_170)
+        self.age_textEdit_5.setObjectName(u"age_textEdit_5")
+        self.age_textEdit_5.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_131.addWidget(self.age_textEdit_5)
+
+        self.age_slider_5 = QSlider(self.frame_170)
+        self.age_slider_5.setObjectName(u"age_slider_5")
+        self.age_slider_5.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_131.addWidget(self.age_slider_5)
+
+
+        self.horizontalLayout_66.addWidget(self.frame_170)
+
+        self.frame_171 = QFrame(self.frame_150)
+        self.frame_171.setObjectName(u"frame_171")
+        self.frame_171.setMaximumSize(QSize(300, 100))
+        self.frame_171.setFrameShape(QFrame.StyledPanel)
+        self.frame_171.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_132 = QVBoxLayout(self.frame_171)
+        self.verticalLayout_132.setSpacing(0)
+        self.verticalLayout_132.setObjectName(u"verticalLayout_132")
+        self.verticalLayout_132.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_6 = QTextEdit(self.frame_171)
+        self.age_textEdit_6.setObjectName(u"age_textEdit_6")
+        self.age_textEdit_6.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_132.addWidget(self.age_textEdit_6)
+
+        self.age_slider_6 = QSlider(self.frame_171)
+        self.age_slider_6.setObjectName(u"age_slider_6")
+        self.age_slider_6.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_132.addWidget(self.age_slider_6)
+
+
+        self.horizontalLayout_66.addWidget(self.frame_171)
+
+
+        self.verticalLayout_103.addWidget(self.frame_150)
+
+        self.frame_149 = QFrame(self.frame_136)
+        self.frame_149.setObjectName(u"frame_149")
+        self.frame_149.setMaximumSize(QSize(650, 100))
+        self.frame_149.setFrameShape(QFrame.StyledPanel)
+        self.frame_149.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_65 = QHBoxLayout(self.frame_149)
+        self.horizontalLayout_65.setObjectName(u"horizontalLayout_65")
+        self.frame_168 = QFrame(self.frame_149)
+        self.frame_168.setObjectName(u"frame_168")
+        self.frame_168.setMaximumSize(QSize(300, 100))
+        self.frame_168.setFrameShape(QFrame.StyledPanel)
+        self.frame_168.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_129 = QVBoxLayout(self.frame_168)
+        self.verticalLayout_129.setSpacing(0)
+        self.verticalLayout_129.setObjectName(u"verticalLayout_129")
+        self.verticalLayout_129.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_7 = QTextEdit(self.frame_168)
+        self.age_textEdit_7.setObjectName(u"age_textEdit_7")
+        self.age_textEdit_7.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_129.addWidget(self.age_textEdit_7)
+
+        self.age_slider_7 = QSlider(self.frame_168)
+        self.age_slider_7.setObjectName(u"age_slider_7")
+        self.age_slider_7.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_129.addWidget(self.age_slider_7)
+
+
+        self.horizontalLayout_65.addWidget(self.frame_168)
+
+        self.frame_169 = QFrame(self.frame_149)
+        self.frame_169.setObjectName(u"frame_169")
+        self.frame_169.setMaximumSize(QSize(300, 100))
+        self.frame_169.setFrameShape(QFrame.StyledPanel)
+        self.frame_169.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_130 = QVBoxLayout(self.frame_169)
+        self.verticalLayout_130.setSpacing(0)
+        self.verticalLayout_130.setObjectName(u"verticalLayout_130")
+        self.verticalLayout_130.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_8 = QTextEdit(self.frame_169)
+        self.age_textEdit_8.setObjectName(u"age_textEdit_8")
+        self.age_textEdit_8.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_130.addWidget(self.age_textEdit_8)
+
+        self.age_slider_8 = QSlider(self.frame_169)
+        self.age_slider_8.setObjectName(u"age_slider_8")
+        self.age_slider_8.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_130.addWidget(self.age_slider_8)
+
+
+        self.horizontalLayout_65.addWidget(self.frame_169)
+
+
+        self.verticalLayout_103.addWidget(self.frame_149)
+
+        self.frame_148 = QFrame(self.frame_136)
+        self.frame_148.setObjectName(u"frame_148")
+        self.frame_148.setMaximumSize(QSize(650, 100))
+        self.frame_148.setFrameShape(QFrame.StyledPanel)
+        self.frame_148.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_64 = QHBoxLayout(self.frame_148)
+        self.horizontalLayout_64.setObjectName(u"horizontalLayout_64")
+        self.frame_166 = QFrame(self.frame_148)
+        self.frame_166.setObjectName(u"frame_166")
+        self.frame_166.setMaximumSize(QSize(300, 100))
+        self.frame_166.setFrameShape(QFrame.StyledPanel)
+        self.frame_166.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_127 = QVBoxLayout(self.frame_166)
+        self.verticalLayout_127.setSpacing(0)
+        self.verticalLayout_127.setObjectName(u"verticalLayout_127")
+        self.verticalLayout_127.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_9 = QTextEdit(self.frame_166)
+        self.age_textEdit_9.setObjectName(u"age_textEdit_9")
+        self.age_textEdit_9.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_127.addWidget(self.age_textEdit_9)
+
+        self.age_slider_9 = QSlider(self.frame_166)
+        self.age_slider_9.setObjectName(u"age_slider_9")
+        self.age_slider_9.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_127.addWidget(self.age_slider_9)
+
+
+        self.horizontalLayout_64.addWidget(self.frame_166)
+
+        self.frame_167 = QFrame(self.frame_148)
+        self.frame_167.setObjectName(u"frame_167")
+        self.frame_167.setMaximumSize(QSize(300, 100))
+        self.frame_167.setFrameShape(QFrame.StyledPanel)
+        self.frame_167.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_128 = QVBoxLayout(self.frame_167)
+        self.verticalLayout_128.setSpacing(0)
+        self.verticalLayout_128.setObjectName(u"verticalLayout_128")
+        self.verticalLayout_128.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_10 = QTextEdit(self.frame_167)
+        self.age_textEdit_10.setObjectName(u"age_textEdit_10")
+        self.age_textEdit_10.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_128.addWidget(self.age_textEdit_10)
+
+        self.age_slider_10 = QSlider(self.frame_167)
+        self.age_slider_10.setObjectName(u"age_slider_10")
+        self.age_slider_10.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_128.addWidget(self.age_slider_10)
+
+
+        self.horizontalLayout_64.addWidget(self.frame_167)
+
+
+        self.verticalLayout_103.addWidget(self.frame_148)
+
+        self.frame_147 = QFrame(self.frame_136)
+        self.frame_147.setObjectName(u"frame_147")
+        self.frame_147.setMaximumSize(QSize(650, 100))
+        self.frame_147.setFrameShape(QFrame.StyledPanel)
+        self.frame_147.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_63 = QHBoxLayout(self.frame_147)
+        self.horizontalLayout_63.setObjectName(u"horizontalLayout_63")
+        self.frame_164 = QFrame(self.frame_147)
+        self.frame_164.setObjectName(u"frame_164")
+        self.frame_164.setMaximumSize(QSize(300, 100))
+        self.frame_164.setFrameShape(QFrame.StyledPanel)
+        self.frame_164.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_125 = QVBoxLayout(self.frame_164)
+        self.verticalLayout_125.setSpacing(0)
+        self.verticalLayout_125.setObjectName(u"verticalLayout_125")
+        self.verticalLayout_125.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_11 = QTextEdit(self.frame_164)
+        self.age_textEdit_11.setObjectName(u"age_textEdit_11")
+        self.age_textEdit_11.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_125.addWidget(self.age_textEdit_11)
+
+        self.age_slider_11 = QSlider(self.frame_164)
+        self.age_slider_11.setObjectName(u"age_slider_11")
+        self.age_slider_11.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_125.addWidget(self.age_slider_11)
+
+
+        self.horizontalLayout_63.addWidget(self.frame_164)
+
+        self.frame_165 = QFrame(self.frame_147)
+        self.frame_165.setObjectName(u"frame_165")
+        self.frame_165.setMaximumSize(QSize(300, 100))
+        self.frame_165.setFrameShape(QFrame.StyledPanel)
+        self.frame_165.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_126 = QVBoxLayout(self.frame_165)
+        self.verticalLayout_126.setSpacing(0)
+        self.verticalLayout_126.setObjectName(u"verticalLayout_126")
+        self.verticalLayout_126.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_12 = QTextEdit(self.frame_165)
+        self.age_textEdit_12.setObjectName(u"age_textEdit_12")
+        self.age_textEdit_12.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_126.addWidget(self.age_textEdit_12)
+
+        self.age_slider_12 = QSlider(self.frame_165)
+        self.age_slider_12.setObjectName(u"age_slider_12")
+        self.age_slider_12.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_126.addWidget(self.age_slider_12)
+
+
+        self.horizontalLayout_63.addWidget(self.frame_165)
+
+
+        self.verticalLayout_103.addWidget(self.frame_147)
+
+        self.frame_146 = QFrame(self.frame_136)
+        self.frame_146.setObjectName(u"frame_146")
+        self.frame_146.setMaximumSize(QSize(650, 100))
+        self.frame_146.setFrameShape(QFrame.StyledPanel)
+        self.frame_146.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_62 = QHBoxLayout(self.frame_146)
+        self.horizontalLayout_62.setObjectName(u"horizontalLayout_62")
+        self.frame_162 = QFrame(self.frame_146)
+        self.frame_162.setObjectName(u"frame_162")
+        self.frame_162.setMaximumSize(QSize(300, 100))
+        self.frame_162.setFrameShape(QFrame.StyledPanel)
+        self.frame_162.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_123 = QVBoxLayout(self.frame_162)
+        self.verticalLayout_123.setSpacing(0)
+        self.verticalLayout_123.setObjectName(u"verticalLayout_123")
+        self.verticalLayout_123.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_13 = QTextEdit(self.frame_162)
+        self.age_textEdit_13.setObjectName(u"age_textEdit_13")
+        self.age_textEdit_13.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_123.addWidget(self.age_textEdit_13)
+
+        self.age_slider_13 = QSlider(self.frame_162)
+        self.age_slider_13.setObjectName(u"age_slider_13")
+        self.age_slider_13.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_123.addWidget(self.age_slider_13)
+
+
+        self.horizontalLayout_62.addWidget(self.frame_162)
+
+        self.frame_163 = QFrame(self.frame_146)
+        self.frame_163.setObjectName(u"frame_163")
+        self.frame_163.setMaximumSize(QSize(300, 100))
+        self.frame_163.setFrameShape(QFrame.StyledPanel)
+        self.frame_163.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_124 = QVBoxLayout(self.frame_163)
+        self.verticalLayout_124.setSpacing(0)
+        self.verticalLayout_124.setObjectName(u"verticalLayout_124")
+        self.verticalLayout_124.setContentsMargins(0, 0, 0, 0)
+        self.age_textEdit_14 = QTextEdit(self.frame_163)
+        self.age_textEdit_14.setObjectName(u"age_textEdit_14")
+        self.age_textEdit_14.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout_124.addWidget(self.age_textEdit_14)
+
+        self.age_slider_14 = QSlider(self.frame_163)
+        self.age_slider_14.setObjectName(u"age_slider_14")
+        self.age_slider_14.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_124.addWidget(self.age_slider_14)
+
+
+        self.horizontalLayout_62.addWidget(self.frame_163)
+
+
+        self.verticalLayout_103.addWidget(self.frame_146)
+
+
+        self.horizontalLayout_58.addWidget(self.frame_136)
+
+        self.frame_137 = QFrame(self.frame_133)
+        self.frame_137.setObjectName(u"frame_137")
+        self.frame_137.setMinimumSize(QSize(150, 0))
+        self.frame_137.setFrameShape(QFrame.StyledPanel)
+        self.frame_137.setFrameShadow(QFrame.Raised)
+        self.label_36 = QLabel(self.frame_137)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setGeometry(QRect(40, 50, 55, 16))
+
+        self.horizontalLayout_58.addWidget(self.frame_137)
+
+
+        self.verticalLayout_101.addWidget(self.frame_133)
+
+        self.frame_134 = QFrame(self.SettingsPage)
+        self.frame_134.setObjectName(u"frame_134")
+        self.frame_134.setMaximumSize(QSize(16777215, 50))
+        self.frame_134.setFrameShape(QFrame.StyledPanel)
+        self.frame_134.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_57 = QHBoxLayout(self.frame_134)
+        self.horizontalLayout_57.setObjectName(u"horizontalLayout_57")
+        self.horizontalSpacer = QSpacerItem(947, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_57.addItem(self.horizontalSpacer)
+
+        self.saveSettingsButton = QPushButton(self.frame_134)
+        self.saveSettingsButton.setObjectName(u"saveSettingsButton")
+        self.saveSettingsButton.setMinimumSize(QSize(120, 0))
+        self.saveSettingsButton.setIcon(icon7)
+
+        self.horizontalLayout_57.addWidget(self.saveSettingsButton)
+
+
+        self.verticalLayout_101.addWidget(self.frame_134)
+
         self.stackedWidget.addWidget(self.SettingsPage)
         self.AcountPage = QWidget()
         self.AcountPage.setObjectName(u"AcountPage")
@@ -810,9 +1386,9 @@ class Ui_MainWindow(object):
         self.Top_menu_slide_button.setObjectName(u"Top_menu_slide_button")
         self.Top_menu_slide_button.setMinimumSize(QSize(40, 40))
         self.Top_menu_slide_button.setMaximumSize(QSize(40, 40))
-        icon5 = QIcon()
-        icon5.addFile(u":/Icons/icons/cil-arrow-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Top_menu_slide_button.setIcon(icon5)
+        icon8 = QIcon()
+        icon8.addFile(u":/Icons/icons/cil-arrow-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Top_menu_slide_button.setIcon(icon8)
 
         self.verticalLayout_21.addWidget(self.Top_menu_slide_button, 0, Qt.AlignHCenter)
 
@@ -3265,9 +3841,9 @@ class Ui_MainWindow(object):
         self.CloseCommunicateButton.setObjectName(u"CloseCommunicateButton")
         self.CloseCommunicateButton.setMaximumSize(QSize(25, 25))
         self.CloseCommunicateButton.setStyleSheet(u"")
-        icon6 = QIcon()
-        icon6.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.CloseCommunicateButton.setIcon(icon6)
+        icon9 = QIcon()
+        icon9.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.CloseCommunicateButton.setIcon(icon9)
 
         self.verticalLayout_43.addWidget(self.CloseCommunicateButton)
 
@@ -3298,7 +3874,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
         self.AllMatchesWraper.setCurrentIndex(0)
         self.match_16.setCurrentIndex(0)
         self.match_5.setCurrentIndex(2)
@@ -3334,7 +3910,7 @@ class Ui_MainWindow(object):
         self.CategoriesBrowseButton.setText(QCoreApplication.translate("MainWindow", u"Przegl\u0105daj", None))
         self.AddCategoriesButton_2.setText(QCoreApplication.translate("MainWindow", u"Dodaj", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Dodane kategorie", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Filtruj", None))
+        self.FilterCattegoryButton.setText(QCoreApplication.translate("MainWindow", u"Filtruj", None))
         ___qtablewidgetitem = self.CompetitorsTable.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119", None));
         ___qtablewidgetitem1 = self.CompetitorsTable.horizontalHeaderItem(1)
@@ -3343,14 +3919,16 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Klub", None));
         ___qtablewidgetitem3 = self.CompetitorsTable.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Numer Licencji", None));
+        self.DeleteCompetitorCategoryButton_2.setText("")
+        self.AddCompetitorCategoryButton_3.setText("")
+        self.AddCompetitorCategoryButton_2.setText("")
         self.ComprtitorName.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119:", None))
         self.CompetitorSurname.setText(QCoreApplication.translate("MainWindow", u"Nazwisko:", None))
         self.CompetitorClub.setText(QCoreApplication.translate("MainWindow", u"Klub:", None))
         self.CompetitorBornDate.setText(QCoreApplication.translate("MainWindow", u"Rok urodzenia:", None))
         self.CompetitorLicenceNo.setText(QCoreApplication.translate("MainWindow", u"Nr licencji:", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"Waga", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Usu\u0144", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Zatwierd\u017a", None))
+        self.SaveCompetitorButton.setText(QCoreApplication.translate("MainWindow", u"               Zapisz zmiany dla zawodnika", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Kategorie", None))
         ___qtablewidgetitem4 = self.CompetitorCategories.horizontalHeaderItem(0)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Grupa wiekowa", None));
@@ -3358,6 +3936,17 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"P\u0142e\u0107", None));
         ___qtablewidgetitem6 = self.CompetitorCategories.horizontalHeaderItem(2)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Kategoria", None));
+        self.DeleteCompetitorCategoryButton.setText("")
+        self.AddCompetitorCategoryButton.setText("")
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"Dziecko", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzik (u12)", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"Kadet (u16)", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"Junior (u18)", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzierzowiec (u21)", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzierzowiec (u23)", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"Senior", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"Pozosta\u0142e ustawinia", None))
+        self.saveSettingsButton.setText(QCoreApplication.translate("MainWindow", u"Zapisz zmiany", None))
         self.Eliminations_button.setText(QCoreApplication.translate("MainWindow", u"Eliminacje", None))
         self.HalfFinal_button.setText(QCoreApplication.translate("MainWindow", u"P\u00f3\u0142 fina\u0142y", None))
         self.Repechage_button.setText(QCoreApplication.translate("MainWindow", u"Repasarze", None))

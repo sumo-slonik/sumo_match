@@ -49,17 +49,20 @@ def create_pdf_repr(Form, name):
     DelPdf.setIcon(icon1)
 
     wrapperLayout.addWidget(DelPdf)
-    print("zwracam")
     return wrapper
 
 
 class CategoryAdder:
+
     def __init__(self, window):
         self.added_categories = []
         self.competitors_list = []
         self.to_add = []
         self.window = window
         self.actual_competitor = None
+        self.available_categories = []
+        self.available_clubs = set()
+        self.category_repr = dict()
 
     def add_category(self):
         files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd(), "Plik PDF (*.pdf)")
@@ -67,7 +70,6 @@ class CategoryAdder:
         self.window.ui.CategoriesToAdd.setText(str(files[0]))
 
     def confirm_categories(self):
-        print("tuaj")
         self.window.ui.CategoriesToAdd.setText("")
 
         for name in self.to_add:
@@ -85,13 +87,16 @@ class CategoryAdder:
         for page in pdf.pages:
             lines += page.extract_text(x_tolerance=3, y_tolerance=3).split('\n')
 
+        title = lines[0].split('-')
+        weight = lines[2].split(':')[-1].split()[0]
         category_name = lines[0] + " " + lines[2].split()[-3:][0] + lines[2].split()[-3:][1]
         lines = list(filter(lambda x: x.split()[0] != 'Strona', lines))
         print(category_name)
-        age_category = category_name.split()[-2]
-        weight_category = category_name.split()[-1]
-        gender = category_name.split()[-4]
+        age_category = title[-1]
+        weight_category = weight
+        gender = title[1]
         actual_category = Category(weight_category, gender, age_category)
+        self.available_categories.append(actual_category)
         for line in lines[4:]:
             print(line)
             name = line.split()[1] + ' ' + line.split()[2]
@@ -99,6 +104,7 @@ class CategoryAdder:
             club = ''
             for i in club_tmp:
                 club += i + ' '
+            self.available_clubs.add(club)
             licence_no = line.split()[-1]
             birth_year = line.split()[-2]
             actual_competitor = PersonalCompetitor(name, club, "", actual_category, birth_year, licence_no)
@@ -109,6 +115,7 @@ class CategoryAdder:
                 self.competitors_list.append(actual_competitor)
         for i in self.competitors_list:
             print(i.custom_string_repr(True, True, True, True, False))
+        self.actualise_combo_boxes()
         return category_name
 
     def show_in_table(self):
@@ -130,26 +137,111 @@ class CategoryAdder:
             row += 1
         table.installEventFilter(self.window)
 
+    def create_combo_box(self, parent, values, start_value):
+        class Combo(QComboBox):
+            def __init__(self, parent, values, start_value):
+                super().__init__(parent)
+                self.addItems(values)
+                self.setCurrentText(start_value)
+                self.currentIndexChanged.connect(self.getComboValue)
+
+            def getComboValue(self):
+                return self.currentText()
+
+        return Combo(parent, values, start_value)
+
     def process_competitor(self, licence_no):
         competitor = list(filter(lambda x: x.get_licence_no() == licence_no, self.competitors_list))[0]
+        self.actual_competitor = competitor
         self.window.ui.ComprtitorName.setText("Imię:" + competitor.get_first_name())
         self.window.ui.CompetitorSurname.setText("Nazwisko:" + competitor.get_surname())
         self.window.ui.CompetitorClub.setText("Klub:" + competitor.get_club())
         self.window.ui.CompetitorBornDate.setText("Rok urodzenia:" + competitor.get_birth_year())
         self.window.ui.CompetitorLicenceNo.setText("Nr licencji:" + competitor.get_licence_no())
+        self.window.ui.CompetitorWeightInput.setText(competitor.get_weight())
         table = self.window.ui.CompetitorCategories
-        table.clear()
+        # table.clear()
         table.setRowCount(len(competitor.get_category()))
         row = 0
+        ages = {x.age for x in self.available_categories}
+        genders = {x.gender for x in self.available_categories}
+        categories = {x.category for x in self.available_categories}
         for category in competitor.get_category():
             print(category)
-            table.setItem(row, 0, QTableWidgetItem(category.get_age()))
-            table.setItem(row, 1, QTableWidgetItem(category.get_gender()))
-            table.setItem(row, 2, QTableWidgetItem(category.get_category()))
+            age_box = self.create_combo_box(table, ages, category.get_age())
+            gender_box = self.create_combo_box(table, genders, category.get_gender())
+            category_box = self.create_combo_box(table, categories, category.get_category())
+            table.setCellWidget(row, 0, age_box)
+            table.setCellWidget(row, 1, gender_box)
+            table.setCellWidget(row, 2, category_box)
+            # table.setItem(row, 0, age_box)
+            # table.setItem(row, 1, gender_box)
+            # table.setItem(row, 2, category_box)
             row += 1
+
+    def remove_category_from_competitor(self):
+        table = self.window.ui.CompetitorCategories
+        index = (table.selectionModel().currentIndex())
+        table.removeRow(index.row())
+
+    def add_category_to_competitor(self):
+        table = self.window.ui.CompetitorCategories
+        ages = {x.age for x in self.available_categories}
+        genders = {x.gender for x in self.available_categories}
+        categories = {x.category for x in self.available_categories}
+        table.setRowCount(table.rowCount() + 1)
+        idndex = table.rowCount()
+        age_box = self.create_combo_box(table, ages, list(ages)[0])
+        gender_box = self.create_combo_box(table, genders, list(genders)[0])
+        category_box = self.create_combo_box(table, categories, list(categories)[0])
+        table.setCellWidget(idndex - 1, 0, age_box)
+        table.setCellWidget(idndex - 1, 1, gender_box)
+        table.setCellWidget(idndex - 1, 2, category_box)
+
+    def save_competitor_changes(self):
+        weight = self.window.ui.CompetitorWeightInput.toPlainText()
+        categories = set()
+
+        table = self.window.ui.CompetitorCategories
+        print("wiersze", table.rowCount())
+
+        for i in range(table.rowCount()):
+            a = table.cellWidget(i, 2).getComboValue()
+            b = table.cellWidget(i, 1).getComboValue()
+            c = table.cellWidget(i, 0).getComboValue()
+            actual_cat = Category(a, b, c)
+            categories.add(actual_cat)
+        self.actual_competitor.category = categories
+        self.actual_competitor.weight = weight
+
+    def filter(self):
+        pass
+
+    def actualise_combo_boxes(self):
+        GenderComboBox = self.window.ui.GenderComboBox
+        AgeComboBox = self.window.ui.AgeComboBox
+        CategoryComboBox = self.window.ui.CategoryComboBox
+        ClubComboBox = self.window.ui.ClubComboBox
+        genders = ["Wszystko"] + [x.gender for x in self.available_categories]
+        ages = ["Wszystko"] + [x.age for x in self.available_categories]
+        categories = ["Wszystko"] + [x.category for x in self.available_categories]
+        clubs = ["Wszystko"] + list(self.available_clubs)
+        genders = set(genders) - {GenderComboBox.itemText(i) for i in range(GenderComboBox.count())}
+        ages = set(ages) - {AgeComboBox.itemText(i) for i in range(AgeComboBox.count())}
+        categories = set(categories) - {CategoryComboBox.itemText(i) for i in range(CategoryComboBox.count())}
+        clubs = set(clubs) - {ClubComboBox.itemText(i) for i in range(ClubComboBox.count())}
+
+        self.window.ui.GenderComboBox.addItems(genders)
+        self.window.ui.AgeComboBox.addItems(ages)
+        self.window.ui.CategoryComboBox.addItems(categories)
+        self.window.ui.ClubComboBox.addItems(clubs)
+        self.window.ui.GenderComboBox.setCurrentText("Wszystko")
+        self.window.ui.AgeComboBox.setCurrentText("Wszystko")
+        self.window.ui.CategoryComboBox.setCurrentText("Wszystko")
+        self.window.ui.ClubComboBox.setCurrentText("Wszystko")
+
+
 
 
 if __name__ == '__main__':
-    op = CategoryAdder(None)
-    with pdfplumber.open("1.pdf") as pdf:
-        op.parse_pdf(pdf)
+    pass

@@ -16,6 +16,21 @@ class Category:
     def __str__(self):
         return self.gender + ' ' + self.age + ' ' + self.category
 
+    def __eq__(self, other):
+        if type(self) != type(other):
+            return False
+        if self.category != other.category:
+            return False
+        if self.age != other.age:
+            return False
+        if self.gender != other.gender:
+            return False
+        return True
+
+    def __hash__(self):
+        return hash(self.gender+self.age+self.category)
+
+
 
 class PersonalCompetitor:
     def __init__(self, name="", club="", weight="", category="", birth_year=0, licence_no='', is_free_fight=False):
