@@ -27,8 +27,9 @@ class MainWindow(QMainWindow):
         self.topMenuAnimation = None
         self.rightMenuAnimation = None
         self.SecondLeftMenuAnimation = None
-        self.categories_adder = CategoryAdder(self)
         self.settings = Settings(self)
+        self.categories_adder = CategoryAdder(self, self.settings)
+
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         # Set main background to transparent
@@ -172,7 +173,7 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentWidget(self.ui.HomePage)
         if go_to == "SettingsPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.SettingsPage)
-            self.settings.show_values()
+            self.settings.set_and_print_sliders()
         if go_to == "AccountPage":
             self.ui.stackedWidget.setCurrentWidget(self.ui.AcountPage)
             self.slide_second_left_menu()

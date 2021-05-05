@@ -28,6 +28,7 @@ class Settings:
         with open('Settings/settings.txt', 'w') as file:
             for i in self.ages:
                 file.write(i + ';' + age_repr(self.ages[i]))
+        self.red_from_file()
 
     def red_from_file(self):
         with open('Settings/settings.txt', 'r') as file:
@@ -37,10 +38,13 @@ class Settings:
                 self.ages[i[0]] = [int(i[1]), int(i[2])]
 
     def show_values(self):
+        print("______________-")
+        print(self.ages['senior'][0],self.ages['senior'][1])
+        print("______________-")
 
         for i in range(7):
-            self.window.ui.__dict__['age_textEdit_' + str(2 * i + 1)].setText(str(self.ages[self.keys[0]][0]))
-            self.window.ui.__dict__['age_textEdit_' + str(2 * i + 2)].setText(str(self.ages[self.keys[0]][1]))
+            self.window.ui.__dict__['age_textEdit_' + str(2 * i + 1)].setText(str(self.ages[self.keys[i]][0]))
+        self.window.ui.__dict__['age_textEdit_' + str(2 * i + 2)].setText(str(self.ages[self.keys[i]][1]))
 
     def slider_1(self, value):
         self.window.ui.__dict__['age_textEdit_1'].setText(str(value))
@@ -96,13 +100,17 @@ class Settings:
 
     def slider_14(self, value):
         self.window.ui.__dict__['age_textEdit_14'].setText(str(value))
-        self.ages['senior'][0] = value
+        self.ages['senior'][1] = value
 
     def set_and_print_sliders(self):
         self.show_values()
         for i in range(7):
             self.window.ui.__dict__['age_slider_' + str(2 * i + 1)].setValue(self.ages[self.keys[i]][0])
             self.window.ui.__dict__['age_slider_' + str(2 * i + 2)].setValue(self.ages[self.keys[i]][1])
+
+    def get_range(self, age_category):
+        return self.ages[age_category]
+
 
 if __name__ == '__main__':
     settings = Settings(None)

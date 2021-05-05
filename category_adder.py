@@ -1,4 +1,5 @@
 import pdfplumber
+from PyQt5.uic.properties import QtGui
 from PySide2.QtWidgets import QFileDialog
 import os
 from PySide2.QtCore import *
@@ -54,7 +55,8 @@ def create_pdf_repr(Form, name):
 
 class CategoryAdder:
 
-    def __init__(self, window):
+    def __init__(self, window, settings):
+        self.settings = settings
         self.added_categories = []
         self.competitors_list = []
         self.to_add = []
@@ -174,10 +176,44 @@ class CategoryAdder:
             table.setCellWidget(row, 0, age_box)
             table.setCellWidget(row, 1, gender_box)
             table.setCellWidget(row, 2, category_box)
-            # table.setItem(row, 0, age_box)
-            # table.setItem(row, 1, gender_box)
-            # table.setItem(row, 2, category_box)
+            if not self.check_age(competitor, category):
+                table.cellWidget(row, 0).setStyleSheet("background-color: red;")
             row += 1
+
+    def check_age(self, competitor, category):
+
+        def contains_digit(string):
+            for i in string:
+                if i.isdigit():
+                    return True
+            return False
+
+        def category_number(string):
+            result = ''
+            for i in string:
+                if i.isdigit():
+                    result += i
+            return int(result)
+
+        age_range = [0, 0]
+        if contains_digit(category.get_age()):
+            age = category_number(category.get_age())
+
+            if age == 14:
+                age_range = self.settings.get_range('u14')
+            if age == 16:
+                age_range = self.settings.get_range('u16')
+            if age == 18:
+                age_range = self.settings.get_range('u18')
+            if age == 21:
+                age_range = self.settings.get_range('u21')
+            if age == 23:
+                age_range = self.settings.get_range('u23')
+        else:
+            if 'SENIOR' in category.get_age().upper():
+                age_range = self.settings.get_range('senior')
+
+        return age_range[0] <= int(competitor.get_birth_year()) <= age_range[1]
 
     def remove_category_from_competitor(self):
         table = self.window.ui.CompetitorCategories
@@ -239,8 +275,6 @@ class CategoryAdder:
         self.window.ui.AgeComboBox.setCurrentText("Wszystko")
         self.window.ui.CategoryComboBox.setCurrentText("Wszystko")
         self.window.ui.ClubComboBox.setCurrentText("Wszystko")
-
-
 
 
 if __name__ == '__main__':
