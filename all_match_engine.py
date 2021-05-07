@@ -31,17 +31,13 @@ def correctTypeFromLength(length):
 class AllMatchEngine(AbstractMatchesMaker):
 
     def __init__(self, competitors):
-        self.competitors = self.randomize_competitors(competitors)
+        self.competitors = competitors
         self.match_type = correctTypeFromLength(len(self.competitors))
         self.engine = None
         if self.match_type == TypeOFMatch.Under16:
             self.engine = MatchUnder16(self.competitors)
         elif self.match_type == TypeOFMatch.Under5:
             self.engine = MatchUnder5Wrapper(self.competitors)
-
-    # TO DO
-    def randomize_competitors(self, competitors):
-        return competitors
 
     def make_match(self, left_win):
         self.engine.make_match(left_win)
@@ -55,11 +51,9 @@ class AllMatchEngine(AbstractMatchesMaker):
     def get_actual_match_id(self):
         self.engine.get_actual_match_id()
 
-    def print_fighters(self,window):
+    def print_fighters(self, window):
         competitors = self.engine.get_actual_fighters()
         print_actual_competitors(*competitors,window)
-
-
 
     def print_match(self, window):
         if self.match_type == TypeOFMatch.Under16:
