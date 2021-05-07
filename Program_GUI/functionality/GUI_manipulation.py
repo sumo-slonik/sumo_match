@@ -311,10 +311,13 @@ def print_match_under_3(match_under_3, main_window):
 
 def print_match_under_5_wrapper(match_under_5_wrapper, main_window):
     if match_under_5_wrapper.actual_state == 5:
+        main_window.ui.match_5.setCurrentWidget(main_window.ui.under_5)
         print_match_under_5(match_under_5_wrapper.engine, main_window)
     if match_under_5_wrapper.actual_state == 4:
+        main_window.ui.match_5.setCurrentWidget(main_window.ui.under_4)
         print_match_under_4(match_under_5_wrapper.engine, main_window)
     if match_under_5_wrapper.actual_state == 3:
+        main_window.ui.match_5.setCurrentWidget(main_window.ui.under_3)
         print_match_under_3(match_under_5_wrapper.engine, main_window)
 
 

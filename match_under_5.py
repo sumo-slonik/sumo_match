@@ -108,8 +108,8 @@ class MatchUnder5Wrapper:
         print("______________________")
         self.rounds += 1
         print("round number", self.rounds)
-        for i in self.competitors:
-            print(i.name, i.get_wins())
+        # for i in self.competitors:
+        #     print(i.name, i.get_wins())
         print("______________________")
         print("______________________")
         if not self.is_end:
@@ -155,14 +155,16 @@ class MatchUnder5Wrapper:
                         if self.actual_state == 3:
                             print("tutaj weszło")
                             self.engine = MatchUnder3(self.competitors)
-        if not self.competitors:
-            self.results = self.results + self.losers
-            self.is_end = True
+                if not self.competitors:
+                    self.results = self.results + self.losers
+                    self.is_end = True
+                else:
+                    self.engine.make_match(left_wins)
 
 
 if __name__ == '__main__':
 
-    Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(3)]
+    Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
     for i in range (100):
         matches = MatchUnder5Wrapper(Competitors)
 
