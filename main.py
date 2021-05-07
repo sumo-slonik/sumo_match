@@ -4,15 +4,12 @@ from PySide2.QtCore import (QPropertyAnimation)
 from PySide2.QtGui import (QColor)
 # Import user interface file
 from Program_GUI.ui_main_window import *
-from match_under_16 import *
 from Program_GUI.functionality.GUI_manipulation import *
-from competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
-from random_functions import random_function_16
-from all_match_engine import AllMatchEngine
-from match_under_5 import MatchUnder5 as Under5
-from category_opener import Opener
-from category_adder import CategoryAdder
-from settings import Settings
+from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
+from Matches.all_match_engine import AllMatchEngine
+from Program_GUI.functionality.category_opener import Opener
+from Bookmarks.category_adder import CategoryAdder
+from Bookmarks.settings import Settings
 
 WINDOW_SIZE = 0
 

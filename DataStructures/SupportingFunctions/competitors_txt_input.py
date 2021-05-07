@@ -1,4 +1,4 @@
-from personal_competitor import PersonalCompetitor
+from DataStructures.personal_competitor import PersonalCompetitor
 
 
 def personal_competitor_txt_input(source):

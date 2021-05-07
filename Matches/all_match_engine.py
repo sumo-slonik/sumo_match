@@ -1,7 +1,7 @@
-from abstractMatchesMaker import AbstractMatchesMaker
+from Matches.abstractMatchesMaker import AbstractMatchesMaker
 from enum import Enum
-from match_under_16 import MatchUnder16
-from match_under_5 import MatchUnder5Wrapper
+from Matches.match_under_16 import MatchUnder16
+from Matches.match_under_5 import MatchUnder5Wrapper
 from Program_GUI.functionality.GUI_manipulation import *
 
 

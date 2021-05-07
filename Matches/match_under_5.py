@@ -1,10 +1,10 @@
 from abc import ABC
-from personal_competitor import *
-from tree_node import Node as Match
-from abstractMatchesMaker import AbstractMatchesMaker
+from DataStructures.personal_competitor import *
+from DataStructures.tree_node import Node as Match
+from Matches.abstractMatchesMaker import AbstractMatchesMaker
 from random import choice
-from match_under_4 import MatchUnder4
-from match_under_3 import MatchUnder3
+from Matches.match_under_4 import MatchUnder4
+from Matches.match_under_3 import MatchUnder3
 
 
 class MatchUnder5(AbstractMatchesMaker):

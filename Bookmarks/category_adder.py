@@ -5,7 +5,7 @@ import os
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from personal_competitor import PersonalCompetitor, Category
+from DataStructures.personal_competitor import PersonalCompetitor, Category
 
 import Program_GUI.gui_theme
 

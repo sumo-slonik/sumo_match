@@ -2,9 +2,7 @@ from PySide2 import QtCore
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from personal_competitor import *
-from match_under_16 import MatchUnder16
-from match_under_5 import MatchUnder5
+from DataStructures.personal_competitor import *
 
 
 def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[]):

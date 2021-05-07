@@ -1,6 +1,6 @@
-from personal_competitor import *
-from tree_node import Node as Match
-from abstractMatchesMaker import AbstractMatchesMaker
+from DataStructures.personal_competitor import *
+from DataStructures.tree_node import Node as Match
+from Matches.abstractMatchesMaker import AbstractMatchesMaker
 from random import choice
 
 

@@ -1,4 +1,3 @@
-from personal_competitor import PersonalCompetitor
 
 
 class ClubCompetotor:
