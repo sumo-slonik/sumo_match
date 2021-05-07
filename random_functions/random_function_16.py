@@ -40,7 +40,7 @@ def choose_place_in_order(half, team_number, free_places, competitors):
     return None, None
 
 
-def random_function_16(competitors, number_of_competitors, master = None, runner_up = None):
+def random_function_16(competitors, number_of_competitors, master=None, runner_up=None):
     free_places = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
     order = {}
     one_half = 2
