@@ -254,7 +254,7 @@ if __name__ == "__main__":
     # competitors = personal_competitor_txt_input("Competitors.txt")
     # teams = divide_competitors_to_teams(competitors)
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
-    competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(4)]
+    competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
     window = MainWindow()
     Opener("Categories", window).add_category_buttons()
     engine = AllMatchEngine(competitors)

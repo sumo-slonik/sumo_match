@@ -10,7 +10,7 @@ from match_under_3 import MatchUnder3
 class MatchUnder5(AbstractMatchesMaker):
 
     def __init__(self, competitors):
-        self.competitors = competitors
+        self.competitors = competitors[:]
         self.matches = [Match() for _ in range(10)]
         self.actualMatchId = 0
         self.is_end = False
@@ -18,7 +18,7 @@ class MatchUnder5(AbstractMatchesMaker):
         # in the documents directory there is
         # a visualisation of the players' order, the player
         # number in matches is an index in the competitors table increased by one
-        self.__matchOrder = [(1, 2), (3, 4), (1, 3), (2, 5), (1, 4), (2, 5), (1, 5), (3, 4), (2, 3), (4, 5)]
+        self.__matchOrder = [(1, 2), (3, 4), (1, 3), (2, 5), (1, 4), (3, 5), (1, 5), (2, 4), (2, 3), (4, 5)]
         for competitors_id, match in zip(self.__matchOrder, self.matches):
             print(competitors_id, match)
             match.set_left_child(self.competitors[competitors_id[0] - 1])
@@ -65,11 +65,12 @@ class MatchUnder5(AbstractMatchesMaker):
 
 class MatchUnder5Wrapper:
     def __init__(self, competitors):
+        self.rounds = 0
         self.results = []
         self.losers = []
         self.is_end = False
         self.actual_state = len(competitors)
-        self.competitors = competitors
+        self.competitors = competitors[:]
         if self.actual_state == 5:
             self.engine = MatchUnder5(competitors)
         if self.actual_state == 4:
@@ -90,6 +91,7 @@ class MatchUnder5Wrapper:
                     else:
                         self.results.append(self.competitors[1])
                         self.results.append(self.competitors[0])
+                    print("dwaj z tym samym rezultatem",self.competitors[1].name, self.competitors[0].name)
             del self.competitors[0]
             del self.competitors[0]
 
@@ -104,8 +106,10 @@ class MatchUnder5Wrapper:
     def make_match(self, left_wins):
         print("______________________")
         print("______________________")
+        self.rounds += 1
+        print("round number", self.rounds)
         for i in self.competitors:
-            print(i.name)
+            print(i.name, i.get_wins())
         print("______________________")
         print("______________________")
         if not self.is_end:
@@ -152,18 +156,19 @@ class MatchUnder5Wrapper:
                             print("tutaj weszło")
                             self.engine = MatchUnder3(self.competitors)
         if not self.competitors:
+            self.results = self.results + self.losers
             self.is_end = True
 
 
 if __name__ == '__main__':
 
-    Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
-    matches = MatchUnder5Wrapper(Competitors)
+    Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(3)]
+    for i in range (100):
+        matches = MatchUnder5Wrapper(Competitors)
 
-    while not matches.is_end:
-        result = choice([True, False])
-        print("Left Win:", result)
-        matches.make_match(result)
+        while not matches.is_end:
+            result = choice([True, False])
+            print("Left Win:", result)
+            matches.make_match(result)
 
-    for i in matches.results:
-        print(i,i.get_wins())
+        print("                                                                  len:",len(matches.results))
