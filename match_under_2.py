@@ -24,8 +24,18 @@ class MatchUnder2(AbstractMatchesMaker, ABC):
         self.actual_round_id = 0
         self.rounds = [Node(left_child=competitors[0], right_child=competitors[1]) for i in range(2)]
         self.final = None
+        self.is_end = False
 
     def make_match(self, left_wins):
+
+        print(self.get_actual_match_id())
+        if self.get_actual_match_id() == 2:
+            if not self.is_end:
+                self.final.make_match(left_wins)
+
+            self.is_end = True
+            return
+
         if left_wins:
             self.rounds[self.actual_round_id].competitor = self.competitors[0]
             self.competitors[0].wins += 1
@@ -36,6 +46,12 @@ class MatchUnder2(AbstractMatchesMaker, ABC):
             self.competitors[1].wins += 1
             self.competitors[0].losses += 1
 
+        self.go_to_next_round()
+
+        if self.get_actual_match_id() == 2:
+            if not self.check_if_next_round_necessary():
+                self.is_end = True
+
     def check_if_next_round_necessary(self):
         if self.competitors[0].wins == self.competitors[1].wins:
             self.final = MatchIfDraw(self.competitors[0], self.competitors[1])
@@ -44,8 +60,6 @@ class MatchUnder2(AbstractMatchesMaker, ABC):
         return False
 
     def go_to_next_round(self):
-        if self.actual_round_id == 1:
-            return
         self.actual_round_id += 1
 
     def go_to_prev_round(self):
@@ -64,21 +78,14 @@ class MatchUnder2(AbstractMatchesMaker, ABC):
 
 
 if __name__ == "__main__":
-    competitors = [PersonalCompetitor(name="Kuba"), PersonalCompetitor(name="Marcin")]
+    Competitors = [PersonalCompetitor(name="Kuba"), PersonalCompetitor(name="Marcin")]
 
-    match = MatchUnder2(competitors)
+    match = MatchUnder2(Competitors)
 
-    for _ in range(2):
+    for _ in range(3):
         first_won = input("czy pierwszy zawodnik wygrał? ")
         first_won = True if first_won == "tak" else False
         match.make_match(first_won)
-
-    final_necessary = match.check_if_next_round_necessary()
-
-    if final_necessary:
-        first_won = input("FINAł: czy pierwszy zawodnik wygrał? ")
-        first_won = True if first_won == "tak" else False
-        match.final.make_match(first_won)
 
     results = match.get_places()
 
