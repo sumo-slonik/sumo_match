@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowOgbvjq.ui'
+## Form generated from reading UI file 'main_windowfqiDCO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1177, 789)
+        MainWindow.resize(1181, 798)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -500,7 +500,7 @@ class Ui_MainWindow(object):
         self.AddedCategories.setWidgetResizable(True)
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 253))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 277))
         self.verticalLayout_93 = QVBoxLayout(self.AddedCategoriesContents)
         self.verticalLayout_93.setObjectName(u"verticalLayout_93")
         self.AddedCategories.setWidget(self.AddedCategoriesContents)
@@ -583,39 +583,6 @@ class Ui_MainWindow(object):
         self.CompetitorsTable.setMaximumSize(QSize(16777215, 250))
 
         self.horizontalLayout_56.addWidget(self.CompetitorsTable)
-
-        self.frame_132 = QFrame(self.frame_131)
-        self.frame_132.setObjectName(u"frame_132")
-        self.frame_132.setFrameShape(QFrame.StyledPanel)
-        self.frame_132.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_100 = QVBoxLayout(self.frame_132)
-        self.verticalLayout_100.setObjectName(u"verticalLayout_100")
-        self.DeleteCompetitorCategoryButton_2 = QPushButton(self.frame_132)
-        self.DeleteCompetitorCategoryButton_2.setObjectName(u"DeleteCompetitorCategoryButton_2")
-        icon5 = QIcon()
-        icon5.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.DeleteCompetitorCategoryButton_2.setIcon(icon5)
-
-        self.verticalLayout_100.addWidget(self.DeleteCompetitorCategoryButton_2)
-
-        self.AddCompetitorCategoryButton_3 = QPushButton(self.frame_132)
-        self.AddCompetitorCategoryButton_3.setObjectName(u"AddCompetitorCategoryButton_3")
-        icon6 = QIcon()
-        icon6.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.AddCompetitorCategoryButton_3.setIcon(icon6)
-
-        self.verticalLayout_100.addWidget(self.AddCompetitorCategoryButton_3)
-
-        self.AddCompetitorCategoryButton_2 = QPushButton(self.frame_132)
-        self.AddCompetitorCategoryButton_2.setObjectName(u"AddCompetitorCategoryButton_2")
-        icon7 = QIcon()
-        icon7.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.AddCompetitorCategoryButton_2.setIcon(icon7)
-
-        self.verticalLayout_100.addWidget(self.AddCompetitorCategoryButton_2)
-
-
-        self.horizontalLayout_56.addWidget(self.frame_132)
 
 
         self.verticalLayout_92.addWidget(self.frame_131)
@@ -708,7 +675,9 @@ class Ui_MainWindow(object):
         self.SaveCompetitorButton = QPushButton(self.frame_129)
         self.SaveCompetitorButton.setObjectName(u"SaveCompetitorButton")
         self.SaveCompetitorButton.setMaximumSize(QSize(16777215, 40))
-        self.SaveCompetitorButton.setIcon(icon7)
+        icon5 = QIcon()
+        icon5.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.SaveCompetitorButton.setIcon(icon5)
 
         self.horizontalLayout_54.addWidget(self.SaveCompetitorButton)
 
@@ -769,13 +738,17 @@ class Ui_MainWindow(object):
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
         self.DeleteCompetitorCategoryButton = QPushButton(self.frame_130)
         self.DeleteCompetitorCategoryButton.setObjectName(u"DeleteCompetitorCategoryButton")
-        self.DeleteCompetitorCategoryButton.setIcon(icon5)
+        icon6 = QIcon()
+        icon6.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DeleteCompetitorCategoryButton.setIcon(icon6)
 
         self.verticalLayout_99.addWidget(self.DeleteCompetitorCategoryButton)
 
         self.AddCompetitorCategoryButton = QPushButton(self.frame_130)
         self.AddCompetitorCategoryButton.setObjectName(u"AddCompetitorCategoryButton")
-        self.AddCompetitorCategoryButton.setIcon(icon6)
+        icon7 = QIcon()
+        icon7.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton.setIcon(icon7)
 
         self.verticalLayout_99.addWidget(self.AddCompetitorCategoryButton)
 
@@ -796,6 +769,16 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_91.addWidget(self.frame_119)
+
+        self.SaveCategoriesToTxt = QPushButton(self.frame_113)
+        self.SaveCategoriesToTxt.setObjectName(u"SaveCategoriesToTxt")
+
+        self.verticalLayout_91.addWidget(self.SaveCategoriesToTxt)
+
+        self.pushButton_4 = QPushButton(self.frame_113)
+        self.pushButton_4.setObjectName(u"pushButton_4")
+
+        self.verticalLayout_91.addWidget(self.pushButton_4)
 
 
         self.horizontalLayout_47.addWidget(self.frame_113)
@@ -1311,7 +1294,7 @@ class Ui_MainWindow(object):
         self.saveSettingsButton = QPushButton(self.frame_134)
         self.saveSettingsButton.setObjectName(u"saveSettingsButton")
         self.saveSettingsButton.setMinimumSize(QSize(120, 0))
-        self.saveSettingsButton.setIcon(icon7)
+        self.saveSettingsButton.setIcon(icon5)
 
         self.horizontalLayout_57.addWidget(self.saveSettingsButton)
 
@@ -3874,10 +3857,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
-        self.AllMatchesWraper.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
+        self.AllMatchesWraper.setCurrentIndex(1)
         self.match_16.setCurrentIndex(0)
-        self.match_5.setCurrentIndex(2)
+        self.match_5.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -3919,9 +3902,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Klub", None));
         ___qtablewidgetitem3 = self.CompetitorsTable.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Numer Licencji", None));
-        self.DeleteCompetitorCategoryButton_2.setText("")
-        self.AddCompetitorCategoryButton_3.setText("")
-        self.AddCompetitorCategoryButton_2.setText("")
         self.ComprtitorName.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119:", None))
         self.CompetitorSurname.setText(QCoreApplication.translate("MainWindow", u"Nazwisko:", None))
         self.CompetitorClub.setText(QCoreApplication.translate("MainWindow", u"Klub:", None))
@@ -3938,6 +3918,8 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Kategoria", None));
         self.DeleteCompetitorCategoryButton.setText("")
         self.AddCompetitorCategoryButton.setText("")
+        self.SaveCategoriesToTxt.setText(QCoreApplication.translate("MainWindow", u"Zapisz pliki do losowa\u0144", None))
+        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Zapisz plik podsumowuj\u0105cy", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Dziecko", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzik (u12)", None))
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"Kadet (u16)", None))

@@ -3,6 +3,7 @@ from PySide2 import QtCore, QtGui
 from PySide2.QtCore import (QPropertyAnimation)
 from PySide2.QtGui import (QColor)
 # Import user interface file
+from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from Program_GUI.ui_main_window import *
 from Program_GUI.functionality.GUI_manipulation import *
 from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
@@ -26,6 +27,7 @@ class MainWindow(QMainWindow):
         self.SecondLeftMenuAnimation = None
         self.settings = Settings(self)
         self.categories_adder = CategoryAdder(self, self.settings)
+        self.CategoryOpener = Opener("Categories", self)
 
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -86,6 +88,7 @@ class MainWindow(QMainWindow):
             (lambda: self.categories_adder.add_category_to_competitor()))
         self.ui.SaveCompetitorButton.clicked.connect(
             (lambda: self.categories_adder.save_competitor_changes()))
+        self.ui.SaveCategoriesToTxt.clicked.connect(lambda: self.categories_adder.categories_to_txt())
 
         # Show window
         self.showFullScreen()
@@ -152,10 +155,11 @@ class MainWindow(QMainWindow):
         self.rightMenuAnimation.start()
 
     def slide_second_left_menu(self):
+        self.CategoryOpener.add_category_buttons()
         actual_menu_size = self.ui.Second_left_menu.width()
         new_menu_size = 0
         if actual_menu_size == 0:
-            new_menu_size = 60
+            new_menu_size = 100
         else:
             new_menu_size = 0
         self.SecondLeftMenuAnimation = QPropertyAnimation(self.ui.Second_left_menu, b"minimumWidth")
@@ -228,21 +232,7 @@ class MainWindow(QMainWindow):
 #     print_match_under_16(matches, main_window)
 
 
-def connect_gui_to_engine(main_window, all_match_engine):
-    def make_match(left_child_win, engine, window):
-        engine.print_match(window)
-        engine.make_match(left_child_win)
-        engine.print_match(window)
 
-    def go_to_next_round(engine, window):
-        engine.go_to_next_round()
-        engine.print_match(window)
-
-    main_window.ui.next_match.clicked.connect(lambda: go_to_next_round(all_match_engine, main_window))
-    main_window.ui.prev_match.clicked.connect(lambda: all_match_engine.go_to_prev_round())
-    main_window.ui.win_left.clicked.connect(lambda: make_match(True, all_match_engine, main_window))
-    main_window.ui.win_right.clicked.connect(lambda: make_match(False, all_match_engine, main_window))
-    engine.print_match(window)
 
 
 if __name__ == "__main__":
@@ -253,7 +243,6 @@ if __name__ == "__main__":
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
     competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
     window = MainWindow()
-    Opener("Categories", window).add_category_buttons()
     engine = AllMatchEngine(competitors)
     connect_gui_to_engine(window, engine)
     sys.exit(app.exec_())

@@ -276,6 +276,17 @@ class CategoryAdder:
         self.window.ui.CategoryComboBox.setCurrentText("Wszystko")
         self.window.ui.ClubComboBox.setCurrentText("Wszystko")
 
+    def categories_to_txt(self):
+        categories_dict = {key: [] for key in self.available_categories}
+        for competitor in self.competitors_list:
+            for category in competitor.get_category():
+                categories_dict[category].append(competitor)
+        for key in categories_dict:
+            with open('Categories/' + key.file_name() +'.txt', 'w',encoding="utf-8") as category_file:
+                for competitor in categories_dict[key]:
+                    category_file.write(
+                        competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
+
 
 if __name__ == '__main__':
     pass

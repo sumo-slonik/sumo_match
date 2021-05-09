@@ -16,6 +16,9 @@ class Category:
     def __str__(self):
         return self.gender + ' ' + self.age + ' ' + self.category
 
+    def file_name(self):
+        return self.gender.strip()[0] + self.age.strip() + self.category
+
     def __eq__(self, other):
         if type(self) != type(other):
             return False
@@ -28,8 +31,7 @@ class Category:
         return True
 
     def __hash__(self):
-        return hash(self.gender+self.age+self.category)
-
+        return hash(self.gender + self.age + self.category)
 
 
 class PersonalCompetitor:

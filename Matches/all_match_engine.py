@@ -38,6 +38,8 @@ class AllMatchEngine(AbstractMatchesMaker):
             self.engine = MatchUnder16(self.competitors)
         elif self.match_type == TypeOFMatch.Under5:
             self.engine = MatchUnder5Wrapper(self.competitors)
+        else:
+            print("Nie mamy zaimplementowanegoe")
 
     def make_match(self, left_win):
         self.engine.make_match(left_win)
