@@ -76,6 +76,7 @@ class CategoryAdder:
 
         for name in self.to_add:
             category_name = ''
+            print("nazwa pliku:" ,name)
             with pdfplumber.open(name) as pdf:
                 category_name = self.parse_pdf(pdf)
             new_repr = create_pdf_repr(self.window.ui.AddedCategoriesContents, category_name)

@@ -1,4 +1,4 @@
-import personal_competitor
+from DataStructures import personal_competitor
 import random
 
 

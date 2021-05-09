@@ -6,7 +6,8 @@ from PySide2.QtGui import (QColor)
 from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from Program_GUI.ui_main_window import *
 from Program_GUI.functionality.GUI_manipulation import *
-from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, divide_competitors_to_teams
+from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, \
+    divide_competitors_to_teams
 from Matches.all_match_engine import AllMatchEngine
 from Program_GUI.functionality.category_opener import Opener
 from Bookmarks.category_adder import CategoryAdder
@@ -53,7 +54,6 @@ class MainWindow(QMainWindow):
         self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
 
         # left menu buttons
-        self.ui.Top_menu_slide_button.clicked.connect(lambda: self.slide_upper_menu())
         self.ui.left_menu_toggle_button.clicked.connect(lambda: self.slide_left_menu())
         self.ui.HomeButton.clicked.connect(lambda: self.menu_button_function("HomePage"))
         self.ui.AccountButton.clicked.connect(lambda: self.menu_button_function("AccountPage"))
@@ -65,10 +65,17 @@ class MainWindow(QMainWindow):
         self.ui.CloseCommunicateButton.clicked.connect(lambda: self.slide_communicate())
 
         # top menu buttons
+        self.ui.Top_menu_slide_button.clicked.connect(lambda: self.slide_upper_menu())
         self.ui.HalfFinal_button.clicked.connect(lambda: self.top_menu_function("HalfFinals"))
         self.ui.Eliminations_button.clicked.connect(lambda: self.top_menu_function("Eliminations"))
         self.ui.Final_button.clicked.connect(lambda: self.top_menu_function("Finals"))
         self.ui.Repechage_button.clicked.connect(lambda: self.top_menu_function("Repechage"))
+
+        # top menu buttons under 10
+        self.ui.Top_menu_slide_button_2.clicked.connect(lambda: self.slide_second_upper_menu())
+        self.ui.Under_10_group_1_button.clicked.connect(lambda: self.top_menu_function_under_10("Group_1"))
+        self.ui.Under_10_group_2_button.clicked.connect(lambda: self.top_menu_function_under_10("Group_2"))
+        self.ui.Under_10_finals_button.clicked.connect(lambda: self.top_menu_function_under_10("Finals"))
 
         # category_menu
         self.ui.Hide_category_menu.clicked.connect(lambda: self.slide_second_left_menu())
@@ -77,6 +84,7 @@ class MainWindow(QMainWindow):
         self.ui.Button_4_competitors.clicked.connect(lambda: self.category_menu_button_function("4"))
         self.ui.Button_3_competitors.clicked.connect(lambda: self.category_menu_button_function("3"))
         self.ui.Button_2_competitors.clicked.connect(lambda: self.category_menu_button_function("2"))
+        self.ui.Button_10_competitors.clicked.connect(lambda: self.category_menu_button_function("10"))
 
         # adding_competitor
         self.ui.CategoriesBrowseButton.clicked.connect(lambda: self.categories_adder.add_category())
@@ -121,6 +129,21 @@ class MainWindow(QMainWindow):
             self.ui.Top_menu_slide_button.setIcon(QtGui.QIcon(u":/Icons/icons/cil-arrow-bottom.png"))
             new_menu_size = 0
         self.topMenuAnimation = QPropertyAnimation(self.ui.Top_menu, b"maximumHeight")
+        self.topMenuAnimation.setDuration(350)
+        self.topMenuAnimation.setStartValue(actual_menu_size)
+        self.topMenuAnimation.setEndValue(new_menu_size)
+        self.topMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.topMenuAnimation.start()
+
+    def slide_second_upper_menu(self):
+        actual_menu_size = self.ui.Under_10_top_menu.height()
+        if actual_menu_size == 0:
+            self.ui.Top_menu_slide_button_2.setIcon(QtGui.QIcon(u":/Icons/icons/cil-arrow-top.png"))
+            new_menu_size = 60
+        else:
+            self.ui.Top_menu_slide_button_2.setIcon(QtGui.QIcon(u":/Icons/icons/cil-arrow-bottom.png"))
+            new_menu_size = 0
+        self.topMenuAnimation = QPropertyAnimation(self.ui.Under_10_top_menu, b"maximumHeight")
         self.topMenuAnimation.setDuration(350)
         self.topMenuAnimation.setStartValue(actual_menu_size)
         self.topMenuAnimation.setEndValue(new_menu_size)
@@ -191,6 +214,14 @@ class MainWindow(QMainWindow):
         if go_to == "Repechage":
             self.ui.match_16.setCurrentWidget(self.ui.Repechage)
 
+    def top_menu_function_under_10(self, go_to):
+        if go_to == "Group_1":
+            self.ui.match_10.setCurrentWidget(self.ui.Grup_I_Under10)
+        if go_to == "Group_2":
+            self.ui.match_10.setCurrentWidget(self.ui.Grup_II_Under10)
+        if go_to == "Finals":
+            self.ui.match_10.setCurrentWidget(self.ui.Finals_Under10)
+
     def category_menu_button_function(self, go_to):
         if go_to == "16":
             self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder16)
@@ -207,6 +238,9 @@ class MainWindow(QMainWindow):
         if go_to == "2":
             self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder5)
             self.ui.match_5.setCurrentWidget(self.ui.Under2)
+        if go_to == "10":
+            self.ui.AllMatchesWraper.setCurrentWidget(self.ui.MatchUnder10)
+            self.ui.match_10.setCurrentWidget(self.ui.Grup_I_Under10)
 
     def table_clicked(self):
         # #selected cell value.
@@ -230,9 +264,6 @@ class MainWindow(QMainWindow):
 #     matches = MatchUnder16(contestants)
 #     # print_eliminations_16(matches, main_window)
 #     print_match_under_16(matches, main_window)
-
-
-
 
 
 if __name__ == "__main__":

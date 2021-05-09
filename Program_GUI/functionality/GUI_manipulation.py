@@ -211,112 +211,133 @@ def color_borders(elements, colors, main_window):
 # TO DO : uogulnić poniższe funkcje bo robią w zasadzie to samo
 # ////////////////////////////////////////////////////////////////////////////
 
-def print_match_under_5_points(match_under_5, main_window):
+def print_match_under_5_points(match_under_5, main_window, name="un_5_point_node_"):
     points = match_under_5.get_results()
     competitors = match_under_5.get_competitors()
     values = [points[x] for x in competitors]
-    node_names = ["un_5_point_node_" + str(x) for x in range(1, 6)]
+    node_names = [name + str(x) for x in range(1, 6)]
     load_values_to_nodes(node_names, values, main_window)
 
 
-def print_actual_match_under_5(match_under_5, main_window):
+def print_actual_match_under_5(match_under_5, main_window, name='un_5_competitor_node_'):
     actual_match_id = match_under_5.get_actual_match_id()
-    all_nodes = ["un_5_competitor_node_" + str(x) for x in range(1, 26)]
+    all_nodes = [name + str(x) for x in range(1, 26)]
     colors_for_all = ['black'] * 25
     colors_for_actual = ['yellow'] * 2
-    node_1 = 'un_5_competitor_node_' + str(match_under_5.get_actual_match_id() * 2 + 6)
-    node_2 = 'un_5_competitor_node_' + str(match_under_5.get_actual_match_id() * 2 + 7)
+    node_1 = name + str(match_under_5.get_actual_match_id() * 2 + 6)
+    node_2 = name + str(match_under_5.get_actual_match_id() * 2 + 7)
 
     color_borders(all_nodes, colors_for_all, main_window)
     color_borders([node_1, node_2], colors_for_actual, main_window)
 
 
-def print_match_under_5(match_under_5, main_window):
-    node_names = ["un_5_competitor_node_" + str(x) for x in range(1, 26)]
+def print_match_under_5(match_under_5, main_window, name="un_5_competitor_node_", points_name='un_5_point_node_'):
+    node_names = [name + str(x) for x in range(1, 26)]
     competitors_list = match_under_5.get_competitors()
     matches_nodes = dict()
     for match in match_under_5.matches:
         competitors_list.append(match.get_left_child())
         competitors_list.append(match.get_right_child())
     load_competitors_to_nodes(node_names, competitors_list, main_window)
-    print_match_under_5_points(match_under_5, main_window)
-    print_actual_match_under_5(match_under_5, main_window)
+    print_match_under_5_points(match_under_5, main_window, points_name)
+    print_actual_match_under_5(match_under_5, main_window, name)
 
 
-def print_match_under_4_points(match_under_4, main_window):
+def print_match_under_4_points(match_under_4, main_window, name="un_4_point_node_"):
     points = match_under_4.get_results()
     competitors = match_under_4.get_competitors()
     values = [points[x] for x in competitors]
-    node_names = ["un_4_point_node_" + str(x) for x in range(1, 5)]
+    node_names = [name + str(x) for x in range(1, 5)]
     load_values_to_nodes(node_names, values, main_window)
 
 
-def print_actual_match_under_4(match_under_4, main_window):
+def print_actual_match_under_4(match_under_4, main_window, name="un_4_competitor_node_"):
     actual_match_id = match_under_4.get_actual_match_id()
-    all_nodes = ["un_4_competitor_node_" + str(x) for x in range(1, 17)]
+    all_nodes = [name + str(x) for x in range(1, 17)]
     colors_for_all = ['black'] * 17
     colors_for_actual = ['yellow'] * 2
-    node_1 = 'un_4_competitor_node_' + str(match_under_4.get_actual_match_id() * 2 + 5)
-    node_2 = 'un_4_competitor_node_' + str(match_under_4.get_actual_match_id() * 2 + 6)
+    node_1 = name + str(match_under_4.get_actual_match_id() * 2 + 5)
+    node_2 = name + str(match_under_4.get_actual_match_id() * 2 + 6)
 
     color_borders(all_nodes, colors_for_all, main_window)
     color_borders([node_1, node_2], colors_for_actual, main_window)
 
 
-def print_match_under_4(match_under_4, main_window):
-    node_names = ["un_4_competitor_node_" + str(x) for x in range(1, 17)]
+def print_match_under_4(match_under_4, main_window, name="un_4_competitor_node_", points_name='un_4_point_node_'):
+    node_names = [name + str(x) for x in range(1, 17)]
     competitors_list = match_under_4.get_competitors()
     matches_nodes = dict()
     for match in match_under_4.matches:
         competitors_list.append(match.get_left_child())
         competitors_list.append(match.get_right_child())
     load_competitors_to_nodes(node_names, competitors_list, main_window)
-    print_match_under_4_points(match_under_4, main_window)
-    print_actual_match_under_4(match_under_4, main_window)
+    print_match_under_4_points(match_under_4, main_window, points_name)
+    print_actual_match_under_4(match_under_4, main_window, name)
 
 
-def print_match_under_3_points(match_under_3, main_window):
+def print_match_under_3_points(match_under_3, main_window, name="un_3_point_node_"):
     points = match_under_3.get_results()
     competitors = match_under_3.get_competitors()
     values = [points[x] for x in competitors]
-    node_names = ["un_3_point_node_" + str(x) for x in range(1, 4)]
+    node_names = [name + str(x) for x in range(1, 4)]
     load_values_to_nodes(node_names, values, main_window)
 
 
-def print_actual_match_under_3(match_under_3, main_window):
+def print_actual_match_under_3(match_under_3, main_window, name="un_3_competitor_node_"):
     actual_match_id = match_under_3.get_actual_match_id()
-    all_nodes = ["un_3_competitor_node_" + str(x) for x in range(1, 10)]
+    all_nodes = [name + str(x) for x in range(1, 10)]
     colors_for_all = ['black'] * 9
     colors_for_actual = ['yellow'] * 2
-    node_1 = 'un_3_competitor_node_' + str(match_under_3.get_actual_match_id() * 2 + 4)
-    node_2 = 'un_3_competitor_node_' + str(match_under_3.get_actual_match_id() * 2 + 5)
+    node_1 = name + str(match_under_3.get_actual_match_id() * 2 + 4)
+    node_2 = name + str(match_under_3.get_actual_match_id() * 2 + 5)
 
     color_borders(all_nodes, colors_for_all, main_window)
     color_borders([node_1, node_2], colors_for_actual, main_window)
 
 
-def print_match_under_3(match_under_3, main_window):
-    node_names = ["un_3_competitor_node_" + str(x) for x in range(1, 10)]
+def print_match_under_3(match_under_3, main_window, name="un_3_competitor_node_", points_name="un_3_point_node_"):
+    node_names = [name + str(x) for x in range(1, 10)]
     competitors_list = match_under_3.get_competitors()
     matches_nodes = dict()
     for match in match_under_3.matches:
         competitors_list.append(match.get_left_child())
         competitors_list.append(match.get_right_child())
     load_competitors_to_nodes(node_names, competitors_list, main_window)
-    print_match_under_3_points(match_under_3, main_window)
-    print_actual_match_under_3(match_under_3, main_window)
+    print_match_under_3_points(match_under_3, main_window, points_name)
+    print_actual_match_under_3(match_under_3, main_window, name)
 
 
-def print_match_under_5_wrapper(match_under_5_wrapper, main_window):
+def print_match_under_5_wrapper(match_under_5_wrapper, main_window,
+                                names=("un_5_competitor_node_", 'un_5_point_node_', "un_4_competitor_node_",
+                                       'un_4_point_node_', "un_3_competitor_node_", "un_3_point_node_"), scenes=5,
+                                group=None):
     if match_under_5_wrapper.actual_state == 5:
-        main_window.ui.match_5.setCurrentWidget(main_window.ui.under_5)
-        print_match_under_5(match_under_5_wrapper.engine, main_window)
+        if scenes == 5:
+            main_window.ui.match_5.setCurrentWidget(main_window.ui.under_5)
+        if scenes == 10:
+            if group == 1:
+                main_window.ui.Grup_I_Under10_G1.setCurrentWidget(main_window.ui.under_5_g1)
+            if group == 2:
+                main_window.ui.Grup_II_Under10_G2.setCurrentWidget(main_window.ui.under_5_g2)
+        print_match_under_5(match_under_5_wrapper.engine, main_window, names[0], names[1])
     if match_under_5_wrapper.actual_state == 4:
-        main_window.ui.match_5.setCurrentWidget(main_window.ui.under_4)
-        print_match_under_4(match_under_5_wrapper.engine, main_window)
+        if scenes == 5:
+            main_window.ui.match_5.setCurrentWidget(main_window.ui.under_4)
+        if scenes == 10:
+            if group == 1:
+                main_window.ui.Grup_I_Under10_G1.setCurrentWidget(main_window.ui.under_4_g1)
+            if group == 2:
+                main_window.ui.Grup_II_Under10_G2.setCurrentWidget(main_window.ui.under_4_g2)
+        print_match_under_4(match_under_5_wrapper.engine, main_window, names[2], names[3])
     if match_under_5_wrapper.actual_state == 3:
-        main_window.ui.match_5.setCurrentWidget(main_window.ui.under_3)
-        print_match_under_3(match_under_5_wrapper.engine, main_window)
+        if scenes == 5:
+            main_window.ui.match_5.setCurrentWidget(main_window.ui.under_3)
+        if scenes == 10:
+            if group == 1:
+                main_window.ui.Grup_I_Under10_G1.setCurrentWidget(main_window.ui.under_3_g1)
+            if group == 2:
+                main_window.ui.Grup_II_Under10_G2.setCurrentWidget(main_window.ui.under_3_g2)
+        print_match_under_3(match_under_5_wrapper.engine, main_window, names[4], names[5])
 
 
 def print_actual_competitors(competitor1, competitor2, window):
@@ -343,6 +364,30 @@ def print_actual_competitors(competitor1, competitor2, window):
     window.ui.Competitor_2.setPlainText(competitor_to_description(competitor2))
 
 
+def print_match_under_10(match_under_10, main_window):
+    state = match_under_10.state
+
+    if state == 0:
+        names = ('un_10_5_grup_1_competitor_node_', 'un_10_5_grup_1_point_node_', 'un_10_4_grup_1_competitor_node_',
+                 'un_10_4_grup_1_point_node_', 'un_10_3_grup_1_competitor_node_', 'un_10_3_grup_1_point_node_')
+        print_match_under_5_wrapper(match_under_10.first_group, main_window, names, 10, 1)
+    if state == 1:
+        names = ('un_10_5_grup_2_competitor_node_', 'un_10_5_grup_2_point_node_', 'un_10_4_grup_2_competitor_node_',
+                 'un_10_4_grup_2_point_node_', 'un_10_3_grup_2_competitor_node_', 'un_10_3_grup_2_point_node_')
+        print_match_under_5_wrapper(match_under_10.second_group, main_window, names, 10, 2)
+    if state == 2:
+        node_names = ['un_10_half_final_competitor_node_' + str(x) for x in range(1, 5)]
+        load_competitors_to_nodes(node_names, match_under_10.overtime.competitors, main_window)
+    if state == 3:
+        node_names = ['un_10_half_final_competitor_node_5','un_10_final_competitor_node_1']
+        load_competitors_to_nodes(node_names,[match_under_10.overtime.tree[0].get_competitor()]*2,main_window)
+    if state == 4:
+        node_names = ['un_10_half_final_competitor_node_6','un_10_final_competitor_node_2']
+        load_competitors_to_nodes(node_names,[match_under_10.overtime.tree[1].get_competitor()]*2,main_window)
+    if state == 5:
+        node_names = ['un_10_final_competitor_node_3']
+        load_competitors_to_nodes(node_names,[match_under_10.overtime.tree[2].get_competitor()],main_window)
+
 def show_message(window, message, slide=False):
     window.ui.Communicate.setPlainText(message)
     if slide:
@@ -355,3 +400,7 @@ def show_message(window, message, slide=False):
             window.leftMenuAnimation.setEndValue(new_size)
             window.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
             window.leftMenuAnimation.start()
+
+# ////////////////////////////////////////////////////////////////////////////
+# TO DO : uogulnić poniższe funkcje bo robią w zasadzie to samo
+# ////////////////////////////////////////////////////////////////////////////

@@ -1,8 +1,11 @@
 from Matches.abstractMatchesMaker import AbstractMatchesMaker
 from enum import Enum
+
+from Matches.match_under_10 import MatchUnder10
 from Matches.match_under_16 import MatchUnder16
 from Matches.match_under_5 import MatchUnder5Wrapper
 from Program_GUI.functionality.GUI_manipulation import *
+from random_functions.random_function_16 import random_function_16
 
 
 class TypeOFMatch(Enum):
@@ -35,9 +38,14 @@ class AllMatchEngine(AbstractMatchesMaker):
         self.match_type = correctTypeFromLength(len(self.competitors))
         self.engine = None
         if self.match_type == TypeOFMatch.Under16:
-            self.engine = MatchUnder16(self.competitors)
+            if len(self.competitors) == 16:
+                self.engine = MatchUnder16(self.competitors)
+            else:
+                print("trzeba wstawić wolne losy")
         elif self.match_type == TypeOFMatch.Under5:
             self.engine = MatchUnder5Wrapper(self.competitors)
+        elif self.match_type == TypeOFMatch.Under10:
+            self.engine = MatchUnder10(self.competitors)
         else:
             print("Nie mamy zaimplementowanegoe")
 
@@ -63,6 +71,8 @@ class AllMatchEngine(AbstractMatchesMaker):
             self.print_fighters(window)
         elif self.match_type == TypeOFMatch.Under5:
             print_match_under_5_wrapper(self.engine, window)
+        elif self.match_type == TypeOFMatch.Under10:
+            print_match_under_10(self.engine,window)
 
 
 if __name__ == '__main__':

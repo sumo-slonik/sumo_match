@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowfqiDCO.ui'
+## Form generated from reading UI file 'main_windowzERrlY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1181, 798)
+        MainWindow.resize(1044, 798)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -286,6 +286,7 @@ class Ui_MainWindow(object):
 
         self.center_main_items = QFrame(self.main_body)
         self.center_main_items.setObjectName(u"center_main_items")
+        self.center_main_items.setMinimumSize(QSize(0, 0))
         self.center_main_items.setStyleSheet(u"background-color: rgb(85, 255, 127);")
         self.center_main_items.setFrameShape(QFrame.StyledPanel)
         self.center_main_items.setFrameShadow(QFrame.Raised)
@@ -321,6 +322,11 @@ class Ui_MainWindow(object):
         self.Button_16_competitors.setObjectName(u"Button_16_competitors")
 
         self.verticalLayout_41.addWidget(self.Button_16_competitors)
+
+        self.Button_10_competitors = QPushButton(self.Second_left_menu)
+        self.Button_10_competitors.setObjectName(u"Button_10_competitors")
+
+        self.verticalLayout_41.addWidget(self.Button_10_competitors)
 
         self.Button_5_competitors = QPushButton(self.Second_left_menu)
         self.Button_5_competitors.setObjectName(u"Button_5_competitors")
@@ -584,6 +590,39 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_56.addWidget(self.CompetitorsTable)
 
+        self.frame_132 = QFrame(self.frame_131)
+        self.frame_132.setObjectName(u"frame_132")
+        self.frame_132.setFrameShape(QFrame.StyledPanel)
+        self.frame_132.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_100 = QVBoxLayout(self.frame_132)
+        self.verticalLayout_100.setObjectName(u"verticalLayout_100")
+        self.DeleteCompetitorCategoryButton_2 = QPushButton(self.frame_132)
+        self.DeleteCompetitorCategoryButton_2.setObjectName(u"DeleteCompetitorCategoryButton_2")
+        icon5 = QIcon()
+        icon5.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DeleteCompetitorCategoryButton_2.setIcon(icon5)
+
+        self.verticalLayout_100.addWidget(self.DeleteCompetitorCategoryButton_2)
+
+        self.AddCompetitorCategoryButton_3 = QPushButton(self.frame_132)
+        self.AddCompetitorCategoryButton_3.setObjectName(u"AddCompetitorCategoryButton_3")
+        icon6 = QIcon()
+        icon6.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton_3.setIcon(icon6)
+
+        self.verticalLayout_100.addWidget(self.AddCompetitorCategoryButton_3)
+
+        self.AddCompetitorCategoryButton_2 = QPushButton(self.frame_132)
+        self.AddCompetitorCategoryButton_2.setObjectName(u"AddCompetitorCategoryButton_2")
+        icon7 = QIcon()
+        icon7.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton_2.setIcon(icon7)
+
+        self.verticalLayout_100.addWidget(self.AddCompetitorCategoryButton_2)
+
+
+        self.horizontalLayout_56.addWidget(self.frame_132)
+
 
         self.verticalLayout_92.addWidget(self.frame_131)
 
@@ -675,9 +714,7 @@ class Ui_MainWindow(object):
         self.SaveCompetitorButton = QPushButton(self.frame_129)
         self.SaveCompetitorButton.setObjectName(u"SaveCompetitorButton")
         self.SaveCompetitorButton.setMaximumSize(QSize(16777215, 40))
-        icon5 = QIcon()
-        icon5.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.SaveCompetitorButton.setIcon(icon5)
+        self.SaveCompetitorButton.setIcon(icon7)
 
         self.horizontalLayout_54.addWidget(self.SaveCompetitorButton)
 
@@ -738,17 +775,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
         self.DeleteCompetitorCategoryButton = QPushButton(self.frame_130)
         self.DeleteCompetitorCategoryButton.setObjectName(u"DeleteCompetitorCategoryButton")
-        icon6 = QIcon()
-        icon6.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.DeleteCompetitorCategoryButton.setIcon(icon6)
+        self.DeleteCompetitorCategoryButton.setIcon(icon5)
 
         self.verticalLayout_99.addWidget(self.DeleteCompetitorCategoryButton)
 
         self.AddCompetitorCategoryButton = QPushButton(self.frame_130)
         self.AddCompetitorCategoryButton.setObjectName(u"AddCompetitorCategoryButton")
-        icon7 = QIcon()
-        icon7.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.AddCompetitorCategoryButton.setIcon(icon7)
+        self.AddCompetitorCategoryButton.setIcon(icon6)
 
         self.verticalLayout_99.addWidget(self.AddCompetitorCategoryButton)
 
@@ -767,18 +800,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_92.addWidget(self.frame_120)
 
-
-        self.verticalLayout_91.addWidget(self.frame_119)
-
-        self.SaveCategoriesToTxt = QPushButton(self.frame_113)
+        self.SaveCategoriesToTxt = QPushButton(self.frame_119)
         self.SaveCategoriesToTxt.setObjectName(u"SaveCategoriesToTxt")
 
-        self.verticalLayout_91.addWidget(self.SaveCategoriesToTxt)
+        self.verticalLayout_92.addWidget(self.SaveCategoriesToTxt)
 
-        self.pushButton_4 = QPushButton(self.frame_113)
-        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.SaveCategoriesToPdf = QPushButton(self.frame_119)
+        self.SaveCategoriesToPdf.setObjectName(u"SaveCategoriesToPdf")
 
-        self.verticalLayout_91.addWidget(self.pushButton_4)
+        self.verticalLayout_92.addWidget(self.SaveCategoriesToPdf)
+
+
+        self.verticalLayout_91.addWidget(self.frame_119)
 
 
         self.horizontalLayout_47.addWidget(self.frame_113)
@@ -1294,7 +1327,7 @@ class Ui_MainWindow(object):
         self.saveSettingsButton = QPushButton(self.frame_134)
         self.saveSettingsButton.setObjectName(u"saveSettingsButton")
         self.saveSettingsButton.setMinimumSize(QSize(120, 0))
-        self.saveSettingsButton.setIcon(icon5)
+        self.saveSettingsButton.setIcon(icon7)
 
         self.horizontalLayout_57.addWidget(self.saveSettingsButton)
 
@@ -2402,6 +2435,2456 @@ class Ui_MainWindow(object):
         self.verticalLayout_118.addWidget(self.match_16)
 
         self.AllMatchesWraper.addWidget(self.MatchUnder16)
+        self.MatchUnder10 = QWidget()
+        self.MatchUnder10.setObjectName(u"MatchUnder10")
+        self.verticalLayout_149 = QVBoxLayout(self.MatchUnder10)
+        self.verticalLayout_149.setObjectName(u"verticalLayout_149")
+        self.Top_menu_under10 = QFrame(self.MatchUnder10)
+        self.Top_menu_under10.setObjectName(u"Top_menu_under10")
+        self.Top_menu_under10.setMinimumSize(QSize(0, 60))
+        self.Top_menu_under10.setMaximumSize(QSize(16777215, 100))
+        self.Top_menu_under10.setFrameShape(QFrame.StyledPanel)
+        self.Top_menu_under10.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_164 = QVBoxLayout(self.Top_menu_under10)
+        self.verticalLayout_164.setSpacing(0)
+        self.verticalLayout_164.setObjectName(u"verticalLayout_164")
+        self.verticalLayout_164.setContentsMargins(0, 0, 0, 0)
+        self.Under_10_top_menu = QFrame(self.Top_menu_under10)
+        self.Under_10_top_menu.setObjectName(u"Under_10_top_menu")
+        self.Under_10_top_menu.setFrameShape(QFrame.StyledPanel)
+        self.Under_10_top_menu.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_59 = QHBoxLayout(self.Under_10_top_menu)
+        self.horizontalLayout_59.setObjectName(u"horizontalLayout_59")
+        self.Under_10_group_1_button = QPushButton(self.Under_10_top_menu)
+        self.Under_10_group_1_button.setObjectName(u"Under_10_group_1_button")
+
+        self.horizontalLayout_59.addWidget(self.Under_10_group_1_button)
+
+        self.Under_10_group_2_button = QPushButton(self.Under_10_top_menu)
+        self.Under_10_group_2_button.setObjectName(u"Under_10_group_2_button")
+
+        self.horizontalLayout_59.addWidget(self.Under_10_group_2_button)
+
+        self.Under_10_finals_button = QPushButton(self.Under_10_top_menu)
+        self.Under_10_finals_button.setObjectName(u"Under_10_finals_button")
+
+        self.horizontalLayout_59.addWidget(self.Under_10_finals_button)
+
+
+        self.verticalLayout_164.addWidget(self.Under_10_top_menu)
+
+        self.Top_menu_slide_button_2 = QPushButton(self.Top_menu_under10)
+        self.Top_menu_slide_button_2.setObjectName(u"Top_menu_slide_button_2")
+        self.Top_menu_slide_button_2.setMinimumSize(QSize(40, 40))
+        self.Top_menu_slide_button_2.setMaximumSize(QSize(40, 40))
+        self.Top_menu_slide_button_2.setIcon(icon8)
+
+        self.verticalLayout_164.addWidget(self.Top_menu_slide_button_2, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_149.addWidget(self.Top_menu_under10)
+
+        self.match_10 = QStackedWidget(self.MatchUnder10)
+        self.match_10.setObjectName(u"match_10")
+        self.match_10.setStyleSheet(u"QTextEdit\n"
+"{\n"
+"	background-color: rgb(255, 255, 255);\n"
+"	border-radius:10px;\n"
+"	font: 75 14pt \"MS Shell Dlg 2\";\n"
+"}")
+        self.Grup_I_Under10 = QWidget()
+        self.Grup_I_Under10.setObjectName(u"Grup_I_Under10")
+        self.verticalLayout_221 = QVBoxLayout(self.Grup_I_Under10)
+        self.verticalLayout_221.setObjectName(u"verticalLayout_221")
+        self.label_76 = QLabel(self.Grup_I_Under10)
+        self.label_76.setObjectName(u"label_76")
+        font3 = QFont()
+        font3.setFamily(u"Calibri")
+        font3.setPointSize(28)
+        font3.setBold(True)
+        font3.setWeight(75)
+        self.label_76.setFont(font3)
+
+        self.verticalLayout_221.addWidget(self.label_76, 0, Qt.AlignHCenter)
+
+        self.Grup_I_Under10_G1 = QStackedWidget(self.Grup_I_Under10)
+        self.Grup_I_Under10_G1.setObjectName(u"Grup_I_Under10_G1")
+        self.under_5_g1 = QWidget()
+        self.under_5_g1.setObjectName(u"under_5_g1")
+        self.horizontalLayout_60 = QHBoxLayout(self.under_5_g1)
+        self.horizontalLayout_60.setObjectName(u"horizontalLayout_60")
+        self.frame_138 = QFrame(self.under_5_g1)
+        self.frame_138.setObjectName(u"frame_138")
+        self.frame_138.setFrameShape(QFrame.StyledPanel)
+        self.frame_138.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_105 = QVBoxLayout(self.frame_138)
+        self.verticalLayout_105.setObjectName(u"verticalLayout_105")
+        self.frame_139 = QFrame(self.frame_138)
+        self.frame_139.setObjectName(u"frame_139")
+        self.frame_139.setFrameShape(QFrame.StyledPanel)
+        self.frame_139.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_106 = QVBoxLayout(self.frame_139)
+        self.verticalLayout_106.setObjectName(u"verticalLayout_106")
+        self.label_40 = QLabel(self.frame_139)
+        self.label_40.setObjectName(u"label_40")
+        self.label_40.setFont(font1)
+
+        self.verticalLayout_106.addWidget(self.label_40)
+
+
+        self.verticalLayout_105.addWidget(self.frame_139)
+
+        self.frame_140 = QFrame(self.frame_138)
+        self.frame_140.setObjectName(u"frame_140")
+        self.frame_140.setFrameShape(QFrame.StyledPanel)
+        self.frame_140.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_68 = QHBoxLayout(self.frame_140)
+        self.horizontalLayout_68.setObjectName(u"horizontalLayout_68")
+        self.frame_141 = QFrame(self.frame_140)
+        self.frame_141.setObjectName(u"frame_141")
+        self.frame_141.setFrameShape(QFrame.StyledPanel)
+        self.frame_141.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_107 = QVBoxLayout(self.frame_141)
+        self.verticalLayout_107.setObjectName(u"verticalLayout_107")
+        self.un_10_5_grup_1_competitor_node_1 = QTextEdit(self.frame_141)
+        self.un_10_5_grup_1_competitor_node_1.setObjectName(u"un_10_5_grup_1_competitor_node_1")
+        self.un_10_5_grup_1_competitor_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_107.addWidget(self.un_10_5_grup_1_competitor_node_1)
+
+        self.un_10_5_grup_1_competitor_node_2 = QTextEdit(self.frame_141)
+        self.un_10_5_grup_1_competitor_node_2.setObjectName(u"un_10_5_grup_1_competitor_node_2")
+        self.un_10_5_grup_1_competitor_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_107.addWidget(self.un_10_5_grup_1_competitor_node_2)
+
+        self.un_10_5_grup_1_competitor_node_3 = QTextEdit(self.frame_141)
+        self.un_10_5_grup_1_competitor_node_3.setObjectName(u"un_10_5_grup_1_competitor_node_3")
+        self.un_10_5_grup_1_competitor_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_107.addWidget(self.un_10_5_grup_1_competitor_node_3)
+
+        self.un_10_5_grup_1_competitor_node_4 = QTextEdit(self.frame_141)
+        self.un_10_5_grup_1_competitor_node_4.setObjectName(u"un_10_5_grup_1_competitor_node_4")
+        self.un_10_5_grup_1_competitor_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_107.addWidget(self.un_10_5_grup_1_competitor_node_4)
+
+        self.un_10_5_grup_1_competitor_node_5 = QTextEdit(self.frame_141)
+        self.un_10_5_grup_1_competitor_node_5.setObjectName(u"un_10_5_grup_1_competitor_node_5")
+        self.un_10_5_grup_1_competitor_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_107.addWidget(self.un_10_5_grup_1_competitor_node_5)
+
+
+        self.horizontalLayout_68.addWidget(self.frame_141)
+
+        self.frame_142 = QFrame(self.frame_140)
+        self.frame_142.setObjectName(u"frame_142")
+        self.frame_142.setMaximumSize(QSize(50, 16777215))
+        self.frame_142.setFrameShape(QFrame.StyledPanel)
+        self.frame_142.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_108 = QVBoxLayout(self.frame_142)
+        self.verticalLayout_108.setObjectName(u"verticalLayout_108")
+        self.un_10_5_grup_1_point_node_1 = QTextEdit(self.frame_142)
+        self.un_10_5_grup_1_point_node_1.setObjectName(u"un_10_5_grup_1_point_node_1")
+        self.un_10_5_grup_1_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_108.addWidget(self.un_10_5_grup_1_point_node_1)
+
+        self.un_10_5_grup_1_point_node_2 = QTextEdit(self.frame_142)
+        self.un_10_5_grup_1_point_node_2.setObjectName(u"un_10_5_grup_1_point_node_2")
+        self.un_10_5_grup_1_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_108.addWidget(self.un_10_5_grup_1_point_node_2)
+
+        self.un_10_5_grup_1_point_node_3 = QTextEdit(self.frame_142)
+        self.un_10_5_grup_1_point_node_3.setObjectName(u"un_10_5_grup_1_point_node_3")
+        self.un_10_5_grup_1_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_108.addWidget(self.un_10_5_grup_1_point_node_3)
+
+        self.un_10_5_grup_1_point_node_4 = QTextEdit(self.frame_142)
+        self.un_10_5_grup_1_point_node_4.setObjectName(u"un_10_5_grup_1_point_node_4")
+        self.un_10_5_grup_1_point_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_point_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_point_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_108.addWidget(self.un_10_5_grup_1_point_node_4)
+
+        self.un_10_5_grup_1_point_node_5 = QTextEdit(self.frame_142)
+        self.un_10_5_grup_1_point_node_5.setObjectName(u"un_10_5_grup_1_point_node_5")
+        self.un_10_5_grup_1_point_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_point_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_point_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_108.addWidget(self.un_10_5_grup_1_point_node_5)
+
+
+        self.horizontalLayout_68.addWidget(self.frame_142)
+
+
+        self.verticalLayout_105.addWidget(self.frame_140)
+
+
+        self.horizontalLayout_60.addWidget(self.frame_138)
+
+        self.frame_143 = QFrame(self.under_5_g1)
+        self.frame_143.setObjectName(u"frame_143")
+        self.frame_143.setMinimumSize(QSize(25, 0))
+        self.frame_143.setFrameShape(QFrame.StyledPanel)
+        self.frame_143.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_109 = QVBoxLayout(self.frame_143)
+        self.verticalLayout_109.setObjectName(u"verticalLayout_109")
+        self.label_41 = QLabel(self.frame_143)
+        self.label_41.setObjectName(u"label_41")
+        self.label_41.setFont(font1)
+        self.label_41.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_109.addWidget(self.label_41)
+
+        self.frame_144 = QFrame(self.frame_143)
+        self.frame_144.setObjectName(u"frame_144")
+        self.frame_144.setEnabled(True)
+        self.frame_144.setFrameShape(QFrame.NoFrame)
+        self.frame_144.setFrameShadow(QFrame.Raised)
+        self._5 = QVBoxLayout(self.frame_144)
+        self._5.setSpacing(0)
+        self._5.setObjectName(u"_5")
+        self._5.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_6 = QTextEdit(self.frame_144)
+        self.un_10_5_grup_1_competitor_node_6.setObjectName(u"un_10_5_grup_1_competitor_node_6")
+        self.un_10_5_grup_1_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._5.addWidget(self.un_10_5_grup_1_competitor_node_6)
+
+        self.un_10_5_grup_1_competitor_node_7 = QTextEdit(self.frame_144)
+        self.un_10_5_grup_1_competitor_node_7.setObjectName(u"un_10_5_grup_1_competitor_node_7")
+        self.un_10_5_grup_1_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._5.addWidget(self.un_10_5_grup_1_competitor_node_7)
+
+
+        self.verticalLayout_109.addWidget(self.frame_144)
+
+        self.frame_152 = QFrame(self.frame_143)
+        self.frame_152.setObjectName(u"frame_152")
+        self.frame_152.setFrameShape(QFrame.StyledPanel)
+        self.frame_152.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_110 = QVBoxLayout(self.frame_152)
+        self.verticalLayout_110.setSpacing(0)
+        self.verticalLayout_110.setObjectName(u"verticalLayout_110")
+        self.verticalLayout_110.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_8 = QTextEdit(self.frame_152)
+        self.un_10_5_grup_1_competitor_node_8.setObjectName(u"un_10_5_grup_1_competitor_node_8")
+        self.un_10_5_grup_1_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_110.addWidget(self.un_10_5_grup_1_competitor_node_8)
+
+        self.un_10_5_grup_1_competitor_node_9 = QTextEdit(self.frame_152)
+        self.un_10_5_grup_1_competitor_node_9.setObjectName(u"un_10_5_grup_1_competitor_node_9")
+        self.un_10_5_grup_1_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_110.addWidget(self.un_10_5_grup_1_competitor_node_9)
+
+
+        self.verticalLayout_109.addWidget(self.frame_152)
+
+
+        self.horizontalLayout_60.addWidget(self.frame_143)
+
+        self.frame_153 = QFrame(self.under_5_g1)
+        self.frame_153.setObjectName(u"frame_153")
+        self.frame_153.setMinimumSize(QSize(25, 0))
+        self.frame_153.setFrameShape(QFrame.StyledPanel)
+        self.frame_153.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_111 = QVBoxLayout(self.frame_153)
+        self.verticalLayout_111.setObjectName(u"verticalLayout_111")
+        self.label_42 = QLabel(self.frame_153)
+        self.label_42.setObjectName(u"label_42")
+        self.label_42.setFont(font1)
+        self.label_42.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_111.addWidget(self.label_42)
+
+        self.frame_154 = QFrame(self.frame_153)
+        self.frame_154.setObjectName(u"frame_154")
+        self.frame_154.setFrameShape(QFrame.StyledPanel)
+        self.frame_154.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_112 = QVBoxLayout(self.frame_154)
+        self.verticalLayout_112.setSpacing(0)
+        self.verticalLayout_112.setObjectName(u"verticalLayout_112")
+        self.verticalLayout_112.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_10 = QTextEdit(self.frame_154)
+        self.un_10_5_grup_1_competitor_node_10.setObjectName(u"un_10_5_grup_1_competitor_node_10")
+        self.un_10_5_grup_1_competitor_node_10.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_10.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_10.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_112.addWidget(self.un_10_5_grup_1_competitor_node_10)
+
+        self.un_10_5_grup_1_competitor_node_11 = QTextEdit(self.frame_154)
+        self.un_10_5_grup_1_competitor_node_11.setObjectName(u"un_10_5_grup_1_competitor_node_11")
+        self.un_10_5_grup_1_competitor_node_11.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_11.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_11.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_112.addWidget(self.un_10_5_grup_1_competitor_node_11)
+
+
+        self.verticalLayout_111.addWidget(self.frame_154)
+
+        self.frame_155 = QFrame(self.frame_153)
+        self.frame_155.setObjectName(u"frame_155")
+        self.frame_155.setFrameShape(QFrame.StyledPanel)
+        self.frame_155.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_113 = QVBoxLayout(self.frame_155)
+        self.verticalLayout_113.setSpacing(0)
+        self.verticalLayout_113.setObjectName(u"verticalLayout_113")
+        self.verticalLayout_113.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_12 = QTextEdit(self.frame_155)
+        self.un_10_5_grup_1_competitor_node_12.setObjectName(u"un_10_5_grup_1_competitor_node_12")
+        self.un_10_5_grup_1_competitor_node_12.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_12.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_12.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_113.addWidget(self.un_10_5_grup_1_competitor_node_12)
+
+        self.un_10_5_grup_1_competitor_node_13 = QTextEdit(self.frame_155)
+        self.un_10_5_grup_1_competitor_node_13.setObjectName(u"un_10_5_grup_1_competitor_node_13")
+        self.un_10_5_grup_1_competitor_node_13.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_13.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_13.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_113.addWidget(self.un_10_5_grup_1_competitor_node_13)
+
+
+        self.verticalLayout_111.addWidget(self.frame_155)
+
+
+        self.horizontalLayout_60.addWidget(self.frame_153)
+
+        self.frame_156 = QFrame(self.under_5_g1)
+        self.frame_156.setObjectName(u"frame_156")
+        self.frame_156.setMinimumSize(QSize(25, 0))
+        self.frame_156.setFrameShape(QFrame.StyledPanel)
+        self.frame_156.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_114 = QVBoxLayout(self.frame_156)
+        self.verticalLayout_114.setObjectName(u"verticalLayout_114")
+        self.verticalLayout_114.setContentsMargins(0, -1, -1, -1)
+        self.label_43 = QLabel(self.frame_156)
+        self.label_43.setObjectName(u"label_43")
+        self.label_43.setFont(font1)
+        self.label_43.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_114.addWidget(self.label_43)
+
+        self.frame_157 = QFrame(self.frame_156)
+        self.frame_157.setObjectName(u"frame_157")
+        self.frame_157.setFrameShape(QFrame.StyledPanel)
+        self.frame_157.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_115 = QVBoxLayout(self.frame_157)
+        self.verticalLayout_115.setSpacing(0)
+        self.verticalLayout_115.setObjectName(u"verticalLayout_115")
+        self.verticalLayout_115.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_14 = QTextEdit(self.frame_157)
+        self.un_10_5_grup_1_competitor_node_14.setObjectName(u"un_10_5_grup_1_competitor_node_14")
+        self.un_10_5_grup_1_competitor_node_14.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_14.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_14.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_115.addWidget(self.un_10_5_grup_1_competitor_node_14)
+
+        self.un_10_5_grup_1_competitor_node_15 = QTextEdit(self.frame_157)
+        self.un_10_5_grup_1_competitor_node_15.setObjectName(u"un_10_5_grup_1_competitor_node_15")
+        self.un_10_5_grup_1_competitor_node_15.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_15.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_15.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_115.addWidget(self.un_10_5_grup_1_competitor_node_15)
+
+
+        self.verticalLayout_114.addWidget(self.frame_157)
+
+        self.frame_158 = QFrame(self.frame_156)
+        self.frame_158.setObjectName(u"frame_158")
+        self.frame_158.setFrameShape(QFrame.StyledPanel)
+        self.frame_158.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_116 = QVBoxLayout(self.frame_158)
+        self.verticalLayout_116.setSpacing(0)
+        self.verticalLayout_116.setObjectName(u"verticalLayout_116")
+        self.verticalLayout_116.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_16 = QTextEdit(self.frame_158)
+        self.un_10_5_grup_1_competitor_node_16.setObjectName(u"un_10_5_grup_1_competitor_node_16")
+        self.un_10_5_grup_1_competitor_node_16.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_16.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_16.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_116.addWidget(self.un_10_5_grup_1_competitor_node_16)
+
+        self.un_10_5_grup_1_competitor_node_17 = QTextEdit(self.frame_158)
+        self.un_10_5_grup_1_competitor_node_17.setObjectName(u"un_10_5_grup_1_competitor_node_17")
+        self.un_10_5_grup_1_competitor_node_17.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_17.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_17.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_116.addWidget(self.un_10_5_grup_1_competitor_node_17)
+
+
+        self.verticalLayout_114.addWidget(self.frame_158)
+
+
+        self.horizontalLayout_60.addWidget(self.frame_156)
+
+        self.frame_159 = QFrame(self.under_5_g1)
+        self.frame_159.setObjectName(u"frame_159")
+        self.frame_159.setMinimumSize(QSize(25, 0))
+        self.frame_159.setFrameShape(QFrame.StyledPanel)
+        self.frame_159.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_117 = QVBoxLayout(self.frame_159)
+        self.verticalLayout_117.setObjectName(u"verticalLayout_117")
+        self.label_44 = QLabel(self.frame_159)
+        self.label_44.setObjectName(u"label_44")
+        self.label_44.setFont(font1)
+        self.label_44.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_117.addWidget(self.label_44)
+
+        self.frame_174 = QFrame(self.frame_159)
+        self.frame_174.setObjectName(u"frame_174")
+        self.frame_174.setFrameShape(QFrame.StyledPanel)
+        self.frame_174.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_119 = QVBoxLayout(self.frame_174)
+        self.verticalLayout_119.setSpacing(0)
+        self.verticalLayout_119.setObjectName(u"verticalLayout_119")
+        self.verticalLayout_119.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_18 = QTextEdit(self.frame_174)
+        self.un_10_5_grup_1_competitor_node_18.setObjectName(u"un_10_5_grup_1_competitor_node_18")
+        self.un_10_5_grup_1_competitor_node_18.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_18.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_18.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_119.addWidget(self.un_10_5_grup_1_competitor_node_18)
+
+        self.un_10_5_grup_1_competitor_node_19 = QTextEdit(self.frame_174)
+        self.un_10_5_grup_1_competitor_node_19.setObjectName(u"un_10_5_grup_1_competitor_node_19")
+        self.un_10_5_grup_1_competitor_node_19.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_19.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_19.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_119.addWidget(self.un_10_5_grup_1_competitor_node_19)
+
+
+        self.verticalLayout_117.addWidget(self.frame_174)
+
+        self.frame_175 = QFrame(self.frame_159)
+        self.frame_175.setObjectName(u"frame_175")
+        self.frame_175.setFrameShape(QFrame.StyledPanel)
+        self.frame_175.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_120 = QVBoxLayout(self.frame_175)
+        self.verticalLayout_120.setSpacing(0)
+        self.verticalLayout_120.setObjectName(u"verticalLayout_120")
+        self.verticalLayout_120.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_20 = QTextEdit(self.frame_175)
+        self.un_10_5_grup_1_competitor_node_20.setObjectName(u"un_10_5_grup_1_competitor_node_20")
+        self.un_10_5_grup_1_competitor_node_20.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_20.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_20.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_120.addWidget(self.un_10_5_grup_1_competitor_node_20)
+
+        self.un_10_5_grup_1_competitor_node_21 = QTextEdit(self.frame_175)
+        self.un_10_5_grup_1_competitor_node_21.setObjectName(u"un_10_5_grup_1_competitor_node_21")
+        self.un_10_5_grup_1_competitor_node_21.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_21.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_21.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_120.addWidget(self.un_10_5_grup_1_competitor_node_21)
+
+
+        self.verticalLayout_117.addWidget(self.frame_175)
+
+
+        self.horizontalLayout_60.addWidget(self.frame_159)
+
+        self.frame_176 = QFrame(self.under_5_g1)
+        self.frame_176.setObjectName(u"frame_176")
+        self.frame_176.setMinimumSize(QSize(50, 0))
+        self.frame_176.setMaximumSize(QSize(16777215, 16777215))
+        self.frame_176.setFrameShape(QFrame.StyledPanel)
+        self.frame_176.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_135 = QVBoxLayout(self.frame_176)
+        self.verticalLayout_135.setObjectName(u"verticalLayout_135")
+        self.label_45 = QLabel(self.frame_176)
+        self.label_45.setObjectName(u"label_45")
+        self.label_45.setFont(font1)
+        self.label_45.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_135.addWidget(self.label_45)
+
+        self.frame_177 = QFrame(self.frame_176)
+        self.frame_177.setObjectName(u"frame_177")
+        self.frame_177.setFrameShape(QFrame.StyledPanel)
+        self.frame_177.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_136 = QVBoxLayout(self.frame_177)
+        self.verticalLayout_136.setSpacing(0)
+        self.verticalLayout_136.setObjectName(u"verticalLayout_136")
+        self.verticalLayout_136.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_22 = QTextEdit(self.frame_177)
+        self.un_10_5_grup_1_competitor_node_22.setObjectName(u"un_10_5_grup_1_competitor_node_22")
+        self.un_10_5_grup_1_competitor_node_22.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_22.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_22.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_136.addWidget(self.un_10_5_grup_1_competitor_node_22)
+
+        self.un_10_5_grup_1_competitor_node_23 = QTextEdit(self.frame_177)
+        self.un_10_5_grup_1_competitor_node_23.setObjectName(u"un_10_5_grup_1_competitor_node_23")
+        self.un_10_5_grup_1_competitor_node_23.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_23.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_23.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_136.addWidget(self.un_10_5_grup_1_competitor_node_23)
+
+
+        self.verticalLayout_135.addWidget(self.frame_177)
+
+        self.frame_178 = QFrame(self.frame_176)
+        self.frame_178.setObjectName(u"frame_178")
+        self.frame_178.setFrameShape(QFrame.StyledPanel)
+        self.frame_178.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_137 = QVBoxLayout(self.frame_178)
+        self.verticalLayout_137.setSpacing(0)
+        self.verticalLayout_137.setObjectName(u"verticalLayout_137")
+        self.verticalLayout_137.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_1_competitor_node_24 = QTextEdit(self.frame_178)
+        self.un_10_5_grup_1_competitor_node_24.setObjectName(u"un_10_5_grup_1_competitor_node_24")
+        self.un_10_5_grup_1_competitor_node_24.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_24.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_24.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_137.addWidget(self.un_10_5_grup_1_competitor_node_24)
+
+        self.un_10_5_grup_1_competitor_node_25 = QTextEdit(self.frame_178)
+        self.un_10_5_grup_1_competitor_node_25.setObjectName(u"un_10_5_grup_1_competitor_node_25")
+        self.un_10_5_grup_1_competitor_node_25.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_1_competitor_node_25.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_1_competitor_node_25.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_137.addWidget(self.un_10_5_grup_1_competitor_node_25)
+
+
+        self.verticalLayout_135.addWidget(self.frame_178)
+
+
+        self.horizontalLayout_60.addWidget(self.frame_176)
+
+        self.Grup_I_Under10_G1.addWidget(self.under_5_g1)
+        self.under_4_g1 = QWidget()
+        self.under_4_g1.setObjectName(u"under_4_g1")
+        self.horizontalLayout_69 = QHBoxLayout(self.under_4_g1)
+        self.horizontalLayout_69.setObjectName(u"horizontalLayout_69")
+        self.frame_179 = QFrame(self.under_4_g1)
+        self.frame_179.setObjectName(u"frame_179")
+        self.frame_179.setFrameShape(QFrame.StyledPanel)
+        self.frame_179.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_138 = QVBoxLayout(self.frame_179)
+        self.verticalLayout_138.setObjectName(u"verticalLayout_138")
+        self.frame_180 = QFrame(self.frame_179)
+        self.frame_180.setObjectName(u"frame_180")
+        self.frame_180.setFrameShape(QFrame.StyledPanel)
+        self.frame_180.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_139 = QVBoxLayout(self.frame_180)
+        self.verticalLayout_139.setObjectName(u"verticalLayout_139")
+        self.label_46 = QLabel(self.frame_180)
+        self.label_46.setObjectName(u"label_46")
+        self.label_46.setFont(font1)
+
+        self.verticalLayout_139.addWidget(self.label_46)
+
+
+        self.verticalLayout_138.addWidget(self.frame_180)
+
+        self.frame_181 = QFrame(self.frame_179)
+        self.frame_181.setObjectName(u"frame_181")
+        self.frame_181.setFrameShape(QFrame.StyledPanel)
+        self.frame_181.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_70 = QHBoxLayout(self.frame_181)
+        self.horizontalLayout_70.setObjectName(u"horizontalLayout_70")
+        self.frame_182 = QFrame(self.frame_181)
+        self.frame_182.setObjectName(u"frame_182")
+        self.frame_182.setFrameShape(QFrame.StyledPanel)
+        self.frame_182.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_140 = QVBoxLayout(self.frame_182)
+        self.verticalLayout_140.setObjectName(u"verticalLayout_140")
+        self.un_10_4_grup_1_competitor_node_1 = QTextEdit(self.frame_182)
+        self.un_10_4_grup_1_competitor_node_1.setObjectName(u"un_10_4_grup_1_competitor_node_1")
+        self.un_10_4_grup_1_competitor_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_140.addWidget(self.un_10_4_grup_1_competitor_node_1)
+
+        self.un_10_4_grup_1_competitor_node_2 = QTextEdit(self.frame_182)
+        self.un_10_4_grup_1_competitor_node_2.setObjectName(u"un_10_4_grup_1_competitor_node_2")
+        self.un_10_4_grup_1_competitor_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_140.addWidget(self.un_10_4_grup_1_competitor_node_2)
+
+        self.un_10_4_grup_1_competitor_node_3 = QTextEdit(self.frame_182)
+        self.un_10_4_grup_1_competitor_node_3.setObjectName(u"un_10_4_grup_1_competitor_node_3")
+        self.un_10_4_grup_1_competitor_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_140.addWidget(self.un_10_4_grup_1_competitor_node_3)
+
+        self.un_10_4_grup_1_competitor_node_4 = QTextEdit(self.frame_182)
+        self.un_10_4_grup_1_competitor_node_4.setObjectName(u"un_10_4_grup_1_competitor_node_4")
+        self.un_10_4_grup_1_competitor_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_140.addWidget(self.un_10_4_grup_1_competitor_node_4)
+
+
+        self.horizontalLayout_70.addWidget(self.frame_182)
+
+        self.frame_183 = QFrame(self.frame_181)
+        self.frame_183.setObjectName(u"frame_183")
+        self.frame_183.setMaximumSize(QSize(50, 16777215))
+        self.frame_183.setFrameShape(QFrame.StyledPanel)
+        self.frame_183.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_141 = QVBoxLayout(self.frame_183)
+        self.verticalLayout_141.setObjectName(u"verticalLayout_141")
+        self.un_10_4_grup_1_point_node_1 = QTextEdit(self.frame_183)
+        self.un_10_4_grup_1_point_node_1.setObjectName(u"un_10_4_grup_1_point_node_1")
+        self.un_10_4_grup_1_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_141.addWidget(self.un_10_4_grup_1_point_node_1)
+
+        self.un_10_4_grup_1_point_node_2 = QTextEdit(self.frame_183)
+        self.un_10_4_grup_1_point_node_2.setObjectName(u"un_10_4_grup_1_point_node_2")
+        self.un_10_4_grup_1_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_141.addWidget(self.un_10_4_grup_1_point_node_2)
+
+        self.un_10_4_grup_1_point_node_3 = QTextEdit(self.frame_183)
+        self.un_10_4_grup_1_point_node_3.setObjectName(u"un_10_4_grup_1_point_node_3")
+        self.un_10_4_grup_1_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_141.addWidget(self.un_10_4_grup_1_point_node_3)
+
+        self.un_10_4_grup_1_point_node_4 = QTextEdit(self.frame_183)
+        self.un_10_4_grup_1_point_node_4.setObjectName(u"un_10_4_grup_1_point_node_4")
+        self.un_10_4_grup_1_point_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_point_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_point_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_141.addWidget(self.un_10_4_grup_1_point_node_4)
+
+
+        self.horizontalLayout_70.addWidget(self.frame_183)
+
+
+        self.verticalLayout_138.addWidget(self.frame_181)
+
+
+        self.horizontalLayout_69.addWidget(self.frame_179)
+
+        self.frame_184 = QFrame(self.under_4_g1)
+        self.frame_184.setObjectName(u"frame_184")
+        self.frame_184.setMinimumSize(QSize(25, 0))
+        self.frame_184.setFrameShape(QFrame.StyledPanel)
+        self.frame_184.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_146 = QVBoxLayout(self.frame_184)
+        self.verticalLayout_146.setObjectName(u"verticalLayout_146")
+        self.label_47 = QLabel(self.frame_184)
+        self.label_47.setObjectName(u"label_47")
+        self.label_47.setFont(font1)
+        self.label_47.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_146.addWidget(self.label_47)
+
+        self.frame_185 = QFrame(self.frame_184)
+        self.frame_185.setObjectName(u"frame_185")
+        self.frame_185.setEnabled(True)
+        self.frame_185.setFrameShape(QFrame.NoFrame)
+        self.frame_185.setFrameShadow(QFrame.Raised)
+        self._6 = QVBoxLayout(self.frame_185)
+        self._6.setSpacing(0)
+        self._6.setObjectName(u"_6")
+        self._6.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_1_competitor_node_5 = QTextEdit(self.frame_185)
+        self.un_10_4_grup_1_competitor_node_5.setObjectName(u"un_10_4_grup_1_competitor_node_5")
+        self.un_10_4_grup_1_competitor_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._6.addWidget(self.un_10_4_grup_1_competitor_node_5)
+
+        self.un_10_4_grup_1_competitor_node_6 = QTextEdit(self.frame_185)
+        self.un_10_4_grup_1_competitor_node_6.setObjectName(u"un_10_4_grup_1_competitor_node_6")
+        self.un_10_4_grup_1_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._6.addWidget(self.un_10_4_grup_1_competitor_node_6)
+
+
+        self.verticalLayout_146.addWidget(self.frame_185)
+
+        self.frame_186 = QFrame(self.frame_184)
+        self.frame_186.setObjectName(u"frame_186")
+        self.frame_186.setFrameShape(QFrame.StyledPanel)
+        self.frame_186.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_147 = QVBoxLayout(self.frame_186)
+        self.verticalLayout_147.setSpacing(0)
+        self.verticalLayout_147.setObjectName(u"verticalLayout_147")
+        self.verticalLayout_147.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_1_competitor_node_7 = QTextEdit(self.frame_186)
+        self.un_10_4_grup_1_competitor_node_7.setObjectName(u"un_10_4_grup_1_competitor_node_7")
+        self.un_10_4_grup_1_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_147.addWidget(self.un_10_4_grup_1_competitor_node_7)
+
+        self.un_10_4_grup_1_competitor_node_8 = QTextEdit(self.frame_186)
+        self.un_10_4_grup_1_competitor_node_8.setObjectName(u"un_10_4_grup_1_competitor_node_8")
+        self.un_10_4_grup_1_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_147.addWidget(self.un_10_4_grup_1_competitor_node_8)
+
+
+        self.verticalLayout_146.addWidget(self.frame_186)
+
+
+        self.horizontalLayout_69.addWidget(self.frame_184)
+
+        self.frame_198 = QFrame(self.under_4_g1)
+        self.frame_198.setObjectName(u"frame_198")
+        self.frame_198.setMinimumSize(QSize(25, 0))
+        self.frame_198.setFrameShape(QFrame.StyledPanel)
+        self.frame_198.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_148 = QVBoxLayout(self.frame_198)
+        self.verticalLayout_148.setObjectName(u"verticalLayout_148")
+        self.label_48 = QLabel(self.frame_198)
+        self.label_48.setObjectName(u"label_48")
+        self.label_48.setFont(font1)
+        self.label_48.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_148.addWidget(self.label_48)
+
+        self.frame_199 = QFrame(self.frame_198)
+        self.frame_199.setObjectName(u"frame_199")
+        self.frame_199.setFrameShape(QFrame.StyledPanel)
+        self.frame_199.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_150 = QVBoxLayout(self.frame_199)
+        self.verticalLayout_150.setSpacing(0)
+        self.verticalLayout_150.setObjectName(u"verticalLayout_150")
+        self.verticalLayout_150.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_1_competitor_node_9 = QTextEdit(self.frame_199)
+        self.un_10_4_grup_1_competitor_node_9.setObjectName(u"un_10_4_grup_1_competitor_node_9")
+        self.un_10_4_grup_1_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_150.addWidget(self.un_10_4_grup_1_competitor_node_9)
+
+        self.un_10_4_grup_1_competitor_node_10 = QTextEdit(self.frame_199)
+        self.un_10_4_grup_1_competitor_node_10.setObjectName(u"un_10_4_grup_1_competitor_node_10")
+        self.un_10_4_grup_1_competitor_node_10.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_10.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_10.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_150.addWidget(self.un_10_4_grup_1_competitor_node_10)
+
+
+        self.verticalLayout_148.addWidget(self.frame_199)
+
+        self.frame_200 = QFrame(self.frame_198)
+        self.frame_200.setObjectName(u"frame_200")
+        self.frame_200.setFrameShape(QFrame.StyledPanel)
+        self.frame_200.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_151 = QVBoxLayout(self.frame_200)
+        self.verticalLayout_151.setSpacing(0)
+        self.verticalLayout_151.setObjectName(u"verticalLayout_151")
+        self.verticalLayout_151.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_1_competitor_node_11 = QTextEdit(self.frame_200)
+        self.un_10_4_grup_1_competitor_node_11.setObjectName(u"un_10_4_grup_1_competitor_node_11")
+        self.un_10_4_grup_1_competitor_node_11.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_11.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_11.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_151.addWidget(self.un_10_4_grup_1_competitor_node_11)
+
+        self.un_10_4_grup_1_competitor_node_12 = QTextEdit(self.frame_200)
+        self.un_10_4_grup_1_competitor_node_12.setObjectName(u"un_10_4_grup_1_competitor_node_12")
+        self.un_10_4_grup_1_competitor_node_12.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_12.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_12.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_151.addWidget(self.un_10_4_grup_1_competitor_node_12)
+
+
+        self.verticalLayout_148.addWidget(self.frame_200)
+
+
+        self.horizontalLayout_69.addWidget(self.frame_198)
+
+        self.frame_201 = QFrame(self.under_4_g1)
+        self.frame_201.setObjectName(u"frame_201")
+        self.frame_201.setMinimumSize(QSize(25, 0))
+        self.frame_201.setFrameShape(QFrame.StyledPanel)
+        self.frame_201.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_152 = QVBoxLayout(self.frame_201)
+        self.verticalLayout_152.setObjectName(u"verticalLayout_152")
+        self.verticalLayout_152.setContentsMargins(0, -1, -1, -1)
+        self.label_49 = QLabel(self.frame_201)
+        self.label_49.setObjectName(u"label_49")
+        self.label_49.setFont(font1)
+        self.label_49.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_152.addWidget(self.label_49)
+
+        self.frame_202 = QFrame(self.frame_201)
+        self.frame_202.setObjectName(u"frame_202")
+        self.frame_202.setFrameShape(QFrame.StyledPanel)
+        self.frame_202.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_153 = QVBoxLayout(self.frame_202)
+        self.verticalLayout_153.setSpacing(0)
+        self.verticalLayout_153.setObjectName(u"verticalLayout_153")
+        self.verticalLayout_153.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_1_competitor_node_13 = QTextEdit(self.frame_202)
+        self.un_10_4_grup_1_competitor_node_13.setObjectName(u"un_10_4_grup_1_competitor_node_13")
+        self.un_10_4_grup_1_competitor_node_13.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_13.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_13.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_153.addWidget(self.un_10_4_grup_1_competitor_node_13)
+
+        self.un_10_4_grup_1_competitor_node_14 = QTextEdit(self.frame_202)
+        self.un_10_4_grup_1_competitor_node_14.setObjectName(u"un_10_4_grup_1_competitor_node_14")
+        self.un_10_4_grup_1_competitor_node_14.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_14.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_14.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_153.addWidget(self.un_10_4_grup_1_competitor_node_14)
+
+
+        self.verticalLayout_152.addWidget(self.frame_202)
+
+        self.frame_203 = QFrame(self.frame_201)
+        self.frame_203.setObjectName(u"frame_203")
+        self.frame_203.setFrameShape(QFrame.StyledPanel)
+        self.frame_203.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_154 = QVBoxLayout(self.frame_203)
+        self.verticalLayout_154.setSpacing(0)
+        self.verticalLayout_154.setObjectName(u"verticalLayout_154")
+        self.verticalLayout_154.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_1_competitor_node_15 = QTextEdit(self.frame_203)
+        self.un_10_4_grup_1_competitor_node_15.setObjectName(u"un_10_4_grup_1_competitor_node_15")
+        self.un_10_4_grup_1_competitor_node_15.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_15.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_15.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_154.addWidget(self.un_10_4_grup_1_competitor_node_15)
+
+        self.un_10_4_grup_1_competitor_node_16 = QTextEdit(self.frame_203)
+        self.un_10_4_grup_1_competitor_node_16.setObjectName(u"un_10_4_grup_1_competitor_node_16")
+        self.un_10_4_grup_1_competitor_node_16.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_1_competitor_node_16.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_1_competitor_node_16.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_154.addWidget(self.un_10_4_grup_1_competitor_node_16)
+
+
+        self.verticalLayout_152.addWidget(self.frame_203)
+
+
+        self.horizontalLayout_69.addWidget(self.frame_201)
+
+        self.Grup_I_Under10_G1.addWidget(self.under_4_g1)
+        self.under_3_g1 = QWidget()
+        self.under_3_g1.setObjectName(u"under_3_g1")
+        self.horizontalLayout_71 = QHBoxLayout(self.under_3_g1)
+        self.horizontalLayout_71.setObjectName(u"horizontalLayout_71")
+        self.frame_204 = QFrame(self.under_3_g1)
+        self.frame_204.setObjectName(u"frame_204")
+        self.frame_204.setFrameShape(QFrame.StyledPanel)
+        self.frame_204.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_155 = QVBoxLayout(self.frame_204)
+        self.verticalLayout_155.setObjectName(u"verticalLayout_155")
+        self.frame_205 = QFrame(self.frame_204)
+        self.frame_205.setObjectName(u"frame_205")
+        self.frame_205.setFrameShape(QFrame.StyledPanel)
+        self.frame_205.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_156 = QVBoxLayout(self.frame_205)
+        self.verticalLayout_156.setObjectName(u"verticalLayout_156")
+        self.label_50 = QLabel(self.frame_205)
+        self.label_50.setObjectName(u"label_50")
+        self.label_50.setFont(font1)
+
+        self.verticalLayout_156.addWidget(self.label_50)
+
+
+        self.verticalLayout_155.addWidget(self.frame_205)
+
+        self.frame_206 = QFrame(self.frame_204)
+        self.frame_206.setObjectName(u"frame_206")
+        self.frame_206.setFrameShape(QFrame.StyledPanel)
+        self.frame_206.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_73 = QHBoxLayout(self.frame_206)
+        self.horizontalLayout_73.setObjectName(u"horizontalLayout_73")
+        self.frame_207 = QFrame(self.frame_206)
+        self.frame_207.setObjectName(u"frame_207")
+        self.frame_207.setFrameShape(QFrame.StyledPanel)
+        self.frame_207.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_157 = QVBoxLayout(self.frame_207)
+        self.verticalLayout_157.setObjectName(u"verticalLayout_157")
+        self.un_10_3_grup_1_competitor_node_1 = QTextEdit(self.frame_207)
+        self.un_10_3_grup_1_competitor_node_1.setObjectName(u"un_10_3_grup_1_competitor_node_1")
+        self.un_10_3_grup_1_competitor_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_157.addWidget(self.un_10_3_grup_1_competitor_node_1)
+
+        self.un_10_3_grup_1_competitor_node_2 = QTextEdit(self.frame_207)
+        self.un_10_3_grup_1_competitor_node_2.setObjectName(u"un_10_3_grup_1_competitor_node_2")
+        self.un_10_3_grup_1_competitor_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_157.addWidget(self.un_10_3_grup_1_competitor_node_2)
+
+        self.un_10_3_grup_1_competitor_node_3 = QTextEdit(self.frame_207)
+        self.un_10_3_grup_1_competitor_node_3.setObjectName(u"un_10_3_grup_1_competitor_node_3")
+        self.un_10_3_grup_1_competitor_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_157.addWidget(self.un_10_3_grup_1_competitor_node_3)
+
+
+        self.horizontalLayout_73.addWidget(self.frame_207)
+
+        self.frame_208 = QFrame(self.frame_206)
+        self.frame_208.setObjectName(u"frame_208")
+        self.frame_208.setMaximumSize(QSize(50, 16777215))
+        self.frame_208.setFrameShape(QFrame.StyledPanel)
+        self.frame_208.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_158 = QVBoxLayout(self.frame_208)
+        self.verticalLayout_158.setObjectName(u"verticalLayout_158")
+        self.un_10_3_grup_1_point_node_1 = QTextEdit(self.frame_208)
+        self.un_10_3_grup_1_point_node_1.setObjectName(u"un_10_3_grup_1_point_node_1")
+        self.un_10_3_grup_1_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_158.addWidget(self.un_10_3_grup_1_point_node_1)
+
+        self.un_10_3_grup_1_point_node_2 = QTextEdit(self.frame_208)
+        self.un_10_3_grup_1_point_node_2.setObjectName(u"un_10_3_grup_1_point_node_2")
+        self.un_10_3_grup_1_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_158.addWidget(self.un_10_3_grup_1_point_node_2)
+
+        self.un_10_3_grup_1_point_node_3 = QTextEdit(self.frame_208)
+        self.un_10_3_grup_1_point_node_3.setObjectName(u"un_10_3_grup_1_point_node_3")
+        self.un_10_3_grup_1_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_158.addWidget(self.un_10_3_grup_1_point_node_3)
+
+
+        self.horizontalLayout_73.addWidget(self.frame_208)
+
+
+        self.verticalLayout_155.addWidget(self.frame_206)
+
+
+        self.horizontalLayout_71.addWidget(self.frame_204)
+
+        self.frame_209 = QFrame(self.under_3_g1)
+        self.frame_209.setObjectName(u"frame_209")
+        self.frame_209.setMinimumSize(QSize(25, 0))
+        self.frame_209.setFrameShape(QFrame.StyledPanel)
+        self.frame_209.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_159 = QVBoxLayout(self.frame_209)
+        self.verticalLayout_159.setObjectName(u"verticalLayout_159")
+        self.label_51 = QLabel(self.frame_209)
+        self.label_51.setObjectName(u"label_51")
+        self.label_51.setFont(font1)
+        self.label_51.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_159.addWidget(self.label_51)
+
+        self.frame_210 = QFrame(self.frame_209)
+        self.frame_210.setObjectName(u"frame_210")
+        self.frame_210.setEnabled(True)
+        self.frame_210.setFrameShape(QFrame.NoFrame)
+        self.frame_210.setFrameShadow(QFrame.Raised)
+        self._7 = QVBoxLayout(self.frame_210)
+        self._7.setSpacing(0)
+        self._7.setObjectName(u"_7")
+        self._7.setContentsMargins(0, 0, 0, 0)
+        self.un_10_3_grup_1_competitor_node_4 = QTextEdit(self.frame_210)
+        self.un_10_3_grup_1_competitor_node_4.setObjectName(u"un_10_3_grup_1_competitor_node_4")
+        self.un_10_3_grup_1_competitor_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._7.addWidget(self.un_10_3_grup_1_competitor_node_4)
+
+        self.un_10_3_grup_1_competitor_node_5 = QTextEdit(self.frame_210)
+        self.un_10_3_grup_1_competitor_node_5.setObjectName(u"un_10_3_grup_1_competitor_node_5")
+        self.un_10_3_grup_1_competitor_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._7.addWidget(self.un_10_3_grup_1_competitor_node_5)
+
+
+        self.verticalLayout_159.addWidget(self.frame_210)
+
+
+        self.horizontalLayout_71.addWidget(self.frame_209)
+
+        self.frame_211 = QFrame(self.under_3_g1)
+        self.frame_211.setObjectName(u"frame_211")
+        self.frame_211.setMinimumSize(QSize(25, 0))
+        self.frame_211.setFrameShape(QFrame.StyledPanel)
+        self.frame_211.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_160 = QVBoxLayout(self.frame_211)
+        self.verticalLayout_160.setObjectName(u"verticalLayout_160")
+        self.label_52 = QLabel(self.frame_211)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setFont(font1)
+        self.label_52.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_160.addWidget(self.label_52)
+
+        self.frame_212 = QFrame(self.frame_211)
+        self.frame_212.setObjectName(u"frame_212")
+        self.frame_212.setFrameShape(QFrame.StyledPanel)
+        self.frame_212.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_161 = QVBoxLayout(self.frame_212)
+        self.verticalLayout_161.setSpacing(0)
+        self.verticalLayout_161.setObjectName(u"verticalLayout_161")
+        self.verticalLayout_161.setContentsMargins(0, 0, 0, 0)
+        self.un_10_3_grup_1_competitor_node_6 = QTextEdit(self.frame_212)
+        self.un_10_3_grup_1_competitor_node_6.setObjectName(u"un_10_3_grup_1_competitor_node_6")
+        self.un_10_3_grup_1_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_161.addWidget(self.un_10_3_grup_1_competitor_node_6)
+
+        self.un_10_3_grup_1_competitor_node_7 = QTextEdit(self.frame_212)
+        self.un_10_3_grup_1_competitor_node_7.setObjectName(u"un_10_3_grup_1_competitor_node_7")
+        self.un_10_3_grup_1_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_161.addWidget(self.un_10_3_grup_1_competitor_node_7)
+
+
+        self.verticalLayout_160.addWidget(self.frame_212)
+
+
+        self.horizontalLayout_71.addWidget(self.frame_211)
+
+        self.frame_213 = QFrame(self.under_3_g1)
+        self.frame_213.setObjectName(u"frame_213")
+        self.frame_213.setMinimumSize(QSize(25, 0))
+        self.frame_213.setFrameShape(QFrame.StyledPanel)
+        self.frame_213.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_162 = QVBoxLayout(self.frame_213)
+        self.verticalLayout_162.setObjectName(u"verticalLayout_162")
+        self.verticalLayout_162.setContentsMargins(0, -1, -1, -1)
+        self.label_53 = QLabel(self.frame_213)
+        self.label_53.setObjectName(u"label_53")
+        self.label_53.setFont(font1)
+        self.label_53.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_162.addWidget(self.label_53)
+
+        self.frame_214 = QFrame(self.frame_213)
+        self.frame_214.setObjectName(u"frame_214")
+        self.frame_214.setFrameShape(QFrame.StyledPanel)
+        self.frame_214.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_163 = QVBoxLayout(self.frame_214)
+        self.verticalLayout_163.setSpacing(0)
+        self.verticalLayout_163.setObjectName(u"verticalLayout_163")
+        self.verticalLayout_163.setContentsMargins(0, 0, 0, 0)
+        self.un_10_3_grup_1_competitor_node_8 = QTextEdit(self.frame_214)
+        self.un_10_3_grup_1_competitor_node_8.setObjectName(u"un_10_3_grup_1_competitor_node_8")
+        self.un_10_3_grup_1_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_163.addWidget(self.un_10_3_grup_1_competitor_node_8)
+
+        self.un_10_3_grup_1_competitor_node_9 = QTextEdit(self.frame_214)
+        self.un_10_3_grup_1_competitor_node_9.setObjectName(u"un_10_3_grup_1_competitor_node_9")
+        self.un_10_3_grup_1_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_1_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_1_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_163.addWidget(self.un_10_3_grup_1_competitor_node_9)
+
+
+        self.verticalLayout_162.addWidget(self.frame_214)
+
+
+        self.horizontalLayout_71.addWidget(self.frame_213)
+
+        self.Grup_I_Under10_G1.addWidget(self.under_3_g1)
+
+        self.verticalLayout_221.addWidget(self.Grup_I_Under10_G1)
+
+        self.match_10.addWidget(self.Grup_I_Under10)
+        self.Grup_II_Under10 = QWidget()
+        self.Grup_II_Under10.setObjectName(u"Grup_II_Under10")
+        self.verticalLayout_222 = QVBoxLayout(self.Grup_II_Under10)
+        self.verticalLayout_222.setObjectName(u"verticalLayout_222")
+        self.label_77 = QLabel(self.Grup_II_Under10)
+        self.label_77.setObjectName(u"label_77")
+        self.label_77.setFont(font3)
+
+        self.verticalLayout_222.addWidget(self.label_77, 0, Qt.AlignHCenter)
+
+        self.Top_menu_wraper_2 = QFrame(self.Grup_II_Under10)
+        self.Top_menu_wraper_2.setObjectName(u"Top_menu_wraper_2")
+        self.Top_menu_wraper_2.setMaximumSize(QSize(16777215, 100))
+        self.Top_menu_wraper_2.setFrameShape(QFrame.StyledPanel)
+        self.Top_menu_wraper_2.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_104 = QVBoxLayout(self.Top_menu_wraper_2)
+        self.verticalLayout_104.setSpacing(0)
+        self.verticalLayout_104.setObjectName(u"verticalLayout_104")
+        self.verticalLayout_104.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_222.addWidget(self.Top_menu_wraper_2, 0, Qt.AlignHCenter)
+
+        self.Grup_II_Under10_G2 = QStackedWidget(self.Grup_II_Under10)
+        self.Grup_II_Under10_G2.setObjectName(u"Grup_II_Under10_G2")
+        self.under_5_g2 = QWidget()
+        self.under_5_g2.setObjectName(u"under_5_g2")
+        self.horizontalLayout_72 = QHBoxLayout(self.under_5_g2)
+        self.horizontalLayout_72.setObjectName(u"horizontalLayout_72")
+        self.frame_226 = QFrame(self.under_5_g2)
+        self.frame_226.setObjectName(u"frame_226")
+        self.frame_226.setFrameShape(QFrame.StyledPanel)
+        self.frame_226.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_173 = QVBoxLayout(self.frame_226)
+        self.verticalLayout_173.setObjectName(u"verticalLayout_173")
+        self.frame_227 = QFrame(self.frame_226)
+        self.frame_227.setObjectName(u"frame_227")
+        self.frame_227.setFrameShape(QFrame.StyledPanel)
+        self.frame_227.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_174 = QVBoxLayout(self.frame_227)
+        self.verticalLayout_174.setObjectName(u"verticalLayout_174")
+        self.label_58 = QLabel(self.frame_227)
+        self.label_58.setObjectName(u"label_58")
+        self.label_58.setFont(font1)
+
+        self.verticalLayout_174.addWidget(self.label_58)
+
+
+        self.verticalLayout_173.addWidget(self.frame_227)
+
+        self.frame_228 = QFrame(self.frame_226)
+        self.frame_228.setObjectName(u"frame_228")
+        self.frame_228.setFrameShape(QFrame.StyledPanel)
+        self.frame_228.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_85 = QHBoxLayout(self.frame_228)
+        self.horizontalLayout_85.setObjectName(u"horizontalLayout_85")
+        self.frame_229 = QFrame(self.frame_228)
+        self.frame_229.setObjectName(u"frame_229")
+        self.frame_229.setFrameShape(QFrame.StyledPanel)
+        self.frame_229.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_175 = QVBoxLayout(self.frame_229)
+        self.verticalLayout_175.setObjectName(u"verticalLayout_175")
+        self.un_10_5_grup_2_competitor_node_1 = QTextEdit(self.frame_229)
+        self.un_10_5_grup_2_competitor_node_1.setObjectName(u"un_10_5_grup_2_competitor_node_1")
+        self.un_10_5_grup_2_competitor_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_175.addWidget(self.un_10_5_grup_2_competitor_node_1)
+
+        self.un_10_5_grup_2_competitor_node_2 = QTextEdit(self.frame_229)
+        self.un_10_5_grup_2_competitor_node_2.setObjectName(u"un_10_5_grup_2_competitor_node_2")
+        self.un_10_5_grup_2_competitor_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_175.addWidget(self.un_10_5_grup_2_competitor_node_2)
+
+        self.un_10_5_grup_2_competitor_node_3 = QTextEdit(self.frame_229)
+        self.un_10_5_grup_2_competitor_node_3.setObjectName(u"un_10_5_grup_2_competitor_node_3")
+        self.un_10_5_grup_2_competitor_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_175.addWidget(self.un_10_5_grup_2_competitor_node_3)
+
+        self.un_10_5_grup_2_competitor_node_4 = QTextEdit(self.frame_229)
+        self.un_10_5_grup_2_competitor_node_4.setObjectName(u"un_10_5_grup_2_competitor_node_4")
+        self.un_10_5_grup_2_competitor_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_175.addWidget(self.un_10_5_grup_2_competitor_node_4)
+
+        self.un_10_5_grup_2_competitor_node_5 = QTextEdit(self.frame_229)
+        self.un_10_5_grup_2_competitor_node_5.setObjectName(u"un_10_5_grup_2_competitor_node_5")
+        self.un_10_5_grup_2_competitor_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_175.addWidget(self.un_10_5_grup_2_competitor_node_5)
+
+
+        self.horizontalLayout_85.addWidget(self.frame_229)
+
+        self.frame_230 = QFrame(self.frame_228)
+        self.frame_230.setObjectName(u"frame_230")
+        self.frame_230.setMaximumSize(QSize(50, 16777215))
+        self.frame_230.setFrameShape(QFrame.StyledPanel)
+        self.frame_230.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_176 = QVBoxLayout(self.frame_230)
+        self.verticalLayout_176.setObjectName(u"verticalLayout_176")
+        self.un_10_5_grup_2_point_node_1 = QTextEdit(self.frame_230)
+        self.un_10_5_grup_2_point_node_1.setObjectName(u"un_10_5_grup_2_point_node_1")
+        self.un_10_5_grup_2_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_176.addWidget(self.un_10_5_grup_2_point_node_1)
+
+        self.un_10_5_grup_2_point_node_2 = QTextEdit(self.frame_230)
+        self.un_10_5_grup_2_point_node_2.setObjectName(u"un_10_5_grup_2_point_node_2")
+        self.un_10_5_grup_2_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_176.addWidget(self.un_10_5_grup_2_point_node_2)
+
+        self.un_10_5_grup_2_point_node_3 = QTextEdit(self.frame_230)
+        self.un_10_5_grup_2_point_node_3.setObjectName(u"un_10_5_grup_2_point_node_3")
+        self.un_10_5_grup_2_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_176.addWidget(self.un_10_5_grup_2_point_node_3)
+
+        self.un_10_5_grup_2_point_node_4 = QTextEdit(self.frame_230)
+        self.un_10_5_grup_2_point_node_4.setObjectName(u"un_10_5_grup_2_point_node_4")
+        self.un_10_5_grup_2_point_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_point_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_point_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_176.addWidget(self.un_10_5_grup_2_point_node_4)
+
+        self.un_10_5_grup_2_point_node_5 = QTextEdit(self.frame_230)
+        self.un_10_5_grup_2_point_node_5.setObjectName(u"un_10_5_grup_2_point_node_5")
+        self.un_10_5_grup_2_point_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_point_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_point_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_176.addWidget(self.un_10_5_grup_2_point_node_5)
+
+
+        self.horizontalLayout_85.addWidget(self.frame_230)
+
+
+        self.verticalLayout_173.addWidget(self.frame_228)
+
+
+        self.horizontalLayout_72.addWidget(self.frame_226)
+
+        self.frame_231 = QFrame(self.under_5_g2)
+        self.frame_231.setObjectName(u"frame_231")
+        self.frame_231.setMinimumSize(QSize(25, 0))
+        self.frame_231.setFrameShape(QFrame.StyledPanel)
+        self.frame_231.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_177 = QVBoxLayout(self.frame_231)
+        self.verticalLayout_177.setObjectName(u"verticalLayout_177")
+        self.label_59 = QLabel(self.frame_231)
+        self.label_59.setObjectName(u"label_59")
+        self.label_59.setFont(font1)
+        self.label_59.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_177.addWidget(self.label_59)
+
+        self.frame_232 = QFrame(self.frame_231)
+        self.frame_232.setObjectName(u"frame_232")
+        self.frame_232.setEnabled(True)
+        self.frame_232.setFrameShape(QFrame.NoFrame)
+        self.frame_232.setFrameShadow(QFrame.Raised)
+        self._9 = QVBoxLayout(self.frame_232)
+        self._9.setSpacing(0)
+        self._9.setObjectName(u"_9")
+        self._9.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_6 = QTextEdit(self.frame_232)
+        self.un_10_5_grup_2_competitor_node_6.setObjectName(u"un_10_5_grup_2_competitor_node_6")
+        self.un_10_5_grup_2_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._9.addWidget(self.un_10_5_grup_2_competitor_node_6)
+
+        self.un_10_5_grup_2_competitor_node_7 = QTextEdit(self.frame_232)
+        self.un_10_5_grup_2_competitor_node_7.setObjectName(u"un_10_5_grup_2_competitor_node_7")
+        self.un_10_5_grup_2_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._9.addWidget(self.un_10_5_grup_2_competitor_node_7)
+
+
+        self.verticalLayout_177.addWidget(self.frame_232)
+
+        self.frame_233 = QFrame(self.frame_231)
+        self.frame_233.setObjectName(u"frame_233")
+        self.frame_233.setFrameShape(QFrame.StyledPanel)
+        self.frame_233.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_178 = QVBoxLayout(self.frame_233)
+        self.verticalLayout_178.setSpacing(0)
+        self.verticalLayout_178.setObjectName(u"verticalLayout_178")
+        self.verticalLayout_178.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_8 = QTextEdit(self.frame_233)
+        self.un_10_5_grup_2_competitor_node_8.setObjectName(u"un_10_5_grup_2_competitor_node_8")
+        self.un_10_5_grup_2_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_178.addWidget(self.un_10_5_grup_2_competitor_node_8)
+
+        self.un_10_5_grup_2_competitor_node_9 = QTextEdit(self.frame_233)
+        self.un_10_5_grup_2_competitor_node_9.setObjectName(u"un_10_5_grup_2_competitor_node_9")
+        self.un_10_5_grup_2_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_178.addWidget(self.un_10_5_grup_2_competitor_node_9)
+
+
+        self.verticalLayout_177.addWidget(self.frame_233)
+
+
+        self.horizontalLayout_72.addWidget(self.frame_231)
+
+        self.frame_234 = QFrame(self.under_5_g2)
+        self.frame_234.setObjectName(u"frame_234")
+        self.frame_234.setMinimumSize(QSize(25, 0))
+        self.frame_234.setFrameShape(QFrame.StyledPanel)
+        self.frame_234.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_179 = QVBoxLayout(self.frame_234)
+        self.verticalLayout_179.setObjectName(u"verticalLayout_179")
+        self.label_60 = QLabel(self.frame_234)
+        self.label_60.setObjectName(u"label_60")
+        self.label_60.setFont(font1)
+        self.label_60.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_179.addWidget(self.label_60)
+
+        self.frame_235 = QFrame(self.frame_234)
+        self.frame_235.setObjectName(u"frame_235")
+        self.frame_235.setFrameShape(QFrame.StyledPanel)
+        self.frame_235.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_180 = QVBoxLayout(self.frame_235)
+        self.verticalLayout_180.setSpacing(0)
+        self.verticalLayout_180.setObjectName(u"verticalLayout_180")
+        self.verticalLayout_180.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_10 = QTextEdit(self.frame_235)
+        self.un_10_5_grup_2_competitor_node_10.setObjectName(u"un_10_5_grup_2_competitor_node_10")
+        self.un_10_5_grup_2_competitor_node_10.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_10.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_10.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_180.addWidget(self.un_10_5_grup_2_competitor_node_10)
+
+        self.un_10_5_grup_2_competitor_node_11 = QTextEdit(self.frame_235)
+        self.un_10_5_grup_2_competitor_node_11.setObjectName(u"un_10_5_grup_2_competitor_node_11")
+        self.un_10_5_grup_2_competitor_node_11.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_11.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_11.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_180.addWidget(self.un_10_5_grup_2_competitor_node_11)
+
+
+        self.verticalLayout_179.addWidget(self.frame_235)
+
+        self.frame_236 = QFrame(self.frame_234)
+        self.frame_236.setObjectName(u"frame_236")
+        self.frame_236.setFrameShape(QFrame.StyledPanel)
+        self.frame_236.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_181 = QVBoxLayout(self.frame_236)
+        self.verticalLayout_181.setSpacing(0)
+        self.verticalLayout_181.setObjectName(u"verticalLayout_181")
+        self.verticalLayout_181.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_12 = QTextEdit(self.frame_236)
+        self.un_10_5_grup_2_competitor_node_12.setObjectName(u"un_10_5_grup_2_competitor_node_12")
+        self.un_10_5_grup_2_competitor_node_12.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_12.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_12.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_181.addWidget(self.un_10_5_grup_2_competitor_node_12)
+
+        self.un_10_5_grup_2_competitor_node_13 = QTextEdit(self.frame_236)
+        self.un_10_5_grup_2_competitor_node_13.setObjectName(u"un_10_5_grup_2_competitor_node_13")
+        self.un_10_5_grup_2_competitor_node_13.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_13.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_13.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_181.addWidget(self.un_10_5_grup_2_competitor_node_13)
+
+
+        self.verticalLayout_179.addWidget(self.frame_236)
+
+
+        self.horizontalLayout_72.addWidget(self.frame_234)
+
+        self.frame_237 = QFrame(self.under_5_g2)
+        self.frame_237.setObjectName(u"frame_237")
+        self.frame_237.setMinimumSize(QSize(25, 0))
+        self.frame_237.setFrameShape(QFrame.StyledPanel)
+        self.frame_237.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_182 = QVBoxLayout(self.frame_237)
+        self.verticalLayout_182.setObjectName(u"verticalLayout_182")
+        self.verticalLayout_182.setContentsMargins(0, -1, -1, -1)
+        self.label_61 = QLabel(self.frame_237)
+        self.label_61.setObjectName(u"label_61")
+        self.label_61.setFont(font1)
+        self.label_61.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_182.addWidget(self.label_61)
+
+        self.frame_238 = QFrame(self.frame_237)
+        self.frame_238.setObjectName(u"frame_238")
+        self.frame_238.setFrameShape(QFrame.StyledPanel)
+        self.frame_238.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_183 = QVBoxLayout(self.frame_238)
+        self.verticalLayout_183.setSpacing(0)
+        self.verticalLayout_183.setObjectName(u"verticalLayout_183")
+        self.verticalLayout_183.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_14 = QTextEdit(self.frame_238)
+        self.un_10_5_grup_2_competitor_node_14.setObjectName(u"un_10_5_grup_2_competitor_node_14")
+        self.un_10_5_grup_2_competitor_node_14.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_14.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_14.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_183.addWidget(self.un_10_5_grup_2_competitor_node_14)
+
+        self.un_10_5_grup_2_competitor_node_15 = QTextEdit(self.frame_238)
+        self.un_10_5_grup_2_competitor_node_15.setObjectName(u"un_10_5_grup_2_competitor_node_15")
+        self.un_10_5_grup_2_competitor_node_15.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_15.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_15.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_183.addWidget(self.un_10_5_grup_2_competitor_node_15)
+
+
+        self.verticalLayout_182.addWidget(self.frame_238)
+
+        self.frame_239 = QFrame(self.frame_237)
+        self.frame_239.setObjectName(u"frame_239")
+        self.frame_239.setFrameShape(QFrame.StyledPanel)
+        self.frame_239.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_184 = QVBoxLayout(self.frame_239)
+        self.verticalLayout_184.setSpacing(0)
+        self.verticalLayout_184.setObjectName(u"verticalLayout_184")
+        self.verticalLayout_184.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_16 = QTextEdit(self.frame_239)
+        self.un_10_5_grup_2_competitor_node_16.setObjectName(u"un_10_5_grup_2_competitor_node_16")
+        self.un_10_5_grup_2_competitor_node_16.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_16.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_16.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_184.addWidget(self.un_10_5_grup_2_competitor_node_16)
+
+        self.un_10_5_grup_2_competitor_node_17 = QTextEdit(self.frame_239)
+        self.un_10_5_grup_2_competitor_node_17.setObjectName(u"un_10_5_grup_2_competitor_node_17")
+        self.un_10_5_grup_2_competitor_node_17.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_17.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_17.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_184.addWidget(self.un_10_5_grup_2_competitor_node_17)
+
+
+        self.verticalLayout_182.addWidget(self.frame_239)
+
+
+        self.horizontalLayout_72.addWidget(self.frame_237)
+
+        self.frame_240 = QFrame(self.under_5_g2)
+        self.frame_240.setObjectName(u"frame_240")
+        self.frame_240.setMinimumSize(QSize(25, 0))
+        self.frame_240.setFrameShape(QFrame.StyledPanel)
+        self.frame_240.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_185 = QVBoxLayout(self.frame_240)
+        self.verticalLayout_185.setObjectName(u"verticalLayout_185")
+        self.label_62 = QLabel(self.frame_240)
+        self.label_62.setObjectName(u"label_62")
+        self.label_62.setFont(font1)
+        self.label_62.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_185.addWidget(self.label_62)
+
+        self.frame_241 = QFrame(self.frame_240)
+        self.frame_241.setObjectName(u"frame_241")
+        self.frame_241.setFrameShape(QFrame.StyledPanel)
+        self.frame_241.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_186 = QVBoxLayout(self.frame_241)
+        self.verticalLayout_186.setSpacing(0)
+        self.verticalLayout_186.setObjectName(u"verticalLayout_186")
+        self.verticalLayout_186.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_18 = QTextEdit(self.frame_241)
+        self.un_10_5_grup_2_competitor_node_18.setObjectName(u"un_10_5_grup_2_competitor_node_18")
+        self.un_10_5_grup_2_competitor_node_18.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_18.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_18.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_186.addWidget(self.un_10_5_grup_2_competitor_node_18)
+
+        self.un_10_5_grup_2_competitor_node_19 = QTextEdit(self.frame_241)
+        self.un_10_5_grup_2_competitor_node_19.setObjectName(u"un_10_5_grup_2_competitor_node_19")
+        self.un_10_5_grup_2_competitor_node_19.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_19.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_19.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_186.addWidget(self.un_10_5_grup_2_competitor_node_19)
+
+
+        self.verticalLayout_185.addWidget(self.frame_241)
+
+        self.frame_242 = QFrame(self.frame_240)
+        self.frame_242.setObjectName(u"frame_242")
+        self.frame_242.setFrameShape(QFrame.StyledPanel)
+        self.frame_242.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_187 = QVBoxLayout(self.frame_242)
+        self.verticalLayout_187.setSpacing(0)
+        self.verticalLayout_187.setObjectName(u"verticalLayout_187")
+        self.verticalLayout_187.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_20 = QTextEdit(self.frame_242)
+        self.un_10_5_grup_2_competitor_node_20.setObjectName(u"un_10_5_grup_2_competitor_node_20")
+        self.un_10_5_grup_2_competitor_node_20.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_20.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_20.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_187.addWidget(self.un_10_5_grup_2_competitor_node_20)
+
+        self.un_10_5_grup_2_competitor_node_21 = QTextEdit(self.frame_242)
+        self.un_10_5_grup_2_competitor_node_21.setObjectName(u"un_10_5_grup_2_competitor_node_21")
+        self.un_10_5_grup_2_competitor_node_21.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_21.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_21.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_187.addWidget(self.un_10_5_grup_2_competitor_node_21)
+
+
+        self.verticalLayout_185.addWidget(self.frame_242)
+
+
+        self.horizontalLayout_72.addWidget(self.frame_240)
+
+        self.frame_243 = QFrame(self.under_5_g2)
+        self.frame_243.setObjectName(u"frame_243")
+        self.frame_243.setMinimumSize(QSize(50, 0))
+        self.frame_243.setMaximumSize(QSize(16777215, 16777215))
+        self.frame_243.setFrameShape(QFrame.StyledPanel)
+        self.frame_243.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_188 = QVBoxLayout(self.frame_243)
+        self.verticalLayout_188.setObjectName(u"verticalLayout_188")
+        self.label_63 = QLabel(self.frame_243)
+        self.label_63.setObjectName(u"label_63")
+        self.label_63.setFont(font1)
+        self.label_63.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_188.addWidget(self.label_63)
+
+        self.frame_244 = QFrame(self.frame_243)
+        self.frame_244.setObjectName(u"frame_244")
+        self.frame_244.setFrameShape(QFrame.StyledPanel)
+        self.frame_244.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_189 = QVBoxLayout(self.frame_244)
+        self.verticalLayout_189.setSpacing(0)
+        self.verticalLayout_189.setObjectName(u"verticalLayout_189")
+        self.verticalLayout_189.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_22 = QTextEdit(self.frame_244)
+        self.un_10_5_grup_2_competitor_node_22.setObjectName(u"un_10_5_grup_2_competitor_node_22")
+        self.un_10_5_grup_2_competitor_node_22.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_22.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_22.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_189.addWidget(self.un_10_5_grup_2_competitor_node_22)
+
+        self.un_10_5_grup_2_competitor_node_23 = QTextEdit(self.frame_244)
+        self.un_10_5_grup_2_competitor_node_23.setObjectName(u"un_10_5_grup_2_competitor_node_23")
+        self.un_10_5_grup_2_competitor_node_23.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_23.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_23.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_189.addWidget(self.un_10_5_grup_2_competitor_node_23)
+
+
+        self.verticalLayout_188.addWidget(self.frame_244)
+
+        self.frame_245 = QFrame(self.frame_243)
+        self.frame_245.setObjectName(u"frame_245")
+        self.frame_245.setFrameShape(QFrame.StyledPanel)
+        self.frame_245.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_190 = QVBoxLayout(self.frame_245)
+        self.verticalLayout_190.setSpacing(0)
+        self.verticalLayout_190.setObjectName(u"verticalLayout_190")
+        self.verticalLayout_190.setContentsMargins(0, 0, 0, 0)
+        self.un_10_5_grup_2_competitor_node_24 = QTextEdit(self.frame_245)
+        self.un_10_5_grup_2_competitor_node_24.setObjectName(u"un_10_5_grup_2_competitor_node_24")
+        self.un_10_5_grup_2_competitor_node_24.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_24.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_24.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_190.addWidget(self.un_10_5_grup_2_competitor_node_24)
+
+        self.un_10_5_grup_2_competitor_node_25 = QTextEdit(self.frame_245)
+        self.un_10_5_grup_2_competitor_node_25.setObjectName(u"un_10_5_grup_2_competitor_node_25")
+        self.un_10_5_grup_2_competitor_node_25.setMaximumSize(QSize(16777215, 50))
+        self.un_10_5_grup_2_competitor_node_25.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_5_grup_2_competitor_node_25.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_190.addWidget(self.un_10_5_grup_2_competitor_node_25)
+
+
+        self.verticalLayout_188.addWidget(self.frame_245)
+
+
+        self.horizontalLayout_72.addWidget(self.frame_243)
+
+        self.Grup_II_Under10_G2.addWidget(self.under_5_g2)
+        self.under_4_g2 = QWidget()
+        self.under_4_g2.setObjectName(u"under_4_g2")
+        self.horizontalLayout_86 = QHBoxLayout(self.under_4_g2)
+        self.horizontalLayout_86.setObjectName(u"horizontalLayout_86")
+        self.frame_246 = QFrame(self.under_4_g2)
+        self.frame_246.setObjectName(u"frame_246")
+        self.frame_246.setFrameShape(QFrame.StyledPanel)
+        self.frame_246.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_191 = QVBoxLayout(self.frame_246)
+        self.verticalLayout_191.setObjectName(u"verticalLayout_191")
+        self.frame_247 = QFrame(self.frame_246)
+        self.frame_247.setObjectName(u"frame_247")
+        self.frame_247.setFrameShape(QFrame.StyledPanel)
+        self.frame_247.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_192 = QVBoxLayout(self.frame_247)
+        self.verticalLayout_192.setObjectName(u"verticalLayout_192")
+        self.label_64 = QLabel(self.frame_247)
+        self.label_64.setObjectName(u"label_64")
+        self.label_64.setFont(font1)
+
+        self.verticalLayout_192.addWidget(self.label_64)
+
+
+        self.verticalLayout_191.addWidget(self.frame_247)
+
+        self.frame_248 = QFrame(self.frame_246)
+        self.frame_248.setObjectName(u"frame_248")
+        self.frame_248.setFrameShape(QFrame.StyledPanel)
+        self.frame_248.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_87 = QHBoxLayout(self.frame_248)
+        self.horizontalLayout_87.setObjectName(u"horizontalLayout_87")
+        self.frame_249 = QFrame(self.frame_248)
+        self.frame_249.setObjectName(u"frame_249")
+        self.frame_249.setFrameShape(QFrame.StyledPanel)
+        self.frame_249.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_193 = QVBoxLayout(self.frame_249)
+        self.verticalLayout_193.setObjectName(u"verticalLayout_193")
+        self.un_10_4_grup_2_competitor_node_1 = QTextEdit(self.frame_249)
+        self.un_10_4_grup_2_competitor_node_1.setObjectName(u"un_10_4_grup_2_competitor_node_1")
+        self.un_10_4_grup_2_competitor_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_193.addWidget(self.un_10_4_grup_2_competitor_node_1)
+
+        self.un_10_4_grup_2_competitor_node_2 = QTextEdit(self.frame_249)
+        self.un_10_4_grup_2_competitor_node_2.setObjectName(u"un_10_4_grup_2_competitor_node_2")
+        self.un_10_4_grup_2_competitor_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_193.addWidget(self.un_10_4_grup_2_competitor_node_2)
+
+        self.un_10_4_grup_2_competitor_node_3 = QTextEdit(self.frame_249)
+        self.un_10_4_grup_2_competitor_node_3.setObjectName(u"un_10_4_grup_2_competitor_node_3")
+        self.un_10_4_grup_2_competitor_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_193.addWidget(self.un_10_4_grup_2_competitor_node_3)
+
+        self.un_10_4_grup_2_competitor_node_4 = QTextEdit(self.frame_249)
+        self.un_10_4_grup_2_competitor_node_4.setObjectName(u"un_10_4_grup_2_competitor_node_4")
+        self.un_10_4_grup_2_competitor_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_193.addWidget(self.un_10_4_grup_2_competitor_node_4)
+
+
+        self.horizontalLayout_87.addWidget(self.frame_249)
+
+        self.frame_250 = QFrame(self.frame_248)
+        self.frame_250.setObjectName(u"frame_250")
+        self.frame_250.setMaximumSize(QSize(50, 16777215))
+        self.frame_250.setFrameShape(QFrame.StyledPanel)
+        self.frame_250.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_194 = QVBoxLayout(self.frame_250)
+        self.verticalLayout_194.setObjectName(u"verticalLayout_194")
+        self.un_10_4_grup_2_point_node_1 = QTextEdit(self.frame_250)
+        self.un_10_4_grup_2_point_node_1.setObjectName(u"un_10_4_grup_2_point_node_1")
+        self.un_10_4_grup_2_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_194.addWidget(self.un_10_4_grup_2_point_node_1)
+
+        self.un_10_4_grup_2_point_node_2 = QTextEdit(self.frame_250)
+        self.un_10_4_grup_2_point_node_2.setObjectName(u"un_10_4_grup_2_point_node_2")
+        self.un_10_4_grup_2_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_194.addWidget(self.un_10_4_grup_2_point_node_2)
+
+        self.un_10_4_grup_2_point_node_3 = QTextEdit(self.frame_250)
+        self.un_10_4_grup_2_point_node_3.setObjectName(u"un_10_4_grup_2_point_node_3")
+        self.un_10_4_grup_2_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_194.addWidget(self.un_10_4_grup_2_point_node_3)
+
+        self.un_10_4_grup_2_point_node_4 = QTextEdit(self.frame_250)
+        self.un_10_4_grup_2_point_node_4.setObjectName(u"un_10_4_grup_2_point_node_4")
+        self.un_10_4_grup_2_point_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_point_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_point_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_194.addWidget(self.un_10_4_grup_2_point_node_4)
+
+
+        self.horizontalLayout_87.addWidget(self.frame_250)
+
+
+        self.verticalLayout_191.addWidget(self.frame_248)
+
+
+        self.horizontalLayout_86.addWidget(self.frame_246)
+
+        self.frame_251 = QFrame(self.under_4_g2)
+        self.frame_251.setObjectName(u"frame_251")
+        self.frame_251.setMinimumSize(QSize(25, 0))
+        self.frame_251.setFrameShape(QFrame.StyledPanel)
+        self.frame_251.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_195 = QVBoxLayout(self.frame_251)
+        self.verticalLayout_195.setObjectName(u"verticalLayout_195")
+        self.label_65 = QLabel(self.frame_251)
+        self.label_65.setObjectName(u"label_65")
+        self.label_65.setFont(font1)
+        self.label_65.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_195.addWidget(self.label_65)
+
+        self.frame_252 = QFrame(self.frame_251)
+        self.frame_252.setObjectName(u"frame_252")
+        self.frame_252.setEnabled(True)
+        self.frame_252.setFrameShape(QFrame.NoFrame)
+        self.frame_252.setFrameShadow(QFrame.Raised)
+        self._10 = QVBoxLayout(self.frame_252)
+        self._10.setSpacing(0)
+        self._10.setObjectName(u"_10")
+        self._10.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_2_competitor_node_5 = QTextEdit(self.frame_252)
+        self.un_10_4_grup_2_competitor_node_5.setObjectName(u"un_10_4_grup_2_competitor_node_5")
+        self.un_10_4_grup_2_competitor_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._10.addWidget(self.un_10_4_grup_2_competitor_node_5)
+
+        self.un_10_4_grup_2_competitor_node_6 = QTextEdit(self.frame_252)
+        self.un_10_4_grup_2_competitor_node_6.setObjectName(u"un_10_4_grup_2_competitor_node_6")
+        self.un_10_4_grup_2_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._10.addWidget(self.un_10_4_grup_2_competitor_node_6)
+
+
+        self.verticalLayout_195.addWidget(self.frame_252)
+
+        self.frame_253 = QFrame(self.frame_251)
+        self.frame_253.setObjectName(u"frame_253")
+        self.frame_253.setFrameShape(QFrame.StyledPanel)
+        self.frame_253.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_196 = QVBoxLayout(self.frame_253)
+        self.verticalLayout_196.setSpacing(0)
+        self.verticalLayout_196.setObjectName(u"verticalLayout_196")
+        self.verticalLayout_196.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_2_competitor_node_7 = QTextEdit(self.frame_253)
+        self.un_10_4_grup_2_competitor_node_7.setObjectName(u"un_10_4_grup_2_competitor_node_7")
+        self.un_10_4_grup_2_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_196.addWidget(self.un_10_4_grup_2_competitor_node_7)
+
+        self.un_10_4_grup_2_competitor_node_8 = QTextEdit(self.frame_253)
+        self.un_10_4_grup_2_competitor_node_8.setObjectName(u"un_10_4_grup_2_competitor_node_8")
+        self.un_10_4_grup_2_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_196.addWidget(self.un_10_4_grup_2_competitor_node_8)
+
+
+        self.verticalLayout_195.addWidget(self.frame_253)
+
+
+        self.horizontalLayout_86.addWidget(self.frame_251)
+
+        self.frame_254 = QFrame(self.under_4_g2)
+        self.frame_254.setObjectName(u"frame_254")
+        self.frame_254.setMinimumSize(QSize(25, 0))
+        self.frame_254.setFrameShape(QFrame.StyledPanel)
+        self.frame_254.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_197 = QVBoxLayout(self.frame_254)
+        self.verticalLayout_197.setObjectName(u"verticalLayout_197")
+        self.label_66 = QLabel(self.frame_254)
+        self.label_66.setObjectName(u"label_66")
+        self.label_66.setFont(font1)
+        self.label_66.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_197.addWidget(self.label_66)
+
+        self.frame_255 = QFrame(self.frame_254)
+        self.frame_255.setObjectName(u"frame_255")
+        self.frame_255.setFrameShape(QFrame.StyledPanel)
+        self.frame_255.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_198 = QVBoxLayout(self.frame_255)
+        self.verticalLayout_198.setSpacing(0)
+        self.verticalLayout_198.setObjectName(u"verticalLayout_198")
+        self.verticalLayout_198.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_2_competitor_node_9 = QTextEdit(self.frame_255)
+        self.un_10_4_grup_2_competitor_node_9.setObjectName(u"un_10_4_grup_2_competitor_node_9")
+        self.un_10_4_grup_2_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_198.addWidget(self.un_10_4_grup_2_competitor_node_9)
+
+        self.un_10_4_grup_2_competitor_node_10 = QTextEdit(self.frame_255)
+        self.un_10_4_grup_2_competitor_node_10.setObjectName(u"un_10_4_grup_2_competitor_node_10")
+        self.un_10_4_grup_2_competitor_node_10.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_10.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_10.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_198.addWidget(self.un_10_4_grup_2_competitor_node_10)
+
+
+        self.verticalLayout_197.addWidget(self.frame_255)
+
+        self.frame_256 = QFrame(self.frame_254)
+        self.frame_256.setObjectName(u"frame_256")
+        self.frame_256.setFrameShape(QFrame.StyledPanel)
+        self.frame_256.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_199 = QVBoxLayout(self.frame_256)
+        self.verticalLayout_199.setSpacing(0)
+        self.verticalLayout_199.setObjectName(u"verticalLayout_199")
+        self.verticalLayout_199.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_2_competitor_node_11 = QTextEdit(self.frame_256)
+        self.un_10_4_grup_2_competitor_node_11.setObjectName(u"un_10_4_grup_2_competitor_node_11")
+        self.un_10_4_grup_2_competitor_node_11.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_11.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_11.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_199.addWidget(self.un_10_4_grup_2_competitor_node_11)
+
+        self.un_10_4_grup_2_competitor_node_12 = QTextEdit(self.frame_256)
+        self.un_10_4_grup_2_competitor_node_12.setObjectName(u"un_10_4_grup_2_competitor_node_12")
+        self.un_10_4_grup_2_competitor_node_12.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_12.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_12.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_199.addWidget(self.un_10_4_grup_2_competitor_node_12)
+
+
+        self.verticalLayout_197.addWidget(self.frame_256)
+
+
+        self.horizontalLayout_86.addWidget(self.frame_254)
+
+        self.frame_257 = QFrame(self.under_4_g2)
+        self.frame_257.setObjectName(u"frame_257")
+        self.frame_257.setMinimumSize(QSize(25, 0))
+        self.frame_257.setFrameShape(QFrame.StyledPanel)
+        self.frame_257.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_200 = QVBoxLayout(self.frame_257)
+        self.verticalLayout_200.setObjectName(u"verticalLayout_200")
+        self.verticalLayout_200.setContentsMargins(0, -1, -1, -1)
+        self.label_67 = QLabel(self.frame_257)
+        self.label_67.setObjectName(u"label_67")
+        self.label_67.setFont(font1)
+        self.label_67.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_200.addWidget(self.label_67)
+
+        self.frame_258 = QFrame(self.frame_257)
+        self.frame_258.setObjectName(u"frame_258")
+        self.frame_258.setFrameShape(QFrame.StyledPanel)
+        self.frame_258.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_201 = QVBoxLayout(self.frame_258)
+        self.verticalLayout_201.setSpacing(0)
+        self.verticalLayout_201.setObjectName(u"verticalLayout_201")
+        self.verticalLayout_201.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_2_competitor_node_13 = QTextEdit(self.frame_258)
+        self.un_10_4_grup_2_competitor_node_13.setObjectName(u"un_10_4_grup_2_competitor_node_13")
+        self.un_10_4_grup_2_competitor_node_13.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_13.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_13.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_201.addWidget(self.un_10_4_grup_2_competitor_node_13)
+
+        self.un_10_4_grup_2_competitor_node_14 = QTextEdit(self.frame_258)
+        self.un_10_4_grup_2_competitor_node_14.setObjectName(u"un_10_4_grup_2_competitor_node_14")
+        self.un_10_4_grup_2_competitor_node_14.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_14.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_14.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_201.addWidget(self.un_10_4_grup_2_competitor_node_14)
+
+
+        self.verticalLayout_200.addWidget(self.frame_258)
+
+        self.frame_259 = QFrame(self.frame_257)
+        self.frame_259.setObjectName(u"frame_259")
+        self.frame_259.setFrameShape(QFrame.StyledPanel)
+        self.frame_259.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_202 = QVBoxLayout(self.frame_259)
+        self.verticalLayout_202.setSpacing(0)
+        self.verticalLayout_202.setObjectName(u"verticalLayout_202")
+        self.verticalLayout_202.setContentsMargins(0, 0, 0, 0)
+        self.un_10_4_grup_2_competitor_node_15 = QTextEdit(self.frame_259)
+        self.un_10_4_grup_2_competitor_node_15.setObjectName(u"un_10_4_grup_2_competitor_node_15")
+        self.un_10_4_grup_2_competitor_node_15.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_15.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_15.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_202.addWidget(self.un_10_4_grup_2_competitor_node_15)
+
+        self.un_10_4_grup_2_competitor_node_16 = QTextEdit(self.frame_259)
+        self.un_10_4_grup_2_competitor_node_16.setObjectName(u"un_10_4_grup_2_competitor_node_16")
+        self.un_10_4_grup_2_competitor_node_16.setMaximumSize(QSize(16777215, 50))
+        self.un_10_4_grup_2_competitor_node_16.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_4_grup_2_competitor_node_16.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_202.addWidget(self.un_10_4_grup_2_competitor_node_16)
+
+
+        self.verticalLayout_200.addWidget(self.frame_259)
+
+
+        self.horizontalLayout_86.addWidget(self.frame_257)
+
+        self.Grup_II_Under10_G2.addWidget(self.under_4_g2)
+        self.under_3_g2 = QWidget()
+        self.under_3_g2.setObjectName(u"under_3_g2")
+        self.horizontalLayout_88 = QHBoxLayout(self.under_3_g2)
+        self.horizontalLayout_88.setObjectName(u"horizontalLayout_88")
+        self.frame_260 = QFrame(self.under_3_g2)
+        self.frame_260.setObjectName(u"frame_260")
+        self.frame_260.setFrameShape(QFrame.StyledPanel)
+        self.frame_260.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_203 = QVBoxLayout(self.frame_260)
+        self.verticalLayout_203.setObjectName(u"verticalLayout_203")
+        self.frame_261 = QFrame(self.frame_260)
+        self.frame_261.setObjectName(u"frame_261")
+        self.frame_261.setFrameShape(QFrame.StyledPanel)
+        self.frame_261.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_204 = QVBoxLayout(self.frame_261)
+        self.verticalLayout_204.setObjectName(u"verticalLayout_204")
+        self.label_68 = QLabel(self.frame_261)
+        self.label_68.setObjectName(u"label_68")
+        self.label_68.setFont(font1)
+
+        self.verticalLayout_204.addWidget(self.label_68)
+
+
+        self.verticalLayout_203.addWidget(self.frame_261)
+
+        self.frame_262 = QFrame(self.frame_260)
+        self.frame_262.setObjectName(u"frame_262")
+        self.frame_262.setFrameShape(QFrame.StyledPanel)
+        self.frame_262.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_89 = QHBoxLayout(self.frame_262)
+        self.horizontalLayout_89.setObjectName(u"horizontalLayout_89")
+        self.frame_263 = QFrame(self.frame_262)
+        self.frame_263.setObjectName(u"frame_263")
+        self.frame_263.setFrameShape(QFrame.StyledPanel)
+        self.frame_263.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_205 = QVBoxLayout(self.frame_263)
+        self.verticalLayout_205.setObjectName(u"verticalLayout_205")
+        self.un_10_3_grup_2_competitor_node_1 = QTextEdit(self.frame_263)
+        self.un_10_3_grup_2_competitor_node_1.setObjectName(u"un_10_3_grup_2_competitor_node_1")
+        self.un_10_3_grup_2_competitor_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_205.addWidget(self.un_10_3_grup_2_competitor_node_1)
+
+        self.un_10_3_grup_2_competitor_node_2 = QTextEdit(self.frame_263)
+        self.un_10_3_grup_2_competitor_node_2.setObjectName(u"un_10_3_grup_2_competitor_node_2")
+        self.un_10_3_grup_2_competitor_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_205.addWidget(self.un_10_3_grup_2_competitor_node_2)
+
+        self.un_10_3_grup_2_competitor_node_3 = QTextEdit(self.frame_263)
+        self.un_10_3_grup_2_competitor_node_3.setObjectName(u"un_10_3_grup_2_competitor_node_3")
+        self.un_10_3_grup_2_competitor_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_205.addWidget(self.un_10_3_grup_2_competitor_node_3)
+
+
+        self.horizontalLayout_89.addWidget(self.frame_263)
+
+        self.frame_264 = QFrame(self.frame_262)
+        self.frame_264.setObjectName(u"frame_264")
+        self.frame_264.setMaximumSize(QSize(50, 16777215))
+        self.frame_264.setFrameShape(QFrame.StyledPanel)
+        self.frame_264.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_206 = QVBoxLayout(self.frame_264)
+        self.verticalLayout_206.setObjectName(u"verticalLayout_206")
+        self.un_10_3_grup_2_point_node_1 = QTextEdit(self.frame_264)
+        self.un_10_3_grup_2_point_node_1.setObjectName(u"un_10_3_grup_2_point_node_1")
+        self.un_10_3_grup_2_point_node_1.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_point_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_point_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_206.addWidget(self.un_10_3_grup_2_point_node_1)
+
+        self.un_10_3_grup_2_point_node_2 = QTextEdit(self.frame_264)
+        self.un_10_3_grup_2_point_node_2.setObjectName(u"un_10_3_grup_2_point_node_2")
+        self.un_10_3_grup_2_point_node_2.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_point_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_point_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_206.addWidget(self.un_10_3_grup_2_point_node_2)
+
+        self.un_10_3_grup_2_point_node_3 = QTextEdit(self.frame_264)
+        self.un_10_3_grup_2_point_node_3.setObjectName(u"un_10_3_grup_2_point_node_3")
+        self.un_10_3_grup_2_point_node_3.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_point_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_point_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_206.addWidget(self.un_10_3_grup_2_point_node_3)
+
+
+        self.horizontalLayout_89.addWidget(self.frame_264)
+
+
+        self.verticalLayout_203.addWidget(self.frame_262)
+
+
+        self.horizontalLayout_88.addWidget(self.frame_260)
+
+        self.frame_265 = QFrame(self.under_3_g2)
+        self.frame_265.setObjectName(u"frame_265")
+        self.frame_265.setMinimumSize(QSize(25, 0))
+        self.frame_265.setFrameShape(QFrame.StyledPanel)
+        self.frame_265.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_207 = QVBoxLayout(self.frame_265)
+        self.verticalLayout_207.setObjectName(u"verticalLayout_207")
+        self.label_69 = QLabel(self.frame_265)
+        self.label_69.setObjectName(u"label_69")
+        self.label_69.setFont(font1)
+        self.label_69.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_207.addWidget(self.label_69)
+
+        self.frame_266 = QFrame(self.frame_265)
+        self.frame_266.setObjectName(u"frame_266")
+        self.frame_266.setEnabled(True)
+        self.frame_266.setFrameShape(QFrame.NoFrame)
+        self.frame_266.setFrameShadow(QFrame.Raised)
+        self._11 = QVBoxLayout(self.frame_266)
+        self._11.setSpacing(0)
+        self._11.setObjectName(u"_11")
+        self._11.setContentsMargins(0, 0, 0, 0)
+        self.un_10_3_grup_2_competitor_node_4 = QTextEdit(self.frame_266)
+        self.un_10_3_grup_2_competitor_node_4.setObjectName(u"un_10_3_grup_2_competitor_node_4")
+        self.un_10_3_grup_2_competitor_node_4.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._11.addWidget(self.un_10_3_grup_2_competitor_node_4)
+
+        self.un_10_3_grup_2_competitor_node_5 = QTextEdit(self.frame_266)
+        self.un_10_3_grup_2_competitor_node_5.setObjectName(u"un_10_3_grup_2_competitor_node_5")
+        self.un_10_3_grup_2_competitor_node_5.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self._11.addWidget(self.un_10_3_grup_2_competitor_node_5)
+
+
+        self.verticalLayout_207.addWidget(self.frame_266)
+
+
+        self.horizontalLayout_88.addWidget(self.frame_265)
+
+        self.frame_267 = QFrame(self.under_3_g2)
+        self.frame_267.setObjectName(u"frame_267")
+        self.frame_267.setMinimumSize(QSize(25, 0))
+        self.frame_267.setFrameShape(QFrame.StyledPanel)
+        self.frame_267.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_208 = QVBoxLayout(self.frame_267)
+        self.verticalLayout_208.setObjectName(u"verticalLayout_208")
+        self.label_70 = QLabel(self.frame_267)
+        self.label_70.setObjectName(u"label_70")
+        self.label_70.setFont(font1)
+        self.label_70.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_208.addWidget(self.label_70)
+
+        self.frame_268 = QFrame(self.frame_267)
+        self.frame_268.setObjectName(u"frame_268")
+        self.frame_268.setFrameShape(QFrame.StyledPanel)
+        self.frame_268.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_209 = QVBoxLayout(self.frame_268)
+        self.verticalLayout_209.setSpacing(0)
+        self.verticalLayout_209.setObjectName(u"verticalLayout_209")
+        self.verticalLayout_209.setContentsMargins(0, 0, 0, 0)
+        self.un_10_3_grup_2_competitor_node_6 = QTextEdit(self.frame_268)
+        self.un_10_3_grup_2_competitor_node_6.setObjectName(u"un_10_3_grup_2_competitor_node_6")
+        self.un_10_3_grup_2_competitor_node_6.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_6.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_209.addWidget(self.un_10_3_grup_2_competitor_node_6)
+
+        self.un_10_3_grup_2_competitor_node_7 = QTextEdit(self.frame_268)
+        self.un_10_3_grup_2_competitor_node_7.setObjectName(u"un_10_3_grup_2_competitor_node_7")
+        self.un_10_3_grup_2_competitor_node_7.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_7.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_7.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_209.addWidget(self.un_10_3_grup_2_competitor_node_7)
+
+
+        self.verticalLayout_208.addWidget(self.frame_268)
+
+
+        self.horizontalLayout_88.addWidget(self.frame_267)
+
+        self.frame_269 = QFrame(self.under_3_g2)
+        self.frame_269.setObjectName(u"frame_269")
+        self.frame_269.setMinimumSize(QSize(25, 0))
+        self.frame_269.setFrameShape(QFrame.StyledPanel)
+        self.frame_269.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_210 = QVBoxLayout(self.frame_269)
+        self.verticalLayout_210.setObjectName(u"verticalLayout_210")
+        self.verticalLayout_210.setContentsMargins(0, -1, -1, -1)
+        self.label_71 = QLabel(self.frame_269)
+        self.label_71.setObjectName(u"label_71")
+        self.label_71.setFont(font1)
+        self.label_71.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
+
+        self.verticalLayout_210.addWidget(self.label_71)
+
+        self.frame_270 = QFrame(self.frame_269)
+        self.frame_270.setObjectName(u"frame_270")
+        self.frame_270.setFrameShape(QFrame.StyledPanel)
+        self.frame_270.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_211 = QVBoxLayout(self.frame_270)
+        self.verticalLayout_211.setSpacing(0)
+        self.verticalLayout_211.setObjectName(u"verticalLayout_211")
+        self.verticalLayout_211.setContentsMargins(0, 0, 0, 0)
+        self.un_10_3_grup_2_competitor_node_8 = QTextEdit(self.frame_270)
+        self.un_10_3_grup_2_competitor_node_8.setObjectName(u"un_10_3_grup_2_competitor_node_8")
+        self.un_10_3_grup_2_competitor_node_8.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_8.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_8.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_211.addWidget(self.un_10_3_grup_2_competitor_node_8)
+
+        self.un_10_3_grup_2_competitor_node_9 = QTextEdit(self.frame_270)
+        self.un_10_3_grup_2_competitor_node_9.setObjectName(u"un_10_3_grup_2_competitor_node_9")
+        self.un_10_3_grup_2_competitor_node_9.setMaximumSize(QSize(16777215, 50))
+        self.un_10_3_grup_2_competitor_node_9.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_3_grup_2_competitor_node_9.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.verticalLayout_211.addWidget(self.un_10_3_grup_2_competitor_node_9)
+
+
+        self.verticalLayout_210.addWidget(self.frame_270)
+
+
+        self.horizontalLayout_88.addWidget(self.frame_269)
+
+        self.Grup_II_Under10_G2.addWidget(self.under_3_g2)
+
+        self.verticalLayout_222.addWidget(self.Grup_II_Under10_G2)
+
+        self.match_10.addWidget(self.Grup_II_Under10)
+        self.Finals_Under10 = QWidget()
+        self.Finals_Under10.setObjectName(u"Finals_Under10")
+        self.verticalLayout_223 = QVBoxLayout(self.Finals_Under10)
+        self.verticalLayout_223.setObjectName(u"verticalLayout_223")
+        self.frame_187 = QFrame(self.Finals_Under10)
+        self.frame_187.setObjectName(u"frame_187")
+        self.frame_187.setFrameShape(QFrame.StyledPanel)
+        self.frame_187.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_142 = QVBoxLayout(self.frame_187)
+        self.verticalLayout_142.setObjectName(u"verticalLayout_142")
+        self.frame_188 = QFrame(self.frame_187)
+        self.frame_188.setObjectName(u"frame_188")
+        self.frame_188.setFrameShape(QFrame.StyledPanel)
+        self.frame_188.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_143 = QVBoxLayout(self.frame_188)
+        self.verticalLayout_143.setObjectName(u"verticalLayout_143")
+        self.frame_189 = QFrame(self.frame_188)
+        self.frame_189.setObjectName(u"frame_189")
+        self.frame_189.setFrameShape(QFrame.StyledPanel)
+        self.frame_189.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_76 = QHBoxLayout(self.frame_189)
+        self.horizontalLayout_76.setObjectName(u"horizontalLayout_76")
+        self.label_37 = QLabel(self.frame_189)
+        self.label_37.setObjectName(u"label_37")
+        self.label_37.setFont(font2)
+
+        self.horizontalLayout_76.addWidget(self.label_37, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_143.addWidget(self.frame_189)
+
+        self.un_10_final_competitor_node_3 = QTextEdit(self.frame_188)
+        self.un_10_final_competitor_node_3.setObjectName(u"un_10_final_competitor_node_3")
+        self.un_10_final_competitor_node_3.setMaximumSize(QSize(270, 50))
+
+        self.verticalLayout_143.addWidget(self.un_10_final_competitor_node_3, 0, Qt.AlignHCenter)
+
+        self.frame_190 = QFrame(self.frame_188)
+        self.frame_190.setObjectName(u"frame_190")
+        self.frame_190.setFrameShape(QFrame.StyledPanel)
+        self.frame_190.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_77 = QHBoxLayout(self.frame_190)
+        self.horizontalLayout_77.setObjectName(u"horizontalLayout_77")
+        self.un_10_final_competitor_node_1 = QTextEdit(self.frame_190)
+        self.un_10_final_competitor_node_1.setObjectName(u"un_10_final_competitor_node_1")
+        self.un_10_final_competitor_node_1.setMaximumSize(QSize(270, 50))
+        self.un_10_final_competitor_node_1.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.un_10_final_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_final_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_final_competitor_node_1.setUndoRedoEnabled(False)
+
+        self.horizontalLayout_77.addWidget(self.un_10_final_competitor_node_1, 0, Qt.AlignHCenter)
+
+        self.un_10_final_competitor_node_2 = QTextEdit(self.frame_190)
+        self.un_10_final_competitor_node_2.setObjectName(u"un_10_final_competitor_node_2")
+        self.un_10_final_competitor_node_2.setMaximumSize(QSize(270, 50))
+        self.un_10_final_competitor_node_2.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.un_10_final_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_final_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_final_competitor_node_2.setUndoRedoEnabled(False)
+
+        self.horizontalLayout_77.addWidget(self.un_10_final_competitor_node_2)
+
+
+        self.verticalLayout_143.addWidget(self.frame_190)
+
+
+        self.verticalLayout_142.addWidget(self.frame_188, 0, Qt.AlignHCenter)
+
+        self.frame_191 = QFrame(self.frame_187)
+        self.frame_191.setObjectName(u"frame_191")
+        self.frame_191.setFrameShape(QFrame.StyledPanel)
+        self.frame_191.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_78 = QHBoxLayout(self.frame_191)
+        self.horizontalLayout_78.setObjectName(u"horizontalLayout_78")
+        self.frame_192 = QFrame(self.frame_191)
+        self.frame_192.setObjectName(u"frame_192")
+        self.frame_192.setFrameShape(QFrame.StyledPanel)
+        self.frame_192.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_144 = QVBoxLayout(self.frame_192)
+        self.verticalLayout_144.setObjectName(u"verticalLayout_144")
+        self.frame_193 = QFrame(self.frame_192)
+        self.frame_193.setObjectName(u"frame_193")
+        self.frame_193.setFrameShape(QFrame.StyledPanel)
+        self.frame_193.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_79 = QHBoxLayout(self.frame_193)
+        self.horizontalLayout_79.setObjectName(u"horizontalLayout_79")
+        self.label_38 = QLabel(self.frame_193)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setFont(font2)
+
+        self.horizontalLayout_79.addWidget(self.label_38, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_144.addWidget(self.frame_193)
+
+        self.un_10_half_final_competitor_node_5 = QTextEdit(self.frame_192)
+        self.un_10_half_final_competitor_node_5.setObjectName(u"un_10_half_final_competitor_node_5")
+        self.un_10_half_final_competitor_node_5.setMaximumSize(QSize(270, 50))
+
+        self.verticalLayout_144.addWidget(self.un_10_half_final_competitor_node_5, 0, Qt.AlignHCenter)
+
+        self.frame_194 = QFrame(self.frame_192)
+        self.frame_194.setObjectName(u"frame_194")
+        self.frame_194.setFrameShape(QFrame.StyledPanel)
+        self.frame_194.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_80 = QHBoxLayout(self.frame_194)
+        self.horizontalLayout_80.setObjectName(u"horizontalLayout_80")
+        self.un_10_half_final_competitor_node_1 = QTextEdit(self.frame_194)
+        self.un_10_half_final_competitor_node_1.setObjectName(u"un_10_half_final_competitor_node_1")
+        self.un_10_half_final_competitor_node_1.setMaximumSize(QSize(270, 50))
+        self.un_10_half_final_competitor_node_1.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.un_10_half_final_competitor_node_1.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_1.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_1.setUndoRedoEnabled(False)
+
+        self.horizontalLayout_80.addWidget(self.un_10_half_final_competitor_node_1)
+
+        self.un_10_half_final_competitor_node_2 = QTextEdit(self.frame_194)
+        self.un_10_half_final_competitor_node_2.setObjectName(u"un_10_half_final_competitor_node_2")
+        self.un_10_half_final_competitor_node_2.setMaximumSize(QSize(270, 50))
+        self.un_10_half_final_competitor_node_2.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.un_10_half_final_competitor_node_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_2.setUndoRedoEnabled(False)
+
+        self.horizontalLayout_80.addWidget(self.un_10_half_final_competitor_node_2)
+
+
+        self.verticalLayout_144.addWidget(self.frame_194)
+
+
+        self.horizontalLayout_78.addWidget(self.frame_192)
+
+        self.frame_195 = QFrame(self.frame_191)
+        self.frame_195.setObjectName(u"frame_195")
+        self.frame_195.setFrameShape(QFrame.StyledPanel)
+        self.frame_195.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_145 = QVBoxLayout(self.frame_195)
+        self.verticalLayout_145.setObjectName(u"verticalLayout_145")
+        self.frame_196 = QFrame(self.frame_195)
+        self.frame_196.setObjectName(u"frame_196")
+        self.frame_196.setFrameShape(QFrame.StyledPanel)
+        self.frame_196.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_81 = QHBoxLayout(self.frame_196)
+        self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
+        self.label_39 = QLabel(self.frame_196)
+        self.label_39.setObjectName(u"label_39")
+        self.label_39.setFont(font2)
+
+        self.horizontalLayout_81.addWidget(self.label_39, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_145.addWidget(self.frame_196)
+
+        self.un_10_half_final_competitor_node_6 = QTextEdit(self.frame_195)
+        self.un_10_half_final_competitor_node_6.setObjectName(u"un_10_half_final_competitor_node_6")
+        self.un_10_half_final_competitor_node_6.setMaximumSize(QSize(270, 50))
+
+        self.verticalLayout_145.addWidget(self.un_10_half_final_competitor_node_6, 0, Qt.AlignHCenter)
+
+        self.frame_197 = QFrame(self.frame_195)
+        self.frame_197.setObjectName(u"frame_197")
+        self.frame_197.setFrameShape(QFrame.StyledPanel)
+        self.frame_197.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_82 = QHBoxLayout(self.frame_197)
+        self.horizontalLayout_82.setObjectName(u"horizontalLayout_82")
+        self.un_10_half_final_competitor_node_3 = QTextEdit(self.frame_197)
+        self.un_10_half_final_competitor_node_3.setObjectName(u"un_10_half_final_competitor_node_3")
+        self.un_10_half_final_competitor_node_3.setMaximumSize(QSize(270, 50))
+        self.un_10_half_final_competitor_node_3.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.un_10_half_final_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_3.setUndoRedoEnabled(False)
+
+        self.horizontalLayout_82.addWidget(self.un_10_half_final_competitor_node_3)
+
+        self.un_10_half_final_competitor_node_4 = QTextEdit(self.frame_197)
+        self.un_10_half_final_competitor_node_4.setObjectName(u"un_10_half_final_competitor_node_4")
+        self.un_10_half_final_competitor_node_4.setMaximumSize(QSize(270, 50))
+        self.un_10_half_final_competitor_node_4.setStyleSheet(u"font: 75 10pt \"MS Shell Dlg 2\";")
+        self.un_10_half_final_competitor_node_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_4.setUndoRedoEnabled(False)
+
+        self.horizontalLayout_82.addWidget(self.un_10_half_final_competitor_node_4)
+
+
+        self.verticalLayout_145.addWidget(self.frame_197)
+
+
+        self.horizontalLayout_78.addWidget(self.frame_195)
+
+
+        self.verticalLayout_142.addWidget(self.frame_191)
+
+
+        self.verticalLayout_223.addWidget(self.frame_187)
+
+        self.match_10.addWidget(self.Finals_Under10)
+
+        self.verticalLayout_149.addWidget(self.match_10)
+
+        self.AllMatchesWraper.addWidget(self.MatchUnder10)
         self.MatchUnder5 = QWidget()
         self.MatchUnder5.setObjectName(u"MatchUnder5")
         self.horizontalLayout_31 = QHBoxLayout(self.MatchUnder5)
@@ -3732,11 +6215,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.pushButton = QPushButton(self.DisplayCompetitors)
         self.pushButton.setObjectName(u"pushButton")
-        font3 = QFont()
-        font3.setPointSize(10)
-        font3.setBold(True)
-        font3.setWeight(75)
-        self.pushButton.setFont(font3)
+        font4 = QFont()
+        font4.setPointSize(10)
+        font4.setBold(True)
+        font4.setWeight(75)
+        self.pushButton.setFont(font4)
 
         self.verticalLayout_18.addWidget(self.pushButton)
 
@@ -3749,7 +6232,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.DisplayCompetitors)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setFont(font3)
+        self.pushButton_2.setFont(font4)
 
         self.verticalLayout_18.addWidget(self.pushButton_2)
 
@@ -3857,9 +6340,12 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
         self.AllMatchesWraper.setCurrentIndex(1)
         self.match_16.setCurrentIndex(0)
+        self.match_10.setCurrentIndex(0)
+        self.Grup_I_Under10_G1.setCurrentIndex(2)
+        self.Grup_II_Under10_G2.setCurrentIndex(1)
         self.match_5.setCurrentIndex(0)
 
 
@@ -3881,6 +6367,7 @@ class Ui_MainWindow(object):
         self.SettingsButton.setText(QCoreApplication.translate("MainWindow", u"Ustawienia", None))
         self.Hide_category_menu.setText("")
         self.Button_16_competitors.setText(QCoreApplication.translate("MainWindow", u"16", None))
+        self.Button_10_competitors.setText(QCoreApplication.translate("MainWindow", u"10", None))
         self.Button_5_competitors.setText(QCoreApplication.translate("MainWindow", u"5", None))
         self.Button_4_competitors.setText(QCoreApplication.translate("MainWindow", u"4", None))
         self.Button_3_competitors.setText(QCoreApplication.translate("MainWindow", u"3", None))
@@ -3902,6 +6389,9 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Klub", None));
         ___qtablewidgetitem3 = self.CompetitorsTable.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Numer Licencji", None));
+        self.DeleteCompetitorCategoryButton_2.setText("")
+        self.AddCompetitorCategoryButton_3.setText("")
+        self.AddCompetitorCategoryButton_2.setText("")
         self.ComprtitorName.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119:", None))
         self.CompetitorSurname.setText(QCoreApplication.translate("MainWindow", u"Nazwisko:", None))
         self.CompetitorClub.setText(QCoreApplication.translate("MainWindow", u"Klub:", None))
@@ -3918,8 +6408,8 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Kategoria", None));
         self.DeleteCompetitorCategoryButton.setText("")
         self.AddCompetitorCategoryButton.setText("")
-        self.SaveCategoriesToTxt.setText(QCoreApplication.translate("MainWindow", u"Zapisz pliki do losowa\u0144", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Zapisz plik podsumowuj\u0105cy", None))
+        self.SaveCategoriesToTxt.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki do loswa\u0144", None))
+        self.SaveCategoriesToPdf.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki podsumowuj\u0105cy", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Dziecko", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzik (u12)", None))
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"Kadet (u16)", None))
@@ -4072,6 +6562,79 @@ class Ui_MainWindow(object):
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"P\u00f3\u0142 Fina\u0142 I", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"P\u00f3\u0142 Fina\u0142 II", None))
+        self.Under_10_group_1_button.setText(QCoreApplication.translate("MainWindow", u"Grupa I", None))
+        self.Under_10_group_2_button.setText(QCoreApplication.translate("MainWindow", u"Grupa II", None))
+        self.Under_10_finals_button.setText(QCoreApplication.translate("MainWindow", u"Fina\u0142y", None))
+        self.Top_menu_slide_button_2.setText("")
+        self.label_76.setText(QCoreApplication.translate("MainWindow", u"Grupa I", None))
+        self.label_40.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
+        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
+        self.label_42.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
+        self.label_43.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.label_44.setText(QCoreApplication.translate("MainWindow", u"Runda IV", None))
+        self.label_45.setText(QCoreApplication.translate("MainWindow", u"Runda V", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
+        self.label_47.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.label_50.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
+        self.label_53.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.label_77.setText(QCoreApplication.translate("MainWindow", u"Grupa II", None))
+        self.label_58.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
+        self.label_59.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
+        self.label_60.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
+        self.label_61.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.label_62.setText(QCoreApplication.translate("MainWindow", u"Runda IV", None))
+        self.label_63.setText(QCoreApplication.translate("MainWindow", u"Runda V", None))
+        self.label_64.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
+        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
+        self.label_66.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
+        self.label_67.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.label_68.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
+        self.label_69.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
+        self.label_70.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
+        self.label_71.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.label_37.setText(QCoreApplication.translate("MainWindow", u"Fina\u0142", None))
+        self.un_10_final_competitor_node_1.setMarkdown("")
+        self.un_10_final_competitor_node_1.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.un_10_final_competitor_node_2.setMarkdown("")
+        self.un_10_final_competitor_node_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"I P\u00f3\u0142fina\u0142", None))
+        self.un_10_half_final_competitor_node_1.setMarkdown("")
+        self.un_10_half_final_competitor_node_1.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.un_10_half_final_competitor_node_2.setMarkdown("")
+        self.un_10_half_final_competitor_node_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.label_39.setText(QCoreApplication.translate("MainWindow", u"II P\u00f3\u0142fina\u0142", None))
+        self.un_10_half_final_competitor_node_3.setMarkdown("")
+        self.un_10_half_final_competitor_node_3.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.un_10_half_final_competitor_node_4.setMarkdown("")
+        self.un_10_half_final_competitor_node_4.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Zawodnicy", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
