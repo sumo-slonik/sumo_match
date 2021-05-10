@@ -329,7 +329,7 @@ class CategoryAdder:
         for pdf_data in categories_for_pdf:
 
             pdf = SimpleDocTemplate(
-                path + "/Reports/" + pdf_data[0] + "_" + pdf_data[1] + ".pdf", pagesize=letter,
+                path + "\\Reports\\" + pdf_data[0] + "_" + pdf_data[1] + ".pdf", pagesize=letter,
                 rightMargin=72, leftMargin=72,
                 topMargin=72, bottomMargin=18)
 
@@ -352,4 +352,4 @@ class CategoryAdder:
 
 
 if __name__ == '__main__':
-    pass
+    print("\\")
