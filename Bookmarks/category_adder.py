@@ -7,6 +7,17 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 from DataStructures.personal_competitor import PersonalCompetitor, Category
 
+from reportlab.lib.enums import TA_JUSTIFY
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+
+from reportlab.lib.colors import blue
+from reportlab.lib.pagesizes import LETTER, letter
+from reportlab.lib.units import inch
+from reportlab.pdfgen.canvas import Canvas
+
 import Program_GUI.gui_theme
 
 
@@ -287,6 +298,60 @@ class CategoryAdder:
                 for competitor in categories_dict[key]:
                     category_file.write(
                         competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
+                    
+    def prepare_categories_to_pdf(self):
+        categories_dict = {key: [] for key in self.available_categories}
+        for competitor in self.competitors_list:
+            for category in competitor.get_category():
+                categories_dict[category].append(competitor)
+
+        categories_for_pdf = dict()
+
+        for category in categories_dict:
+            if categories_for_pdf.get((category.gender, category.age), None) is None:
+                categories_for_pdf[(category.gender, category.age)] = dict()
+
+            categories_for_pdf[(category.gender, category.age)][category] = categories_dict[category]
+
+        return categories_for_pdf
+
+    def create_pdfs(self):
+        pdfmetrics.registerFont(TTFont('polishFont', 'AbhayaLibre-Regular.ttf'))
+
+        categories_for_pdf = self.prepare_categories_to_pdf()
+
+        styles = getSampleStyleSheet()
+        styles.add(ParagraphStyle(name='RegularDownloaded', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=12))
+        styles.add(ParagraphStyle(name='WeightName', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=17))
+
+        for pdf_data in categories_for_pdf:
+
+            ############################
+            #zmienić ścieżkę na względną
+            ################################
+
+            pdf = SimpleDocTemplate(
+                "C:/Users/Marcin/Desktop/studia zdalne/semestr 4/sumo_match/Reports/" + pdf_data[0] + "_" + pdf_data[
+                    1] + ".pdf", pagesize=letter,
+                rightMargin=72, leftMargin=72,
+                topMargin=72, bottomMargin=18)
+
+            body = []
+
+            for category in categories_for_pdf[pdf_data]:
+                body.append(Paragraph('<font size="17"> %s </font>' % (category.gender + " " + category.age + " " +
+                                                                       category.category + " kg"),
+                                      styles["WeightName"]))
+                body.append(Spacer(1, 10))
+
+                for competitor in categories_for_pdf[pdf_data][category]:
+                    body.append(Paragraph(competitor.get_first_name() + " " + competitor.get_surname() + "  |  "
+                                          + competitor.get_club(), styles["RegularDownloaded"]))
+
+                body.append(Spacer(1, 10))
+
+            # Save the PDF file
+            pdf.build(body)
 
 
 if __name__ == '__main__':
