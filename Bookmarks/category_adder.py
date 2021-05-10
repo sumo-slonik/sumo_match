@@ -324,15 +324,12 @@ class CategoryAdder:
         styles.add(ParagraphStyle(name='RegularDownloaded', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=12))
         styles.add(ParagraphStyle(name='WeightName', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=17))
 
+        path = os.getcwd()
+
         for pdf_data in categories_for_pdf:
 
-            ############################
-            #zmienić ścieżkę na względną
-            ################################
-
             pdf = SimpleDocTemplate(
-                "C:/Users/Marcin/Desktop/studia zdalne/semestr 4/sumo_match/Reports/" + pdf_data[0] + "_" + pdf_data[
-                    1] + ".pdf", pagesize=letter,
+                path + "/Reports/" + pdf_data[0] + "_" + pdf_data[1] + ".pdf", pagesize=letter,
                 rightMargin=72, leftMargin=72,
                 topMargin=72, bottomMargin=18)
 
