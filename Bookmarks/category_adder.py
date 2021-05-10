@@ -324,12 +324,13 @@ class CategoryAdder:
         styles.add(ParagraphStyle(name='RegularDownloaded', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=12))
         styles.add(ParagraphStyle(name='WeightName', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=17))
 
-        path = os.getcwd()
+        path = os.getcwd() + "\\Reports\\"
+        path = r"{}".format(path)
 
         for pdf_data in categories_for_pdf:
 
             pdf = SimpleDocTemplate(
-                path + "\\Reports\\" + pdf_data[0] + "_" + pdf_data[1] + ".pdf", pagesize=letter,
+                path + pdf_data[0] + "_" + pdf_data[1] + ".pdf", pagesize=letter,
                 rightMargin=72, leftMargin=72,
                 topMargin=72, bottomMargin=18)
 
@@ -352,4 +353,7 @@ class CategoryAdder:
 
 
 if __name__ == '__main__':
-    print("\\")
+    path = os.getcwd() + "\\Reports\\"
+    path = r"{}".format(path)
+
+    print(path)
