@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowzERrlY.ui'
+## Form generated from reading UI file 'main_windowxONFNz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1044, 798)
+        MainWindow.resize(1040, 794)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -6193,6 +6193,158 @@ class Ui_MainWindow(object):
         self.horizontalLayout_33 = QHBoxLayout(self.MatchUnder2)
         self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
         self.AllMatchesWraper.addWidget(self.MatchUnder2)
+        self.TeemMatch = QWidget()
+        self.TeemMatch.setObjectName(u"TeemMatch")
+        self.verticalLayout_165 = QVBoxLayout(self.TeemMatch)
+        self.verticalLayout_165.setObjectName(u"verticalLayout_165")
+        self.frame_215 = QFrame(self.TeemMatch)
+        self.frame_215.setObjectName(u"frame_215")
+        self.frame_215.setMaximumSize(QSize(16777215, 60))
+        self.frame_215.setFrameShape(QFrame.StyledPanel)
+        self.frame_215.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_74 = QHBoxLayout(self.frame_215)
+        self.horizontalLayout_74.setObjectName(u"horizontalLayout_74")
+        self.TeamName_1 = QLabel(self.frame_215)
+        self.TeamName_1.setObjectName(u"TeamName_1")
+        font4 = QFont()
+        font4.setFamily(u"Calibri")
+        font4.setPointSize(18)
+        font4.setBold(True)
+        font4.setWeight(75)
+        self.TeamName_1.setFont(font4)
+
+        self.horizontalLayout_74.addWidget(self.TeamName_1)
+
+        self.team_1_score = QTextEdit(self.frame_215)
+        self.team_1_score.setObjectName(u"team_1_score")
+        self.team_1_score.setMaximumSize(QSize(100, 16777215))
+
+        self.horizontalLayout_74.addWidget(self.team_1_score)
+
+        self.label_56 = QLabel(self.frame_215)
+        self.label_56.setObjectName(u"label_56")
+        self.label_56.setMaximumSize(QSize(5, 16777215))
+        font5 = QFont()
+        font5.setFamily(u"Calibri")
+        font5.setPointSize(20)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.label_56.setFont(font5)
+
+        self.horizontalLayout_74.addWidget(self.label_56)
+
+        self.team_2_score = QTextEdit(self.frame_215)
+        self.team_2_score.setObjectName(u"team_2_score")
+        self.team_2_score.setMaximumSize(QSize(100, 16777215))
+
+        self.horizontalLayout_74.addWidget(self.team_2_score)
+
+        self.TeamName_2 = QLabel(self.frame_215)
+        self.TeamName_2.setObjectName(u"TeamName_2")
+        self.TeamName_2.setFont(font4)
+
+        self.horizontalLayout_74.addWidget(self.TeamName_2)
+
+
+        self.verticalLayout_165.addWidget(self.frame_215)
+
+        self.frame_216 = QFrame(self.TeemMatch)
+        self.frame_216.setObjectName(u"frame_216")
+        self.frame_216.setMinimumSize(QSize(0, 100))
+        self.frame_216.setFrameShape(QFrame.StyledPanel)
+        self.frame_216.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_75 = QHBoxLayout(self.frame_216)
+        self.horizontalLayout_75.setObjectName(u"horizontalLayout_75")
+        self.frame_217 = QFrame(self.frame_216)
+        self.frame_217.setObjectName(u"frame_217")
+        self.frame_217.setFrameShape(QFrame.StyledPanel)
+        self.frame_217.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_167 = QVBoxLayout(self.frame_217)
+        self.verticalLayout_167.setObjectName(u"verticalLayout_167")
+        self.team_1_competitor_1 = QTextEdit(self.frame_217)
+        self.team_1_competitor_1.setObjectName(u"team_1_competitor_1")
+
+        self.verticalLayout_167.addWidget(self.team_1_competitor_1)
+
+        self.team_1_competitor_2 = QTextEdit(self.frame_217)
+        self.team_1_competitor_2.setObjectName(u"team_1_competitor_2")
+
+        self.verticalLayout_167.addWidget(self.team_1_competitor_2)
+
+        self.team_1_competitor_3 = QTextEdit(self.frame_217)
+        self.team_1_competitor_3.setObjectName(u"team_1_competitor_3")
+
+        self.verticalLayout_167.addWidget(self.team_1_competitor_3)
+
+        self.team_1_competitor_4 = QTextEdit(self.frame_217)
+        self.team_1_competitor_4.setObjectName(u"team_1_competitor_4")
+
+        self.verticalLayout_167.addWidget(self.team_1_competitor_4)
+
+
+        self.horizontalLayout_75.addWidget(self.frame_217)
+
+        self.frame_218 = QFrame(self.frame_216)
+        self.frame_218.setObjectName(u"frame_218")
+        self.frame_218.setFrameShape(QFrame.StyledPanel)
+        self.frame_218.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_166 = QVBoxLayout(self.frame_218)
+        self.verticalLayout_166.setObjectName(u"verticalLayout_166")
+        self.team_2_competitor_1 = QTextEdit(self.frame_218)
+        self.team_2_competitor_1.setObjectName(u"team_2_competitor_1")
+
+        self.verticalLayout_166.addWidget(self.team_2_competitor_1)
+
+        self.team_2_competitor_2 = QTextEdit(self.frame_218)
+        self.team_2_competitor_2.setObjectName(u"team_2_competitor_2")
+
+        self.verticalLayout_166.addWidget(self.team_2_competitor_2)
+
+        self.team_2_competitor_3 = QTextEdit(self.frame_218)
+        self.team_2_competitor_3.setObjectName(u"team_2_competitor_3")
+
+        self.verticalLayout_166.addWidget(self.team_2_competitor_3)
+
+        self.team_2_competitor_4 = QTextEdit(self.frame_218)
+        self.team_2_competitor_4.setObjectName(u"team_2_competitor_4")
+
+        self.verticalLayout_166.addWidget(self.team_2_competitor_4)
+
+
+        self.horizontalLayout_75.addWidget(self.frame_218)
+
+
+        self.verticalLayout_165.addWidget(self.frame_216)
+
+        self.frame_219 = QFrame(self.TeemMatch)
+        self.frame_219.setObjectName(u"frame_219")
+        self.frame_219.setMinimumSize(QSize(40, 40))
+        self.frame_219.setFrameShape(QFrame.StyledPanel)
+        self.frame_219.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_168 = QVBoxLayout(self.frame_219)
+        self.verticalLayout_168.setSpacing(0)
+        self.verticalLayout_168.setObjectName(u"verticalLayout_168")
+        self.verticalLayout_168.setContentsMargins(0, 0, 0, 0)
+        self.pushButton_3 = QPushButton(self.frame_219)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pushButton_3.setMaximumSize(QSize(40, 40))
+        icon9 = QIcon()
+        icon9.addFile(u":/Icons/icons/cil-arrow-top.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_3.setIcon(icon9)
+
+        self.verticalLayout_168.addWidget(self.pushButton_3, 0, Qt.AlignHCenter)
+
+        self.frame_220 = QFrame(self.frame_219)
+        self.frame_220.setObjectName(u"frame_220")
+        self.frame_220.setFrameShape(QFrame.StyledPanel)
+        self.frame_220.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_168.addWidget(self.frame_220)
+
+
+        self.verticalLayout_165.addWidget(self.frame_219)
+
+        self.AllMatchesWraper.addWidget(self.TeemMatch)
 
         self.verticalLayout_20.addWidget(self.AllMatchesWraper)
 
@@ -6215,11 +6367,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.pushButton = QPushButton(self.DisplayCompetitors)
         self.pushButton.setObjectName(u"pushButton")
-        font4 = QFont()
-        font4.setPointSize(10)
-        font4.setBold(True)
-        font4.setWeight(75)
-        self.pushButton.setFont(font4)
+        font6 = QFont()
+        font6.setPointSize(10)
+        font6.setBold(True)
+        font6.setWeight(75)
+        self.pushButton.setFont(font6)
 
         self.verticalLayout_18.addWidget(self.pushButton)
 
@@ -6232,7 +6384,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.DisplayCompetitors)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setFont(font4)
+        self.pushButton_2.setFont(font6)
 
         self.verticalLayout_18.addWidget(self.pushButton_2)
 
@@ -6307,9 +6459,9 @@ class Ui_MainWindow(object):
         self.CloseCommunicateButton.setObjectName(u"CloseCommunicateButton")
         self.CloseCommunicateButton.setMaximumSize(QSize(25, 25))
         self.CloseCommunicateButton.setStyleSheet(u"")
-        icon9 = QIcon()
-        icon9.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.CloseCommunicateButton.setIcon(icon9)
+        icon10 = QIcon()
+        icon10.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.CloseCommunicateButton.setIcon(icon10)
 
         self.verticalLayout_43.addWidget(self.CloseCommunicateButton)
 
@@ -6341,10 +6493,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(4)
-        self.AllMatchesWraper.setCurrentIndex(1)
-        self.match_16.setCurrentIndex(0)
-        self.match_10.setCurrentIndex(0)
-        self.Grup_I_Under10_G1.setCurrentIndex(2)
+        self.AllMatchesWraper.setCurrentIndex(4)
+        self.match_16.setCurrentIndex(3)
+        self.match_10.setCurrentIndex(1)
+        self.Grup_I_Under10_G1.setCurrentIndex(0)
         self.Grup_II_Under10_G2.setCurrentIndex(1)
         self.match_5.setCurrentIndex(0)
 
@@ -6653,6 +6805,10 @@ class Ui_MainWindow(object):
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"Runda I", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
+        self.TeamName_1.setText(QCoreApplication.translate("MainWindow", u"Dru\u017cyna I", None))
+        self.label_56.setText(QCoreApplication.translate("MainWindow", u":", None))
+        self.TeamName_2.setText(QCoreApplication.translate("MainWindow", u"Dru\u017cyna II", None))
+        self.pushButton_3.setText("")
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Zawodnik I", None))
         self.Competitor_1.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

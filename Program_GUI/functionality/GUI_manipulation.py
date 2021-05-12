@@ -379,14 +379,15 @@ def print_match_under_10(match_under_10, main_window):
         node_names = ['un_10_half_final_competitor_node_' + str(x) for x in range(1, 5)]
         load_competitors_to_nodes(node_names, match_under_10.overtime.competitors, main_window)
     if state == 3:
-        node_names = ['un_10_half_final_competitor_node_5','un_10_final_competitor_node_1']
-        load_competitors_to_nodes(node_names,[match_under_10.overtime.tree[0].get_competitor()]*2,main_window)
+        node_names = ['un_10_half_final_competitor_node_5', 'un_10_final_competitor_node_1']
+        load_competitors_to_nodes(node_names, [match_under_10.overtime.tree[0].get_competitor()] * 2, main_window)
     if state == 4:
-        node_names = ['un_10_half_final_competitor_node_6','un_10_final_competitor_node_2']
-        load_competitors_to_nodes(node_names,[match_under_10.overtime.tree[1].get_competitor()]*2,main_window)
+        node_names = ['un_10_half_final_competitor_node_6', 'un_10_final_competitor_node_2']
+        load_competitors_to_nodes(node_names, [match_under_10.overtime.tree[1].get_competitor()] * 2, main_window)
     if state == 5:
         node_names = ['un_10_final_competitor_node_3']
-        load_competitors_to_nodes(node_names,[match_under_10.overtime.tree[2].get_competitor()],main_window)
+        load_competitors_to_nodes(node_names, [match_under_10.overtime.tree[2].get_competitor()], main_window)
+
 
 def show_message(window, message, slide=False):
     window.ui.Communicate.setPlainText(message)
@@ -401,6 +402,13 @@ def show_message(window, message, slide=False):
             window.leftMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
             window.leftMenuAnimation.start()
 
-# ////////////////////////////////////////////////////////////////////////////
-# TO DO : uogulnić poniższe funkcje bo robią w zasadzie to samo
-# ////////////////////////////////////////////////////////////////////////////
+
+def print_team_match(team_match, main_window):
+    team1_nodes = ['team_1_competitor_' + str(x) for x in range(1, 5)]
+    team2_nodes = ['team_2_competitor_' + str(x) for x in range(1, 5)]
+    load_competitors_to_nodes(team1_nodes, team_match.team1.get_competitors_list(), main_window)
+    load_competitors_to_nodes(team2_nodes, team_match.team2.get_competitors_list(), main_window)
+    main_window.ui.team_1_score.setText(str(team_match.score[0]))
+    main_window.ui.team_2_score.setText(str(team_match.score[1]))
+    main_window.ui.TeamName_1.setText(str(team_match.team1.get_club_name()))
+    main_window.ui.TeamName_2.setText(str(team_match.team2.get_club_name()))

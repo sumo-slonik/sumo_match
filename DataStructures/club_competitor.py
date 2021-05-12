@@ -1,8 +1,6 @@
+class ClubCompetitor:
 
-
-class ClubCompetotor:
-
-    def __init__(self, firs_competitor, second_competitor, third_competitor, substitute, club_name,
+    def __init__(self, first_competitor, second_competitor, third_competitor, substitute, club_name,
                  is_free_fight=False):
         self.is_free_fight = is_free_fight
         self.club_name = club_name
@@ -10,15 +8,16 @@ class ClubCompetotor:
         self.substitute = substitute
         self.third_competitor = third_competitor
         self.second_competitor = second_competitor
-        self.firs_competitor = firs_competitor
+        self.first_competitor = first_competitor
+
         self.has_been_changed = False
         self.changes = {1: self.__change_first, 2: self.__change_second, 3: self.__change_third}
 
     def get_club_name(self):
         return self.club_name
 
-    def get_firs_competitor(self):
-        return self.firs_competitor
+    def get_first_competitor(self):
+        return self.first_competitor
 
     def get_second_competitor(self):
         return self.second_competitor
@@ -29,8 +28,11 @@ class ClubCompetotor:
     def get_substitute(self):
         return self.substitute
 
+    def get_competitors_list(self):
+        return [self.first_competitor, self.second_competitor, self.third_competitor, self.substitute]
+
     def __change_first(self):
-        self.firs_competitor, self.substitute = self.substitute, self.firs_competitor
+        self.first_competitor, self.substitute = self.substitute, self.first_competitor
 
     def __change_second(self):
         self.second_competitor, self.substitute = self.substitute, self.second_competitor

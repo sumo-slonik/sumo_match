@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1040</width>
-    <height>789</height>
+    <height>794</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -2466,7 +2466,7 @@ background-position: center left;
 }</string>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="MatchUnder16">
                     <layout class="QVBoxLayout" name="verticalLayout_118">
@@ -12222,6 +12222,225 @@ p, li { white-space: pre-wrap; }
                    </widget>
                    <widget class="QWidget" name="MatchUnder2">
                     <layout class="QHBoxLayout" name="horizontalLayout_33"/>
+                   </widget>
+                   <widget class="QWidget" name="TeemMatch">
+                    <layout class="QVBoxLayout" name="verticalLayout_165">
+                     <item>
+                      <widget class="QFrame" name="frame_215">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_74">
+                        <item>
+                         <widget class="QLabel" name="TeamName_1">
+                          <property name="font">
+                           <font>
+                            <family>Calibri</family>
+                            <pointsize>18</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Drużyna I</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="team_1_score">
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_56">
+                          <property name="maximumSize">
+                           <size>
+                            <width>5</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Calibri</family>
+                            <pointsize>20</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="team_2_score">
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="TeamName_2">
+                          <property name="font">
+                           <font>
+                            <family>Calibri</family>
+                            <pointsize>18</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Drużyna II</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_216">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>100</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_75">
+                        <item>
+                         <widget class="QFrame" name="frame_217">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_167">
+                           <item>
+                            <widget class="QTextEdit" name="team_1_competitor_1"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="team_1_competitor_2"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="team_1_competitor_3"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="team_1_competitor_4"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_218">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_166">
+                           <item>
+                            <widget class="QTextEdit" name="team_2_competitor_1"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="team_2_competitor_2"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="team_2_competitor_3"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="team_2_competitor_4"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_219">
+                       <property name="minimumSize">
+                        <size>
+                         <width>40</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_168">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item alignment="Qt::AlignHCenter">
+                         <widget class="QPushButton" name="pushButton_3">
+                          <property name="maximumSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset resource="gui_theme.qrc">
+                            <normaloff>:/Icons/icons/cil-arrow-top.png</normaloff>:/Icons/icons/cil-arrow-top.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_220">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </widget>
                  </item>

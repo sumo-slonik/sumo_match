@@ -23,6 +23,7 @@ class Opener:
         competitors = personal_competitor_txt_input('Categories/' + file)
         engine = AllMatchEngine(competitors)
         connect_gui_to_engine(self.window, engine)
+
     def add_category_buttons(self):
         for file_name in self.category_files:
             if file_name not in self.used:

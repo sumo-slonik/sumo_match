@@ -1,4 +1,3 @@
-from DataStructures.club_competitor import ClubCompetotor
 from DataStructures.personal_competitor import PersonalCompetitor
 from DataStructures.tree_node import Node
 from copy import deepcopy

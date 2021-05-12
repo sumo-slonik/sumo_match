@@ -1,8 +1,13 @@
 import sys
+from random import choice
+from time import sleep
+
 from PySide2 import QtCore, QtGui
 from PySide2.QtCore import (QPropertyAnimation)
 from PySide2.QtGui import (QColor)
 # Import user interface file
+from DataStructures.club_competitor import ClubCompetitor
+from Matches.match_for_teams import TeamMatch
 from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from Program_GUI.ui_main_window import *
 from Program_GUI.functionality.GUI_manipulation import *
@@ -12,6 +17,7 @@ from Matches.all_match_engine import AllMatchEngine
 from Program_GUI.functionality.category_opener import Opener
 from Bookmarks.category_adder import CategoryAdder
 from Bookmarks.settings import Settings
+from Program_GUI.functionality.GUI_manipulation import print_team_match
 
 WINDOW_SIZE = 0
 
@@ -97,6 +103,7 @@ class MainWindow(QMainWindow):
         self.ui.SaveCompetitorButton.clicked.connect(
             (lambda: self.categories_adder.save_competitor_changes()))
         self.ui.SaveCategoriesToTxt.clicked.connect(lambda: self.categories_adder.categories_to_txt())
+        self.ui.SaveCategoriesToPdf.clicked.connect(lambda: self.categories_adder.create_pdfs())
 
         # Show window
         self.showFullScreen()
@@ -276,6 +283,22 @@ if __name__ == "__main__":
     window = MainWindow()
     engine = AllMatchEngine(competitors)
     connect_gui_to_engine(window, engine)
+    #############################################
+    marciny = [PersonalCompetitor("Marcin Warchoł" + str(x)) for x in range(4)]
+    kuby = [PersonalCompetitor("Kuba Nowakowski" + str(x)) for x in range(4)]
+
+    team_1 = ClubCompetitor(*marciny, "marciny")
+    team_2 = ClubCompetitor(*kuby, "kuby")
+
+    match = TeamMatch(team_1, team_2)
+    states = [True, False]
+    for i in range(3):
+        res = choice(states)
+        print(res)
+        match.make_match(res)
+        print_team_match(match,window)
+
+    #############################################
     sys.exit(app.exec_())
 
 else:
