@@ -6,11 +6,15 @@ from DataStructures.personal_competitor import *
 
 
 def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[]):
+    is_personal = isinstance(competitors_list[0], PersonalCompetitor)
     for node, competitor in zip(nodes_names, competitors_list):
         main_window.ui.__dict__[node].clear()
         main_window.ui.__dict__[node].setAlignment(Qt.AlignCenter)
-        main_window.ui.__dict__[node].append(competitor.get_name())
-        main_window.ui.__dict__[node].append(competitor.get_club())
+        if is_personal:
+            main_window.ui.__dict__[node].append(competitor.get_name())
+            main_window.ui.__dict__[node].append(competitor.get_club())
+        else:
+            main_window.ui.__dict__[node].append(competitor.get_club_name())
         main_window.ui.__dict__[node].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
     for node in copy_nodes:
         tmp = main_window.ui.__dict__[node[:-4]].toPlainText()
@@ -404,6 +408,8 @@ def show_message(window, message, slide=False):
 
 
 def print_team_match(team_match, main_window):
+    print("powinno zmienić")
+    main_window.ui.AllMatchesWraper.setCurrentWidget(main_window.ui.TeemMatch)
     team1_nodes = ['team_1_competitor_' + str(x) for x in range(1, 5)]
     team2_nodes = ['team_2_competitor_' + str(x) for x in range(1, 5)]
     load_competitors_to_nodes(team1_nodes, team_match.team1.get_competitors_list(), main_window)
@@ -412,3 +418,14 @@ def print_team_match(team_match, main_window):
     main_window.ui.team_2_score.setText(str(team_match.score[1]))
     main_window.ui.TeamName_1.setText(str(team_match.team1.get_club_name()))
     main_window.ui.TeamName_2.setText(str(team_match.team2.get_club_name()))
+
+
+def change_match_buttons(main_window, is_team, match):
+    if is_team:
+        main_window.ui.win_left.setVisible(match)
+        main_window.ui.win_right.setVisible(match)
+        main_window.ui.make_match_button.setVisible(not match)
+        main_window.ui.go_to_all_match_button.setVisible(match)
+    else:
+        main_window.ui.make_match_button.setVisible(False)
+        main_window.ui.go_to_all_match_button.setVisible(False)

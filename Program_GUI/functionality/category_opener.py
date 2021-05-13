@@ -2,7 +2,8 @@ import os
 
 from PySide2.QtCore import QCoreApplication
 from PySide2.QtWidgets import QPushButton
-from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input
+from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, \
+    club_competitor_txt_input
 from Matches.all_match_engine import AllMatchEngine
 from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from functools import partial
@@ -18,11 +19,20 @@ class Opener:
 
         print(self.category_files)
 
-    def open_category(self, file):
-        print('____________', file)
-        competitors = personal_competitor_txt_input('Categories/' + file)
-        engine = AllMatchEngine(competitors)
-        connect_gui_to_engine(self.window, engine)
+    def open_category(self, patch):
+        print('____________', patch)
+        with open('Categories/'+patch, "r", encoding="utf-8") as file:
+            for line in file:
+                line = line.strip()
+                line = line.split()
+                if line[0] == 'klub':
+                    competitors = club_competitor_txt_input('Categories/' + patch)
+                else:
+                    competitors = personal_competitor_txt_input('Categories/' + patch)
+                break
+        engine = AllMatchEngine(competitors,self.window)
+        self.window.AllMatchEngine = engine
+        # connect_gui_to_engine(self.window, engine)
 
     def add_category_buttons(self):
         for file_name in self.category_files:

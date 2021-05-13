@@ -56,6 +56,9 @@ class MatchUnder3(AbstractMatchesMaker, ABC):
     def get_competitors(self):
         return self.competitors[:]
 
+    def get_actual_match(self):
+        return self.matches[self.get_actual_match_id()]
+
 
 if __name__ == "__main__":
     competitors = [PersonalCompetitor("Marcin " + str(x)) for x in range(3)]

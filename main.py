@@ -35,6 +35,7 @@ class MainWindow(QMainWindow):
         self.settings = Settings(self)
         self.categories_adder = CategoryAdder(self, self.settings)
         self.CategoryOpener = Opener("Categories", self)
+        self.AllMatchEngine = None
 
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -281,24 +282,9 @@ if __name__ == "__main__":
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
     competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
     window = MainWindow()
-    engine = AllMatchEngine(competitors)
+    engine = AllMatchEngine(competitors,window)
     connect_gui_to_engine(window, engine)
-    #############################################
-    marciny = [PersonalCompetitor("Marcin Warchoł" + str(x)) for x in range(4)]
-    kuby = [PersonalCompetitor("Kuba Nowakowski" + str(x)) for x in range(4)]
 
-    team_1 = ClubCompetitor(*marciny, "marciny")
-    team_2 = ClubCompetitor(*kuby, "kuby")
-
-    match = TeamMatch(team_1, team_2)
-    states = [True, False]
-    for i in range(3):
-        res = choice(states)
-        print(res)
-        match.make_match(res)
-        print_team_match(match,window)
-
-    #############################################
     sys.exit(app.exec_())
 
 else:

@@ -48,9 +48,10 @@ class MatchUnder5(AbstractMatchesMaker):
 
     def print_actual_match(self):
         print(self.actualMatchId)
-        print("Left: ", self.matches[self.actualMatchId].get_left_child().name)
-        print("Right: ", self.matches[self.actualMatchId].get_right_child().name)
-        print("Winner: ", self.matches[self.actualMatchId].get_competitor().name)
+        if isinstance(self.matches[self.actualMatchId].get_left_child(), PersonalCompetitor):
+            print("Left: ", self.matches[self.actualMatchId].get_left_child().name)
+            print("Right: ", self.matches[self.actualMatchId].get_right_child().name)
+            print("Winner: ", self.matches[self.actualMatchId].get_competitor().name)
 
     def get_results(self):
         competitors_points = {competitor: 0 for competitor in self.competitors}
@@ -91,7 +92,7 @@ class MatchUnder5Wrapper:
                     else:
                         self.results.append(self.competitors[1])
                         self.results.append(self.competitors[0])
-                    print("dwaj z tym samym rezultatem",self.competitors[1].name, self.competitors[0].name)
+                    print("dwaj z tym samym rezultatem", self.competitors[1].name, self.competitors[0].name)
             del self.competitors[0]
             del self.competitors[0]
 
@@ -157,11 +158,14 @@ class MatchUnder5Wrapper:
                         self.results = self.results + self.losers
                         self.is_end = True
 
+    def get_actual_match(self):
+        return self.engine.get_actual_match()
+
 
 if __name__ == '__main__':
 
     Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
-    for i in range (100):
+    for i in range(100):
         matches = MatchUnder5Wrapper(Competitors)
 
         while not matches.is_end:
@@ -169,4 +173,4 @@ if __name__ == '__main__':
             print("Left Win:", result)
             matches.make_match(result)
 
-        print("                                                                  len:",len(matches.results))
+        print("                                                                  len:", len(matches.results))

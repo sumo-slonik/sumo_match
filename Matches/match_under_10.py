@@ -33,6 +33,9 @@ class Overtime:
         if self.actual_match_id > 0:
             self.actual_match_id -= 1
 
+    def get_actual_match(self):
+        return self.tree[self.get_actual_match_id()]
+
 
 class MatchUnder10(AbstractMatchesMaker, ABC):
     def __init__(self, competitors):
@@ -106,6 +109,15 @@ class MatchUnder10(AbstractMatchesMaker, ABC):
     def print_results(self):
         for competitor in self.results:
             print(competitor.name, competitor.wins)
+
+    def get_actual_match(self):
+        if self.overtime:
+            return self.overtime.get_actual_match()
+        elif self.first_group.is_end:
+            return self.second_group.get_actual_match()
+        else:
+            return self.first_group.get_actual_match()
+
 
 
 if __name__ == "__main__":

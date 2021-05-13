@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1040</width>
-    <height>794</height>
+    <width>1216</width>
+    <height>803</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 0, 127);</string>
+       <string notr="true">background-color: rgb(8, 1, 38);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -72,7 +72,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 85, 255);</string>
+          <string notr="true"/>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -196,7 +196,9 @@ QFrame
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(85, 0, 127);</string>
+          <string notr="true">QPushButton:hover{
+	background-color: rgb(85, 0, 0);
+}</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::WinPanel</enum>
@@ -307,7 +309,7 @@ QPushButton:hover{
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 85, 255);</string>
+       <string notr="true">background-color: rgb(8, 1, 38);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -521,7 +523,12 @@ background-position: center left;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(85, 255, 127);</string>
+          <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.505, fy:0.5, stop:0.00995025 rgba(30, 38, 177, 255), stop:0.975124 rgba(29, 36, 129, 255));
+
+
+
+
+</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -558,6 +565,12 @@ background-position: center left;
               <width>0</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	color: rgb(172, 172, 172);
+	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+}</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -693,12 +706,39 @@ background-position: center left;
               <height>50</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">
+QFrame {
+    background: transparent;
+}
+
+QTextEdit {
+   
+	background-color: rgb(217, 217, 217);
+ 	border-radius: 8px;
+}
+
+QPushButton
+{
+    background-color: white;
+ 	border-radius: 2px;
+}
+
+QLabel
+{
+	color: rgb(185, 185, 185);
+	font: 75 26pt &quot;Calibri&quot;;
+}
+
+
+</string>
+            </property>
             <property name="currentIndex">
-             <number>4</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(85, 170, 0);</string>
+              <string notr="true"/>
              </property>
             </widget>
             <widget class="QWidget" name="SummaryPage">
@@ -731,9 +771,11 @@ background-position: center left;
                      <widget class="QLabel" name="label_11">
                       <property name="font">
                        <font>
-                        <pointsize>16</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <family>Calibri</family>
+                        <pointsize>26</pointsize>
+                        <weight>9</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="text">
@@ -770,6 +812,13 @@ background-position: center left;
              </layout>
             </widget>
             <widget class="QWidget" name="CompetitorInputPage">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{	
+	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+	font: 75 11pt &quot;Calibri&quot;;
+	color: rgb(186, 186, 186);
+}</string>
+             </property>
              <layout class="QHBoxLayout" name="horizontalLayout_46">
               <item>
                <widget class="QFrame" name="frame_62">
@@ -807,9 +856,13 @@ background-position: center left;
                        <font>
                         <family>Calibri</family>
                         <pointsize>16</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <weight>9</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">font: 75 16pt &quot;Calibri&quot;;</string>
                       </property>
                       <property name="text">
                        <string>Dodaj kategorię</string>
@@ -902,9 +955,13 @@ background-position: center left;
                           <font>
                            <family>Calibri</family>
                            <pointsize>16</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
+                           <weight>9</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
                           </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 16pt &quot;Calibri&quot;;</string>
                          </property>
                          <property name="text">
                           <string>Dodane kategorie</string>
@@ -960,6 +1017,15 @@ background-position: center left;
                      <width>16777215</width>
                      <height>16777215</height>
                     </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox
+{
+	
+	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+
+	color: rgb(150, 150, 150);
+}</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1053,51 +1119,6 @@ background-position: center left;
                             </column>
                            </widget>
                           </item>
-                          <item>
-                           <widget class="QFrame" name="frame_132">
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QVBoxLayout" name="verticalLayout_100">
-                             <item>
-                              <widget class="QPushButton" name="DeleteCompetitorCategoryButton_2">
-                               <property name="text">
-                                <string/>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="gui_theme.qrc">
-                                 <normaloff>:/Icons/icons/cil-trash.png</normaloff>:/Icons/icons/cil-trash.png</iconset>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QPushButton" name="AddCompetitorCategoryButton_3">
-                               <property name="text">
-                                <string/>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="gui_theme.qrc">
-                                 <normaloff>:/Icons/icons/cil-medical-cross.png</normaloff>:/Icons/icons/cil-medical-cross.png</iconset>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QPushButton" name="AddCompetitorCategoryButton_2">
-                               <property name="text">
-                                <string/>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="gui_theme.qrc">
-                                 <normaloff>:/Icons/icons/cil-save.png</normaloff>:/Icons/icons/cil-save.png</iconset>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
                          </layout>
                         </widget>
                        </item>
@@ -1136,6 +1157,9 @@ background-position: center left;
                                     <height>140</height>
                                    </size>
                                   </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">font: 75 10pt &quot;Calibri&quot;;</string>
+                                  </property>
                                   <property name="frameShape">
                                    <enum>QFrame::StyledPanel</enum>
                                   </property>
@@ -1145,6 +1169,9 @@ background-position: center left;
                                   <layout class="QVBoxLayout" name="verticalLayout_96">
                                    <item>
                                     <widget class="QLabel" name="ComprtitorName">
+                                     <property name="styleSheet">
+                                      <string notr="true">background:transparent;</string>
+                                     </property>
                                      <property name="text">
                                       <string>Imię:</string>
                                      </property>
@@ -1152,6 +1179,9 @@ background-position: center left;
                                    </item>
                                    <item>
                                     <widget class="QLabel" name="CompetitorSurname">
+                                     <property name="styleSheet">
+                                      <string notr="true">background:transparent;</string>
+                                     </property>
                                      <property name="text">
                                       <string>Nazwisko:</string>
                                      </property>
@@ -1159,6 +1189,9 @@ background-position: center left;
                                    </item>
                                    <item>
                                     <widget class="QLabel" name="CompetitorClub">
+                                     <property name="styleSheet">
+                                      <string notr="true">background:transparent;</string>
+                                     </property>
                                      <property name="text">
                                       <string>Klub:</string>
                                      </property>
@@ -1166,6 +1199,9 @@ background-position: center left;
                                    </item>
                                    <item>
                                     <widget class="QLabel" name="CompetitorBornDate">
+                                     <property name="styleSheet">
+                                      <string notr="true">background:transparent;</string>
+                                     </property>
                                      <property name="text">
                                       <string>Rok urodzenia:</string>
                                      </property>
@@ -1173,6 +1209,9 @@ background-position: center left;
                                    </item>
                                    <item>
                                     <widget class="QLabel" name="CompetitorLicenceNo">
+                                     <property name="styleSheet">
+                                      <string notr="true">background:transparent;</string>
+                                     </property>
                                      <property name="text">
                                       <string>Nr licencji:</string>
                                      </property>
@@ -1388,7 +1427,7 @@ background-position: center left;
             </widget>
             <widget class="QWidget" name="SettingsPage">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 170, 255);</string>
+              <string notr="true"/>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_101">
               <item>
@@ -2370,19 +2409,6 @@ background-position: center left;
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <widget class="QLabel" name="label_36">
-                    <property name="geometry">
-                     <rect>
-                      <x>40</x>
-                      <y>50</y>
-                      <width>55</width>
-                      <height>16</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>Pozostałe ustawinia</string>
-                    </property>
-                   </widget>
                   </widget>
                  </item>
                 </layout>
@@ -2440,11 +2466,19 @@ background-position: center left;
             </widget>
             <widget class="QWidget" name="AcountPage">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(85, 85, 255);</string>
+              <string notr="true">background: transparent; </string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
                <widget class="QFrame" name="Content_wraper">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{	
+	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+	font: 75 11pt &quot;Calibri&quot;;
+	color: rgb(186, 186, 186);
+}
+</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -2458,12 +2492,17 @@ background-position: center left;
                  <item>
                   <widget class="QStackedWidget" name="AllMatchesWraper">
                    <property name="styleSheet">
-                    <string notr="true">QTextEdit
-{
-	background-color: rgb(255, 255, 255);
-	border-radius:10px;
-	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-}</string>
+                    <string notr="true">QTextEdit {
+    background-color: rgb(217, 217, 217);
+	border-color:rgb(0, 0, 0);
+	border-style: solid;
+	border-width: 2px;
+}
+
+
+ background: transparent;
+
+</string>
                    </property>
                    <property name="currentIndex">
                     <number>4</number>
@@ -2560,6 +2599,9 @@ background-position: center left;
                             <height>40</height>
                            </size>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
                           <property name="text">
                            <string/>
                           </property>
@@ -2575,15 +2617,10 @@ background-position: center left;
                      <item>
                       <widget class="QStackedWidget" name="match_16">
                        <property name="styleSheet">
-                        <string notr="true">QTextEdit
-{
-	background-color: rgb(255, 255, 255);
-	border-radius:10px;
-	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-}</string>
+                        <string notr="true"/>
                        </property>
                        <property name="currentIndex">
-                        <number>3</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="Eliminations">
                         <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -2593,12 +2630,7 @@ background-position: center left;
                             <bool>false</bool>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">QTextEdit
-{
-	background-color: rgb(255, 255, 255);
-	border-radius:10px;
-	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-}</string>
+                            <string notr="true"/>
                            </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
@@ -2679,8 +2711,8 @@ background-position: center left;
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                        <property name="placeholderText">
                                         <string/>
@@ -3150,7 +3182,7 @@ p, li { white-space: pre-wrap; }
                                         </size>
                                        </property>
                                        <property name="styleSheet">
-                                        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                        <string notr="true"/>
                                        </property>
                                        <property name="verticalScrollBarPolicy">
                                         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -3168,8 +3200,8 @@ p, li { white-space: pre-wrap; }
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -4015,9 +4047,11 @@ p, li { white-space: pre-wrap; }
                                    <widget class="QLabel" name="label_6">
                                     <property name="font">
                                      <font>
-                                      <pointsize>18</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
+                                      <family>Calibri</family>
+                                      <pointsize>26</pointsize>
+                                      <weight>9</weight>
+                                      <italic>false</italic>
+                                      <bold>false</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -4119,6 +4153,9 @@ p, li { white-space: pre-wrap; }
                             </item>
                             <item>
                              <widget class="QFrame" name="frame_44">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
@@ -4148,10 +4185,15 @@ p, li { white-space: pre-wrap; }
                                       <widget class="QLabel" name="label_7">
                                        <property name="font">
                                         <font>
+                                         <family>Calibri</family>
                                          <pointsize>18</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
+                                         <weight>9</weight>
+                                         <italic>false</italic>
+                                         <bold>false</bold>
                                         </font>
+                                       </property>
+                                       <property name="styleSheet">
+                                        <string notr="true">font: 75 18pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <property name="text">
                                         <string>Walka o pierwszy brąz</string>
@@ -4189,7 +4231,7 @@ p, li { white-space: pre-wrap; }
                                         </size>
                                        </property>
                                        <property name="styleSheet">
-                                        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                        <string notr="true"/>
                                        </property>
                                        <property name="verticalScrollBarPolicy">
                                         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4207,8 +4249,8 @@ p, li { white-space: pre-wrap; }
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -4221,7 +4263,7 @@ p, li { white-space: pre-wrap; }
                                         </size>
                                        </property>
                                        <property name="styleSheet">
-                                        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                        <string notr="true"/>
                                        </property>
                                        <property name="verticalScrollBarPolicy">
                                         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4239,8 +4281,8 @@ p, li { white-space: pre-wrap; }
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -4272,10 +4314,15 @@ p, li { white-space: pre-wrap; }
                                       <widget class="QLabel" name="label_5">
                                        <property name="font">
                                         <font>
+                                         <family>Calibri</family>
                                          <pointsize>18</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
+                                         <weight>9</weight>
+                                         <italic>false</italic>
+                                         <bold>false</bold>
                                         </font>
+                                       </property>
+                                       <property name="styleSheet">
+                                        <string notr="true">font: 75 18pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <property name="text">
                                         <string>Walka o drugi brąz</string>
@@ -4387,12 +4434,7 @@ p, li { white-space: pre-wrap; }
                          <item>
                           <widget class="QFrame" name="frame_24">
                            <property name="styleSheet">
-                            <string notr="true">QTextEdit
-{
-	background-color: rgb(255, 255, 255);
-	border-radius:10px;
-	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-}</string>
+                            <string notr="true"/>
                            </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
@@ -4423,9 +4465,11 @@ p, li { white-space: pre-wrap; }
                                    <widget class="QLabel" name="label">
                                     <property name="font">
                                      <font>
-                                      <pointsize>18</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
+                                      <family>Calibri</family>
+                                      <pointsize>26</pointsize>
+                                      <weight>9</weight>
+                                      <italic>false</italic>
+                                      <bold>false</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -4533,9 +4577,11 @@ p, li { white-space: pre-wrap; }
                                    <widget class="QLabel" name="label_2">
                                     <property name="font">
                                      <font>
-                                      <pointsize>18</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
+                                      <family>Calibri</family>
+                                      <pointsize>26</pointsize>
+                                      <weight>9</weight>
+                                      <italic>false</italic>
+                                      <bold>false</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -4670,6 +4716,12 @@ p, li { white-space: pre-wrap; }
                         </property>
                         <item>
                          <widget class="QFrame" name="Under_10_top_menu">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>0</height>
+                           </size>
+                          </property>
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
                           </property>
@@ -4715,6 +4767,9 @@ p, li { white-space: pre-wrap; }
                             <height>40</height>
                            </size>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
                           <property name="text">
                            <string/>
                           </property>
@@ -4730,15 +4785,10 @@ p, li { white-space: pre-wrap; }
                      <item>
                       <widget class="QStackedWidget" name="match_10">
                        <property name="styleSheet">
-                        <string notr="true">QTextEdit
-{
-	background-color: rgb(255, 255, 255);
-	border-radius:10px;
-	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-}</string>
+                        <string notr="true"/>
                        </property>
                        <property name="currentIndex">
-                        <number>1</number>
+                        <number>2</number>
                        </property>
                        <widget class="QWidget" name="Grup_I_Under10">
                         <layout class="QVBoxLayout" name="verticalLayout_221">
@@ -4747,9 +4797,10 @@ p, li { white-space: pre-wrap; }
                            <property name="font">
                             <font>
                              <family>Calibri</family>
-                             <pointsize>28</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <pointsize>26</pointsize>
+                             <weight>9</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
                             </font>
                            </property>
                            <property name="text">
@@ -4760,7 +4811,7 @@ p, li { white-space: pre-wrap; }
                          <item>
                           <widget class="QStackedWidget" name="Grup_I_Under10_G1">
                            <property name="currentIndex">
-                            <number>0</number>
+                            <number>2</number>
                            </property>
                            <widget class="QWidget" name="under_5_g1">
                             <layout class="QHBoxLayout" name="horizontalLayout_60">
@@ -4787,9 +4838,10 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <family>Calibri</family>
-                                       <pointsize>16</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
+                                       <pointsize>26</pointsize>
+                                       <weight>9</weight>
+                                       <italic>false</italic>
+                                       <bold>false</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -5025,9 +5077,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5182,9 +5235,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5339,9 +5393,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5493,9 +5548,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5653,9 +5709,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5814,9 +5871,10 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <family>Calibri</family>
-                                       <pointsize>16</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
+                                       <pointsize>26</pointsize>
+                                       <weight>9</weight>
+                                       <italic>false</italic>
+                                       <bold>false</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -6020,9 +6078,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6177,9 +6236,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6334,9 +6394,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6495,9 +6556,10 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <family>Calibri</family>
-                                       <pointsize>16</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
+                                       <pointsize>26</pointsize>
+                                       <weight>9</weight>
+                                       <italic>false</italic>
+                                       <bold>false</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -6669,9 +6731,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6767,9 +6830,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6865,9 +6929,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6953,9 +7018,10 @@ p, li { white-space: pre-wrap; }
                            <property name="font">
                             <font>
                              <family>Calibri</family>
-                             <pointsize>28</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <pointsize>26</pointsize>
+                             <weight>9</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
                             </font>
                            </property>
                            <property name="text">
@@ -6999,7 +7065,7 @@ p, li { white-space: pre-wrap; }
                          <item>
                           <widget class="QStackedWidget" name="Grup_II_Under10_G2">
                            <property name="currentIndex">
-                            <number>1</number>
+                            <number>2</number>
                            </property>
                            <widget class="QWidget" name="under_5_g2">
                             <layout class="QHBoxLayout" name="horizontalLayout_72">
@@ -7026,9 +7092,10 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <family>Calibri</family>
-                                       <pointsize>16</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
+                                       <pointsize>26</pointsize>
+                                       <weight>9</weight>
+                                       <italic>false</italic>
+                                       <bold>false</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -7264,9 +7331,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7421,9 +7489,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7578,9 +7647,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7732,9 +7802,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7892,9 +7963,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8053,9 +8125,10 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <family>Calibri</family>
-                                       <pointsize>16</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
+                                       <pointsize>26</pointsize>
+                                       <weight>9</weight>
+                                       <italic>false</italic>
+                                       <bold>false</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -8259,9 +8332,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8416,9 +8490,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8573,9 +8648,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8734,9 +8810,10 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <family>Calibri</family>
-                                       <pointsize>16</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
+                                       <pointsize>26</pointsize>
+                                       <weight>9</weight>
+                                       <italic>false</italic>
+                                       <bold>false</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -8908,9 +8985,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9006,9 +9084,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9104,9 +9183,10 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <family>Calibri</family>
-                                    <pointsize>16</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
+                                    <pointsize>26</pointsize>
+                                    <weight>9</weight>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9218,9 +9298,11 @@ p, li { white-space: pre-wrap; }
                                    <widget class="QLabel" name="label_37">
                                     <property name="font">
                                      <font>
-                                      <pointsize>18</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
+                                      <family>Calibri</family>
+                                      <pointsize>26</pointsize>
+                                      <weight>9</weight>
+                                      <italic>false</italic>
+                                      <bold>false</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -9259,7 +9341,7 @@ p, li { white-space: pre-wrap; }
                                      </size>
                                     </property>
                                     <property name="styleSheet">
-                                     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                     <string notr="true"/>
                                     </property>
                                     <property name="verticalScrollBarPolicy">
                                      <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -9277,8 +9359,8 @@ p, li { white-space: pre-wrap; }
                                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -9291,7 +9373,7 @@ p, li { white-space: pre-wrap; }
                                      </size>
                                     </property>
                                     <property name="styleSheet">
-                                     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                     <string notr="true"/>
                                     </property>
                                     <property name="verticalScrollBarPolicy">
                                      <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -9309,8 +9391,8 @@ p, li { white-space: pre-wrap; }
                                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -9351,9 +9433,11 @@ p, li { white-space: pre-wrap; }
                                       <widget class="QLabel" name="label_38">
                                        <property name="font">
                                         <font>
-                                         <pointsize>18</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
+                                         <family>Calibri</family>
+                                         <pointsize>26</pointsize>
+                                         <weight>9</weight>
+                                         <italic>false</italic>
+                                         <bold>false</bold>
                                         </font>
                                        </property>
                                        <property name="text">
@@ -9424,7 +9508,7 @@ p, li { white-space: pre-wrap; }
                                         </size>
                                        </property>
                                        <property name="styleSheet">
-                                        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                        <string notr="true"/>
                                        </property>
                                        <property name="verticalScrollBarPolicy">
                                         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -9442,8 +9526,8 @@ p, li { white-space: pre-wrap; }
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -9475,9 +9559,11 @@ p, li { white-space: pre-wrap; }
                                       <widget class="QLabel" name="label_39">
                                        <property name="font">
                                         <font>
-                                         <pointsize>18</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
+                                         <family>Calibri</family>
+                                         <pointsize>26</pointsize>
+                                         <weight>9</weight>
+                                         <italic>false</italic>
+                                         <bold>false</bold>
                                         </font>
                                        </property>
                                        <property name="text">
@@ -9516,7 +9602,7 @@ p, li { white-space: pre-wrap; }
                                         </size>
                                        </property>
                                        <property name="styleSheet">
-                                        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                        <string notr="true"/>
                                        </property>
                                        <property name="verticalScrollBarPolicy">
                                         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -9534,8 +9620,8 @@ p, li { white-space: pre-wrap; }
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -9548,7 +9634,7 @@ p, li { white-space: pre-wrap; }
                                         </size>
                                        </property>
                                        <property name="styleSheet">
-                                        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                                        <string notr="true"/>
                                        </property>
                                        <property name="verticalScrollBarPolicy">
                                         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -9566,8 +9652,8 @@ p, li { white-space: pre-wrap; }
                                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -9593,8 +9679,11 @@ p, li { white-space: pre-wrap; }
                     <layout class="QHBoxLayout" name="horizontalLayout_31">
                      <item>
                       <widget class="QStackedWidget" name="match_5">
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="under_5">
                         <layout class="QHBoxLayout" name="horizontalLayout_36">
@@ -9621,9 +9710,10 @@ p, li { white-space: pre-wrap; }
                                  <property name="font">
                                   <font>
                                    <family>Calibri</family>
-                                   <pointsize>16</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
+                                   <pointsize>26</pointsize>
+                                   <weight>9</weight>
+                                   <italic>false</italic>
+                                   <bold>false</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -9859,9 +9949,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10016,9 +10107,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10173,9 +10265,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10327,9 +10420,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10487,9 +10581,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10648,9 +10743,10 @@ p, li { white-space: pre-wrap; }
                                  <property name="font">
                                   <font>
                                    <family>Calibri</family>
-                                   <pointsize>16</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
+                                   <pointsize>26</pointsize>
+                                   <weight>9</weight>
+                                   <italic>false</italic>
+                                   <bold>false</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -10854,9 +10950,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11011,9 +11108,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11168,9 +11266,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11329,9 +11428,10 @@ p, li { white-space: pre-wrap; }
                                  <property name="font">
                                   <font>
                                    <family>Calibri</family>
-                                   <pointsize>16</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
+                                   <pointsize>26</pointsize>
+                                   <weight>9</weight>
+                                   <italic>false</italic>
+                                   <bold>false</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -11503,9 +11603,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11601,9 +11702,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11699,9 +11801,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11801,9 +11904,10 @@ p, li { white-space: pre-wrap; }
                                  <property name="font">
                                   <font>
                                    <family>Calibri</family>
-                                   <pointsize>16</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
+                                   <pointsize>26</pointsize>
+                                   <weight>9</weight>
+                                   <italic>false</italic>
+                                   <bold>false</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -11943,9 +12047,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12041,9 +12146,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12139,9 +12245,10 @@ p, li { white-space: pre-wrap; }
                               <property name="font">
                                <font>
                                 <family>Calibri</family>
-                                <pointsize>16</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
+                                <pointsize>26</pointsize>
+                                <weight>9</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12154,6 +12261,9 @@ p, li { white-space: pre-wrap; }
                             </item>
                             <item>
                              <widget class="QFrame" name="frame_95">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
@@ -12245,9 +12355,10 @@ p, li { white-space: pre-wrap; }
                           <property name="font">
                            <font>
                             <family>Calibri</family>
-                            <pointsize>18</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
+                            <pointsize>26</pointsize>
+                            <weight>9</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
                            </font>
                           </property>
                           <property name="text">
@@ -12269,17 +12380,22 @@ p, li { white-space: pre-wrap; }
                          <widget class="QLabel" name="label_56">
                           <property name="maximumSize">
                            <size>
-                            <width>5</width>
+                            <width>10</width>
                             <height>16777215</height>
                            </size>
                           </property>
                           <property name="font">
                            <font>
                             <family>Calibri</family>
-                            <pointsize>20</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
+                            <pointsize>25</pointsize>
+                            <weight>9</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
                            </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">font: 75 25pt &quot;Calibri&quot;;
+color:rgb(255, 255, 255);</string>
                           </property>
                           <property name="text">
                            <string>:</string>
@@ -12301,9 +12417,10 @@ p, li { white-space: pre-wrap; }
                           <property name="font">
                            <font>
                             <family>Calibri</family>
-                            <pointsize>18</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
+                            <pointsize>26</pointsize>
+                            <weight>9</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
                            </font>
                           </property>
                           <property name="text">
@@ -12418,6 +12535,9 @@ p, li { white-space: pre-wrap; }
                             <height>40</height>
                            </size>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true">background:transparent;</string>
+                          </property>
                           <property name="text">
                            <string/>
                           </property>
@@ -12461,6 +12581,17 @@ p, li { white-space: pre-wrap; }
                   <height>16777215</height>
                  </size>
                 </property>
+                <property name="styleSheet">
+                 <string notr="true">QTextEdit{
+   background-color: rgb(217, 217, 217);
+}
+QPushButton{	
+	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+	font: 75 11pt &quot;Calibri&quot;;
+	color: rgb(186, 186, 186);
+}
+</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -12481,9 +12612,11 @@ p, li { white-space: pre-wrap; }
                      <widget class="QPushButton" name="pushButton">
                       <property name="font">
                        <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <family>Calibri</family>
+                        <pointsize>11</pointsize>
+                        <weight>9</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="text">
@@ -12520,9 +12653,11 @@ p, li { white-space: pre-wrap; }
                      <widget class="QPushButton" name="pushButton_2">
                       <property name="font">
                        <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <family>Calibri</family>
+                        <pointsize>11</pointsize>
+                        <weight>9</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="text">
@@ -12563,19 +12698,81 @@ p, li { white-space: pre-wrap; }
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_13">
+                      <layout class="QVBoxLayout" name="verticalLayout_169">
                        <item>
-                        <widget class="QPushButton" name="win_left">
-                         <property name="text">
-                          <string>Wygrał I</string>
+                        <widget class="QFrame" name="frame_221">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
                          </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_171">
+                          <item>
+                           <widget class="QPushButton" name="win_left">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>Wygrał I</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="win_right">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>Wygrał II</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="win_right">
-                         <property name="text">
-                          <string>Wygrał II</string>
+                        <widget class="QFrame" name="frame_222">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
                          </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_170">
+                          <item>
+                           <widget class="QPushButton" name="make_match_button">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>Rozegraj mecz</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="go_to_all_match_button">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>Powrót do krzyżówki</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                       </layout>
@@ -12595,15 +12792,27 @@ p, li { white-space: pre-wrap; }
                    <layout class="QHBoxLayout" name="horizontalLayout_12">
                     <item>
                      <widget class="QPushButton" name="prev_match">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
                       <property name="text">
-                       <string>Poprzedni Mecz</string>
+                       <string>Poprzedni</string>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <widget class="QPushButton" name="next_match">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
                       <property name="text">
-                       <string>Następny Mecz</string>
+                       <string>Następny</string>
                       </property>
                      </widget>
                     </item>
@@ -12671,32 +12880,6 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
       </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="main_footer">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>10</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 85, 127);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_43"/>
      </widget>
     </item>
    </layout>

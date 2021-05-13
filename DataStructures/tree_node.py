@@ -20,7 +20,10 @@ class Node:
             else:
                 self.competitor = self.right_child
         self.competitor.win()
-        print(self.competitor.name, self.competitor.wins)
+        if isinstance(self.competitor,personal_competitor.PersonalCompetitor):
+            print(self.competitor.name, self.competitor.wins)
+        else:
+            print(self.competitor.get_club_name(), self.competitor.wins)
 
     def set_left_child(self, child):
         self.left_child = child

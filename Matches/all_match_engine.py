@@ -1,3 +1,4 @@
+from DataStructures.tree_node import Node
 from Matches.abstractMatchesMaker import AbstractMatchesMaker
 from enum import Enum
 
@@ -5,6 +6,8 @@ from Matches.match_under_10 import MatchUnder10
 from Matches.match_under_16 import MatchUnder16
 from Matches.match_under_5 import MatchUnder5Wrapper
 from Program_GUI.functionality.GUI_manipulation import *
+from DataStructures.club_competitor import ClubCompetitor
+from Matches.match_for_teams import TeamMatch
 from random_functions.random_function_16 import random_function_16
 
 
@@ -33,10 +36,14 @@ def correctTypeFromLength(length):
 
 class AllMatchEngine(AbstractMatchesMaker):
 
-    def __init__(self, competitors):
+    def __init__(self, competitors, window):
         self.competitors = competitors
         self.match_type = correctTypeFromLength(len(self.competitors))
         self.engine = None
+        self.teamMatch = isinstance(competitors[0], ClubCompetitor)
+        self.in_match = False
+        self.teamEngine = None
+        self.window = window
         if self.match_type == TypeOFMatch.Under16:
             if len(self.competitors) == 16:
                 self.engine = MatchUnder16(self.competitors)
@@ -48,8 +55,29 @@ class AllMatchEngine(AbstractMatchesMaker):
             self.engine = MatchUnder10(self.competitors)
         else:
             print("Nie mamy zaimplementowanegoe")
+        self.print_match()
+
+    def go_to_team_match(self):
+        self.in_match = True
+        change_match_buttons(self.window, True, True)
+        first_competitor = self.engine.get_actual_match().get_left_child()
+        second_competitor = self.engine.get_actual_match().get_right_child()
+        first_competitor = first_competitor if not isinstance(first_competitor,
+                                                              Node) else first_competitor.competitor
+        second_competitor = second_competitor if not isinstance(second_competitor,
+                                                                Node) else second_competitor.competitor
+
+        print('_______________________________')
+        print(first_competitor)
+        print(second_competitor)
+        print(type(first_competitor))
+        print(type(second_competitor))
+        print('_______________________________')
+        self.teamEngine = TeamMatch(first_competitor, second_competitor)
+        self.print_match()
 
     def make_match(self, left_win):
+        print('_____________________________________________________________________________________________________')
         self.engine.make_match(left_win)
 
     def go_to_next_round(self):
@@ -61,18 +89,27 @@ class AllMatchEngine(AbstractMatchesMaker):
     def get_actual_match_id(self):
         self.engine.get_actual_match_id()
 
-    def print_fighters(self, window):
+    def print_fighters(self):
         competitors = self.engine.get_actual_fighters()
-        print_actual_competitors(*competitors,window)
+        print_actual_competitors(*competitors, self.window)
 
-    def print_match(self, window):
-        if self.match_type == TypeOFMatch.Under16:
-            print_match_under_16(self.engine, window)
-            self.print_fighters(window)
-        elif self.match_type == TypeOFMatch.Under5:
-            print_match_under_5_wrapper(self.engine, window)
-        elif self.match_type == TypeOFMatch.Under10:
-            print_match_under_10(self.engine,window)
+    def print_match(self):
+        if self.in_match and self.teamMatch:
+            print_team_match(self.teamEngine, self.window)
+            change_match_buttons(self.window, True, True)
+        else:
+            if self.match_type == TypeOFMatch.Under16:
+                print_match_under_16(self.engine, self.window)
+                self.print_fighters()
+            elif self.match_type == TypeOFMatch.Under5:
+                print_match_under_5_wrapper(self.engine, self.window)
+            elif self.match_type == TypeOFMatch.Under10:
+                print_match_under_10(self.engine, self.window)
+
+            if self.teamMatch:
+                change_match_buttons(self.window, True, False)
+            else:
+                change_match_buttons(self.window, False, False)
 
 
 if __name__ == '__main__':

@@ -35,7 +35,8 @@ class Category:
 
 
 class PersonalCompetitor:
-    def __init__(self, name="", club="", weight="", category="", birth_year=0, licence_no='', is_free_fight=False):
+    def __init__(self, name="", club="", weight="", category="", birth_year=0,
+                 licence_no='', is_free_fight=False):
         self.name = name
         self.club = club
         self.weight = weight
