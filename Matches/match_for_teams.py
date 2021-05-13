@@ -15,24 +15,28 @@ class TeamMatch(AbstractMatchesMaker, ABC):
         self.actual_match_id = 0
         self.rounds = [Match() for _ in range(3)]
         self.score = [0, 0]
+        self.is_end = False
         for single_round, first, second in zip(self.rounds, self.team1.get_competitors_list()[:-1],
                                                self.team2.get_competitors_list()[:-1]):
             single_round.set_left_child(first)
             single_round.set_right_child(second)
 
     def make_match(self, win_left):
-        if win_left:
-            self.score[0] += 1
-        else:
-            self.score[1] += 1
+        if not self.is_end:
+            if win_left:
+                self.score[0] += 1
+            else:
+                self.score[1] += 1
 
-        self.rounds[self.actual_match_id].make_match(win_left)
-        self.print_actual_match()
-        self.go_to_next_round()
+            self.rounds[self.actual_match_id].make_match(win_left)
+            self.print_actual_match()
+            self.go_to_next_round()
 
     def go_to_next_round(self):
-        if self.actual_match_id < 3:
+        if self.actual_match_id < 2:
             self.actual_match_id += 1
+        else:
+            self.is_end = True
 
     def go_to_prev_round(self):
         if self.actual_match_id > 0:

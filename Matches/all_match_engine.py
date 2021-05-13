@@ -76,9 +76,21 @@ class AllMatchEngine(AbstractMatchesMaker):
         self.teamEngine = TeamMatch(first_competitor, second_competitor)
         self.print_match()
 
+    def go_to_all_matches(self):
+        self.in_match = False
+        change_match_buttons(self.window, True, False)
+        if self.teamEngine.is_end:
+            # if we done team match we can give results to all matches
+            self.make_match(self.teamEngine.score[0] > 1)
+        self.teamEngine = None
+        self.print_match()
+
     def make_match(self, left_win):
         print('_____________________________________________________________________________________________________')
-        self.engine.make_match(left_win)
+        if self.in_match:
+            self.teamEngine.make_match(left_win)
+        else:
+            self.engine.make_match(left_win)
 
     def go_to_next_round(self):
         self.engine.go_to_next_round()
@@ -90,17 +102,25 @@ class AllMatchEngine(AbstractMatchesMaker):
         self.engine.get_actual_match_id()
 
     def print_fighters(self):
-        competitors = self.engine.get_actual_fighters()
+        competitor1 = self.engine.get_actual_match().get_left_child()
+        competitor2 = self.engine.get_actual_match().get_right_child()
+        if isinstance(competitor1, Node):
+            competitor1 = competitor1.get_competitor()
+        if isinstance(competitor2, Node):
+            competitor2 = competitor2.get_competitor()
+
+        competitors = [competitor1, competitor2]
         print_actual_competitors(*competitors, self.window)
 
     def print_match(self):
         if self.in_match and self.teamMatch:
             print_team_match(self.teamEngine, self.window)
             change_match_buttons(self.window, True, True)
+            if self.teamEngine.is_end:
+                hide_wind_buttons(self.window, True)
         else:
             if self.match_type == TypeOFMatch.Under16:
                 print_match_under_16(self.engine, self.window)
-                self.print_fighters()
             elif self.match_type == TypeOFMatch.Under5:
                 print_match_under_5_wrapper(self.engine, self.window)
             elif self.match_type == TypeOFMatch.Under10:
@@ -110,7 +130,7 @@ class AllMatchEngine(AbstractMatchesMaker):
                 change_match_buttons(self.window, True, False)
             else:
                 change_match_buttons(self.window, False, False)
-
+            self.print_fighters()
 
 if __name__ == '__main__':
     for i in range(2, 34):

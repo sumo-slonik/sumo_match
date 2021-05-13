@@ -734,7 +734,7 @@ QLabel
 </string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
@@ -2505,7 +2505,7 @@ QLabel
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>4</number>
+                    <number>2</number>
                    </property>
                    <widget class="QWidget" name="MatchUnder16">
                     <layout class="QVBoxLayout" name="verticalLayout_118">
@@ -9683,7 +9683,7 @@ p, li { white-space: pre-wrap; }
                         <string notr="true"/>
                        </property>
                        <property name="currentIndex">
-                        <number>3</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="under_5">
                         <layout class="QHBoxLayout" name="horizontalLayout_36">

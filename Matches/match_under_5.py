@@ -80,6 +80,7 @@ class MatchUnder5Wrapper:
             self.engine = MatchUnder3(competitors)
 
     def check_if_two_competitors_get_the_same_result(self):
+        self.competitors.sort(key=lambda x: x.get_wins(), reverse=True)
         if len(self.competitors) == 2 or (
                 len(self.competitors) >= 3 and self.competitors[0].get_wins() == self.competitors[1].get_wins() !=
                 self.competitors[2].get_wins()):
@@ -97,6 +98,7 @@ class MatchUnder5Wrapper:
             del self.competitors[0]
 
     def get_bests_competitors_to_results(self):
+        self.competitors.sort(key=lambda x: x.get_wins(), reverse=True)
         while len(self.competitors) > 1 and self.competitors[0].get_wins() != self.competitors[1].get_wins():
             self.results.append(self.competitors[0])
             del self.competitors[0]
@@ -163,14 +165,6 @@ class MatchUnder5Wrapper:
 
 
 if __name__ == '__main__':
-
     Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
-    for i in range(100):
-        matches = MatchUnder5Wrapper(Competitors)
-
-        while not matches.is_end:
-            result = choice([True, False])
-            print("Left Win:", result)
-            matches.make_match(result)
-
-        print("                                                                  len:", len(matches.results))
+    matches = MatchUnder5Wrapper(Competitors)
+    matches.make_match(True)

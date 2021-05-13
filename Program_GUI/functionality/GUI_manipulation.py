@@ -364,13 +364,35 @@ def print_actual_competitors(competitor1, competitor2, window):
         result += '\n'
         return result
 
-    window.ui.Competitor_1.setPlainText(competitor_to_description(competitor1))
-    window.ui.Competitor_2.setPlainText(competitor_to_description(competitor2))
+    def club_to_description(competitor):
+        result = ''
+        result += 'Nazwa:'
+        result += competitor.get_club_name()
+        result += '\n'
+        result += 'I:'
+        result += str(competitor.get_first_competitor().name)
+        result += '\n'
+        result += 'II:'
+        result += str(competitor.get_second_competitor().name)
+        result += '\n'
+        result += 'III:'
+        result += str(competitor.get_third_competitor().name)
+        result += '\n'
+        result += 'IV:'
+        result += str(competitor.get_substitute().name)
+        result += '\n'
+        return result
+    if isinstance(competitor1,PersonalCompetitor):
+        window.ui.Competitor_1.setPlainText(competitor_to_description(competitor1))
+        window.ui.Competitor_2.setPlainText(competitor_to_description(competitor2))
+    else:
+        window.ui.Competitor_1.setPlainText(club_to_description(competitor1))
+        window.ui.Competitor_2.setPlainText(club_to_description(competitor2))
 
 
 def print_match_under_10(match_under_10, main_window):
     state = match_under_10.state
-
+    main_window.ui.AllMatchesWraper.setCurrentWidget(main_window.ui.MatchUnder10)
     if state == 0:
         names = ('un_10_5_grup_1_competitor_node_', 'un_10_5_grup_1_point_node_', 'un_10_4_grup_1_competitor_node_',
                  'un_10_4_grup_1_point_node_', 'un_10_3_grup_1_competitor_node_', 'un_10_3_grup_1_point_node_')
@@ -420,10 +442,14 @@ def print_team_match(team_match, main_window):
     main_window.ui.TeamName_2.setText(str(team_match.team2.get_club_name()))
 
 
+def hide_wind_buttons(main_window, hide):
+    main_window.ui.win_left.setVisible(not hide)
+    main_window.ui.win_right.setVisible(not hide)
+
+
 def change_match_buttons(main_window, is_team, match):
     if is_team:
-        main_window.ui.win_left.setVisible(match)
-        main_window.ui.win_right.setVisible(match)
+        hide_wind_buttons(main_window,not match)
         main_window.ui.make_match_button.setVisible(not match)
         main_window.ui.go_to_all_match_button.setVisible(match)
     else:
