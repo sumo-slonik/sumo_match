@@ -254,8 +254,10 @@ class MatchUnder16:
             actual_match = self.bronzeFights[self.actualMatchId - 21]
         else:
             actual_match = self.eliminations.get_actual_node()
-
-        return [actual_match.left_child.competitor, actual_match.right_child.competitor]
+        if isinstance(actual_match.left_child, Node):
+            return [actual_match.left_child.competitor, actual_match.right_child.competitor]
+        else:
+            return [actual_match.left_child, actual_match.right_child]
 
     # do poprawy zle przyporzadkowuje trzecie miejsca
 
