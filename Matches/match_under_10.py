@@ -34,7 +34,7 @@ class Overtime:
             self.actual_match_id -= 1
 
     def get_actual_match(self):
-        return self.tree[self.get_actual_match_id()]
+        return self.tree[self.actual_match_id]
 
 
 class MatchUnder10(AbstractMatchesMaker, ABC):

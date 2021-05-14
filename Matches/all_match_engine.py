@@ -130,6 +130,7 @@ class AllMatchEngine(AbstractMatchesMaker):
                 change_match_buttons(self.window, True, False)
             else:
                 change_match_buttons(self.window, False, False)
+                hide_wind_buttons(self.window, False)
             self.print_fighters()
 
 if __name__ == '__main__':

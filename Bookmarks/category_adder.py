@@ -87,14 +87,14 @@ class CategoryAdder:
 
         for name in self.to_add:
             category_name = ''
-            print("nazwa pliku:" ,name)
+            print("nazwa pliku:", name)
             with pdfplumber.open(name) as pdf:
                 category_name = self.parse_pdf(pdf)
             new_repr = create_pdf_repr(self.window.ui.AddedCategoriesContents, category_name)
             new_repr.setObjectName(name + "repr")
             self.window.ui.verticalLayout_93.addWidget(new_repr)
             new_repr.show()
-        self.show_in_table()
+        self.show_in_table(self.competitors_list)
 
     def parse_pdf(self, pdf):
         lines = []
@@ -132,18 +132,19 @@ class CategoryAdder:
         self.actualise_combo_boxes()
         return category_name
 
-    def show_in_table(self):
-        a = QTabWidget(None)
+    def show_in_table(self, competitors):
+
         table = self.window.ui.CompetitorsTable
+        table.setRowCount(0)
         table_width = table.width()
         table.setColumnWidth(0, table_width / 4)
         table.setColumnWidth(1, table_width / 4)
         table.setColumnWidth(2, table_width / 4)
         table.setColumnWidth(3, table_width / 4)
 
-        table.setRowCount(len(self.competitors_list))
+        table.setRowCount(len(competitors))
         row = 0
-        for competitor in self.competitors_list:
+        for competitor in competitors:
             table.setItem(row, 0, QTableWidgetItem(competitor.get_first_name()))
             table.setItem(row, 1, QTableWidgetItem(competitor.get_surname()))
             table.setItem(row, 2, QTableWidgetItem(competitor.get_club()))
@@ -175,6 +176,7 @@ class CategoryAdder:
         self.window.ui.CompetitorWeightInput.setText(competitor.get_weight())
         table = self.window.ui.CompetitorCategories
         # table.clear()
+        table.setRowCount(0)
         table.setRowCount(len(competitor.get_category()))
         row = 0
         ages = {x.age for x in self.available_categories}
@@ -191,6 +193,54 @@ class CategoryAdder:
             if not self.check_age(competitor, category):
                 table.cellWidget(row, 0).setStyleSheet("background-color: red;")
             row += 1
+
+    def filter_competitors(self):
+        def check_gender(competitor, gender):
+            for i in competitor.category:
+                print(i.gender)
+                if gender == i.gender:
+                    print('pass')
+                    return True
+            print('no pass')
+            return False
+
+        def check_age(competitor, age):
+            for i in competitor.category:
+                if age == i.age:
+                    return True
+            return False
+
+        def check_club(competitor, club):
+            return competitor.get_club() == club
+
+        def check_category(competitor, category):
+            for i in competitor.category:
+                if category == i.category:
+                    return True
+            return False
+
+        gender = self.window.ui.GenderComboBox.currentText()
+        age = self.window.ui.AgeComboBox.currentText()
+        category = self.window.ui.CategoryComboBox.currentText()
+        club = self.window.ui.ClubComboBox.currentText()
+        result = self.competitors_list[:]
+        print(gender, age, category, club)
+        if gender != "Wszystko":
+            result = filter(lambda x: check_gender(x, gender), result)
+        if age != "Wszystko":
+            result = filter(lambda x: check_age(x, age), result)
+        if category != "Wszystko":
+            result = filter(lambda x: check_category(x, category), result)
+        if club != "Wszystko":
+            result = filter(lambda x: check_club(x, club), result)
+        result = list(result)
+
+        for i in result:
+            print(i.name)
+        return result
+
+    def show_filter(self):
+        self.show_in_table(self.filter_competitors())
 
     def check_age(self, competitor, category):
 
@@ -294,11 +344,11 @@ class CategoryAdder:
             for category in competitor.get_category():
                 categories_dict[category].append(competitor)
         for key in categories_dict:
-            with open('Categories/' + key.file_name() +'.txt', 'w',encoding="utf-8") as category_file:
+            with open('Categories/' + key.file_name() + '.txt', 'w', encoding="utf-8") as category_file:
                 for competitor in categories_dict[key]:
                     category_file.write(
                         competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
-                    
+
     def prepare_categories_to_pdf(self):
         categories_dict = {key: [] for key in self.available_categories}
         for competitor in self.competitors_list:
@@ -357,6 +407,7 @@ class CategoryAdder:
             # Save the PDF file
             pdf.build(body)
         print("Zakończono generowanie pdfów")
+
 
 if __name__ == '__main__':
     path = os.getcwd() + "\\Reports\\"
