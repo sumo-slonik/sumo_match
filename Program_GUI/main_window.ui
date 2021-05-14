@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1216</width>
+    <width>1041</width>
     <height>803</height>
    </rect>
   </property>
@@ -734,12 +734,492 @@ QLabel
 </string>
             </property>
             <property name="currentIndex">
-             <number>4</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
+            </widget>
+            <widget class="QWidget" name="RandomCompetitros">
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QFrame" name="frame_132">
+                <property name="maximumSize">
+                 <size>
+                  <width>300</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_100">
+                 <item>
+                  <widget class="QLabel" name="label_36">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Calibri</family>
+                     <pointsize>16</pointsize>
+                     <weight>9</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">font: 75 16pt &quot;Calibri&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Dodaj kategorię</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_223">
+                   <property name="minimumSize">
+                    <size>
+                     <width>250</width>
+                     <height>300</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_172">
+                    <item>
+                     <widget class="QFrame" name="frame_224">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_83">
+                       <item>
+                        <widget class="QLineEdit" name="CategoriesToAdd_2"/>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="CategoriesBrowseButton_2">
+                         <property name="text">
+                          <string>Przeglądaj</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_225">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_84">
+                       <item>
+                        <widget class="QPushButton" name="AddCategoriesButton_3">
+                         <property name="text">
+                          <string>Dodaj</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_271">
+                   <property name="minimumSize">
+                    <size>
+                     <width>250</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_212">
+                    <item>
+                     <widget class="QLabel" name="label_54">
+                      <property name="font">
+                       <font>
+                        <family>Calibri</family>
+                        <pointsize>16</pointsize>
+                        <weight>9</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">font: 75 16pt &quot;Calibri&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Dodane kategorie</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTableWidget" name="tableWidget">
+                      <column>
+                       <property name="text">
+                        <string>Nowa kolumna</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Wiek</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Waga</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_272">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_214">
+                 <item>
+                  <widget class="QFrame" name="frame_273">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_43">
+                    <item>
+                     <widget class="QTableWidget" name="tableWidget_2">
+                      <column>
+                       <property name="text">
+                        <string>Nowa kolumna</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Nazwisko</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QStackedWidget" name="stackedWidget_2">
+                      <property name="currentIndex">
+                       <number>1</number>
+                      </property>
+                      <widget class="QWidget" name="RandomFunctionRes16">
+                       <layout class="QVBoxLayout" name="verticalLayout_213">
+                        <item>
+                         <widget class="QLabel" name="label_72">
+                          <property name="text">
+                           <string>Krzyżówka do 16 zawodników</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_275">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_90">
+                           <item>
+                            <widget class="QFrame" name="frame_277">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_216">
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_1"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_2"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_3"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_4"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_279">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_217">
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_9"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_10"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_11"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_12"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_276">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_91">
+                           <item>
+                            <widget class="QFrame" name="frame_278">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_218">
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_5"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_6"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_7"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_8"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_280">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_219">
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_13"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_14"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_15"/>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="RandRes16_16"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="RandomFunctionRes10">
+                       <layout class="QVBoxLayout" name="verticalLayout_220">
+                        <item>
+                         <widget class="QFrame" name="frame_281">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_224">
+                           <item>
+                            <widget class="QLabel" name="label_73">
+                             <property name="text">
+                              <string>Krzyżówka do 10 zwodniów</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_55">
+                             <property name="text">
+                              <string>Grupa I</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_1"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_2"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_3"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_4"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_5"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_282">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_225">
+                           <item>
+                            <widget class="QLabel" name="label_57">
+                             <property name="text">
+                              <string>Grupa II</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_6"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_7"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_8"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_9"/>
+                           </item>
+                           <item>
+                            <widget class="QTextEdit" name="RandRes10_10"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="RandomFunctionRes5">
+                       <layout class="QVBoxLayout" name="verticalLayout_226">
+                        <item>
+                         <widget class="QLabel" name="label_74">
+                          <property name="text">
+                           <string>Krzyżówka do 5 zwodniów</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="RandRes5_1"/>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="RandRes5_2"/>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="RandRes5_3"/>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="RandRes5_4"/>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="RandRes5_5"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_274">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_215">
+                    <item>
+                     <widget class="QPushButton" name="pushButton_5">
+                      <property name="text">
+                       <string>Losuj</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButton_4">
+                      <property name="text">
+                       <string>Zapisz</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
             <widget class="QWidget" name="SummaryPage">
              <layout class="QHBoxLayout" name="horizontalLayout_44">
