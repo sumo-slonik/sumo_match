@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowNjkbBP.ui'
+## Form generated from reading UI file 'main_windowZHAZcG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,7 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import gui_theme_rc
+import Program_GUI.gui_theme
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -245,16 +245,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_42.addWidget(self.AccountButton_3)
 
-        self.AccountButton_4 = QPushButton(self.frame)
-        self.AccountButton_4.setObjectName(u"AccountButton_4")
-        self.AccountButton_4.setStyleSheet(u"background-image: url(:/Icons/icons/cil-reload.png);\n"
+        self.RandomFunctionsButton = QPushButton(self.frame)
+        self.RandomFunctionsButton.setObjectName(u"RandomFunctionsButton")
+        self.RandomFunctionsButton.setStyleSheet(u"background-image: url(:/Icons/icons/cil-reload.png);\n"
 "background-repeat:none;\n"
 "background-position: center left;\n"
 "\n"
 "padding-left: 50px;\n"
 "")
 
-        self.verticalLayout_42.addWidget(self.AccountButton_4)
+        self.verticalLayout_42.addWidget(self.RandomFunctionsButton)
 
 
         self.verticalLayout_2.addWidget(self.frame, 0, Qt.AlignTop)
@@ -403,11 +403,11 @@ class Ui_MainWindow(object):
         self.HomePage.setObjectName(u"HomePage")
         self.HomePage.setStyleSheet(u"")
         self.stackedWidget.addWidget(self.HomePage)
-        self.RandomCompetitros = QWidget()
-        self.RandomCompetitros.setObjectName(u"RandomCompetitros")
-        self.horizontalLayout_13 = QHBoxLayout(self.RandomCompetitros)
+        self.RandomCompetitors = QWidget()
+        self.RandomCompetitors.setObjectName(u"RandomCompetitors")
+        self.horizontalLayout_13 = QHBoxLayout(self.RandomCompetitors)
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
-        self.frame_132 = QFrame(self.RandomCompetitros)
+        self.frame_132 = QFrame(self.RandomCompetitors)
         self.frame_132.setObjectName(u"frame_132")
         self.frame_132.setMaximumSize(QSize(300, 16777215))
         self.frame_132.setFrameShape(QFrame.StyledPanel)
@@ -486,18 +486,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_212.addWidget(self.label_54)
 
-        self.tableWidget = QTableWidget(self.frame_271)
-        if (self.tableWidget.columnCount() < 3):
-            self.tableWidget.setColumnCount(3)
+        self.CategoriesTable = QTableWidget(self.frame_271)
+        if (self.CategoriesTable.columnCount() < 3):
+            self.CategoriesTable.setColumnCount(3)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.CategoriesTable.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.CategoriesTable.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        self.tableWidget.setObjectName(u"tableWidget")
+        self.CategoriesTable.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.CategoriesTable.setObjectName(u"CategoriesTable")
 
-        self.verticalLayout_212.addWidget(self.tableWidget)
+        self.verticalLayout_212.addWidget(self.CategoriesTable)
 
 
         self.verticalLayout_100.addWidget(self.frame_271)
@@ -505,7 +505,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addWidget(self.frame_132)
 
-        self.frame_272 = QFrame(self.RandomCompetitros)
+        self.frame_272 = QFrame(self.RandomCompetitors)
         self.frame_272.setObjectName(u"frame_272")
         self.frame_272.setFrameShape(QFrame.StyledPanel)
         self.frame_272.setFrameShadow(QFrame.Raised)
@@ -827,7 +827,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addWidget(self.frame_272)
 
-        self.stackedWidget.addWidget(self.RandomCompetitros)
+        self.stackedWidget.addWidget(self.RandomCompetitors)
         self.SummaryPage = QWidget()
         self.SummaryPage.setObjectName(u"SummaryPage")
         self.horizontalLayout_44 = QHBoxLayout(self.SummaryPage)
@@ -971,7 +971,7 @@ class Ui_MainWindow(object):
         self.AddedCategories.setWidgetResizable(True)
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 277))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 28))
         self.verticalLayout_93 = QVBoxLayout(self.AddedCategoriesContents)
         self.verticalLayout_93.setObjectName(u"verticalLayout_93")
         self.AddedCategories.setWidget(self.AddedCategoriesContents)
@@ -6991,7 +6991,7 @@ class Ui_MainWindow(object):
         self.AccountButton.setText(QCoreApplication.translate("MainWindow", u"Kategorie", None))
         self.AddCategoriesButton.setText(QCoreApplication.translate("MainWindow", u"Wprowadzanie zawodnik\u00f3w", None))
         self.AccountButton_3.setText(QCoreApplication.translate("MainWindow", u"Raporty", None))
-        self.AccountButton_4.setText(QCoreApplication.translate("MainWindow", u"Losowanie", None))
+        self.RandomFunctionsButton.setText(QCoreApplication.translate("MainWindow", u"Losowanie", None))
         self.InfoButton.setText(QCoreApplication.translate("MainWindow", u"Komunikaty", None))
         self.SettingsButton.setText(QCoreApplication.translate("MainWindow", u"Ustawienia", None))
         self.Hide_category_menu.setText("")
@@ -7006,11 +7006,11 @@ class Ui_MainWindow(object):
         self.CategoriesBrowseButton_2.setText(QCoreApplication.translate("MainWindow", u"Przegl\u0105daj", None))
         self.AddCategoriesButton_3.setText(QCoreApplication.translate("MainWindow", u"Dodaj", None))
         self.label_54.setText(QCoreApplication.translate("MainWindow", u"Dodane kategorie", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem = self.CategoriesTable.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Nowa kolumna", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1 = self.CategoriesTable.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Wiek", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2 = self.CategoriesTable.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Waga", None));
         ___qtablewidgetitem3 = self.tableWidget_2.horizontalHeaderItem(0)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Nowa kolumna", None));

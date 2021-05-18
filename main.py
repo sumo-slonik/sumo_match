@@ -18,7 +18,7 @@ from Program_GUI.functionality.category_opener import Opener
 from Bookmarks.category_adder import CategoryAdder
 from Bookmarks.settings import Settings
 from Program_GUI.functionality.GUI_manipulation import print_team_match
-
+from Bookmarks.RanomFunctionsWrapper import RandomFunctionWrapper
 WINDOW_SIZE = 0
 
 
@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
         self.categories_adder = CategoryAdder(self, self.settings)
         self.CategoryOpener = Opener("Categories", self)
         self.AllMatchEngine = None
-
+        self.RandomFunctionWrapper = RandomFunctionWrapper(self)
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         # Set main background to transparent
@@ -66,8 +66,8 @@ class MainWindow(QMainWindow):
         self.ui.AccountButton.clicked.connect(lambda: self.menu_button_function("AccountPage"))
         self.ui.SettingsButton.clicked.connect(lambda: self.menu_button_function("SettingsPage"))
         self.ui.InfoButton.clicked.connect(lambda: self.slide_communicate())
+        self.ui.RandomFunctionsButton.clicked.connect(lambda: self.menu_button_function("RandomCompetitors"))
         self.ui.AddCategoriesButton.clicked.connect(lambda: self.menu_button_function("CompetitorInputPage"))
-
         # close communicate
         self.ui.CloseCommunicateButton.clicked.connect(lambda: self.slide_communicate())
 
@@ -106,9 +106,15 @@ class MainWindow(QMainWindow):
         self.ui.SaveCategoriesToTxt.clicked.connect(lambda: self.categories_adder.categories_to_txt())
         self.ui.SaveCategoriesToPdf.clicked.connect(lambda: self.categories_adder.create_pdfs())
         self.ui.FilterCattegoryButton.clicked.connect(lambda: self.categories_adder.show_filter())
+
+        # Random functions
+        self.ui.FilterCattegoryButton.clicked.connect(lambda: self.categories_adder.show_filter())
+
+        
         # Show window
         self.showFullScreen()
         self.show()
+
 
     # Restore or maximize your window
     def restore_or_maximize_window(self):
@@ -211,6 +217,8 @@ class MainWindow(QMainWindow):
             self.slide_second_left_menu()
         if go_to == 'CompetitorInputPage':
             self.ui.stackedWidget.setCurrentWidget(self.ui.CompetitorInputPage)
+        if go_to == 'RandomCompetitors':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.RandomCompetitors)
 
     def top_menu_function(self, go_to):
         if go_to == "Eliminations":

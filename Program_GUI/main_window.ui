@@ -452,7 +452,7 @@ padding-left: 50px;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="AccountButton_4">
+              <widget class="QPushButton" name="RandomFunctionsButton">
                <property name="styleSheet">
                 <string notr="true">background-image: url(:/Icons/icons/cil-reload.png);
 background-repeat:none;
@@ -741,7 +741,7 @@ QLabel
               <string notr="true"/>
              </property>
             </widget>
-            <widget class="QWidget" name="RandomCompetitros">
+            <widget class="QWidget" name="RandomCompetitors">
              <layout class="QHBoxLayout" name="horizontalLayout_13">
               <item>
                <widget class="QFrame" name="frame_132">
@@ -883,7 +883,7 @@ QLabel
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTableWidget" name="tableWidget">
+                     <widget class="QTableWidget" name="CategoriesTable">
                       <column>
                        <property name="text">
                         <string>Nowa kolumna</string>
