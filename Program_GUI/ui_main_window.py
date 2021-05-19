@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowZHAZcG.ui'
+## Form generated from reading UI file 'main_windowlJXhrp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1041, 803)
+        MainWindow.resize(1121, 822)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -28,7 +28,10 @@ class Ui_MainWindow(object):
         self.main_header = QFrame(self.centralwidget)
         self.main_header.setObjectName(u"main_header")
         self.main_header.setMaximumSize(QSize(16777215, 50))
-        self.main_header.setStyleSheet(u"background-color: rgb(8, 1, 38);")
+        self.main_header.setStyleSheet(u"QFrame\n"
+"{\n"
+"	background-color: rgb(47, 47, 47);\n"
+"}")
         self.main_header.setFrameShape(QFrame.StyledPanel)
         self.main_header.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.main_header)
@@ -53,7 +56,7 @@ class Ui_MainWindow(object):
 "	padding: 5px 10px;\n"
 "	border: none;\n"
 "	border-radius: 10px;\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(47, 47, 47);\n"
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -61,7 +64,7 @@ class Ui_MainWindow(object):
 "}\n"
 "QFrame\n"
 "{\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(47, 47, 47);\n"
 "}\n"
 "\n"
 "")
@@ -98,7 +101,11 @@ class Ui_MainWindow(object):
         self.top_right_btns = QFrame(self.main_header)
         self.top_right_btns.setObjectName(u"top_right_btns")
         self.top_right_btns.setMaximumSize(QSize(100, 16777215))
-        self.top_right_btns.setStyleSheet(u"QPushButton:hover{\n"
+        self.top_right_btns.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(47, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
 "	background-color: rgb(85, 0, 0);\n"
 "}")
         self.top_right_btns.setFrameShape(QFrame.WinPanel)
@@ -161,7 +168,13 @@ class Ui_MainWindow(object):
         self.main_body = QFrame(self.centralwidget)
         self.main_body.setObjectName(u"main_body")
         self.main_body.setEnabled(True)
-        self.main_body.setStyleSheet(u"background-color: rgb(8, 1, 38);")
+        self.main_body.setStyleSheet(u"QFrame{\n"
+"	background-color: rgb(47, 47, 47);\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"	background-color: rgb(47, 47, 47);\n"
+"}")
         self.main_body.setFrameShape(QFrame.StyledPanel)
         self.main_body.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.main_body)
@@ -173,7 +186,7 @@ class Ui_MainWindow(object):
         self.left_menu.setMaximumSize(QSize(50, 16777215))
         self.left_menu.setStyleSheet(u"QFrame\n"
 "{\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(47, 47, 47);\n"
 "}\n"
 "\n"
 "QPushButton{\n"
@@ -181,13 +194,12 @@ class Ui_MainWindow(object):
 "	padding: 25px 10px;\n"
 "	border: none;\n"
 "	border-radius: 10px;\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(47, 47, 47);\n"
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(85, 0, 0);\n"
-"}\n"
-"")
+"}")
         self.left_menu.setFrameShape(QFrame.StyledPanel)
         self.left_menu.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.left_menu)
@@ -289,7 +301,9 @@ class Ui_MainWindow(object):
         self.center_main_items = QFrame(self.main_body)
         self.center_main_items.setObjectName(u"center_main_items")
         self.center_main_items.setMinimumSize(QSize(0, 0))
-        self.center_main_items.setStyleSheet(u"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.505, fy:0.5, stop:0.00995025 rgba(30, 38, 177, 255), stop:0.975124 rgba(29, 36, 129, 255));\n"
+        self.center_main_items.setStyleSheet(u"background-color: \n"
+"\n"
+"qlineargradient(spread:pad, x1:0.29, y1:0, x2:1, y2:0, stop:0 rgba(83, 83, 83, 255), stop:0.9801 rgba(0, 0, 0, 255))\n"
 "\n"
 "\n"
 "\n"
@@ -305,9 +319,22 @@ class Ui_MainWindow(object):
         self.Second_left_menu.setObjectName(u"Second_left_menu")
         self.Second_left_menu.setMinimumSize(QSize(0, 0))
         self.Second_left_menu.setMaximumSize(QSize(0, 16777215))
-        self.Second_left_menu.setStyleSheet(u"QPushButton{\n"
-"	color: rgb(172, 172, 172);\n"
-"	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));\n"
+        self.Second_left_menu.setStyleSheet(u"QFrame {\n"
+"	background:transparent;\n"
+"}\n"
+"\n"
+"QPushButton\n"
+"{\n"
+"\n"
+"	background-color: rgb(98, 98, 98);\n"
+"	border-style: solid;\n"
+"	border-width: 1px;\n"
+" 	border-radius: 2px;\n"
+"	border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(85, 0, 0);\n"
 "}")
         self.Second_left_menu.setFrameShape(QFrame.StyledPanel)
         self.Second_left_menu.setFrameShadow(QFrame.Raised)
@@ -387,7 +414,8 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton\n"
 "{\n"
-"    background-color: white;\n"
+"\n"
+"	background-color: rgb(30, 30, 30);\n"
 " 	border-radius: 2px;\n"
 "}\n"
 "\n"
@@ -395,9 +423,25 @@ class Ui_MainWindow(object):
 "{\n"
 "	color: rgb(185, 185, 185);\n"
 "	font: 75 26pt \"Calibri\";\n"
+"	font-weight: bold;\n"
 "}\n"
 "\n"
+"QLineEdit {\n"
+"	background-color: rgb(47, 47, 47);\n"
+"	font: 255 8pt \"Calibri\";\n"
+"	color: white;\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"}\n"
 "\n"
+"QComboBox {\n"
+"	background-color: rgb(30, 30, 30);\n"
+"	color: rgb(150, 150, 150);\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"}\n"
 "")
         self.HomePage = QWidget()
         self.HomePage.setObjectName(u"HomePage")
@@ -405,11 +449,61 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.HomePage)
         self.RandomCompetitors = QWidget()
         self.RandomCompetitors.setObjectName(u"RandomCompetitors")
+        self.RandomCompetitors.setStyleSheet(u"QPushButton{	\n"
+"\n"
+"	font: 75 11pt \"Calibri\";\n"
+"	color: rgb(186, 186, 186);\n"
+"}\n"
+"\n"
+"QWidget{\n"
+"	background: transparent;\n"
+"}\n"
+"\n"
+"QTextEdit {\n"
+"   \n"
+"	background-color: rgb(217, 217, 217);\n"
+" 	border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton\n"
+"{\n"
+"\n"
+"	background-color: rgb(30, 30, 30);\n"
+" 	border-radius: 2px;\n"
+"}\n"
+"\n"
+"QLabel\n"
+"{\n"
+"	color: rgb(185, 185, 185);\n"
+"	font: 75 26pt \"Calibri\";\n"
+"	font-weight: bold;\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"	background-color: rgb(47, 47, 47);\n"
+"	font: 255 8pt \"Calibri\";\n"
+"	color: white;\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"}\n"
+"\n"
+"QComboBox {\n"
+"	background-color: rgb(30, 30, 30);\n"
+"	color: rgb(150, 150, 150);\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"}")
         self.horizontalLayout_13 = QHBoxLayout(self.RandomCompetitors)
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
         self.frame_132 = QFrame(self.RandomCompetitors)
         self.frame_132.setObjectName(u"frame_132")
         self.frame_132.setMaximumSize(QSize(300, 16777215))
+        self.frame_132.setStyleSheet(u"QFrame\n"
+"{\n"
+"	background-color: rgb(61, 61, 61);\n"
+"}")
         self.frame_132.setFrameShape(QFrame.StyledPanel)
         self.frame_132.setFrameShadow(QFrame.Raised)
         self.verticalLayout_100 = QVBoxLayout(self.frame_132)
@@ -532,6 +626,7 @@ class Ui_MainWindow(object):
 
         self.stackedWidget_2 = QStackedWidget(self.frame_273)
         self.stackedWidget_2.setObjectName(u"stackedWidget_2")
+        self.stackedWidget_2.setStyleSheet(u"")
         self.RandomFunctionRes16 = QWidget()
         self.RandomFunctionRes16.setObjectName(u"RandomFunctionRes16")
         self.verticalLayout_213 = QVBoxLayout(self.RandomFunctionRes16)
@@ -850,9 +945,9 @@ class Ui_MainWindow(object):
         font1 = QFont()
         font1.setFamily(u"Calibri")
         font1.setPointSize(26)
-        font1.setBold(False)
+        font1.setBold(True)
         font1.setItalic(False)
-        font1.setWeight(9)
+        font1.setWeight(75)
         self.label_11.setFont(font1)
 
         self.horizontalLayout_45.addWidget(self.label_11)
@@ -879,7 +974,7 @@ class Ui_MainWindow(object):
         self.CompetitorInputPage = QWidget()
         self.CompetitorInputPage.setObjectName(u"CompetitorInputPage")
         self.CompetitorInputPage.setStyleSheet(u"QPushButton{	\n"
-"	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));\n"
+"\n"
 "	font: 75 11pt \"Calibri\";\n"
 "	color: rgb(186, 186, 186);\n"
 "}")
@@ -894,6 +989,17 @@ class Ui_MainWindow(object):
         self.frame_112 = QFrame(self.frame_62)
         self.frame_112.setObjectName(u"frame_112")
         self.frame_112.setMaximumSize(QSize(300, 16777215))
+        self.frame_112.setStyleSheet(u"QFrame\n"
+"{\n"
+"	background-color: rgb(61, 61, 61);\n"
+"}\n"
+"\n"
+"QLabel\n"
+"{\n"
+"	color: rgb(185, 185, 185);\n"
+"	font: 75 26pt \"Calibri\";\n"
+"	font-weight: bold;\n"
+"}")
         self.frame_112.setFrameShape(QFrame.StyledPanel)
         self.frame_112.setFrameShadow(QFrame.Raised)
         self.verticalLayout_88 = QVBoxLayout(self.frame_112)
@@ -968,10 +1074,16 @@ class Ui_MainWindow(object):
         self.AddedCategories.setObjectName(u"AddedCategories")
         self.AddedCategories.setMinimumSize(QSize(250, 0))
         self.AddedCategories.setMaximumSize(QSize(250, 16777215))
+        self.AddedCategories.setStyleSheet(u"background-color: transparent\n"
+" \n"
+"")
+        self.AddedCategories.setFrameShape(QFrame.StyledPanel)
+        self.AddedCategories.setLineWidth(0)
+        self.AddedCategories.setMidLineWidth(0)
         self.AddedCategories.setWidgetResizable(True)
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 28))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 296))
         self.verticalLayout_93 = QVBoxLayout(self.AddedCategoriesContents)
         self.verticalLayout_93.setObjectName(u"verticalLayout_93")
         self.AddedCategories.setWidget(self.AddedCategoriesContents)
@@ -988,13 +1100,7 @@ class Ui_MainWindow(object):
         self.frame_113.setObjectName(u"frame_113")
         self.frame_113.setMinimumSize(QSize(500, 0))
         self.frame_113.setMaximumSize(QSize(16777215, 16777215))
-        self.frame_113.setStyleSheet(u"QComboBox\n"
-"{\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));\n"
-"\n"
-"	color: rgb(150, 150, 150);\n"
-"}")
+        self.frame_113.setStyleSheet(u"")
         self.frame_113.setFrameShape(QFrame.StyledPanel)
         self.frame_113.setFrameShadow(QFrame.Raised)
         self.verticalLayout_91 = QVBoxLayout(self.frame_113)
@@ -1139,6 +1245,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_53.setObjectName(u"horizontalLayout_53")
         self.label_27 = QLabel(self.frame_128)
         self.label_27.setObjectName(u"label_27")
+        self.label_27.setStyleSheet(u"font: 76 23pt \"Calibri\";")
 
         self.horizontalLayout_53.addWidget(self.label_27)
 
@@ -1156,15 +1263,6 @@ class Ui_MainWindow(object):
         self.frame_129.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_54 = QHBoxLayout(self.frame_129)
         self.horizontalLayout_54.setObjectName(u"horizontalLayout_54")
-        self.SaveCompetitorButton = QPushButton(self.frame_129)
-        self.SaveCompetitorButton.setObjectName(u"SaveCompetitorButton")
-        self.SaveCompetitorButton.setMaximumSize(QSize(16777215, 40))
-        icon5 = QIcon()
-        icon5.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.SaveCompetitorButton.setIcon(icon5)
-
-        self.horizontalLayout_54.addWidget(self.SaveCompetitorButton)
-
 
         self.verticalLayout_95.addWidget(self.frame_129)
 
@@ -1211,6 +1309,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem12 = QTableWidgetItem()
         self.CompetitorCategories.setHorizontalHeaderItem(2, __qtablewidgetitem12)
         self.CompetitorCategories.setObjectName(u"CompetitorCategories")
+        self.CompetitorCategories.setFrameShape(QFrame.StyledPanel)
+        self.CompetitorCategories.setFrameShadow(QFrame.Sunken)
+        self.CompetitorCategories.setAutoScrollMargin(16)
+        self.CompetitorCategories.setGridStyle(Qt.SolidLine)
+        self.CompetitorCategories.horizontalHeader().setDefaultSectionSize(125)
 
         self.horizontalLayout_55.addWidget(self.CompetitorCategories)
 
@@ -1222,17 +1325,17 @@ class Ui_MainWindow(object):
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
         self.DeleteCompetitorCategoryButton = QPushButton(self.frame_130)
         self.DeleteCompetitorCategoryButton.setObjectName(u"DeleteCompetitorCategoryButton")
-        icon6 = QIcon()
-        icon6.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.DeleteCompetitorCategoryButton.setIcon(icon6)
+        icon5 = QIcon()
+        icon5.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DeleteCompetitorCategoryButton.setIcon(icon5)
 
         self.verticalLayout_99.addWidget(self.DeleteCompetitorCategoryButton)
 
         self.AddCompetitorCategoryButton = QPushButton(self.frame_130)
         self.AddCompetitorCategoryButton.setObjectName(u"AddCompetitorCategoryButton")
-        icon7 = QIcon()
-        icon7.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.AddCompetitorCategoryButton.setIcon(icon7)
+        icon6 = QIcon()
+        icon6.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton.setIcon(icon6)
 
         self.verticalLayout_99.addWidget(self.AddCompetitorCategoryButton)
 
@@ -1250,6 +1353,15 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_92.addWidget(self.frame_120)
+
+        self.SaveCompetitorButton = QPushButton(self.frame_119)
+        self.SaveCompetitorButton.setObjectName(u"SaveCompetitorButton")
+        self.SaveCompetitorButton.setMaximumSize(QSize(16777215, 40))
+        icon7 = QIcon()
+        icon7.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.SaveCompetitorButton.setIcon(icon7)
+
+        self.verticalLayout_92.addWidget(self.SaveCompetitorButton)
 
         self.SaveCategoriesToTxt = QPushButton(self.frame_119)
         self.SaveCategoriesToTxt.setObjectName(u"SaveCategoriesToTxt")
@@ -1775,7 +1887,7 @@ class Ui_MainWindow(object):
         self.saveSettingsButton = QPushButton(self.frame_134)
         self.saveSettingsButton.setObjectName(u"saveSettingsButton")
         self.saveSettingsButton.setMinimumSize(QSize(120, 0))
-        self.saveSettingsButton.setIcon(icon5)
+        self.saveSettingsButton.setIcon(icon7)
 
         self.horizontalLayout_57.addWidget(self.saveSettingsButton)
 
@@ -1791,7 +1903,7 @@ class Ui_MainWindow(object):
         self.Content_wraper = QFrame(self.AcountPage)
         self.Content_wraper.setObjectName(u"Content_wraper")
         self.Content_wraper.setStyleSheet(u"QPushButton{	\n"
-"	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));\n"
+"\n"
 "	font: 75 11pt \"Calibri\";\n"
 "	color: rgb(186, 186, 186);\n"
 "}\n"
@@ -6798,11 +6910,16 @@ class Ui_MainWindow(object):
         self.ControlPanel.setObjectName(u"ControlPanel")
         self.ControlPanel.setMinimumSize(QSize(250, 0))
         self.ControlPanel.setMaximumSize(QSize(250, 16777215))
-        self.ControlPanel.setStyleSheet(u"QTextEdit{\n"
+        self.ControlPanel.setStyleSheet(u"QFrame {\n"
+"	background-color: rgb(38, 38, 38);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
 "   background-color: rgb(217, 217, 217);\n"
 "}\n"
 "QPushButton{	\n"
-"	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));\n"
+"	background-color: rgb(30, 30, 30);\n"
+" 	border-radius: 2px;\n"
 "	font: 75 11pt \"Calibri\";\n"
 "	color: rgb(186, 186, 186);\n"
 "}\n"
@@ -6968,8 +7085,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
-        self.stackedWidget_2.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget_2.setCurrentIndex(2)
         self.AllMatchesWraper.setCurrentIndex(2)
         self.match_16.setCurrentIndex(1)
         self.match_10.setCurrentIndex(2)
@@ -7003,6 +7120,7 @@ class Ui_MainWindow(object):
         self.Button_2_competitors.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.label_36.setText(QCoreApplication.translate("MainWindow", u"Dodaj kategori\u0119", None))
+        self.CategoriesToAdd_2.setText("")
         self.CategoriesBrowseButton_2.setText(QCoreApplication.translate("MainWindow", u"Przegl\u0105daj", None))
         self.AddCategoriesButton_3.setText(QCoreApplication.translate("MainWindow", u"Dodaj", None))
         self.label_54.setText(QCoreApplication.translate("MainWindow", u"Dodane kategorie", None))
@@ -7017,7 +7135,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem4 = self.tableWidget_2.horizontalHeaderItem(1)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Nazwisko", None));
         self.label_72.setText(QCoreApplication.translate("MainWindow", u"Krzy\u017c\u00f3wka do 16 zawodnik\u00f3w", None))
-        self.label_73.setText(QCoreApplication.translate("MainWindow", u"Krzy\u017c\u00f3wka do 10 zwodni\u00f3w", None))
+        self.label_73.setText(QCoreApplication.translate("MainWindow", u"Krzy\u017c\u00f3wka do 10 zawodnik\u00f3w", None))
         self.label_55.setText(QCoreApplication.translate("MainWindow", u"Grupa I", None))
         self.label_57.setText(QCoreApplication.translate("MainWindow", u"Grupa II", None))
         self.label_74.setText(QCoreApplication.translate("MainWindow", u"Krzy\u017c\u00f3wka do 5 zwodni\u00f3w", None))
@@ -7045,7 +7163,6 @@ class Ui_MainWindow(object):
         self.CompetitorBornDate.setText(QCoreApplication.translate("MainWindow", u"Rok urodzenia:", None))
         self.CompetitorLicenceNo.setText(QCoreApplication.translate("MainWindow", u"Nr licencji:", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"Waga", None))
-        self.SaveCompetitorButton.setText(QCoreApplication.translate("MainWindow", u"               Zapisz zmiany dla zawodnika", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Kategorie", None))
         ___qtablewidgetitem9 = self.CompetitorCategories.horizontalHeaderItem(0)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Grupa wiekowa", None));
@@ -7055,8 +7172,9 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Kategoria", None));
         self.DeleteCompetitorCategoryButton.setText("")
         self.AddCompetitorCategoryButton.setText("")
+        self.SaveCompetitorButton.setText(QCoreApplication.translate("MainWindow", u"               Zapisz zmiany dla zawodnika", None))
         self.SaveCategoriesToTxt.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki do loswa\u0144", None))
-        self.SaveCategoriesToPdf.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki podsumowuj\u0105cy", None))
+        self.SaveCategoriesToPdf.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki podsumowuj\u0105ce", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Dziecko", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzik (u12)", None))
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"Kadet (u16)", None))

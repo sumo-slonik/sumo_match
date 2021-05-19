@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1041</width>
-    <height>803</height>
+    <width>1121</width>
+    <height>822</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(8, 1, 38);</string>
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -523,7 +523,7 @@ background-position: center left;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.505, fy:0.5, stop:0.00995025 rgba(30, 38, 177, 255), stop:0.975124 rgba(29, 36, 129, 255));
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 91, 255), stop:0.925373 rgba(3, 2, 57, 255))
 
 
 
@@ -734,7 +734,7 @@ QLabel
 </string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
@@ -1462,6 +1462,20 @@ QLabel
                            <height>16777215</height>
                           </size>
                          </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: transparent
+ 
+</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="lineWidth">
+                          <number>0</number>
+                         </property>
+                         <property name="midLineWidth">
+                          <number>0</number>
+                         </property>
                          <property name="widgetResizable">
                           <bool>true</bool>
                          </property>
@@ -1471,7 +1485,7 @@ QLabel
                             <x>0</x>
                             <y>0</y>
                             <width>248</width>
-                            <height>277</height>
+                            <height>296</height>
                            </rect>
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_93"/>
@@ -1726,6 +1740,9 @@ QLabel
                                      <layout class="QHBoxLayout" name="horizontalLayout_53">
                                       <item>
                                        <widget class="QLabel" name="label_27">
+                                        <property name="styleSheet">
+                                         <string notr="true">font: 76 23pt &quot;Calibri&quot;;</string>
+                                        </property>
                                         <property name="text">
                                          <string>Waga</string>
                                         </property>
@@ -1817,6 +1834,21 @@ QLabel
                                   <layout class="QHBoxLayout" name="horizontalLayout_55">
                                    <item>
                                     <widget class="QTableWidget" name="CompetitorCategories">
+                                     <property name="frameShape">
+                                      <enum>QFrame::StyledPanel</enum>
+                                     </property>
+                                     <property name="frameShadow">
+                                      <enum>QFrame::Sunken</enum>
+                                     </property>
+                                     <property name="autoScrollMargin">
+                                      <number>16</number>
+                                     </property>
+                                     <property name="gridStyle">
+                                      <enum>Qt::SolidLine</enum>
+                                     </property>
+                                     <attribute name="horizontalHeaderDefaultSectionSize">
+                                      <number>125</number>
+                                     </attribute>
                                      <column>
                                       <property name="text">
                                        <string>Grupa wiekowa</string>
@@ -1890,7 +1922,7 @@ QLabel
                        <item>
                         <widget class="QPushButton" name="SaveCategoriesToPdf">
                          <property name="text">
-                          <string>Generuj pliki podsumowujący</string>
+                          <string>Generuj pliki podsumowujące</string>
                          </property>
                         </widget>
                        </item>
