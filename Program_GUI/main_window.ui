@@ -39,7 +39,10 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
+       <string notr="true">QFrame
+{
+	background-color: rgb(47, 47, 47);
+}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -110,7 +113,7 @@ QPushButton{
 	padding: 5px 10px;
 	border: none;
 	border-radius: 10px;
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(47, 47, 47);
 	color: rgb(255, 255, 255);
 }
 QPushButton:hover{
@@ -118,7 +121,7 @@ QPushButton:hover{
 }
 QFrame
 {
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(47, 47, 47);
 }
 
 </string>
@@ -196,7 +199,11 @@ QFrame
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton:hover{
+          <string notr="true">QPushButton {
+	background-color: rgb(47, 47, 47);
+}
+
+QPushButton:hover{
 	background-color: rgb(85, 0, 0);
 }</string>
          </property>
@@ -309,7 +316,13 @@ QPushButton:hover{
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(8, 1, 38);</string>
+       <string notr="true">QFrame{
+	background-color: rgb(47, 47, 47);
+}
+
+QPushButton {
+	background-color: rgb(47, 47, 47);
+}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -344,7 +357,7 @@ QPushButton:hover{
          <property name="styleSheet">
           <string notr="true">QFrame
 {
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(47, 47, 47);
 }
 
 QPushButton{
@@ -352,13 +365,12 @@ QPushButton{
 	padding: 25px 10px;
 	border: none;
 	border-radius: 10px;
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(47, 47, 47);
 	color: rgb(255, 255, 255);
 }
 QPushButton:hover{
 	background-color: rgb(85, 0, 0);
-}
-</string>
+}</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -523,8 +535,11 @@ background-position: center left;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 91, 255), stop:0.925373 rgba(3, 2, 57, 255))
+          <string notr="true">background-color: 
 
+
+
+qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(83, 83, 83, 255), stop:0.9801 rgba(32, 32, 32, 255))
 
 
 
@@ -567,9 +582,22 @@ background-position: center left;
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton{
-	color: rgb(172, 172, 172);
-	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+             <string notr="true">QFrame {
+	background:transparent;
+}
+
+QPushButton
+{
+
+	background-color: rgb(98, 98, 98);
+	border-style: solid;
+	border-width: 1px;
+ 	border-radius: 2px;
+	border-color: black;
+}
+
+QPushButton:hover{
+	background-color: rgb(85, 0, 0);
 }</string>
             </property>
             <property name="frameShape">
@@ -720,7 +748,8 @@ QTextEdit {
 
 QPushButton
 {
-    background-color: white;
+
+	background-color: rgb(30, 30, 30);
  	border-radius: 2px;
 }
 
@@ -728,9 +757,25 @@ QLabel
 {
 	color: rgb(185, 185, 185);
 	font: 75 26pt &quot;Calibri&quot;;
+	font-weight: bold;
 }
 
+QLineEdit {
+	background-color: rgb(47, 47, 47);
+	font: 255 8pt &quot;Calibri&quot;;
+	color: white;
+	border-style: solid;
+	border-width: 2;
+	border-color: rgb(150, 150, 150);
+}
 
+QComboBox {
+	background-color: rgb(30, 30, 30);
+	color: rgb(150, 150, 150);
+	border-style: solid;
+	border-width: 2;
+	border-color: rgb(150, 150, 150);
+}
 </string>
             </property>
             <property name="currentIndex">
@@ -742,6 +787,54 @@ QLabel
              </property>
             </widget>
             <widget class="QWidget" name="RandomCompetitors">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{	
+
+	font: 75 11pt &quot;Calibri&quot;;
+	color: rgb(186, 186, 186);
+}
+
+QWidget{
+	background: transparent;
+}
+
+QTextEdit {
+   
+	background-color: rgb(217, 217, 217);
+ 	border-radius: 8px;
+}
+
+QPushButton
+{
+
+	background-color: rgb(30, 30, 30);
+ 	border-radius: 2px;
+}
+
+QLabel
+{
+	color: rgb(185, 185, 185);
+	font: 75 26pt &quot;Calibri&quot;;
+	font-weight: bold;
+}
+
+QLineEdit {
+	background-color: rgb(47, 47, 47);
+	font: 255 8pt &quot;Calibri&quot;;
+	color: white;
+	border-style: solid;
+	border-width: 2;
+	border-color: rgb(150, 150, 150);
+}
+
+QComboBox {
+	background-color: rgb(30, 30, 30);
+	color: rgb(150, 150, 150);
+	border-style: solid;
+	border-width: 2;
+	border-color: rgb(150, 150, 150);
+}</string>
+             </property>
              <layout class="QHBoxLayout" name="horizontalLayout_13">
               <item>
                <widget class="QFrame" name="frame_132">
@@ -750,6 +843,12 @@ QLabel
                   <width>300</width>
                   <height>16777215</height>
                  </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame
+{
+	background-color: rgb(61, 61, 61);
+}</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -814,7 +913,11 @@ QLabel
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_83">
                        <item>
-                        <widget class="QLineEdit" name="CategoriesToAdd_2"/>
+                        <widget class="QLineEdit" name="CategoriesToAdd_2">
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
                        </item>
                        <item>
                         <widget class="QPushButton" name="CategoriesBrowseButton_2">
@@ -946,8 +1049,11 @@ QLabel
                     </item>
                     <item>
                      <widget class="QStackedWidget" name="stackedWidget_2">
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>2</number>
                       </property>
                       <widget class="QWidget" name="RandomFunctionRes16">
                        <layout class="QVBoxLayout" name="verticalLayout_213">
@@ -1094,7 +1200,7 @@ QLabel
                            <item>
                             <widget class="QLabel" name="label_73">
                              <property name="text">
-                              <string>Krzyżówka do 10 zwodniów</string>
+                              <string>Krzyżówka do 10 zawodników</string>
                              </property>
                             </widget>
                            </item>
@@ -1253,9 +1359,9 @@ QLabel
                        <font>
                         <family>Calibri</family>
                         <pointsize>26</pointsize>
-                        <weight>9</weight>
+                        <weight>75</weight>
                         <italic>false</italic>
-                        <bold>false</bold>
+                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="text">
@@ -1294,7 +1400,7 @@ QLabel
             <widget class="QWidget" name="CompetitorInputPage">
              <property name="styleSheet">
               <string notr="true">QPushButton{	
-	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+
 	font: 75 11pt &quot;Calibri&quot;;
 	color: rgb(186, 186, 186);
 }</string>
@@ -1316,6 +1422,19 @@ QLabel
                      <width>300</width>
                      <height>16777215</height>
                     </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame
+{
+	background-color: rgb(61, 61, 61);
+}
+
+QLabel
+{
+	color: rgb(185, 185, 185);
+	font: 75 26pt &quot;Calibri&quot;;
+	font-weight: bold;
+}</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1513,13 +1632,7 @@ QLabel
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QComboBox
-{
-	
-	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
-
-	color: rgb(150, 150, 150);
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1762,25 +1875,7 @@ QLabel
                                      <property name="frameShadow">
                                       <enum>QFrame::Raised</enum>
                                      </property>
-                                     <layout class="QHBoxLayout" name="horizontalLayout_54">
-                                      <item>
-                                       <widget class="QPushButton" name="SaveCompetitorButton">
-                                        <property name="maximumSize">
-                                         <size>
-                                          <width>16777215</width>
-                                          <height>40</height>
-                                         </size>
-                                        </property>
-                                        <property name="text">
-                                         <string>               Zapisz zmiany dla zawodnika</string>
-                                        </property>
-                                        <property name="icon">
-                                         <iconset resource="gui_theme.qrc">
-                                          <normaloff>:/Icons/icons/cil-save.png</normaloff>:/Icons/icons/cil-save.png</iconset>
-                                        </property>
-                                       </widget>
-                                      </item>
-                                     </layout>
+                                     <layout class="QHBoxLayout" name="horizontalLayout_54"/>
                                     </widget>
                                    </item>
                                   </layout>
@@ -1910,6 +2005,23 @@ QLabel
                            </widget>
                           </item>
                          </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="SaveCompetitorButton">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>               Zapisz zmiany dla zawodnika</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-save.png</normaloff>:/Icons/icons/cil-save.png</iconset>
+                         </property>
                         </widget>
                        </item>
                        <item>
@@ -2985,7 +3097,7 @@ QLabel
                <widget class="QFrame" name="Content_wraper">
                 <property name="styleSheet">
                  <string notr="true">QPushButton{	
-	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+
 	font: 75 11pt &quot;Calibri&quot;;
 	color: rgb(186, 186, 186);
 }
@@ -4561,9 +4673,9 @@ p, li { white-space: pre-wrap; }
                                      <font>
                                       <family>Calibri</family>
                                       <pointsize>26</pointsize>
-                                      <weight>9</weight>
+                                      <weight>75</weight>
                                       <italic>false</italic>
-                                      <bold>false</bold>
+                                      <bold>true</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -4979,9 +5091,9 @@ p, li { white-space: pre-wrap; }
                                      <font>
                                       <family>Calibri</family>
                                       <pointsize>26</pointsize>
-                                      <weight>9</weight>
+                                      <weight>75</weight>
                                       <italic>false</italic>
-                                      <bold>false</bold>
+                                      <bold>true</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -5091,9 +5203,9 @@ p, li { white-space: pre-wrap; }
                                      <font>
                                       <family>Calibri</family>
                                       <pointsize>26</pointsize>
-                                      <weight>9</weight>
+                                      <weight>75</weight>
                                       <italic>false</italic>
-                                      <bold>false</bold>
+                                      <bold>true</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -5310,9 +5422,9 @@ p, li { white-space: pre-wrap; }
                             <font>
                              <family>Calibri</family>
                              <pointsize>26</pointsize>
-                             <weight>9</weight>
+                             <weight>75</weight>
                              <italic>false</italic>
-                             <bold>false</bold>
+                             <bold>true</bold>
                             </font>
                            </property>
                            <property name="text">
@@ -5351,9 +5463,9 @@ p, li { white-space: pre-wrap; }
                                       <font>
                                        <family>Calibri</family>
                                        <pointsize>26</pointsize>
-                                       <weight>9</weight>
+                                       <weight>75</weight>
                                        <italic>false</italic>
-                                       <bold>false</bold>
+                                       <bold>true</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -5590,9 +5702,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5748,9 +5860,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -5906,9 +6018,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6061,9 +6173,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6222,9 +6334,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6384,9 +6496,9 @@ p, li { white-space: pre-wrap; }
                                       <font>
                                        <family>Calibri</family>
                                        <pointsize>26</pointsize>
-                                       <weight>9</weight>
+                                       <weight>75</weight>
                                        <italic>false</italic>
-                                       <bold>false</bold>
+                                       <bold>true</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -6591,9 +6703,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6749,9 +6861,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -6907,9 +7019,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7069,9 +7181,9 @@ p, li { white-space: pre-wrap; }
                                       <font>
                                        <family>Calibri</family>
                                        <pointsize>26</pointsize>
-                                       <weight>9</weight>
+                                       <weight>75</weight>
                                        <italic>false</italic>
-                                       <bold>false</bold>
+                                       <bold>true</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -7244,9 +7356,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7343,9 +7455,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7442,9 +7554,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -7531,9 +7643,9 @@ p, li { white-space: pre-wrap; }
                             <font>
                              <family>Calibri</family>
                              <pointsize>26</pointsize>
-                             <weight>9</weight>
+                             <weight>75</weight>
                              <italic>false</italic>
-                             <bold>false</bold>
+                             <bold>true</bold>
                             </font>
                            </property>
                            <property name="text">
@@ -7605,9 +7717,9 @@ p, li { white-space: pre-wrap; }
                                       <font>
                                        <family>Calibri</family>
                                        <pointsize>26</pointsize>
-                                       <weight>9</weight>
+                                       <weight>75</weight>
                                        <italic>false</italic>
-                                       <bold>false</bold>
+                                       <bold>true</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -7844,9 +7956,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8002,9 +8114,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8160,9 +8272,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8315,9 +8427,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8476,9 +8588,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -8638,9 +8750,9 @@ p, li { white-space: pre-wrap; }
                                       <font>
                                        <family>Calibri</family>
                                        <pointsize>26</pointsize>
-                                       <weight>9</weight>
+                                       <weight>75</weight>
                                        <italic>false</italic>
-                                       <bold>false</bold>
+                                       <bold>true</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -8845,9 +8957,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9003,9 +9115,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9161,9 +9273,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9323,9 +9435,9 @@ p, li { white-space: pre-wrap; }
                                       <font>
                                        <family>Calibri</family>
                                        <pointsize>26</pointsize>
-                                       <weight>9</weight>
+                                       <weight>75</weight>
                                        <italic>false</italic>
-                                       <bold>false</bold>
+                                       <bold>true</bold>
                                       </font>
                                      </property>
                                      <property name="text">
@@ -9498,9 +9610,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9597,9 +9709,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9696,9 +9808,9 @@ p, li { white-space: pre-wrap; }
                                    <font>
                                     <family>Calibri</family>
                                     <pointsize>26</pointsize>
-                                    <weight>9</weight>
+                                    <weight>75</weight>
                                     <italic>false</italic>
-                                    <bold>false</bold>
+                                    <bold>true</bold>
                                    </font>
                                   </property>
                                   <property name="text">
@@ -9812,9 +9924,9 @@ p, li { white-space: pre-wrap; }
                                      <font>
                                       <family>Calibri</family>
                                       <pointsize>26</pointsize>
-                                      <weight>9</weight>
+                                      <weight>75</weight>
                                       <italic>false</italic>
-                                      <bold>false</bold>
+                                      <bold>true</bold>
                                      </font>
                                     </property>
                                     <property name="text">
@@ -9947,9 +10059,9 @@ p, li { white-space: pre-wrap; }
                                         <font>
                                          <family>Calibri</family>
                                          <pointsize>26</pointsize>
-                                         <weight>9</weight>
+                                         <weight>75</weight>
                                          <italic>false</italic>
-                                         <bold>false</bold>
+                                         <bold>true</bold>
                                         </font>
                                        </property>
                                        <property name="text">
@@ -10073,9 +10185,9 @@ p, li { white-space: pre-wrap; }
                                         <font>
                                          <family>Calibri</family>
                                          <pointsize>26</pointsize>
-                                         <weight>9</weight>
+                                         <weight>75</weight>
                                          <italic>false</italic>
-                                         <bold>false</bold>
+                                         <bold>true</bold>
                                         </font>
                                        </property>
                                        <property name="text">
@@ -10223,9 +10335,9 @@ p, li { white-space: pre-wrap; }
                                   <font>
                                    <family>Calibri</family>
                                    <pointsize>26</pointsize>
-                                   <weight>9</weight>
+                                   <weight>75</weight>
                                    <italic>false</italic>
-                                   <bold>false</bold>
+                                   <bold>true</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -10462,9 +10574,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10620,9 +10732,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10778,9 +10890,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -10933,9 +11045,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11094,9 +11206,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11256,9 +11368,9 @@ p, li { white-space: pre-wrap; }
                                   <font>
                                    <family>Calibri</family>
                                    <pointsize>26</pointsize>
-                                   <weight>9</weight>
+                                   <weight>75</weight>
                                    <italic>false</italic>
-                                   <bold>false</bold>
+                                   <bold>true</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -11463,9 +11575,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11621,9 +11733,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11779,9 +11891,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -11941,9 +12053,9 @@ p, li { white-space: pre-wrap; }
                                   <font>
                                    <family>Calibri</family>
                                    <pointsize>26</pointsize>
-                                   <weight>9</weight>
+                                   <weight>75</weight>
                                    <italic>false</italic>
-                                   <bold>false</bold>
+                                   <bold>true</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -12116,9 +12228,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12215,9 +12327,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12314,9 +12426,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12417,9 +12529,9 @@ p, li { white-space: pre-wrap; }
                                   <font>
                                    <family>Calibri</family>
                                    <pointsize>26</pointsize>
-                                   <weight>9</weight>
+                                   <weight>75</weight>
                                    <italic>false</italic>
-                                   <bold>false</bold>
+                                   <bold>true</bold>
                                   </font>
                                  </property>
                                  <property name="text">
@@ -12560,9 +12672,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12659,9 +12771,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12758,9 +12870,9 @@ p, li { white-space: pre-wrap; }
                                <font>
                                 <family>Calibri</family>
                                 <pointsize>26</pointsize>
-                                <weight>9</weight>
+                                <weight>75</weight>
                                 <italic>false</italic>
-                                <bold>false</bold>
+                                <bold>true</bold>
                                </font>
                               </property>
                               <property name="text">
@@ -12868,9 +12980,9 @@ p, li { white-space: pre-wrap; }
                            <font>
                             <family>Calibri</family>
                             <pointsize>26</pointsize>
-                            <weight>9</weight>
+                            <weight>75</weight>
                             <italic>false</italic>
-                            <bold>false</bold>
+                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="text">
@@ -12930,9 +13042,9 @@ color:rgb(255, 255, 255);</string>
                            <font>
                             <family>Calibri</family>
                             <pointsize>26</pointsize>
-                            <weight>9</weight>
+                            <weight>75</weight>
                             <italic>false</italic>
-                            <bold>false</bold>
+                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="text">
@@ -13094,11 +13206,16 @@ color:rgb(255, 255, 255);</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QTextEdit{
+                 <string notr="true">QFrame {
+	background-color: rgb(38, 38, 38);
+}
+
+QTextEdit{
    background-color: rgb(217, 217, 217);
 }
 QPushButton{	
-	background-color: qlineargradient(spread:pad, x1:0.054, y1:1, x2:0.975, y2:0.0507273, stop:0.0447761 rgba(30, 96, 178, 255), stop:0.21393 rgba(23, 77, 158, 255), stop:0.39801 rgba(17, 62, 145, 255), stop:0.58209 rgba(16, 58, 142, 255), stop:0.776119 rgba(10, 43, 134, 255), stop:1 rgba(19, 41, 113, 255));
+	background-color: rgb(30, 30, 30);
+ 	border-radius: 2px;
 	font: 75 11pt &quot;Calibri&quot;;
 	color: rgb(186, 186, 186);
 }
@@ -13356,7 +13473,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 170, 255);</string>
+          <string notr="true">background-color: rgb(81, 81, 81);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>

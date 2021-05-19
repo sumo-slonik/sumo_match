@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowlJXhrp.ui'
+## Form generated from reading UI file 'main_windowZIuOrX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -303,8 +303,9 @@ class Ui_MainWindow(object):
         self.center_main_items.setMinimumSize(QSize(0, 0))
         self.center_main_items.setStyleSheet(u"background-color: \n"
 "\n"
-"qlineargradient(spread:pad, x1:0.29, y1:0, x2:1, y2:0, stop:0 rgba(83, 83, 83, 255), stop:0.9801 rgba(0, 0, 0, 255))\n"
 "\n"
+"\n"
+"qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(83, 83, 83, 255), stop:0.9801 rgba(32, 32, 32, 255))\n"
 "\n"
 "\n"
 "\n"
@@ -7055,7 +7056,7 @@ class Ui_MainWindow(object):
         self.right_menu.setObjectName(u"right_menu")
         self.right_menu.setMinimumSize(QSize(0, 0))
         self.right_menu.setMaximumSize(QSize(0, 16777215))
-        self.right_menu.setStyleSheet(u"background-color: rgb(0, 170, 255);")
+        self.right_menu.setStyleSheet(u"background-color: rgb(81, 81, 81);")
         self.right_menu.setFrameShape(QFrame.StyledPanel)
         self.right_menu.setFrameShadow(QFrame.Raised)
         self.verticalLayout_43 = QVBoxLayout(self.right_menu)
@@ -7085,7 +7086,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(3)
         self.stackedWidget_2.setCurrentIndex(2)
         self.AllMatchesWraper.setCurrentIndex(2)
         self.match_16.setCurrentIndex(1)
