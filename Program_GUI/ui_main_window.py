@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowdAqNdS.ui'
+## Form generated from reading UI file 'main_windowrSpPAc.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -2036,6 +2036,20 @@ class Ui_MainWindow(object):
         self.Top_menu = QFrame(self.Top_menu_wraper)
         self.Top_menu.setObjectName(u"Top_menu")
         self.Top_menu.setMaximumSize(QSize(16777215, 0))
+        self.Top_menu.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background-color: rgb(30, 30, 30);\n"
+"	border-style: solid;\n"
+" 	border-radius: 2px;\n"
+"	border-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	border-style: solid;\n"
+"	border-radius: 2px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"}")
         self.Top_menu.setFrameShape(QFrame.StyledPanel)
         self.Top_menu.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_14 = QHBoxLayout(self.Top_menu)
@@ -5363,6 +5377,8 @@ class Ui_MainWindow(object):
         self.un_10_final_competitor_node_3 = QTextEdit(self.frame_188)
         self.un_10_final_competitor_node_3.setObjectName(u"un_10_final_competitor_node_3")
         self.un_10_final_competitor_node_3.setMaximumSize(QSize(270, 50))
+        self.un_10_final_competitor_node_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_final_competitor_node_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         self.verticalLayout_143.addWidget(self.un_10_final_competitor_node_3, 0, Qt.AlignHCenter)
 
@@ -5428,6 +5444,8 @@ class Ui_MainWindow(object):
         self.un_10_half_final_competitor_node_5 = QTextEdit(self.frame_192)
         self.un_10_half_final_competitor_node_5.setObjectName(u"un_10_half_final_competitor_node_5")
         self.un_10_half_final_competitor_node_5.setMaximumSize(QSize(270, 50))
+        self.un_10_half_final_competitor_node_5.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.un_10_half_final_competitor_node_5.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
 
         self.verticalLayout_144.addWidget(self.un_10_half_final_competitor_node_5, 0, Qt.AlignHCenter)
 
@@ -5487,6 +5505,7 @@ class Ui_MainWindow(object):
         self.un_10_half_final_competitor_node_6 = QTextEdit(self.frame_195)
         self.un_10_half_final_competitor_node_6.setObjectName(u"un_10_half_final_competitor_node_6")
         self.un_10_half_final_competitor_node_6.setMaximumSize(QSize(270, 50))
+        self.un_10_half_final_competitor_node_6.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         self.verticalLayout_145.addWidget(self.un_10_half_final_competitor_node_6, 0, Qt.AlignHCenter)
 
@@ -6852,7 +6871,7 @@ class Ui_MainWindow(object):
         self.frame_215.setMaximumSize(QSize(16777215, 120))
         self.frame_215.setStyleSheet(u"QTextEdit {\n"
 "	color: rgb(54, 54, 54);\n"
-"	font: 75 35pt \"Calibri\";\n"
+"	font: 75 40pt \"Calibri\";\n"
 "	font-weight: bold;\n"
 "	text-align: center;\n"
 "}")
@@ -6873,19 +6892,29 @@ class Ui_MainWindow(object):
         self.team_1_score = QTextEdit(self.frame_215)
         self.team_1_score.setObjectName(u"team_1_score")
         self.team_1_score.setMaximumSize(QSize(100, 16777215))
+        font3 = QFont()
+        font3.setFamily(u"Calibri")
+        font3.setPointSize(40)
+        font3.setBold(True)
+        font3.setItalic(False)
+        font3.setWeight(75)
+        font3.setStyleStrategy(QFont.PreferDefault)
+        self.team_1_score.setFont(font3)
+        self.team_1_score.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.team_1_score.setReadOnly(True)
 
         self.horizontalLayout_74.addWidget(self.team_1_score)
 
         self.label_56 = QLabel(self.frame_215)
         self.label_56.setObjectName(u"label_56")
         self.label_56.setMaximumSize(QSize(10, 16777215))
-        font3 = QFont()
-        font3.setFamily(u"Calibri")
-        font3.setPointSize(25)
-        font3.setBold(False)
-        font3.setItalic(False)
-        font3.setWeight(9)
-        self.label_56.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Calibri")
+        font4.setPointSize(25)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setWeight(9)
+        self.label_56.setFont(font4)
         self.label_56.setStyleSheet(u"font: 75 25pt \"Calibri\";\n"
 "color:rgb(255, 255, 255);")
 
@@ -6894,6 +6923,8 @@ class Ui_MainWindow(object):
         self.team_2_score = QTextEdit(self.frame_215)
         self.team_2_score.setObjectName(u"team_2_score")
         self.team_2_score.setMaximumSize(QSize(100, 16777215))
+        self.team_2_score.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.team_2_score.setReadOnly(True)
 
         self.horizontalLayout_74.addWidget(self.team_2_score)
 
@@ -6910,10 +6941,8 @@ class Ui_MainWindow(object):
         self.frame_216 = QFrame(self.TeemMatch)
         self.frame_216.setObjectName(u"frame_216")
         self.frame_216.setMinimumSize(QSize(0, 100))
-        self.frame_216.setMaximumSize(QSize(16777215, 500))
-        self.frame_216.setStyleSheet(u"QTextEdit {\n"
-"	width: 100px;\n"
-"}")
+        self.frame_216.setMaximumSize(QSize(16777215, 16777215))
+        self.frame_216.setStyleSheet(u"")
         self.frame_216.setFrameShape(QFrame.StyledPanel)
         self.frame_216.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_75 = QHBoxLayout(self.frame_216)
@@ -6926,25 +6955,26 @@ class Ui_MainWindow(object):
         self.verticalLayout_167.setObjectName(u"verticalLayout_167")
         self.team_1_competitor_1 = QTextEdit(self.frame_217)
         self.team_1_competitor_1.setObjectName(u"team_1_competitor_1")
-        self.team_1_competitor_1.setMaximumSize(QSize(630, 16777215))
+        self.team_1_competitor_1.setMaximumSize(QSize(630, 130))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_1)
 
         self.team_1_competitor_2 = QTextEdit(self.frame_217)
         self.team_1_competitor_2.setObjectName(u"team_1_competitor_2")
-        self.team_1_competitor_2.setMaximumSize(QSize(630, 16777215))
+        self.team_1_competitor_2.setMaximumSize(QSize(630, 130))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_2)
 
         self.team_1_competitor_3 = QTextEdit(self.frame_217)
         self.team_1_competitor_3.setObjectName(u"team_1_competitor_3")
-        self.team_1_competitor_3.setMaximumSize(QSize(630, 16777215))
+        self.team_1_competitor_3.setMaximumSize(QSize(630, 130))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_3)
 
         self.team_1_competitor_4 = QTextEdit(self.frame_217)
         self.team_1_competitor_4.setObjectName(u"team_1_competitor_4")
-        self.team_1_competitor_4.setMaximumSize(QSize(630, 16777215))
+        self.team_1_competitor_4.setMaximumSize(QSize(630, 100))
+        self.team_1_competitor_4.setStyleSheet(u"margin-top: 30px;")
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_4)
 
@@ -6962,29 +6992,29 @@ class Ui_MainWindow(object):
         self.verticalLayout_166.setObjectName(u"verticalLayout_166")
         self.team_2_competitor_1 = QTextEdit(self.frame_218)
         self.team_2_competitor_1.setObjectName(u"team_2_competitor_1")
-        self.team_2_competitor_1.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_1.setMaximumSize(QSize(16777215, 130))
         self.team_2_competitor_1.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_1)
 
         self.team_2_competitor_2 = QTextEdit(self.frame_218)
         self.team_2_competitor_2.setObjectName(u"team_2_competitor_2")
-        self.team_2_competitor_2.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_2.setMaximumSize(QSize(16777215, 130))
         self.team_2_competitor_2.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_2)
 
         self.team_2_competitor_3 = QTextEdit(self.frame_218)
         self.team_2_competitor_3.setObjectName(u"team_2_competitor_3")
-        self.team_2_competitor_3.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_3.setMaximumSize(QSize(16777215, 130))
         self.team_2_competitor_3.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_3)
 
         self.team_2_competitor_4 = QTextEdit(self.frame_218)
         self.team_2_competitor_4.setObjectName(u"team_2_competitor_4")
-        self.team_2_competitor_4.setMaximumSize(QSize(16777215, 16777215))
-        self.team_2_competitor_4.setStyleSheet(u"")
+        self.team_2_competitor_4.setMaximumSize(QSize(16777215, 100))
+        self.team_2_competitor_4.setStyleSheet(u"margin-top: 30px;")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_4)
 
@@ -7065,13 +7095,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.pushButton = QPushButton(self.DisplayCompetitors)
         self.pushButton.setObjectName(u"pushButton")
-        font4 = QFont()
-        font4.setFamily(u"Calibri")
-        font4.setPointSize(11)
-        font4.setBold(False)
-        font4.setItalic(False)
-        font4.setWeight(9)
-        self.pushButton.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Calibri")
+        font5.setPointSize(11)
+        font5.setBold(False)
+        font5.setItalic(False)
+        font5.setWeight(9)
+        self.pushButton.setFont(font5)
 
         self.verticalLayout_18.addWidget(self.pushButton)
 
@@ -7084,7 +7114,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.DisplayCompetitors)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setFont(font4)
+        self.pushButton_2.setFont(font5)
 
         self.verticalLayout_18.addWidget(self.pushButton_2)
 
@@ -7216,9 +7246,9 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.setCurrentIndex(5)
         self.stackedWidget_2.setCurrentIndex(2)
-        self.AllMatchesWraper.setCurrentIndex(4)
+        self.AllMatchesWraper.setCurrentIndex(1)
         self.match_16.setCurrentIndex(1)
-        self.match_10.setCurrentIndex(2)
+        self.match_10.setCurrentIndex(0)
         self.Grup_I_Under10_G1.setCurrentIndex(2)
         self.Grup_II_Under10_G2.setCurrentIndex(2)
         self.match_5.setCurrentIndex(2)
