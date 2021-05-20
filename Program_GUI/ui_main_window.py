@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowMjBnEt.ui'
+## Form generated from reading UI file 'main_windowiEQIfn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1108,6 +1108,7 @@ class Ui_MainWindow(object):
         self.frame_115 = QFrame(self.frame_112)
         self.frame_115.setObjectName(u"frame_115")
         self.frame_115.setMinimumSize(QSize(250, 0))
+        self.frame_115.setStyleSheet(u"")
         self.frame_115.setFrameShape(QFrame.StyledPanel)
         self.frame_115.setFrameShadow(QFrame.Raised)
         self.verticalLayout_89 = QVBoxLayout(self.frame_115)
@@ -1122,17 +1123,29 @@ class Ui_MainWindow(object):
         self.AddedCategories = QScrollArea(self.frame_115)
         self.AddedCategories.setObjectName(u"AddedCategories")
         self.AddedCategories.setMinimumSize(QSize(250, 0))
-        self.AddedCategories.setMaximumSize(QSize(250, 16777215))
-        self.AddedCategories.setStyleSheet(u"background-color: transparent\n"
-" \n"
-"")
+        self.AddedCategories.setMaximumSize(QSize(245, 16777215))
+        self.AddedCategories.setToolTipDuration(-1)
+        self.AddedCategories.setStyleSheet(u"QScrollArea{\n"
+"background: transparent;\n"
+"}")
         self.AddedCategories.setFrameShape(QFrame.StyledPanel)
+        self.AddedCategories.setFrameShadow(QFrame.Raised)
         self.AddedCategories.setLineWidth(0)
         self.AddedCategories.setMidLineWidth(0)
         self.AddedCategories.setWidgetResizable(True)
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
+        self.AddedCategoriesContents.setEnabled(True)
         self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 296))
+        self.AddedCategoriesContents.setMaximumSize(QSize(16777215, 16777215))
+        self.AddedCategoriesContents.setStyleSheet(u"QWidget {\n"
+"	background-color: rgb(100, 100, 100);\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"	font: 255 8pt \"Calibri\";\n"
+"	color: white;\n"
+"}")
         self.verticalLayout_93 = QVBoxLayout(self.AddedCategoriesContents)
         self.verticalLayout_93.setObjectName(u"verticalLayout_93")
         self.AddedCategories.setWidget(self.AddedCategoriesContents)
@@ -7161,7 +7174,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(3)
         self.stackedWidget_2.setCurrentIndex(2)
         self.AllMatchesWraper.setCurrentIndex(2)
         self.match_16.setCurrentIndex(1)
