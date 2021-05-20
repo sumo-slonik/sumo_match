@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowZIuOrX.ui'
+## Form generated from reading UI file 'main_windowMjBnEt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -415,9 +415,12 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton\n"
 "{\n"
-"\n"
 "	background-color: rgb(30, 30, 30);\n"
 " 	border-radius: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
 "}\n"
 "\n"
 "QLabel\n"
@@ -442,6 +445,17 @@ class Ui_MainWindow(object):
 "	border-style: solid;\n"
 "	border-width: 2;\n"
 "	border-color: rgb(150, 150, 150);\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"	background-color: rgb(100, 100, 100);\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"	font: 255 8pt \"Calibri\";"
+                        "\n"
+"	color: white;\n"
+"	\n"
 "}\n"
 "")
         self.HomePage = QWidget()
@@ -468,9 +482,13 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton\n"
 "{\n"
-"\n"
 "	background-color: rgb(30, 30, 30);\n"
 " 	border-radius: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0,)\n"
 "}\n"
 "\n"
 "QLabel\n"
@@ -495,6 +513,17 @@ class Ui_MainWindow(object):
 "	border-style: solid;\n"
 "	border-width: 2;\n"
 "	border-color: rgb(150, 150, 150);\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"	background-color: rgb(100, 100, 100);\n"
+""
+                        "	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"	font: 255 8pt \"Calibri\";\n"
+"	color: white;\n"
+"	\n"
 "}")
         self.horizontalLayout_13 = QHBoxLayout(self.RandomCompetitors)
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
@@ -570,6 +599,7 @@ class Ui_MainWindow(object):
         self.frame_271 = QFrame(self.frame_132)
         self.frame_271.setObjectName(u"frame_271")
         self.frame_271.setMinimumSize(QSize(250, 0))
+        self.frame_271.setStyleSheet(u"")
         self.frame_271.setFrameShape(QFrame.StyledPanel)
         self.frame_271.setFrameShadow(QFrame.Raised)
         self.verticalLayout_212 = QVBoxLayout(self.frame_271)
@@ -591,6 +621,15 @@ class Ui_MainWindow(object):
         __qtablewidgetitem2 = QTableWidgetItem()
         self.CategoriesTable.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         self.CategoriesTable.setObjectName(u"CategoriesTable")
+        self.CategoriesTable.setStyleSheet(u"QTableWidget {\n"
+"	background-color: rgb(100, 100, 100);\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"	font: 255 8pt \"Calibri\";\n"
+"	color: white;\n"
+"	\n"
+"}")
 
         self.verticalLayout_212.addWidget(self.CategoriesTable)
 
@@ -926,6 +965,10 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.RandomCompetitors)
         self.SummaryPage = QWidget()
         self.SummaryPage.setObjectName(u"SummaryPage")
+        self.SummaryPage.setStyleSheet(u"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0,)\n"
+"}")
         self.horizontalLayout_44 = QHBoxLayout(self.SummaryPage)
         self.horizontalLayout_44.setObjectName(u"horizontalLayout_44")
         self.frame_58 = QFrame(self.SummaryPage)
@@ -978,6 +1021,11 @@ class Ui_MainWindow(object):
 "\n"
 "	font: 75 11pt \"Calibri\";\n"
 "	color: rgb(186, 186, 186);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0,)\n"
 "}")
         self.horizontalLayout_46 = QHBoxLayout(self.CompetitorInputPage)
         self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
@@ -1166,6 +1214,7 @@ class Ui_MainWindow(object):
         self.CompetitorsTable.setHorizontalHeaderItem(3, __qtablewidgetitem9)
         self.CompetitorsTable.setObjectName(u"CompetitorsTable")
         self.CompetitorsTable.setMaximumSize(QSize(16777215, 250))
+        self.CompetitorsTable.setStyleSheet(u"")
 
         self.horizontalLayout_56.addWidget(self.CompetitorsTable)
 
@@ -1386,7 +1435,21 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.CompetitorInputPage)
         self.SettingsPage = QWidget()
         self.SettingsPage.setObjectName(u"SettingsPage")
-        self.SettingsPage.setStyleSheet(u"")
+        self.SettingsPage.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background-color: rgb(83, 83, 83);\n"
+" 	border-radius: 2px;\n"
+"	color: rgb(157, 157, 157);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QSlider {\n"
+"	background: transparent;\n"
+"}")
         self.verticalLayout_101 = QVBoxLayout(self.SettingsPage)
         self.verticalLayout_101.setObjectName(u"verticalLayout_101")
         self.frame_133 = QFrame(self.SettingsPage)
@@ -1898,7 +1961,14 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.SettingsPage)
         self.AcountPage = QWidget()
         self.AcountPage.setObjectName(u"AcountPage")
-        self.AcountPage.setStyleSheet(u"background: transparent; ")
+        self.AcountPage.setStyleSheet(u"QWidget {\n"
+"	background: transparent; \n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0,)\n"
+"}")
         self.horizontalLayout_6 = QHBoxLayout(self.AcountPage)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.Content_wraper = QFrame(self.AcountPage)
@@ -6924,6 +6994,11 @@ class Ui_MainWindow(object):
 "	font: 75 11pt \"Calibri\";\n"
 "	color: rgb(186, 186, 186);\n"
 "}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0,)\n"
+"}\n"
 "")
         self.ControlPanel.setFrameShape(QFrame.StyledPanel)
         self.ControlPanel.setFrameShadow(QFrame.Raised)
@@ -7086,7 +7161,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(4)
         self.stackedWidget_2.setCurrentIndex(2)
         self.AllMatchesWraper.setCurrentIndex(2)
         self.match_16.setCurrentIndex(1)
