@@ -3,6 +3,8 @@ import os
 import pdfplumber
 from PySide2.QtWidgets import QFileDialog
 
+from DataStructures.personal_competitor import Category, PersonalCompetitor
+
 
 class RandomFunctionWrapper():
     def __init__(self, window):
@@ -28,11 +30,31 @@ class RandomFunctionWrapper():
         lines = []
         for page in pdf.pages:
             lines += page.extract_text(x_tolerance=3, y_tolerance=3).split('\n')
-
-        actual_category = None
-
+        actual_category = ''
+        result = dict()
         for line in lines:
-            if line.split()[0] == 'Kobiety' or line.split()[0] == 'Mężczyźni':
-                gender = line.split()[0]
-                age = line.split()[1:-2]
-                weight = line.split()[-2:]
+            if 'Kategoria:' in line:
+                category = line[10:].strip().split('-')
+                gender = category[0]
+                age = category[1]
+                weight = category[2]
+                actual_category = Category(weight, gender, age)
+            else:
+                competitor = line.strip().split('|')
+                name = competitor[0]
+                club = competitor[1]
+                licence_no = competitor[2]
+                competitor = PersonalCompetitor(name=name, club=club, licence_no=licence_no, category=actual_category)
+                if result.get(actual_category,0) == 0:
+                    result[actual_category] = (competitor,)
+                else:
+                    result[actual_category] = result[actual_category] + (competitor,)
+        return result
+
+
+if __name__ == '__main__':
+    a = RandomFunctionWrapper(None)
+    with pdfplumber.open('D:\sumo_match\Reports\ Mężczyźni _ Kadet (16).pdf') as file:
+        res = a.parse_pdf(file)
+    for competitor in res:
+        print(competitor,res[competitor])
