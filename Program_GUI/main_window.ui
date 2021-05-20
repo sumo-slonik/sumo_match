@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1121</width>
-    <height>822</height>
+    <width>1115</width>
+    <height>831</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -735,8 +735,7 @@ QPushButton:hover{
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-QFrame {
+             <string notr="true">QFrame {
     background: transparent;
 }
 
@@ -787,7 +786,16 @@ QTableWidget {
 	border-color: rgb(150, 150, 150);
 	font: 255 8pt &quot;Calibri&quot;;
 	color: white;
-	
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
+                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
 }
 </string>
             </property>
@@ -1668,7 +1676,7 @@ background: transparent;
                             <x>0</x>
                             <y>0</y>
                             <width>248</width>
-                            <height>296</height>
+                            <height>305</height>
                            </rect>
                           </property>
                           <property name="maximumSize">
@@ -1728,6 +1736,15 @@ background: transparent;
                         <width>16777215</width>
                         <height>50</height>
                        </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox {
+	background-color: rgb(30, 30, 30);
+	color: rgb(150, 150, 150);
+	border-style: solid;
+	border-width: 2;
+	border-color: rgb(150, 150, 150);
+}</string>
                       </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
@@ -10411,7 +10428,7 @@ p, li { white-space: pre-wrap; }
                         <string notr="true"/>
                        </property>
                        <property name="currentIndex">
-                        <number>1</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="under_5">
                         <layout class="QHBoxLayout" name="horizontalLayout_36">
@@ -13068,8 +13085,13 @@ p, li { white-space: pre-wrap; }
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
-                         <height>60</height>
+                         <height>120</height>
                         </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel {
+
+}</string>
                        </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -13089,8 +13111,16 @@ p, li { white-space: pre-wrap; }
                             <bold>true</bold>
                            </font>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	
+}</string>
+                          </property>
                           <property name="text">
                            <string>Drużyna I</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
@@ -13154,6 +13184,9 @@ color:rgb(255, 255, 255);</string>
                           <property name="text">
                            <string>Drużyna II</string>
                           </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
                          </widget>
                         </item>
                        </layout>
@@ -13166,6 +13199,17 @@ color:rgb(255, 255, 255);</string>
                          <width>0</width>
                          <height>100</height>
                         </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>500</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QTextEdit {
+	width: 100px;
+}</string>
                        </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -13184,16 +13228,44 @@ color:rgb(255, 255, 255);</string>
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_167">
                            <item>
-                            <widget class="QTextEdit" name="team_1_competitor_1"/>
+                            <widget class="QTextEdit" name="team_1_competitor_1">
+                             <property name="maximumSize">
+                              <size>
+                               <width>630</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="team_1_competitor_2"/>
+                            <widget class="QTextEdit" name="team_1_competitor_2">
+                             <property name="maximumSize">
+                              <size>
+                               <width>630</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="team_1_competitor_3"/>
+                            <widget class="QTextEdit" name="team_1_competitor_3">
+                             <property name="maximumSize">
+                              <size>
+                               <width>630</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="team_1_competitor_4"/>
+                            <widget class="QTextEdit" name="team_1_competitor_4">
+                             <property name="maximumSize">
+                              <size>
+                               <width>630</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
                            </item>
                           </layout>
                          </widget>
@@ -13208,16 +13280,56 @@ color:rgb(255, 255, 255);</string>
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_166">
                            <item>
-                            <widget class="QTextEdit" name="team_2_competitor_1"/>
+                            <widget class="QTextEdit" name="team_2_competitor_1">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">margin-left: 108px;</string>
+                             </property>
+                            </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="team_2_competitor_2"/>
+                            <widget class="QTextEdit" name="team_2_competitor_2">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">margin-left: 108px;</string>
+                             </property>
+                            </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="team_2_competitor_3"/>
+                            <widget class="QTextEdit" name="team_2_competitor_3">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">margin-left: 108px;</string>
+                             </property>
+                            </widget>
                            </item>
                            <item>
-                            <widget class="QTextEdit" name="team_2_competitor_4"/>
+                            <widget class="QTextEdit" name="team_2_competitor_4">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">margin-left: 108px;</string>
+                             </property>
+                            </widget>
                            </item>
                           </layout>
                          </widget>
@@ -13311,7 +13423,7 @@ color:rgb(255, 255, 255);</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QFrame {
-	background-color: rgb(38, 38, 38);
+	background-color: rgb(61, 61, 61);
 }
 
 QTextEdit{

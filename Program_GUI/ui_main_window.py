@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowiEQIfn.ui'
+## Form generated from reading UI file 'main_windowdAqNdS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,13 +12,12 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import Program_GUI.gui_theme
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1121, 822)
+        MainWindow.resize(1115, 831)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -402,8 +401,7 @@ class Ui_MainWindow(object):
         self.stackedWidget = QStackedWidget(self.center_main_items)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setMinimumSize(QSize(0, 50))
-        self.stackedWidget.setStyleSheet(u"\n"
-"QFrame {\n"
+        self.stackedWidget.setStyleSheet(u"QFrame {\n"
 "    background: transparent;\n"
 "}\n"
 "\n"
@@ -452,10 +450,15 @@ class Ui_MainWindow(object):
 "	border-style: solid;\n"
 "	border-width: 2;\n"
 "	border-color: rgb(150, 150, 150);\n"
-"	font: 255 8pt \"Calibri\";"
-                        "\n"
-"	color: white;\n"
-"	\n"
+"	font: 255 8pt \"Calibri\";\n"
+""
+                        "	color: white;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"	background-color: rgb(99, 99, 99);\n"
+"    border: 2px solid darkgray;\n"
+"    selection-background-color:rgb(150, 150, 150);\n"
 "}\n"
 "")
         self.HomePage = QWidget()
@@ -1136,7 +1139,7 @@ class Ui_MainWindow(object):
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
         self.AddedCategoriesContents.setEnabled(True)
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 296))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 305))
         self.AddedCategoriesContents.setMaximumSize(QSize(16777215, 16777215))
         self.AddedCategoriesContents.setStyleSheet(u"QWidget {\n"
 "	background-color: rgb(100, 100, 100);\n"
@@ -1170,6 +1173,13 @@ class Ui_MainWindow(object):
         self.frame_118 = QFrame(self.frame_113)
         self.frame_118.setObjectName(u"frame_118")
         self.frame_118.setMaximumSize(QSize(16777215, 50))
+        self.frame_118.setStyleSheet(u"QComboBox {\n"
+"	background-color: rgb(30, 30, 30);\n"
+"	color: rgb(150, 150, 150);\n"
+"	border-style: solid;\n"
+"	border-width: 2;\n"
+"	border-color: rgb(150, 150, 150);\n"
+"}")
         self.frame_118.setFrameShape(QFrame.StyledPanel)
         self.frame_118.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_50 = QHBoxLayout(self.frame_118)
@@ -6839,7 +6849,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_165.setObjectName(u"verticalLayout_165")
         self.frame_215 = QFrame(self.TeemMatch)
         self.frame_215.setObjectName(u"frame_215")
-        self.frame_215.setMaximumSize(QSize(16777215, 60))
+        self.frame_215.setMaximumSize(QSize(16777215, 120))
+        self.frame_215.setStyleSheet(u"QTextEdit {\n"
+"	color: rgb(54, 54, 54);\n"
+"	font: 75 35pt \"Calibri\";\n"
+"	font-weight: bold;\n"
+"	text-align: center;\n"
+"}")
         self.frame_215.setFrameShape(QFrame.StyledPanel)
         self.frame_215.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_74 = QHBoxLayout(self.frame_215)
@@ -6847,6 +6863,10 @@ class Ui_MainWindow(object):
         self.TeamName_1 = QLabel(self.frame_215)
         self.TeamName_1.setObjectName(u"TeamName_1")
         self.TeamName_1.setFont(font1)
+        self.TeamName_1.setStyleSheet(u"QLabel {\n"
+"	\n"
+"}")
+        self.TeamName_1.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_74.addWidget(self.TeamName_1)
 
@@ -6880,6 +6900,7 @@ class Ui_MainWindow(object):
         self.TeamName_2 = QLabel(self.frame_215)
         self.TeamName_2.setObjectName(u"TeamName_2")
         self.TeamName_2.setFont(font1)
+        self.TeamName_2.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_74.addWidget(self.TeamName_2)
 
@@ -6889,6 +6910,10 @@ class Ui_MainWindow(object):
         self.frame_216 = QFrame(self.TeemMatch)
         self.frame_216.setObjectName(u"frame_216")
         self.frame_216.setMinimumSize(QSize(0, 100))
+        self.frame_216.setMaximumSize(QSize(16777215, 500))
+        self.frame_216.setStyleSheet(u"QTextEdit {\n"
+"	width: 100px;\n"
+"}")
         self.frame_216.setFrameShape(QFrame.StyledPanel)
         self.frame_216.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_75 = QHBoxLayout(self.frame_216)
@@ -6901,21 +6926,25 @@ class Ui_MainWindow(object):
         self.verticalLayout_167.setObjectName(u"verticalLayout_167")
         self.team_1_competitor_1 = QTextEdit(self.frame_217)
         self.team_1_competitor_1.setObjectName(u"team_1_competitor_1")
+        self.team_1_competitor_1.setMaximumSize(QSize(630, 16777215))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_1)
 
         self.team_1_competitor_2 = QTextEdit(self.frame_217)
         self.team_1_competitor_2.setObjectName(u"team_1_competitor_2")
+        self.team_1_competitor_2.setMaximumSize(QSize(630, 16777215))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_2)
 
         self.team_1_competitor_3 = QTextEdit(self.frame_217)
         self.team_1_competitor_3.setObjectName(u"team_1_competitor_3")
+        self.team_1_competitor_3.setMaximumSize(QSize(630, 16777215))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_3)
 
         self.team_1_competitor_4 = QTextEdit(self.frame_217)
         self.team_1_competitor_4.setObjectName(u"team_1_competitor_4")
+        self.team_1_competitor_4.setMaximumSize(QSize(630, 16777215))
 
         self.verticalLayout_167.addWidget(self.team_1_competitor_4)
 
@@ -6924,27 +6953,38 @@ class Ui_MainWindow(object):
 
         self.frame_218 = QFrame(self.frame_216)
         self.frame_218.setObjectName(u"frame_218")
+        self.frame_218.setStyleSheet(u"QTextEdit {\n"
+"	margin-left: 108px;\n"
+"}")
         self.frame_218.setFrameShape(QFrame.StyledPanel)
         self.frame_218.setFrameShadow(QFrame.Raised)
         self.verticalLayout_166 = QVBoxLayout(self.frame_218)
         self.verticalLayout_166.setObjectName(u"verticalLayout_166")
         self.team_2_competitor_1 = QTextEdit(self.frame_218)
         self.team_2_competitor_1.setObjectName(u"team_2_competitor_1")
+        self.team_2_competitor_1.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_1.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_1)
 
         self.team_2_competitor_2 = QTextEdit(self.frame_218)
         self.team_2_competitor_2.setObjectName(u"team_2_competitor_2")
+        self.team_2_competitor_2.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_2.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_2)
 
         self.team_2_competitor_3 = QTextEdit(self.frame_218)
         self.team_2_competitor_3.setObjectName(u"team_2_competitor_3")
+        self.team_2_competitor_3.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_3.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_3)
 
         self.team_2_competitor_4 = QTextEdit(self.frame_218)
         self.team_2_competitor_4.setObjectName(u"team_2_competitor_4")
+        self.team_2_competitor_4.setMaximumSize(QSize(16777215, 16777215))
+        self.team_2_competitor_4.setStyleSheet(u"")
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_4)
 
@@ -6995,7 +7035,7 @@ class Ui_MainWindow(object):
         self.ControlPanel.setMinimumSize(QSize(250, 0))
         self.ControlPanel.setMaximumSize(QSize(250, 16777215))
         self.ControlPanel.setStyleSheet(u"QFrame {\n"
-"	background-color: rgb(38, 38, 38);\n"
+"	background-color: rgb(61, 61, 61);\n"
 "}\n"
 "\n"
 "QTextEdit{\n"
@@ -7174,14 +7214,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(5)
         self.stackedWidget_2.setCurrentIndex(2)
-        self.AllMatchesWraper.setCurrentIndex(2)
+        self.AllMatchesWraper.setCurrentIndex(4)
         self.match_16.setCurrentIndex(1)
         self.match_10.setCurrentIndex(2)
         self.Grup_I_Under10_G1.setCurrentIndex(2)
         self.Grup_II_Under10_G2.setCurrentIndex(2)
-        self.match_5.setCurrentIndex(1)
+        self.match_5.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
