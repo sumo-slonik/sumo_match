@@ -788,19 +788,15 @@ QTableWidget {
 	color: white;
 }
 
-QComboBox:editable {
-    background: white;
-}
-
-QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
-                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
+QComboBox QAbstractItemView {
+	background-color: rgb(99, 99, 99);
+    border: 2px solid darkgray;
+    selection-background-color:rgb(150, 150, 150);
 }
 </string>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
@@ -3250,7 +3246,7 @@ QPushButton:hover{
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>2</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="MatchUnder16">
                     <layout class="QVBoxLayout" name="verticalLayout_118">
@@ -3291,6 +3287,22 @@ QPushButton:hover{
                             <width>16777215</width>
                             <height>0</height>
                            </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton
+{
+	background-color: rgb(30, 30, 30);
+	border-style: solid;
+ 	border-radius: 2px;
+	border-color: rgb(0, 0, 0);
+}
+
+QPushButton:hover{
+	background-color: rgb(157, 157, 157);
+	border-style: solid;
+	border-radius: 2px;
+	border-color: rgb(255, 255, 255);
+}</string>
                           </property>
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
@@ -5533,7 +5545,7 @@ p, li { white-space: pre-wrap; }
                         <string notr="true"/>
                        </property>
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="Grup_I_Under10">
                         <layout class="QVBoxLayout" name="verticalLayout_221">
@@ -10066,6 +10078,12 @@ p, li { white-space: pre-wrap; }
                                    <height>50</height>
                                   </size>
                                  </property>
+                                 <property name="verticalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
+                                 <property name="horizontalScrollBarPolicy">
+                                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                                 </property>
                                 </widget>
                                </item>
                                <item>
@@ -10201,6 +10219,12 @@ p, li { white-space: pre-wrap; }
                                       <height>50</height>
                                      </size>
                                     </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
+                                    <property name="horizontalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAsNeeded</enum>
+                                    </property>
                                    </widget>
                                   </item>
                                   <item>
@@ -10327,6 +10351,9 @@ p, li { white-space: pre-wrap; }
                                       <height>50</height>
                                      </size>
                                     </property>
+                                    <property name="verticalScrollBarPolicy">
+                                     <enum>Qt::ScrollBarAlwaysOff</enum>
+                                    </property>
                                    </widget>
                                   </item>
                                   <item>
@@ -10428,7 +10455,7 @@ p, li { white-space: pre-wrap; }
                         <string notr="true"/>
                        </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>2</number>
                        </property>
                        <widget class="QWidget" name="under_5">
                         <layout class="QHBoxLayout" name="horizontalLayout_36">
@@ -13089,8 +13116,11 @@ p, li { white-space: pre-wrap; }
                         </size>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QLabel {
-
+                        <string notr="true">QTextEdit {
+	color: rgb(54, 54, 54);
+	font: 75 40pt &quot;Calibri&quot;;
+	font-weight: bold;
+	text-align: center;
 }</string>
                        </property>
                        <property name="frameShape">
@@ -13132,6 +13162,22 @@ p, li { white-space: pre-wrap; }
                             <height>16777215</height>
                            </size>
                           </property>
+                          <property name="font">
+                           <font>
+                            <family>Calibri</family>
+                            <pointsize>40</pointsize>
+                            <weight>75</weight>
+                            <italic>false</italic>
+                            <bold>true</bold>
+                            <stylestrategy>PreferDefault</stylestrategy>
+                           </font>
+                          </property>
+                          <property name="verticalScrollBarPolicy">
+                           <enum>Qt::ScrollBarAlwaysOff</enum>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
                          </widget>
                         </item>
                         <item>
@@ -13168,6 +13214,12 @@ color:rgb(255, 255, 255);</string>
                             <height>16777215</height>
                            </size>
                           </property>
+                          <property name="verticalScrollBarPolicy">
+                           <enum>Qt::ScrollBarAlwaysOff</enum>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
                          </widget>
                         </item>
                         <item>
@@ -13203,13 +13255,11 @@ color:rgb(255, 255, 255);</string>
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
-                         <height>500</height>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QTextEdit {
-	width: 100px;
-}</string>
+                        <string notr="true"/>
                        </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -13232,7 +13282,7 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>630</width>
-                               <height>16777215</height>
+                               <height>130</height>
                               </size>
                              </property>
                             </widget>
@@ -13242,7 +13292,7 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>630</width>
-                               <height>16777215</height>
+                               <height>130</height>
                               </size>
                              </property>
                             </widget>
@@ -13252,7 +13302,7 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>630</width>
-                               <height>16777215</height>
+                               <height>130</height>
                               </size>
                              </property>
                             </widget>
@@ -13262,8 +13312,11 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>630</width>
-                               <height>16777215</height>
+                               <height>100</height>
                               </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">margin-top: 30px;</string>
                              </property>
                             </widget>
                            </item>
@@ -13272,6 +13325,11 @@ color:rgb(255, 255, 255);</string>
                         </item>
                         <item>
                          <widget class="QFrame" name="frame_218">
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
+	margin-left: 108px;
+}</string>
+                          </property>
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
                           </property>
@@ -13284,11 +13342,11 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>16777215</width>
-                               <height>16777215</height>
+                               <height>130</height>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">margin-left: 108px;</string>
+                              <string notr="true"/>
                              </property>
                             </widget>
                            </item>
@@ -13297,11 +13355,11 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>16777215</width>
-                               <height>16777215</height>
+                               <height>130</height>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">margin-left: 108px;</string>
+                              <string notr="true"/>
                              </property>
                             </widget>
                            </item>
@@ -13310,11 +13368,11 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>16777215</width>
-                               <height>16777215</height>
+                               <height>130</height>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">margin-left: 108px;</string>
+                              <string notr="true"/>
                              </property>
                             </widget>
                            </item>
@@ -13323,11 +13381,11 @@ color:rgb(255, 255, 255);</string>
                              <property name="maximumSize">
                               <size>
                                <width>16777215</width>
-                               <height>16777215</height>
+                               <height>100</height>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">margin-left: 108px;</string>
+                              <string notr="true">margin-top: 30px;</string>
                              </property>
                             </widget>
                            </item>

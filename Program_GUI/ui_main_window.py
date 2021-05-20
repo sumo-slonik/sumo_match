@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowrSpPAc.ui'
+## Form generated from reading UI file 'main_windowjqWSDy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -7244,7 +7244,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(2)
         self.AllMatchesWraper.setCurrentIndex(1)
         self.match_16.setCurrentIndex(1)
