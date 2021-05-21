@@ -68,4 +68,3 @@ if __name__ == "__main__":
     print("second group:")
     for competitor in second_group:
         print(competitor.get_name())
-© 2021 GitHub, Inc.

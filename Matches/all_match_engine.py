@@ -1,3 +1,4 @@
+from Bookmarks.raport_generator import RaportGenerator
 from DataStructures.tree_node import Node
 from Matches.abstractMatchesMaker import AbstractMatchesMaker
 from enum import Enum
@@ -132,6 +133,10 @@ class AllMatchEngine(AbstractMatchesMaker):
                 change_match_buttons(self.window, False, False)
                 hide_wind_buttons(self.window, False)
             self.print_fighters()
+
+    # def generate_result(self):
+    #     RaportGenerator(self.engine.results)
+
 
 if __name__ == '__main__':
     for i in range(2, 34):
