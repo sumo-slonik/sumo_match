@@ -399,7 +399,7 @@ class CategoryAdder:
                 body.append(Spacer(1, 10))
 
                 for competitor in categories_for_pdf[pdf_data][category]:
-                    body.append(Paragraph(competitor.get_first_name() + " " + competitor.get_surname() + "  |  "
+                    body.append(Paragraph(competitor.get_surname() + " " + competitor.get_first_name() + "  |  "
                                           + competitor.get_club()+'|'+competitor.get_licence_no(), styles["RegularDownloaded"]))
 
                 body.append(Spacer(1, 10))

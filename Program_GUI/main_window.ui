@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1115</width>
+    <width>1210</width>
     <height>831</height>
    </rect>
   </property>
@@ -796,7 +796,7 @@ QComboBox QAbstractItemView {
 </string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
@@ -1034,7 +1034,7 @@ QTableWidget {
                       </property>
                       <column>
                        <property name="text">
-                        <string>Nowa kolumna</string>
+                        <string>Płeć</string>
                        </property>
                       </column>
                       <column>
@@ -1074,22 +1074,48 @@ QTableWidget {
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_43">
                     <item>
-                     <widget class="QTableWidget" name="tableWidget_2">
-                      <column>
-                       <property name="text">
-                        <string>Nowa kolumna</string>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string>Nazwisko</string>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </column>
+                     <widget class="QFrame" name="frame_283">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_227">
+                       <item>
+                        <widget class="QTableWidget" name="Competitors_table">
+                         <column>
+                          <property name="text">
+                           <string>imię</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Nazwisko</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Numer licencji</string>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="SetAsMaster">
+                         <property name="text">
+                          <string>Mistrz</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="SetAsRunnerUp">
+                         <property name="text">
+                          <string>Vice-Mistrz</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                     <item>
@@ -1351,7 +1377,7 @@ QTableWidget {
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_215">
                     <item>
-                     <widget class="QPushButton" name="pushButton_5">
+                     <widget class="QPushButton" name="MakeRandomize">
                       <property name="text">
                        <string>Losuj</string>
                       </property>
@@ -1672,7 +1698,7 @@ background: transparent;
                             <x>0</x>
                             <y>0</y>
                             <width>248</width>
-                            <height>305</height>
+                            <height>28</height>
                            </rect>
                           </property>
                           <property name="maximumSize">

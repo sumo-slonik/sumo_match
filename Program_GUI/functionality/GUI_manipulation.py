@@ -3,6 +3,8 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 from DataStructures.personal_competitor import *
+from Matches.types_of_matches import TypeOFMatch
+
 
 
 def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[]):
@@ -455,3 +457,22 @@ def change_match_buttons(main_window, is_team, match):
     else:
         main_window.ui.make_match_button.setVisible(False)
         main_window.ui.go_to_all_match_button.setVisible(False)
+
+
+def print_randomisation_results(main_window,competitors,match_type):
+    if match_type == TypeOFMatch.Under5:
+        node_names = ['RandRes5_'+str(i+1) for i in range(len(competitors))]
+        load_competitors_to_nodes(node_names,competitors,main_window)
+        main_window.ui.stackedWidget_2.setCurrentWidget(main_window.ui.RandomFunctionRes5)
+    if match_type == TypeOFMatch.Under10:
+        node_names = ['RandRes10_'+str(i+1) for i in range(len(competitors[0]))]
+        load_competitors_to_nodes(node_names,competitors[0],main_window)
+
+        node_names = ['RandRes10_'+str(i+6) for i in range(len(competitors[1]))]
+        load_competitors_to_nodes(node_names,competitors[1],main_window)
+
+        main_window.ui.stackedWidget_2.setCurrentWidget(main_window.ui.RandomFunctionRes10)
+    if match_type == TypeOFMatch.Under16:
+        node_names = ['RandRes16_'+str(i+1) for i in range(len(competitors))]
+        load_competitors_to_nodes(node_names,competitors,main_window)
+        main_window.ui.stackedWidget_2.setCurrentWidget(main_window.ui.RandomFunctionRes16)

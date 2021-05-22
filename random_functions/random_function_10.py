@@ -1,4 +1,4 @@
-import personal_competitor
+from DataStructures.personal_competitor import PersonalCompetitor
 import random
 
 
@@ -16,6 +16,7 @@ def random_function_10(competitors, number_of_competitors, master=None, runner_u
         second_group.append(runner_up)
 
     while number_of_competitors > 0:
+        print(number_of_competitors)
         for i in range(len(competitors)):
             if number_of_competitors == 0:
                 break
@@ -49,14 +50,14 @@ def random_function_10(competitors, number_of_competitors, master=None, runner_u
 
 if __name__ == "__main__":
     competitors = [
-        [personal_competitor.PersonalCompetitor("Kuba1"), personal_competitor.PersonalCompetitor("Kuba2")],
-        [personal_competitor.PersonalCompetitor("Marcin1"), personal_competitor.PersonalCompetitor("Marcin2")],
-        [personal_competitor.PersonalCompetitor("pojedynczy1")],
-        [personal_competitor.PersonalCompetitor("pojedynczy2")]
+        [PersonalCompetitor("Kuba1"), PersonalCompetitor("Kuba2")],
+        [PersonalCompetitor("Marcin1"), PersonalCompetitor("Marcin2")],
+        [PersonalCompetitor("pojedynczy1")],
+        [PersonalCompetitor("pojedynczy2")]
     ]
 
-    master = personal_competitor.PersonalCompetitor(name="Marcin")
-    runner_up = personal_competitor.PersonalCompetitor(name="Adas")
+    master = PersonalCompetitor(name="Marcin")
+    runner_up = PersonalCompetitor(name="Adas")
 
     first_group, second_group = random_function_10(competitors, 6, master)
 

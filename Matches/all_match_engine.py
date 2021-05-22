@@ -1,38 +1,21 @@
 from Bookmarks.raport_generator import RaportGenerator
 from DataStructures.tree_node import Node
 from Matches.abstractMatchesMaker import AbstractMatchesMaker
+from Matches.types_of_matches import TypeOFMatch, correctTypeFromLength
+
 from enum import Enum
 
 from Matches.match_under_10 import MatchUnder10
 from Matches.match_under_16 import MatchUnder16
 from Matches.match_under_5 import MatchUnder5Wrapper
 from Program_GUI.functionality.GUI_manipulation import *
+from Program_GUI.functionality.GUI_manipulation import print_match_under_5_wrapper
 from DataStructures.club_competitor import ClubCompetitor
 from Matches.match_for_teams import TeamMatch
 from random_functions.random_function_16 import random_function_16
 
 
-class TypeOFMatch(Enum):
-    Under5 = 5
-    Under10 = 10
-    Under16 = 16
-    Under32 = 32
-    Under64 = 64
 
-
-def correctTypeFromLength(length):
-    if length == 2:
-        return TypeOFMatch(2)
-    if length <= 5:
-        return TypeOFMatch(5)
-    if length <= 10:  # (5,10]
-        return TypeOFMatch(10)
-    if length <= 16:  # (10,16]
-        return TypeOFMatch(16)
-    if length <= 32:  # (16,32]
-        return TypeOFMatch(32)
-    if length <= 64:
-        return TypeOFMatch(64)
 
 
 class AllMatchEngine(AbstractMatchesMaker):

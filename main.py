@@ -108,9 +108,14 @@ class MainWindow(QMainWindow):
         self.ui.FilterCattegoryButton.clicked.connect(lambda: self.categories_adder.show_filter())
 
         # Random functions
-        self.ui.FilterCattegoryButton.clicked.connect(lambda: self.categories_adder.show_filter())
 
-        
+        self.ui.CategoriesBrowseButton_2.clicked.connect(lambda: self.RandomFunctionWrapper.add_category())
+        self.ui.AddCategoriesButton_3.clicked.connect(lambda: self.RandomFunctionWrapper.confirm_categories())
+        self.ui.CategoriesTable.clicked.connect(lambda: self.chose_category())
+        self.ui.Competitors_table.clicked.connect(lambda: self.chose_competitor())
+        self.ui.SetAsMaster.clicked.connect(lambda: self.RandomFunctionWrapper.make_master())
+        self.ui.SetAsRunnerUp.clicked.connect(lambda: self.RandomFunctionWrapper.make_runner_up())
+        self.ui.MakeRandomize.clicked.connect(lambda: self.RandomFunctionWrapper.make_randomization())
         # Show window
         self.showFullScreen()
         self.show()
@@ -265,6 +270,22 @@ class MainWindow(QMainWindow):
         value = index.sibling(index.row(), 3).data()
         print("to leci do addera: ", value)
         self.categories_adder.process_competitor(value)
+
+    def chose_category(self):
+        index = (self.ui.CategoriesTable.selectionModel().currentIndex())
+        gender = index.sibling(index.row(), 0).data()
+        age = index.sibling(index.row(), 1).data()
+        category = index.sibling(index.row(), 2).data()
+
+        selected = Category(category,gender,age)
+        self.RandomFunctionWrapper.select_category(selected)
+
+    def chose_competitor(self):
+        index = (self.ui.Competitors_table.selectionModel().currentIndex())
+        licence_no = index.sibling(index.row(), 2).data()
+        self.RandomFunctionWrapper.select_competitor(licence_no)
+
+
 
 
 # # Execute app
