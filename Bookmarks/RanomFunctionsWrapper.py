@@ -11,6 +11,7 @@ from random_functions.random_function_10 import random_function_10
 from random_functions.random_function_16 import random_function_16
 from DataStructures.SupportingFunctions.competitors_txt_input import divide_competitors_to_teams
 
+
 class RandomFunctionWrapper():
     def __init__(self, window):
         self.categories = dict()
@@ -18,6 +19,8 @@ class RandomFunctionWrapper():
         self.to_add = []
         self.actual_category = {'master': None, 'runner_up': None, 'Category': None}
         self.actual_competitor = None
+        self.actual_results = None
+        self.actual_name = None
 
     def add_category(self):
         files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd(), "Plik PDF (*.pdf)")
@@ -116,11 +119,25 @@ class RandomFunctionWrapper():
             result = random_function_16(teams, len(competitors), master, runnerUp)
             print("wycodzę z 16")
 
-        print_randomisation_results(self.window,result,type_of_match)
+        print_randomisation_results(self.window, result, type_of_match)
+        self.actual_results = result
         for i in result:
             print(i)
 
+    def save_to_txt(self):
+        if self.actual_results is not None:
+            with open('Categories/'+self.actual_name + '.txt', "w",encoding="utf-8") as file:
+                to_print = []
+                if isinstance(self.actual_results[0], list):
+                    to_print = self.actual_results[0] + self.actual_results[1]
+                else:
+                    to_print = self.actual_results
+                for competitor in to_print:
+                    file.write(
+                        competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
+
     def select_category(self, category):
+        self.actual_name = category.gender[0] + category.age + category.category
         self.actual_category['Category'] = self.categories[category]
         self.actual_category['runner_up'] = None
         self.actual_category['master'] = None
@@ -129,7 +146,7 @@ class RandomFunctionWrapper():
     def print_actual_category(self):
         competitors = self.actual_category['Category']
         print(competitors)
-        print("powinno być ",len(self.actual_category['Category']))
+        print("powinno być ", len(self.actual_category['Category']))
         table = self.window.ui.Competitors_table
 
         table.setRowCount(0)

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowuXDFSt.ui'
+## Form generated from reading UI file 'main_windowciGURL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -974,10 +974,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_215.addWidget(self.MakeRandomize)
 
-        self.pushButton_4 = QPushButton(self.frame_274)
-        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.SaveRandomRes = QPushButton(self.frame_274)
+        self.SaveRandomRes.setObjectName(u"SaveRandomRes")
 
-        self.verticalLayout_215.addWidget(self.pushButton_4)
+        self.verticalLayout_215.addWidget(self.SaveRandomRes)
 
 
         self.verticalLayout_214.addWidget(self.frame_274)
@@ -7265,7 +7265,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(1)
-        self.stackedWidget_2.setCurrentIndex(2)
+        self.stackedWidget_2.setCurrentIndex(0)
         self.AllMatchesWraper.setCurrentIndex(1)
         self.match_16.setCurrentIndex(1)
         self.match_10.setCurrentIndex(0)
@@ -7323,7 +7323,7 @@ class Ui_MainWindow(object):
         self.label_57.setText(QCoreApplication.translate("MainWindow", u"Grupa II", None))
         self.label_74.setText(QCoreApplication.translate("MainWindow", u"Krzy\u017c\u00f3wka do 5 zwodni\u00f3w", None))
         self.MakeRandomize.setText(QCoreApplication.translate("MainWindow", u"Losuj", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Zapisz", None))
+        self.SaveRandomRes.setText(QCoreApplication.translate("MainWindow", u"Zapisz", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Wyniki", None))
         self.comboBox.setCurrentText("")
         self.comboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Kategoria", None))

@@ -116,6 +116,7 @@ class MainWindow(QMainWindow):
         self.ui.SetAsMaster.clicked.connect(lambda: self.RandomFunctionWrapper.make_master())
         self.ui.SetAsRunnerUp.clicked.connect(lambda: self.RandomFunctionWrapper.make_runner_up())
         self.ui.MakeRandomize.clicked.connect(lambda: self.RandomFunctionWrapper.make_randomization())
+        self.ui.SaveRandomRes.clicked.connect(lambda: self.RandomFunctionWrapper.save_to_txt())
         # Show window
         self.showFullScreen()
         self.show()

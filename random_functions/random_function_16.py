@@ -73,7 +73,7 @@ def random_function_16(competitors, number_of_competitors, master=None, runner_u
         place_in_order = random.choice(free_places[lot])
         free_places[lot].remove(place_in_order)
 
-        order[place_in_order] = personal_competitor.PersonalCompetitor(name="Free fight", is_free_fight=True)
+        order[place_in_order] = personal_competitor.PersonalCompetitor(name="WOLNY LOS", is_free_fight=True)
 
         free_lots -= 1
 
