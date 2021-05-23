@@ -117,7 +117,7 @@ QPushButton{
 	color: rgb(255, 255, 255);
 }
 QPushButton:hover{
-	background-color: rgb(85, 0, 0);
+	background-color: rgb(184, 139, 32);
 }
 QFrame
 {
@@ -369,7 +369,7 @@ QPushButton{
 	color: rgb(255, 255, 255);
 }
 QPushButton:hover{
-	background-color: rgb(85, 0, 0);
+	background-color: rgb(184, 139, 32);
 }</string>
          </property>
          <property name="frameShape">
@@ -419,21 +419,6 @@ padding-left: 50px;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="AccountButton">
-               <property name="styleSheet">
-                <string notr="true">background-image: url(:/Icons/icons/cil-view-module.png);
-background-repeat:none;
-background-position: center left;
-
-padding-left: 50px;
-</string>
-               </property>
-               <property name="text">
-                <string>Kategorie</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QPushButton" name="AddCategoriesButton">
                <property name="styleSheet">
                 <string notr="true">background-image: url(:/Icons/icons/cil-user-follow.png);
@@ -445,21 +430,6 @@ padding-left: 50px;
                </property>
                <property name="text">
                 <string>Wprowadzanie zawodników</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="AccountButton_3">
-               <property name="styleSheet">
-                <string notr="true">background-image: url(:/Icons/icons/cil-description.png);
-background-repeat:none;
-background-position: center left;
-
-padding-left: 50px;
-</string>
-               </property>
-               <property name="text">
-                <string>Raporty</string>
                </property>
               </widget>
              </item>
@@ -481,6 +451,36 @@ padding-left: 50px;
                  <width>20</width>
                  <height>20</height>
                 </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AccountButton">
+               <property name="styleSheet">
+                <string notr="true">background-image: url(:/Icons/icons/cil-view-module.png);
+background-repeat:none;
+background-position: center left;
+
+padding-left: 50px;
+</string>
+               </property>
+               <property name="text">
+                <string>Kategorie</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AccountButton_3">
+               <property name="styleSheet">
+                <string notr="true">background-image: url(:/Icons/icons/cil-description.png);
+background-repeat:none;
+background-position: center left;
+
+padding-left: 50px;
+</string>
+               </property>
+               <property name="text">
+                <string>Raporty</string>
                </property>
               </widget>
              </item>
@@ -814,7 +814,7 @@ QComboBox QAbstractItemView {
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>70</height>
+                  <height>100</height>
                  </size>
                 </property>
                 <property name="frameShape">
@@ -829,14 +829,17 @@ QComboBox QAbstractItemView {
                    <property name="font">
                     <font>
                      <family>Calibri 13</family>
-                     <pointsize>30</pointsize>
+                     <pointsize>50</pointsize>
                      <weight>9</weight>
                      <italic>false</italic>
                      <bold>false</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font: 75 30pt &quot;Calibri&quot; bold;</string>
+                    <string notr="true">QLabel {
+	font: 75 50pt &quot;Calibri&quot; bold;
+	color: rgb(184, 139, 32);
+}</string>
                    </property>
                    <property name="text">
                     <string>Sumo match maker</string>
@@ -869,8 +872,151 @@ QComboBox QAbstractItemView {
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_229">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="frame_294">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_232">
+                       <item>
+                        <widget class="QLabel" name="label_84">
+                         <property name="text">
+                          <string>Program umożliwiający prowadzenie</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_85">
+                         <property name="text">
+                          <string>zawodów sumo</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_289">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_95">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_5">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-user-follow.png</normaloff>:/Icons/icons/cil-user-follow.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_79">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Dodawanie kategorii</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_291">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_97">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_8">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-3d.png</normaloff>:/Icons/icons/cil-3d.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_81">
+                         <property name="text">
+                          <string>Losowanie </string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
                     <item>
                      <widget class="QFrame" name="frame_288">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -912,49 +1058,13 @@ QComboBox QAbstractItemView {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="frame_289">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_95">
-                       <item>
-                        <widget class="QPushButton" name="pushButton_5">
-                         <property name="maximumSize">
-                          <size>
-                           <width>50</width>
-                           <height>16777215</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                         <property name="icon">
-                          <iconset resource="gui_theme.qrc">
-                           <normaloff>:/Icons/icons/cil-user-follow.png</normaloff>:/Icons/icons/cil-user-follow.png</iconset>
-                         </property>
-                         <property name="iconSize">
-                          <size>
-                           <width>50</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="label_79">
-                         <property name="text">
-                          <string>Dodawanie kategorii</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item>
                      <widget class="QFrame" name="frame_290">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -987,50 +1097,14 @@ QComboBox QAbstractItemView {
                        </item>
                        <item>
                         <widget class="QLabel" name="label_80">
-                         <property name="text">
-                          <string>Przeglądanie raportów</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QFrame" name="frame_291">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_97">
-                       <item>
-                        <widget class="QPushButton" name="pushButton_8">
                          <property name="maximumSize">
                           <size>
-                           <width>50</width>
+                           <width>16777215</width>
                            <height>16777215</height>
                           </size>
                          </property>
                          <property name="text">
-                          <string/>
-                         </property>
-                         <property name="icon">
-                          <iconset resource="gui_theme.qrc">
-                           <normaloff>:/Icons/icons/cil-3d.png</normaloff>:/Icons/icons/cil-3d.png</iconset>
-                         </property>
-                         <property name="iconSize">
-                          <size>
-                           <width>50</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="label_81">
-                         <property name="text">
-                          <string>Losowanie </string>
+                          <string>Przeglądanie raportów</string>
                          </property>
                         </widget>
                        </item>
@@ -1048,6 +1122,56 @@ QComboBox QAbstractItemView {
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_230">
+                    <item>
+                     <widget class="QFrame" name="frame_292">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QFrame" name="frame_293">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>70</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_231">
+                       <item>
+                        <widget class="QLabel" name="label_82">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 10pt &quot;Calibri&quot; bold;</string>
+                         </property>
+                         <property name="text">
+                          <string>Jakub Nowakowski, Marcin Warchoł</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_83">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 10pt &quot;Calibri&quot; bold;</string>
+                         </property>
+                         <property name="text">
+                          <string>Wersja 1.0</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
