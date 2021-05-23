@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1490</width>
-    <height>840</height>
+    <width>1263</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -421,7 +421,7 @@ padding-left: 50px;
              <item>
               <widget class="QPushButton" name="AccountButton">
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/Icons/icons/cil-folder-open.png);
+                <string notr="true">background-image: url(:/Icons/icons/cil-view-module.png);
 background-repeat:none;
 background-position: center left;
 
@@ -466,7 +466,7 @@ padding-left: 50px;
              <item>
               <widget class="QPushButton" name="RandomFunctionsButton">
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/Icons/icons/cil-reload.png);
+                <string notr="true">background-image: url(:/Icons/icons/cil-3d.png);
 background-repeat:none;
 background-position: center left;
 
@@ -475,6 +475,12 @@ padding-left: 50px;
                </property>
                <property name="text">
                 <string>Losowanie</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
                </property>
               </widget>
              </item>
@@ -796,12 +802,258 @@ QComboBox QAbstractItemView {
 </string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
+             <layout class="QVBoxLayout" name="verticalLayout_228">
+              <item>
+               <widget class="QFrame" name="frame_284">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_92">
+                 <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_75">
+                   <property name="font">
+                    <font>
+                     <family>Calibri 13</family>
+                     <pointsize>30</pointsize>
+                     <weight>9</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">font: 75 30pt &quot;Calibri&quot; bold;</string>
+                   </property>
+                   <property name="text">
+                    <string>Sumo match maker</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_285">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+	background: transparent;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_93">
+                 <item>
+                  <widget class="QFrame" name="frame_286">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_229">
+                    <item>
+                     <widget class="QFrame" name="frame_288">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_94">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_4">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-view-module.png</normaloff>:/Icons/icons/cil-view-module.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_78">
+                         <property name="text">
+                          <string>Prowadzenie krzyżówek</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_289">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_95">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_5">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-user-follow.png</normaloff>:/Icons/icons/cil-user-follow.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_79">
+                         <property name="text">
+                          <string>Dodawanie kategorii</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_290">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_96">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_6">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-description.png</normaloff>:/Icons/icons/cil-description.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_80">
+                         <property name="text">
+                          <string>Przeglądanie raportów</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_291">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_97">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_8">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="gui_theme.qrc">
+                           <normaloff>:/Icons/icons/cil-3d.png</normaloff>:/Icons/icons/cil-3d.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_81">
+                         <property name="text">
+                          <string>Losowanie </string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_287">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
             <widget class="QWidget" name="RandomCompetitors">
              <property name="styleSheet">
@@ -1707,8 +1959,8 @@ background: transparent;
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>248</width>
-                            <height>28</height>
+                            <width>227</width>
+                            <height>22</height>
                            </rect>
                           </property>
                           <property name="maximumSize">
