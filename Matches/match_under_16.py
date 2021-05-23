@@ -330,6 +330,8 @@ class MatchUnder16:
             for comp in x:
                 print(comp.get_name())
 
+        self.results = results
+
 
 if __name__ == "__main__":
     zawodnicy = [PersonalCompetitor(name="Kuba" + str(x)) for x in range(0, 16)]

@@ -71,10 +71,17 @@ class AllMatchEngine(AbstractMatchesMaker):
 
     def make_match(self, left_win):
         print('_____________________________________________________________________________________________________')
+
         if self.in_match:
             self.teamEngine.make_match(left_win)
         else:
             self.engine.make_match(left_win)
+
+        print("*************************************")
+        print(self.engine.results)
+        if self.match_type == TypeOFMatch.Under16 and len(self.engine.results) != 0:
+            print("_____________________________________")
+            self.generate_result()
 
     def go_to_next_round(self):
         self.engine.go_to_next_round()
@@ -117,8 +124,11 @@ class AllMatchEngine(AbstractMatchesMaker):
                 hide_wind_buttons(self.window, False)
             self.print_fighters()
 
-    # def generate_result(self):
-    #     RaportGenerator(self.engine.results)
+    def generate_result(self):
+        if self.match_type == TypeOFMatch.Under16:
+            print("weszło")
+            generator = RaportGenerator(sum(self.engine.results, []), "tmp_name")
+            generator.generate_pdf()
 
 
 if __name__ == '__main__':
