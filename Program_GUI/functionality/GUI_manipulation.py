@@ -246,7 +246,8 @@ def print_match_under_5(match_under_5, main_window, name="un_5_competitor_node_"
         competitors_list.append(match.get_right_child())
     load_competitors_to_nodes(node_names, competitors_list, main_window)
     print_match_under_5_points(match_under_5, main_window, points_name)
-    print_actual_match_under_5(match_under_5, main_window, name)
+    if not match_under_5.is_end:
+        print_actual_match_under_5(match_under_5, main_window, name)
 
 
 def print_match_under_4_points(match_under_4, main_window, name="un_4_point_node_"):
@@ -266,7 +267,8 @@ def print_actual_match_under_4(match_under_4, main_window, name="un_4_competitor
     node_2 = name + str(match_under_4.get_actual_match_id() * 2 + 6)
 
     color_borders(all_nodes, colors_for_all, main_window)
-    color_borders([node_1, node_2], colors_for_actual, main_window)
+    if not match_under_4.is_end:
+        color_borders([node_1, node_2], colors_for_actual, main_window)
 
 
 def print_match_under_4(match_under_4, main_window, name="un_4_competitor_node_", points_name='un_4_point_node_'):
@@ -298,7 +300,8 @@ def print_actual_match_under_3(match_under_3, main_window, name="un_3_competitor
     node_2 = name + str(match_under_3.get_actual_match_id() * 2 + 5)
 
     color_borders(all_nodes, colors_for_all, main_window)
-    color_borders([node_1, node_2], colors_for_actual, main_window)
+    if not match_under_3.is_end:
+        color_borders([node_1, node_2], colors_for_actual, main_window)
 
 
 def print_match_under_3(match_under_3, main_window, name="un_3_competitor_node_", points_name="un_3_point_node_"):
@@ -399,7 +402,7 @@ def print_match_under_10(match_under_10, main_window):
         names = ('un_10_5_grup_1_competitor_node_', 'un_10_5_grup_1_point_node_', 'un_10_4_grup_1_competitor_node_',
                  'un_10_4_grup_1_point_node_', 'un_10_3_grup_1_competitor_node_', 'un_10_3_grup_1_point_node_')
         print_match_under_5_wrapper(match_under_10.first_group, main_window, names, 10, 1)
-    if state == 1:
+    if state in [1,2]:
         names = ('un_10_5_grup_2_competitor_node_', 'un_10_5_grup_2_point_node_', 'un_10_4_grup_2_competitor_node_',
                  'un_10_4_grup_2_point_node_', 'un_10_3_grup_2_competitor_node_', 'un_10_3_grup_2_point_node_')
         print_match_under_5_wrapper(match_under_10.second_group, main_window, names, 10, 2)

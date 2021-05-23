@@ -1,6 +1,7 @@
 import os
 
 import pdfplumber
+from PySide2.QtGui import QColor
 from PySide2.QtWidgets import QFileDialog, QTableWidgetItem
 
 from DataStructures.personal_competitor import Category, PersonalCompetitor
@@ -22,26 +23,44 @@ class RandomFunctionWrapper():
         self.actual_results = None
         self.actual_name = None
         self.actual_category_row = 0
+        self.actual_competitor_row = 0
+        self.master_row = 0
+        self.runner_up_row = 0
 
     def add_category(self):
         files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd(), "Plik PDF (*.pdf)")
         self.to_add = files[0]
         self.window.ui.CategoriesToAdd_2.setText(str(files[0]))
 
-    def select_competitor(self, licence_no):
+    def select_competitor(self, licence_no, row):
         self.actual_competitor = \
             list(filter(lambda x: x.get_licence_no() == licence_no, self.actual_category['Category']))[0]
         print(self.actual_competitor)
+        self.actual_competitor_row = row
 
     def make_master(self):
+        table = self.window.ui.Competitors_table
         self.actual_category['master'] = self.actual_competitor
         if self.actual_category['runner_up'] == self.actual_competitor:
             self.actual_category['runner_up'] = None
+        if self.master_row != self.actual_competitor_row:
+            for i in range(4):
+                table.item(self.master_row, i).setBackground(QColor(104, 100, 100))
+        self.master_row = self.actual_competitor_row
+        for i in range(4):
+            table.item(self.master_row, i).setBackground(QColor(184, 139, 32))
 
     def make_runner_up(self):
+        table = self.window.ui.Competitors_table
         self.actual_category['runner_up'] = self.actual_competitor
         if self.actual_category['master'] == self.actual_competitor:
             self.actual_category['master'] = None
+        if self.runner_up_row != self.actual_competitor_row:
+            for i in range(4):
+                table.item(self.runner_up_row, i).setBackground(QColor(104, 100, 100))
+        self.runner_up_row = self.actual_competitor_row
+        for i in range(4):
+            table.item(self.runner_up_row, i).setBackground(QColor(151, 136, 136))
 
     def print_categories(self):
         table = self.window.ui.CategoriesTable
@@ -129,7 +148,7 @@ class RandomFunctionWrapper():
 
     def save_to_txt(self):
         table = self.window.ui.CategoriesTable
-        table.setItem(self.actual_category_row, 3, QTableWidgetItem("NIE"))
+        table.setItem(self.actual_category_row, 3, QTableWidgetItem("TAK"))
         if self.actual_results is not None:
             with open('Categories/' + self.actual_name + '.txt', "w", encoding="utf-8") as file:
                 to_print = []

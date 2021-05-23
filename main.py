@@ -19,6 +19,7 @@ from Bookmarks.category_adder import CategoryAdder
 from Bookmarks.settings import Settings
 from Program_GUI.functionality.GUI_manipulation import print_team_match
 from Bookmarks.RanomFunctionsWrapper import RandomFunctionWrapper
+
 WINDOW_SIZE = 0
 
 
@@ -120,7 +121,6 @@ class MainWindow(QMainWindow):
         # Show window
         self.showFullScreen()
         self.show()
-
 
     # Restore or maximize your window
     def restore_or_maximize_window(self):
@@ -278,15 +278,13 @@ class MainWindow(QMainWindow):
         age = index.sibling(index.row(), 1).data()
         category = index.sibling(index.row(), 2).data()
 
-        selected = Category(category,gender,age)
-        self.RandomFunctionWrapper.select_category(selected,index.row())
+        selected = Category(category, gender, age)
+        self.RandomFunctionWrapper.select_category(selected, index.row())
 
     def chose_competitor(self):
         index = (self.ui.Competitors_table.selectionModel().currentIndex())
         licence_no = index.sibling(index.row(), 2).data()
-        self.RandomFunctionWrapper.select_competitor(licence_no)
-
-
+        self.RandomFunctionWrapper.select_competitor(licence_no, index.row())
 
 
 # # Execute app
@@ -312,7 +310,7 @@ if __name__ == "__main__":
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
     competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
     window = MainWindow()
-    engine = AllMatchEngine(competitors,window)
+    engine = AllMatchEngine(competitors, window)
     connect_gui_to_engine(window, engine)
 
     sys.exit(app.exec_())
