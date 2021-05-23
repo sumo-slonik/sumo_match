@@ -21,6 +21,7 @@ class RandomFunctionWrapper():
         self.actual_competitor = None
         self.actual_results = None
         self.actual_name = None
+        self.actual_category_row = 0
 
     def add_category(self):
         files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd(), "Plik PDF (*.pdf)")
@@ -46,9 +47,10 @@ class RandomFunctionWrapper():
         table = self.window.ui.CategoriesTable
         table.setRowCount(0)
         table_width = table.width()
-        table.setColumnWidth(0, (table_width - 25) / 3)
-        table.setColumnWidth(1, (table_width - 25) / 3)
-        table.setColumnWidth(2, (table_width - 25) / 3)
+        table.setColumnWidth(0, (table_width - 25) / 4)
+        table.setColumnWidth(1, (table_width - 25) / 4)
+        table.setColumnWidth(2, (table_width - 25) / 4)
+        table.setColumnWidth(3, (table_width - 25) / 4)
 
         table.setRowCount(len(self.categories))
         row = 0
@@ -56,6 +58,7 @@ class RandomFunctionWrapper():
             table.setItem(row, 0, QTableWidgetItem(category.get_gender()))
             table.setItem(row, 1, QTableWidgetItem(category.get_age()))
             table.setItem(row, 2, QTableWidgetItem(category.get_category()))
+            table.setItem(row, 3, QTableWidgetItem("NIE"))
             row += 1
 
     def confirm_categories(self):
@@ -125,8 +128,10 @@ class RandomFunctionWrapper():
             print(i)
 
     def save_to_txt(self):
+        table = self.window.ui.CategoriesTable
+        table.setItem(self.actual_category_row, 3, QTableWidgetItem("NIE"))
         if self.actual_results is not None:
-            with open('Categories/'+self.actual_name + '.txt', "w",encoding="utf-8") as file:
+            with open('Categories/' + self.actual_name + '.txt', "w", encoding="utf-8") as file:
                 to_print = []
                 if isinstance(self.actual_results[0], list):
                     to_print = self.actual_results[0] + self.actual_results[1]
@@ -136,11 +141,12 @@ class RandomFunctionWrapper():
                     file.write(
                         competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
 
-    def select_category(self, category):
+    def select_category(self, category, row):
         self.actual_name = category.gender[0] + category.age + category.category
         self.actual_category['Category'] = self.categories[category]
         self.actual_category['runner_up'] = None
         self.actual_category['master'] = None
+        self.actual_category_row = row
         self.print_actual_category()
 
     def print_actual_category(self):
@@ -151,9 +157,10 @@ class RandomFunctionWrapper():
 
         table.setRowCount(0)
         table_width = table.width()
-        table.setColumnWidth(0, table_width / 3)
-        table.setColumnWidth(1, table_width / 3)
-        table.setColumnWidth(2, table_width / 3)
+        table.setColumnWidth(0, table_width / 4)
+        table.setColumnWidth(1, table_width / 4)
+        table.setColumnWidth(2, table_width / 4)
+        table.setColumnWidth(3, table_width / 4)
 
         table.setRowCount(len(competitors))
         row = 0
@@ -161,6 +168,7 @@ class RandomFunctionWrapper():
             table.setItem(row, 0, QTableWidgetItem(competitor.get_first_name()))
             table.setItem(row, 1, QTableWidgetItem(competitor.get_surname()))
             table.setItem(row, 2, QTableWidgetItem(competitor.get_licence_no()))
+            table.setItem(row, 3, QTableWidgetItem(competitor.get_club()))
             row += 1
 
     def parse_pdf(self, pdf):

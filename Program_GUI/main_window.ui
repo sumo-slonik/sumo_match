@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1210</width>
-    <height>831</height>
+    <width>1490</width>
+    <height>840</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1047,6 +1047,11 @@ QTableWidget {
                         <string>Waga</string>
                        </property>
                       </column>
+                      <column>
+                       <property name="text">
+                        <string>Zapisano</string>
+                       </property>
+                      </column>
                      </widget>
                     </item>
                    </layout>
@@ -1099,6 +1104,11 @@ QTableWidget {
                            <string>Numer licencji</string>
                           </property>
                          </column>
+                         <column>
+                          <property name="text">
+                           <string>Klub</string>
+                          </property>
+                         </column>
                         </widget>
                        </item>
                        <item>
@@ -1124,7 +1134,7 @@ QTableWidget {
                        <string notr="true"/>
                       </property>
                       <property name="currentIndex">
-                       <number>2</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="RandomFunctionRes16">
                        <layout class="QVBoxLayout" name="verticalLayout_213">
@@ -1384,7 +1394,7 @@ QTableWidget {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="pushButton_4">
+                     <widget class="QPushButton" name="SaveRandomRes">
                       <property name="text">
                        <string>Zapisz</string>
                       </property>

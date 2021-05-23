@@ -98,10 +98,16 @@ class MatchUnder10(AbstractMatchesMaker, ABC):
         self.results.reverse()
 
     def go_to_next_round(self):
-        pass
+        if not self.first_group.is_end:
+            self.first_group.go_to_next_round()
+        elif not self.second_group.is_end:
+            self.second_group.go_to_next_round()
 
     def go_to_prev_round(self):
-        pass
+        if not self.first_group.is_end:
+            self.first_group.go_to_prev_round()
+        elif not self.second_group.is_end:
+            self.second_group.go_to_prev_round()
 
     def get_actual_match_id(self):
         pass
@@ -117,7 +123,6 @@ class MatchUnder10(AbstractMatchesMaker, ABC):
             return self.second_group.get_actual_match()
         else:
             return self.first_group.get_actual_match()
-
 
 
 if __name__ == "__main__":

@@ -232,6 +232,9 @@ class MatchUnder16:
         elif self.actualMatchId in [21, 22]:
             self.actualMatchId += 1
 
+    def go_to_next_round(self):
+        self.go_to_next_mach()
+
     def go_to_prev_round(self):
         pass  # TO DO
 

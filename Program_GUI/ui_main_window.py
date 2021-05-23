@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowciGURL.ui'
+## Form generated from reading UI file 'main_windowoRzFJP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1210, 831)
+        MainWindow.resize(1490, 840)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -616,14 +616,16 @@ class Ui_MainWindow(object):
         self.verticalLayout_212.addWidget(self.label_54)
 
         self.CategoriesTable = QTableWidget(self.frame_271)
-        if (self.CategoriesTable.columnCount() < 3):
-            self.CategoriesTable.setColumnCount(3)
+        if (self.CategoriesTable.columnCount() < 4):
+            self.CategoriesTable.setColumnCount(4)
         __qtablewidgetitem = QTableWidgetItem()
         self.CategoriesTable.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         self.CategoriesTable.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
         self.CategoriesTable.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.CategoriesTable.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         self.CategoriesTable.setObjectName(u"CategoriesTable")
         self.CategoriesTable.setStyleSheet(u"QTableWidget {\n"
 "	background-color: rgb(100, 100, 100);\n"
@@ -662,14 +664,16 @@ class Ui_MainWindow(object):
         self.verticalLayout_227 = QVBoxLayout(self.frame_283)
         self.verticalLayout_227.setObjectName(u"verticalLayout_227")
         self.Competitors_table = QTableWidget(self.frame_283)
-        if (self.Competitors_table.columnCount() < 3):
-            self.Competitors_table.setColumnCount(3)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.Competitors_table.setHorizontalHeaderItem(0, __qtablewidgetitem3)
+        if (self.Competitors_table.columnCount() < 4):
+            self.Competitors_table.setColumnCount(4)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.Competitors_table.setHorizontalHeaderItem(1, __qtablewidgetitem4)
+        self.Competitors_table.setHorizontalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.Competitors_table.setHorizontalHeaderItem(2, __qtablewidgetitem5)
+        self.Competitors_table.setHorizontalHeaderItem(1, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.Competitors_table.setHorizontalHeaderItem(2, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.Competitors_table.setHorizontalHeaderItem(3, __qtablewidgetitem7)
         self.Competitors_table.setObjectName(u"Competitors_table")
 
         self.verticalLayout_227.addWidget(self.Competitors_table)
@@ -1247,14 +1251,14 @@ class Ui_MainWindow(object):
         self.CompetitorsTable = QTableWidget(self.frame_131)
         if (self.CompetitorsTable.columnCount() < 4):
             self.CompetitorsTable.setColumnCount(4)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        self.CompetitorsTable.setHorizontalHeaderItem(0, __qtablewidgetitem6)
-        __qtablewidgetitem7 = QTableWidgetItem()
-        self.CompetitorsTable.setHorizontalHeaderItem(1, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.CompetitorsTable.setHorizontalHeaderItem(2, __qtablewidgetitem8)
+        self.CompetitorsTable.setHorizontalHeaderItem(0, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.CompetitorsTable.setHorizontalHeaderItem(3, __qtablewidgetitem9)
+        self.CompetitorsTable.setHorizontalHeaderItem(1, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.CompetitorsTable.setHorizontalHeaderItem(2, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.CompetitorsTable.setHorizontalHeaderItem(3, __qtablewidgetitem11)
         self.CompetitorsTable.setObjectName(u"CompetitorsTable")
         self.CompetitorsTable.setMaximumSize(QSize(16777215, 250))
         self.CompetitorsTable.setStyleSheet(u"")
@@ -1395,12 +1399,12 @@ class Ui_MainWindow(object):
         self.CompetitorCategories = QTableWidget(self.frame_127)
         if (self.CompetitorCategories.columnCount() < 3):
             self.CompetitorCategories.setColumnCount(3)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.CompetitorCategories.setHorizontalHeaderItem(0, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.CompetitorCategories.setHorizontalHeaderItem(1, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.CompetitorCategories.setHorizontalHeaderItem(2, __qtablewidgetitem12)
+        self.CompetitorCategories.setHorizontalHeaderItem(0, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.CompetitorCategories.setHorizontalHeaderItem(1, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.CompetitorCategories.setHorizontalHeaderItem(2, __qtablewidgetitem14)
         self.CompetitorCategories.setObjectName(u"CompetitorCategories")
         self.CompetitorCategories.setFrameShape(QFrame.StyledPanel)
         self.CompetitorCategories.setFrameShadow(QFrame.Sunken)
@@ -7309,12 +7313,16 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Wiek", None));
         ___qtablewidgetitem2 = self.CategoriesTable.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Waga", None));
-        ___qtablewidgetitem3 = self.Competitors_table.horizontalHeaderItem(0)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"imi\u0119", None));
-        ___qtablewidgetitem4 = self.Competitors_table.horizontalHeaderItem(1)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Nazwisko", None));
-        ___qtablewidgetitem5 = self.Competitors_table.horizontalHeaderItem(2)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Numer licencji", None));
+        ___qtablewidgetitem3 = self.CategoriesTable.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Zapisano", None));
+        ___qtablewidgetitem4 = self.Competitors_table.horizontalHeaderItem(0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"imi\u0119", None));
+        ___qtablewidgetitem5 = self.Competitors_table.horizontalHeaderItem(1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Nazwisko", None));
+        ___qtablewidgetitem6 = self.Competitors_table.horizontalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Numer licencji", None));
+        ___qtablewidgetitem7 = self.Competitors_table.horizontalHeaderItem(3)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Klub", None));
         self.SetAsMaster.setText(QCoreApplication.translate("MainWindow", u"Mistrz", None))
         self.SetAsRunnerUp.setText(QCoreApplication.translate("MainWindow", u"Vice-Mistrz", None))
         self.label_72.setText(QCoreApplication.translate("MainWindow", u"Krzy\u017c\u00f3wka do 16 zawodnik\u00f3w", None))
@@ -7332,14 +7340,14 @@ class Ui_MainWindow(object):
         self.AddCategoriesButton_2.setText(QCoreApplication.translate("MainWindow", u"Dodaj", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Dodane kategorie", None))
         self.FilterCattegoryButton.setText(QCoreApplication.translate("MainWindow", u"Filtruj", None))
-        ___qtablewidgetitem6 = self.CompetitorsTable.horizontalHeaderItem(0)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119", None));
-        ___qtablewidgetitem7 = self.CompetitorsTable.horizontalHeaderItem(1)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Nazwisko", None));
-        ___qtablewidgetitem8 = self.CompetitorsTable.horizontalHeaderItem(2)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Klub", None));
-        ___qtablewidgetitem9 = self.CompetitorsTable.horizontalHeaderItem(3)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Numer Licencji", None));
+        ___qtablewidgetitem8 = self.CompetitorsTable.horizontalHeaderItem(0)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119", None));
+        ___qtablewidgetitem9 = self.CompetitorsTable.horizontalHeaderItem(1)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Nazwisko", None));
+        ___qtablewidgetitem10 = self.CompetitorsTable.horizontalHeaderItem(2)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Klub", None));
+        ___qtablewidgetitem11 = self.CompetitorsTable.horizontalHeaderItem(3)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Numer Licencji", None));
         self.ComprtitorName.setText(QCoreApplication.translate("MainWindow", u"Imi\u0119:", None))
         self.CompetitorSurname.setText(QCoreApplication.translate("MainWindow", u"Nazwisko:", None))
         self.CompetitorClub.setText(QCoreApplication.translate("MainWindow", u"Klub:", None))
@@ -7347,12 +7355,12 @@ class Ui_MainWindow(object):
         self.CompetitorLicenceNo.setText(QCoreApplication.translate("MainWindow", u"Nr licencji:", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"Waga", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Kategorie", None))
-        ___qtablewidgetitem10 = self.CompetitorCategories.horizontalHeaderItem(0)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Grupa wiekowa", None));
-        ___qtablewidgetitem11 = self.CompetitorCategories.horizontalHeaderItem(1)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"P\u0142e\u0107", None));
-        ___qtablewidgetitem12 = self.CompetitorCategories.horizontalHeaderItem(2)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Kategoria", None));
+        ___qtablewidgetitem12 = self.CompetitorCategories.horizontalHeaderItem(0)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Grupa wiekowa", None));
+        ___qtablewidgetitem13 = self.CompetitorCategories.horizontalHeaderItem(1)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"P\u0142e\u0107", None));
+        ___qtablewidgetitem14 = self.CompetitorCategories.horizontalHeaderItem(2)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Kategoria", None));
         self.DeleteCompetitorCategoryButton.setText("")
         self.AddCompetitorCategoryButton.setText("")
         self.SaveCompetitorButton.setText(QCoreApplication.translate("MainWindow", u"               Zapisz zmiany dla zawodnika", None))

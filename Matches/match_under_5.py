@@ -163,6 +163,14 @@ class MatchUnder5Wrapper:
     def get_actual_match(self):
         return self.engine.get_actual_match()
 
+    def go_to_next_round(self):
+        if not self.is_end:
+            self.engine.go_to_next_round()
+
+    def go_to_prev_round(self):
+        if not self.is_end:
+            self.engine.go_to_prev_round()
+
 
 if __name__ == '__main__':
     Competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]

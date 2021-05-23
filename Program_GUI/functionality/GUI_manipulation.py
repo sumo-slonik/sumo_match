@@ -395,7 +395,7 @@ def print_actual_competitors(competitor1, competitor2, window):
 def print_match_under_10(match_under_10, main_window):
     state = match_under_10.state
     main_window.ui.AllMatchesWraper.setCurrentWidget(main_window.ui.MatchUnder10)
-    if state == 0:
+    if state in [0,1]:
         names = ('un_10_5_grup_1_competitor_node_', 'un_10_5_grup_1_point_node_', 'un_10_4_grup_1_competitor_node_',
                  'un_10_4_grup_1_point_node_', 'un_10_3_grup_1_competitor_node_', 'un_10_3_grup_1_point_node_')
         print_match_under_5_wrapper(match_under_10.first_group, main_window, names, 10, 1)

@@ -279,7 +279,7 @@ class MainWindow(QMainWindow):
         category = index.sibling(index.row(), 2).data()
 
         selected = Category(category,gender,age)
-        self.RandomFunctionWrapper.select_category(selected)
+        self.RandomFunctionWrapper.select_category(selected,index.row())
 
     def chose_competitor(self):
         index = (self.ui.Competitors_table.selectionModel().currentIndex())
