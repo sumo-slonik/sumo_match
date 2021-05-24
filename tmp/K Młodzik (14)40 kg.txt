@@ -1,8 +1,8 @@
-Arciszewska Zofia; KS ORŁY (Milejów) ;
-Kucharska Agata; UKS Master (Łódź) ;
-Raś Aleksandra; LUKS SYRENA (Gnojnica) ;
-Sobczak Marcelina; UKS SMS (Łódź) ;
-Borowa Weronika; SKS Gladiator (Siedlce) ;
-Kutyba Klaudia; UKS IRON BULLS (Bielawa) ;
 Skura Ewa; UKS Atleta (Łódź) ;
+Arciszewska Zofia; KS ORŁY (Milejów) ;
+Kutyba Klaudia; UKS IRON BULLS (Bielawa) ;
+Sobczak Marcelina; UKS SMS (Łódź) ;
+Kucharska Agata; UKS Master (Łódź) ;
+Borowa Weronika; SKS Gladiator (Siedlce) ;
+Raś Aleksandra; LUKS SYRENA (Gnojnica) ;
 Uchymiak Alicja; UKJ LEGION (Zamość) ;
