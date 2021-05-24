@@ -12,6 +12,8 @@ class TeamMatch(AbstractMatchesMaker, ABC):
     def __init__(self, team1, team2):
         self.team1 = team1
         self.team2 = team2
+        self.team1_selected_competitor = None
+        self.team2_selected_competitor = None
         self.actual_match_id = 0
         self.rounds = [Match() for _ in range(3)]
         self.score = [0, 0]
@@ -37,6 +39,9 @@ class TeamMatch(AbstractMatchesMaker, ABC):
             self.actual_match_id += 1
         else:
             self.is_end = True
+
+    def use_substitute(self,in_left):
+        pass
 
     def go_to_prev_round(self):
         if self.actual_match_id > 0:

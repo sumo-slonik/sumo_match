@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowCtRopf.ui'
+## Form generated from reading UI file 'main_windowfSGugp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,7 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-# import Program_GUI.gui_theme
+import Program_GUI.gui_theme
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -21,6 +21,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(1263, 724)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.centralwidget.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -336,7 +337,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(85, 0, 0);\n"
+"	background-color: rgb(184, 139, 32);\n"
 "}")
         self.Second_left_menu.setFrameShape(QFrame.StyledPanel)
         self.Second_left_menu.setFrameShadow(QFrame.Raised)
@@ -645,6 +646,18 @@ class Ui_MainWindow(object):
         self.frame_292.setObjectName(u"frame_292")
         self.frame_292.setFrameShape(QFrame.StyledPanel)
         self.frame_292.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_101 = QHBoxLayout(self.frame_292)
+        self.horizontalLayout_101.setObjectName(u"horizontalLayout_101")
+        self.pushButton_11 = QPushButton(self.frame_292)
+        self.pushButton_11.setObjectName(u"pushButton_11")
+        self.pushButton_11.setMinimumSize(QSize(300, 300))
+        icon9 = QIcon()
+        icon9.addFile(u":/Icons/icons/logo.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_11.setIcon(icon9)
+        self.pushButton_11.setIconSize(QSize(400, 400))
+
+        self.horizontalLayout_101.addWidget(self.pushButton_11, 0, Qt.AlignVCenter)
+
 
         self.verticalLayout_230.addWidget(self.frame_292)
 
@@ -1374,7 +1387,7 @@ class Ui_MainWindow(object):
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
         self.AddedCategoriesContents.setEnabled(True)
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 227, 22))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 198))
         self.AddedCategoriesContents.setMaximumSize(QSize(16777215, 16777215))
         self.AddedCategoriesContents.setStyleSheet(u"QWidget {\n"
 "	background-color: rgb(100, 100, 100);\n"
@@ -1633,17 +1646,17 @@ class Ui_MainWindow(object):
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
         self.DeleteCompetitorCategoryButton = QPushButton(self.frame_130)
         self.DeleteCompetitorCategoryButton.setObjectName(u"DeleteCompetitorCategoryButton")
-        icon9 = QIcon()
-        icon9.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.DeleteCompetitorCategoryButton.setIcon(icon9)
+        icon10 = QIcon()
+        icon10.addFile(u":/Icons/icons/cil-trash.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DeleteCompetitorCategoryButton.setIcon(icon10)
 
         self.verticalLayout_99.addWidget(self.DeleteCompetitorCategoryButton)
 
         self.AddCompetitorCategoryButton = QPushButton(self.frame_130)
         self.AddCompetitorCategoryButton.setObjectName(u"AddCompetitorCategoryButton")
-        icon10 = QIcon()
-        icon10.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.AddCompetitorCategoryButton.setIcon(icon10)
+        icon11 = QIcon()
+        icon11.addFile(u":/Icons/icons/cil-medical-cross.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.AddCompetitorCategoryButton.setIcon(icon11)
 
         self.verticalLayout_99.addWidget(self.AddCompetitorCategoryButton)
 
@@ -1665,9 +1678,9 @@ class Ui_MainWindow(object):
         self.SaveCompetitorButton = QPushButton(self.frame_119)
         self.SaveCompetitorButton.setObjectName(u"SaveCompetitorButton")
         self.SaveCompetitorButton.setMaximumSize(QSize(16777215, 40))
-        icon11 = QIcon()
-        icon11.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.SaveCompetitorButton.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u":/Icons/icons/cil-save.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.SaveCompetitorButton.setIcon(icon12)
 
         self.verticalLayout_92.addWidget(self.SaveCompetitorButton)
 
@@ -2209,7 +2222,7 @@ class Ui_MainWindow(object):
         self.saveSettingsButton = QPushButton(self.frame_134)
         self.saveSettingsButton.setObjectName(u"saveSettingsButton")
         self.saveSettingsButton.setMinimumSize(QSize(120, 0))
-        self.saveSettingsButton.setIcon(icon11)
+        self.saveSettingsButton.setIcon(icon12)
 
         self.horizontalLayout_57.addWidget(self.saveSettingsButton)
 
@@ -2317,9 +2330,9 @@ class Ui_MainWindow(object):
         self.Top_menu_slide_button.setMinimumSize(QSize(40, 40))
         self.Top_menu_slide_button.setMaximumSize(QSize(40, 40))
         self.Top_menu_slide_button.setStyleSheet(u"background:transparent;")
-        icon12 = QIcon()
-        icon12.addFile(u":/Icons/icons/cil-arrow-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Top_menu_slide_button.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u":/Icons/icons/cil-arrow-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Top_menu_slide_button.setIcon(icon13)
 
         self.verticalLayout_21.addWidget(self.Top_menu_slide_button, 0, Qt.AlignHCenter)
 
@@ -3384,7 +3397,7 @@ class Ui_MainWindow(object):
         self.Top_menu_slide_button_2.setMinimumSize(QSize(40, 40))
         self.Top_menu_slide_button_2.setMaximumSize(QSize(40, 40))
         self.Top_menu_slide_button_2.setStyleSheet(u"background:transparent;")
-        self.Top_menu_slide_button_2.setIcon(icon12)
+        self.Top_menu_slide_button_2.setIcon(icon13)
 
         self.verticalLayout_164.addWidget(self.Top_menu_slide_button_2, 0, Qt.AlignHCenter)
 
@@ -4353,7 +4366,7 @@ class Ui_MainWindow(object):
         self.label_51.setFont(font2)
         self.label_51.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_159.addWidget(self.label_51)
+        self.verticalLayout_159.addWidget(self.label_51, 0, Qt.AlignHCenter)
 
         self.frame_210 = QFrame(self.frame_209)
         self.frame_210.setObjectName(u"frame_210")
@@ -4398,7 +4411,7 @@ class Ui_MainWindow(object):
         self.label_52.setFont(font2)
         self.label_52.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_160.addWidget(self.label_52)
+        self.verticalLayout_160.addWidget(self.label_52, 0, Qt.AlignHCenter)
 
         self.frame_212 = QFrame(self.frame_211)
         self.frame_212.setObjectName(u"frame_212")
@@ -4443,7 +4456,7 @@ class Ui_MainWindow(object):
         self.label_53.setFont(font2)
         self.label_53.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_162.addWidget(self.label_53)
+        self.verticalLayout_162.addWidget(self.label_53, 0, Qt.AlignHCenter)
 
         self.frame_214 = QFrame(self.frame_213)
         self.frame_214.setObjectName(u"frame_214")
@@ -5942,7 +5955,7 @@ class Ui_MainWindow(object):
         self.label_4.setFont(font2)
         self.label_4.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_37.addWidget(self.label_4)
+        self.verticalLayout_37.addWidget(self.label_4, 0, Qt.AlignHCenter)
 
         self.frame_71 = QFrame(self.frame_56)
         self.frame_71.setObjectName(u"frame_71")
@@ -6014,7 +6027,7 @@ class Ui_MainWindow(object):
         self.label_8.setFont(font2)
         self.label_8.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_38.addWidget(self.label_8)
+        self.verticalLayout_38.addWidget(self.label_8, 0, Qt.AlignHCenter)
 
         self.frame_73 = QFrame(self.frame_55)
         self.frame_73.setObjectName(u"frame_73")
@@ -6086,7 +6099,7 @@ class Ui_MainWindow(object):
         self.label_9.setFont(font2)
         self.label_9.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_39.addWidget(self.label_9)
+        self.verticalLayout_39.addWidget(self.label_9, 0, Qt.AlignHCenter)
 
         self.frame_75 = QFrame(self.frame_52)
         self.frame_75.setObjectName(u"frame_75")
@@ -6157,7 +6170,7 @@ class Ui_MainWindow(object):
         self.label_10.setFont(font2)
         self.label_10.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_40.addWidget(self.label_10)
+        self.verticalLayout_40.addWidget(self.label_10, 0, Qt.AlignHCenter)
 
         self.frame_76 = QFrame(self.frame_49)
         self.frame_76.setObjectName(u"frame_76")
@@ -6229,7 +6242,7 @@ class Ui_MainWindow(object):
         self.label_17.setFont(font2)
         self.label_17.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_50.addWidget(self.label_17)
+        self.verticalLayout_50.addWidget(self.label_17, 0, Qt.AlignHCenter)
 
         self.frame_78 = QFrame(self.frame_2)
         self.frame_78.setObjectName(u"frame_78")
@@ -6309,7 +6322,7 @@ class Ui_MainWindow(object):
         self.label_20.setObjectName(u"label_20")
         self.label_20.setFont(font2)
 
-        self.verticalLayout_73.addWidget(self.label_20)
+        self.verticalLayout_73.addWidget(self.label_20, 0, Qt.AlignHCenter)
 
 
         self.verticalLayout_49.addWidget(self.frame_91)
@@ -6421,7 +6434,7 @@ class Ui_MainWindow(object):
         self.label_12.setFont(font2)
         self.label_12.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_45.addWidget(self.label_12)
+        self.verticalLayout_45.addWidget(self.label_12, 0, Qt.AlignHCenter)
 
         self.frame_81 = QFrame(self.frame_63)
         self.frame_81.setObjectName(u"frame_81")
@@ -6493,7 +6506,7 @@ class Ui_MainWindow(object):
         self.label_18.setFont(font2)
         self.label_18.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_48.addWidget(self.label_18)
+        self.verticalLayout_48.addWidget(self.label_18, 0, Qt.AlignHCenter)
 
         self.frame_85 = QFrame(self.frame_68)
         self.frame_85.setObjectName(u"frame_85")
@@ -6565,7 +6578,7 @@ class Ui_MainWindow(object):
         self.label_13.setFont(font2)
         self.label_13.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_47.addWidget(self.label_13)
+        self.verticalLayout_47.addWidget(self.label_13, 0, Qt.AlignHCenter)
 
         self.frame_83 = QFrame(self.frame_65)
         self.frame_83.setObjectName(u"frame_83")
@@ -6964,7 +6977,7 @@ class Ui_MainWindow(object):
         self.label_22.setFont(font2)
         self.label_22.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_77.addWidget(self.label_22)
+        self.verticalLayout_77.addWidget(self.label_22, 0, Qt.AlignHCenter)
 
         self.frame_104 = QFrame(self.frame_98)
         self.frame_104.setObjectName(u"frame_104")
@@ -7009,7 +7022,7 @@ class Ui_MainWindow(object):
         self.label_24.setFont(font2)
         self.label_24.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_86.addWidget(self.label_24)
+        self.verticalLayout_86.addWidget(self.label_24, 0, Qt.AlignHCenter)
 
         self.frame_111 = QFrame(self.frame_110)
         self.frame_111.setObjectName(u"frame_111")
@@ -7054,7 +7067,7 @@ class Ui_MainWindow(object):
         self.label_16.setFont(font2)
         self.label_16.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_66.addWidget(self.label_16)
+        self.verticalLayout_66.addWidget(self.label_16, 0, Qt.AlignHCenter)
 
         self.frame_95 = QFrame(self.frame_88)
         self.frame_95.setObjectName(u"frame_95")
@@ -7135,6 +7148,7 @@ class Ui_MainWindow(object):
         font4.setWeight(75)
         font4.setStyleStrategy(QFont.PreferDefault)
         self.team_1_score.setFont(font4)
+        self.team_1_score.setStyleSheet(u"text-align: center;")
         self.team_1_score.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.team_1_score.setReadOnly(True)
 
@@ -7158,6 +7172,7 @@ class Ui_MainWindow(object):
         self.team_2_score = QTextEdit(self.frame_215)
         self.team_2_score.setObjectName(u"team_2_score")
         self.team_2_score.setMaximumSize(QSize(100, 16777215))
+        self.team_2_score.setStyleSheet(u"text-align: center;")
         self.team_2_score.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.team_2_score.setReadOnly(True)
 
@@ -7243,6 +7258,7 @@ class Ui_MainWindow(object):
         self.team_2_competitor_3.setObjectName(u"team_2_competitor_3")
         self.team_2_competitor_3.setMaximumSize(QSize(16777215, 130))
         self.team_2_competitor_3.setStyleSheet(u"")
+        self.team_2_competitor_3.setAcceptRichText(False)
 
         self.verticalLayout_166.addWidget(self.team_2_competitor_3)
 
@@ -7259,34 +7275,80 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_165.addWidget(self.frame_216)
 
-        self.frame_219 = QFrame(self.TeemMatch)
-        self.frame_219.setObjectName(u"frame_219")
-        self.frame_219.setMinimumSize(QSize(40, 40))
-        self.frame_219.setFrameShape(QFrame.StyledPanel)
-        self.frame_219.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_168 = QVBoxLayout(self.frame_219)
+        self.Substitut_menu = QFrame(self.TeemMatch)
+        self.Substitut_menu.setObjectName(u"Substitut_menu")
+        self.Substitut_menu.setMinimumSize(QSize(40, 100))
+        self.Substitut_menu.setStyleSheet(u"")
+        self.Substitut_menu.setFrameShape(QFrame.StyledPanel)
+        self.Substitut_menu.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_168 = QVBoxLayout(self.Substitut_menu)
         self.verticalLayout_168.setSpacing(0)
         self.verticalLayout_168.setObjectName(u"verticalLayout_168")
         self.verticalLayout_168.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_3 = QPushButton(self.frame_219)
+        self.pushButton_3 = QPushButton(self.Substitut_menu)
         self.pushButton_3.setObjectName(u"pushButton_3")
         self.pushButton_3.setMaximumSize(QSize(40, 40))
         self.pushButton_3.setStyleSheet(u"background:transparent;")
-        icon13 = QIcon()
-        icon13.addFile(u":/Icons/icons/cil-arrow-top.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon13)
+        icon14 = QIcon()
+        icon14.addFile(u":/Icons/icons/cil-arrow-top.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_3.setIcon(icon14)
 
         self.verticalLayout_168.addWidget(self.pushButton_3, 0, Qt.AlignHCenter)
 
-        self.frame_220 = QFrame(self.frame_219)
-        self.frame_220.setObjectName(u"frame_220")
-        self.frame_220.setFrameShape(QFrame.StyledPanel)
-        self.frame_220.setFrameShadow(QFrame.Raised)
+        self.Substitut_menu_inside = QFrame(self.Substitut_menu)
+        self.Substitut_menu_inside.setObjectName(u"Substitut_menu_inside")
+        self.Substitut_menu_inside.setMinimumSize(QSize(0, 0))
+        self.Substitut_menu_inside.setMaximumSize(QSize(16777215, 0))
+        self.Substitut_menu_inside.setStyleSheet(u"QPushButton{	\n"
+"	background-color: rgb(30, 30, 30);\n"
+" 	border-radius: 2px;\n"
+"	font: 75 11pt \"Calibri\";\n"
+"	color: rgb(186, 186, 186);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(157, 157, 157);\n"
+"	color: rgb(0, 0, 0,)\n"
+"}")
+        self.Substitut_menu_inside.setFrameShape(QFrame.StyledPanel)
+        self.Substitut_menu_inside.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_98 = QHBoxLayout(self.Substitut_menu_inside)
+        self.horizontalLayout_98.setObjectName(u"horizontalLayout_98")
+        self.frame_295 = QFrame(self.Substitut_menu_inside)
+        self.frame_295.setObjectName(u"frame_295")
+        self.frame_295.setFrameShape(QFrame.StyledPanel)
+        self.frame_295.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_99 = QHBoxLayout(self.frame_295)
+        self.horizontalLayout_99.setObjectName(u"horizontalLayout_99")
+        self.pushButton_9 = QPushButton(self.frame_295)
+        self.pushButton_9.setObjectName(u"pushButton_9")
+        self.pushButton_9.setMaximumSize(QSize(200, 16777215))
 
-        self.verticalLayout_168.addWidget(self.frame_220)
+        self.horizontalLayout_99.addWidget(self.pushButton_9)
 
 
-        self.verticalLayout_165.addWidget(self.frame_219)
+        self.horizontalLayout_98.addWidget(self.frame_295)
+
+        self.frame_296 = QFrame(self.Substitut_menu_inside)
+        self.frame_296.setObjectName(u"frame_296")
+        self.frame_296.setFrameShape(QFrame.StyledPanel)
+        self.frame_296.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_100 = QHBoxLayout(self.frame_296)
+        self.horizontalLayout_100.setObjectName(u"horizontalLayout_100")
+        self.pushButton_10 = QPushButton(self.frame_296)
+        self.pushButton_10.setObjectName(u"pushButton_10")
+        self.pushButton_10.setMaximumSize(QSize(200, 16777215))
+
+        self.horizontalLayout_100.addWidget(self.pushButton_10)
+
+
+        self.horizontalLayout_98.addWidget(self.frame_296)
+
+
+        self.verticalLayout_168.addWidget(self.Substitut_menu_inside)
+
+
+        self.verticalLayout_165.addWidget(self.Substitut_menu)
 
         self.AllMatchesWraper.addWidget(self.TeemMatch)
 
@@ -7458,9 +7520,9 @@ class Ui_MainWindow(object):
         self.CloseCommunicateButton.setObjectName(u"CloseCommunicateButton")
         self.CloseCommunicateButton.setMaximumSize(QSize(25, 25))
         self.CloseCommunicateButton.setStyleSheet(u"")
-        icon14 = QIcon()
-        icon14.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.CloseCommunicateButton.setIcon(icon14)
+        icon15 = QIcon()
+        icon15.addFile(u":/Icons/icons/cil-x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.CloseCommunicateButton.setIcon(icon15)
 
         self.verticalLayout_43.addWidget(self.CloseCommunicateButton)
 
@@ -7479,14 +7541,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(5)
         self.stackedWidget_2.setCurrentIndex(0)
-        self.AllMatchesWraper.setCurrentIndex(1)
+        self.AllMatchesWraper.setCurrentIndex(3)
         self.match_16.setCurrentIndex(1)
         self.match_10.setCurrentIndex(0)
         self.Grup_I_Under10_G1.setCurrentIndex(2)
         self.Grup_II_Under10_G2.setCurrentIndex(2)
-        self.match_5.setCurrentIndex(2)
+        self.match_5.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7524,6 +7586,7 @@ class Ui_MainWindow(object):
         self.label_78.setText(QCoreApplication.translate("MainWindow", u"Prowadzenie krzy\u017c\u00f3wek", None))
         self.pushButton_6.setText("")
         self.label_80.setText(QCoreApplication.translate("MainWindow", u"Przegl\u0105danie raport\u00f3w", None))
+        self.pushButton_11.setText("")
         self.label_82.setText(QCoreApplication.translate("MainWindow", u"Jakub Nowakowski, Marcin Warcho\u0142", None))
         self.label_83.setText(QCoreApplication.translate("MainWindow", u"Wersja 1.0", None))
         self.label_36.setText(QCoreApplication.translate("MainWindow", u"Dodaj kategori\u0119", None))
@@ -7833,9 +7896,21 @@ class Ui_MainWindow(object):
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"Runda II", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Runda III", None))
         self.TeamName_1.setText(QCoreApplication.translate("MainWindow", u"Dru\u017cyna I", None))
+        self.team_1_score.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Calibri'; font-size:40pt; font-weight:600; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label_56.setText(QCoreApplication.translate("MainWindow", u":", None))
+        self.team_2_score.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Calibri'; font-size:40pt; font-weight:600; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.TeamName_2.setText(QCoreApplication.translate("MainWindow", u"Dru\u017cyna II", None))
         self.pushButton_3.setText("")
+        self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"Wykorzystaj rezerwowego", None))
+        self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"Wykorzystaj rezerwowego", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Zawodnik I", None))
         self.Competitor_1.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

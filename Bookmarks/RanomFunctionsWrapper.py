@@ -69,7 +69,7 @@ class RandomFunctionWrapper():
         table.setColumnWidth(0, (table_width - 25) / 4)
         table.setColumnWidth(1, (table_width - 25) / 4)
         table.setColumnWidth(2, (table_width - 25) / 4)
-        table.setColumnWidth(3, (table_width - 25) / 4)
+        table.setColumnWidth(3, (table_width) / 4)
 
         table.setRowCount(len(self.categories))
         row = 0

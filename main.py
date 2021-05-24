@@ -118,6 +118,8 @@ class MainWindow(QMainWindow):
         self.ui.SetAsRunnerUp.clicked.connect(lambda: self.RandomFunctionWrapper.make_runner_up())
         self.ui.MakeRandomize.clicked.connect(lambda: self.RandomFunctionWrapper.make_randomization())
         self.ui.SaveRandomRes.clicked.connect(lambda: self.RandomFunctionWrapper.save_to_txt())
+
+
         # Show window
         self.showFullScreen()
         self.show()
@@ -285,6 +287,7 @@ class MainWindow(QMainWindow):
         index = (self.ui.Competitors_table.selectionModel().currentIndex())
         licence_no = index.sibling(index.row(), 2).data()
         self.RandomFunctionWrapper.select_competitor(licence_no, index.row())
+
 
 
 # # Execute app

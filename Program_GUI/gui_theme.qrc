@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>icons/logo.png</file>
+    <file>icons/logo_bezn.png</file>
     <file>icons/cil-3d.png</file>
     <file>icons/cil-4k.png</file>
     <file>icons/cil-airplay.png</file>

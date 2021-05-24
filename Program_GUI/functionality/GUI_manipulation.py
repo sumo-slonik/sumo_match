@@ -6,7 +6,6 @@ from DataStructures.personal_competitor import *
 from Matches.types_of_matches import TypeOFMatch
 
 
-
 def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[]):
     is_personal = isinstance(competitors_list[0], PersonalCompetitor)
     for node, competitor in zip(nodes_names, competitors_list):
@@ -17,10 +16,11 @@ def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_n
             main_window.ui.__dict__[node].append(competitor.get_club())
         else:
             main_window.ui.__dict__[node].append(competitor.get_club_name())
-        main_window.ui.__dict__[node].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+        main_window.ui.__dict__[node].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     for node in copy_nodes:
         tmp = main_window.ui.__dict__[node[:-4]].toPlainText()
         main_window.ui.__dict__[node].setPlainText(tmp)
+        main_window.ui.__dict__[node].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
 
 
 def load_values_to_nodes(nodes_names, values, main_window):
@@ -28,7 +28,7 @@ def load_values_to_nodes(nodes_names, values, main_window):
         main_window.ui.__dict__[node].clear()
         main_window.ui.__dict__[node].setAlignment(Qt.AlignCenter)
         main_window.ui.__dict__[node].append(str(value))
-        main_window.ui.__dict__[node].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+        main_window.ui.__dict__[node].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
 
 
 def print_eliminations_16(eliminations, main_window):
@@ -43,7 +43,7 @@ def print_eliminations_16(eliminations, main_window):
     # print("xd  ", eliminations.tree[1].get_competitor())
     # change border color for actual node
     actual_match_id = eliminations.get_actual_match_id()
-    main_window.ui.__dict__[node_name(actual_match_id)].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+    main_window.ui.__dict__[node_name(actual_match_id)].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                       "text-align: center;"
                                                                       "border: 4px solid yellow;"
                                                                       )
@@ -53,29 +53,29 @@ def print_eliminations_16(eliminations, main_window):
     left_node_name = node_name(actual_match_id * 2)
     right_node_name = node_name(actual_match_id * 2 + 1)
     if actual_node.get_competitor() == left_child.get_competitor():
-        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                               "text-align: center;"
                                                               "border: 3px solid Lime;"
                                                               )
-        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                "text-align: center;"
                                                                "border: 3px solid red;"
                                                                )
     elif actual_node.get_competitor() == right_child.get_competitor():
-        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                "text-align: center;"
                                                                "border: 3px solid Lime;"
                                                                )
-        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                               "text-align: center;"
                                                               "border: 3px solid red;"
                                                               )
     else:
-        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                "text-align: center;"
                                                                "border: 3px solid yellow;"
                                                                )
-        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                               "text-align: center;"
                                                               "border: 3px solid yellow;"
                                                               )
@@ -94,7 +94,7 @@ def print_repechage_16(repechage, main_window):
     # print("xd  ", eliminations.tree[1].get_competitor())
     # change border color for actual node
     actual_match_id = repechage.get_actual_match_id()
-    main_window.ui.__dict__[node_name(actual_match_id)].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+    main_window.ui.__dict__[node_name(actual_match_id)].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                       "text-align: center;"
                                                                       "border: 4px solid yellow;"
                                                                       )
@@ -104,29 +104,29 @@ def print_repechage_16(repechage, main_window):
     left_node_name = node_name(actual_match_id * 2)
     right_node_name = node_name(actual_match_id * 2 + 1)
     if actual_node.get_competitor() == left_child.get_competitor():
-        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                               "text-align: center;"
                                                               "border: 3px solid Lime;"
                                                               )
-        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                "text-align: center;"
                                                                "border: 3px solid red;"
                                                                )
     elif actual_node.get_competitor() == right_child.get_competitor():
-        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                "text-align: center;"
                                                                "border: 3px solid Lime;"
                                                                )
-        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                               "text-align: center;"
                                                               "border: 3px solid red;"
                                                               )
     else:
-        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[right_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                                "text-align: center;"
                                                                "border: 3px solid yellow;"
                                                                )
-        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[left_node_name].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                               "text-align: center;"
                                                               "border: 3px solid yellow;"
                                                               )
@@ -138,7 +138,7 @@ def print_bronze_medals(bronze_fights, main_window):
     main_window.ui.__dict__["rep_16_node_2_cpy"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["rep_16_node_2_cpy"].append(bronze_fights[0].get_left_child().get_name())
     main_window.ui.__dict__["rep_16_node_2_cpy"].append(bronze_fights[0].get_left_child().get_club())
-    main_window.ui.__dict__["rep_16_node_2_cpy"].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+    main_window.ui.__dict__["rep_16_node_2_cpy"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].clear()
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].append(bronze_fights[0].get_right_child().get_name())
@@ -149,14 +149,14 @@ def print_bronze_medals(bronze_fights, main_window):
     main_window.ui.__dict__["textEdit_4"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["textEdit_4"].append(bronze_fights[0].get_competitor().get_name())
     main_window.ui.__dict__["textEdit_4"].append(bronze_fights[0].get_competitor().get_club())
-    main_window.ui.__dict__["textEdit_4"].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+    main_window.ui.__dict__["textEdit_4"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
 
     # second bronze match
     main_window.ui.__dict__["rep_16_node_3_cpy"].clear()
     main_window.ui.__dict__["rep_16_node_3_cpy"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["rep_16_node_3_cpy"].append(bronze_fights[1].get_left_child().get_name())
     main_window.ui.__dict__["rep_16_node_3_cpy"].append(bronze_fights[1].get_left_child().get_club())
-    main_window.ui.__dict__["rep_16_node_3_cpy"].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+    main_window.ui.__dict__["rep_16_node_3_cpy"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].clear()
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].append(bronze_fights[1].get_right_child().get_name())
@@ -167,7 +167,7 @@ def print_bronze_medals(bronze_fights, main_window):
     main_window.ui.__dict__["textEdit_5"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["textEdit_5"].append(bronze_fights[1].get_competitor().get_name())
     main_window.ui.__dict__["textEdit_5"].append(bronze_fights[1].get_competitor().get_club())
-    main_window.ui.__dict__["textEdit_5"].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+    main_window.ui.__dict__["textEdit_5"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
 
 
 def print_match_under_16(match_under_16, main_window):
@@ -207,7 +207,7 @@ def colorNodeBorder(node_number, main_window):
 
 def color_borders(elements, colors, main_window):
     for color, element in zip(colors, elements):
-        main_window.ui.__dict__[element].setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[element].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
                                                        "text-align: center;"
                                                        "border: 3px solid " + color + ";"
                                                        )
@@ -387,22 +387,29 @@ def print_actual_competitors(competitor1, competitor2, window):
         result += str(competitor.get_substitute().name)
         result += '\n'
         return result
-    if isinstance(competitor1,PersonalCompetitor):
+
+    if isinstance(competitor1, PersonalCompetitor):
+        window.ui.Competitor_1.setFontPointSize(16)
         window.ui.Competitor_1.setPlainText(competitor_to_description(competitor1))
+        window.ui.Competitor_2.setFontPointSize(16)
         window.ui.Competitor_2.setPlainText(competitor_to_description(competitor2))
+
     else:
+        window.ui.Competitor_1.setFontPointSize(12)
         window.ui.Competitor_1.setPlainText(club_to_description(competitor1))
+        window.ui.Competitor_2.setFontPointSize(12)
         window.ui.Competitor_2.setPlainText(club_to_description(competitor2))
+
 
 
 def print_match_under_10(match_under_10, main_window):
     state = match_under_10.state
     main_window.ui.AllMatchesWraper.setCurrentWidget(main_window.ui.MatchUnder10)
-    if state in [0,1]:
+    if state in [0, 1]:
         names = ('un_10_5_grup_1_competitor_node_', 'un_10_5_grup_1_point_node_', 'un_10_4_grup_1_competitor_node_',
                  'un_10_4_grup_1_point_node_', 'un_10_3_grup_1_competitor_node_', 'un_10_3_grup_1_point_node_')
         print_match_under_5_wrapper(match_under_10.first_group, main_window, names, 10, 1)
-    if state in [1,2]:
+    if state in [1, 2]:
         names = ('un_10_5_grup_2_competitor_node_', 'un_10_5_grup_2_point_node_', 'un_10_4_grup_2_competitor_node_',
                  'un_10_4_grup_2_point_node_', 'un_10_3_grup_2_competitor_node_', 'un_10_3_grup_2_point_node_')
         print_match_under_5_wrapper(match_under_10.second_group, main_window, names, 10, 2)
@@ -442,7 +449,10 @@ def print_team_match(team_match, main_window):
     load_competitors_to_nodes(team1_nodes, team_match.team1.get_competitors_list(), main_window)
     load_competitors_to_nodes(team2_nodes, team_match.team2.get_competitors_list(), main_window)
     main_window.ui.team_1_score.setText(str(team_match.score[0]))
+    main_window.ui.team_1_score.setAlignment(Qt.AlignCenter)
     main_window.ui.team_2_score.setText(str(team_match.score[1]))
+    main_window.ui.team_2_score.setAlignment(Qt.AlignCenter)
+
     main_window.ui.TeamName_1.setText(str(team_match.team1.get_club_name()))
     main_window.ui.TeamName_2.setText(str(team_match.team2.get_club_name()))
 
@@ -454,7 +464,7 @@ def hide_wind_buttons(main_window, hide):
 
 def change_match_buttons(main_window, is_team, match):
     if is_team:
-        hide_wind_buttons(main_window,not match)
+        hide_wind_buttons(main_window, not match)
         main_window.ui.make_match_button.setVisible(not match)
         main_window.ui.go_to_all_match_button.setVisible(match)
     else:
@@ -462,20 +472,32 @@ def change_match_buttons(main_window, is_team, match):
         main_window.ui.go_to_all_match_button.setVisible(False)
 
 
-def print_randomisation_results(main_window,competitors,match_type):
+def print_randomisation_results(main_window, competitors, match_type):
     if match_type == TypeOFMatch.Under5:
-        node_names = ['RandRes5_'+str(i+1) for i in range(len(competitors))]
-        load_competitors_to_nodes(node_names,competitors,main_window)
+        node_names = ['RandRes5_' + str(i + 1) for i in range(len(competitors))]
+        load_competitors_to_nodes(node_names, competitors, main_window)
         main_window.ui.stackedWidget_2.setCurrentWidget(main_window.ui.RandomFunctionRes5)
     if match_type == TypeOFMatch.Under10:
-        node_names = ['RandRes10_'+str(i+1) for i in range(len(competitors[0]))]
-        load_competitors_to_nodes(node_names,competitors[0],main_window)
+        node_names = ['RandRes10_' + str(i + 1) for i in range(len(competitors[0]))]
+        load_competitors_to_nodes(node_names, competitors[0], main_window)
 
-        node_names = ['RandRes10_'+str(i+6) for i in range(len(competitors[1]))]
-        load_competitors_to_nodes(node_names,competitors[1],main_window)
+        node_names = ['RandRes10_' + str(i + 6) for i in range(len(competitors[1]))]
+        load_competitors_to_nodes(node_names, competitors[1], main_window)
 
         main_window.ui.stackedWidget_2.setCurrentWidget(main_window.ui.RandomFunctionRes10)
     if match_type == TypeOFMatch.Under16:
-        node_names = ['RandRes16_'+str(i+1) for i in range(len(competitors))]
-        load_competitors_to_nodes(node_names,competitors,main_window)
+        node_names = ['RandRes16_' + str(i + 1) for i in range(len(competitors))]
+        load_competitors_to_nodes(node_names, competitors, main_window)
         main_window.ui.stackedWidget_2.setCurrentWidget(main_window.ui.RandomFunctionRes16)
+
+
+def print_selected_competitor(main_window, team, number):
+    if team == 1:
+        all_nodes = ['team_1_competitor_' + str(x + 1) for x in range(4)]
+        selected = 'team_1_competitor_' + str(number)
+    else:
+        all_nodes = ['team_2_competitor_' + str(x + 1) for x in range(4)]
+        selected = 'team_2_competitor_' + str(number)
+
+    color_borders(all_nodes, ['black'] * len(all_nodes), main_window)
+    color_borders(selected, ['blue'], main_window)
