@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowpkaFwE.ui'
+## Form generated from reading UI file 'main_windowNjcshL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,13 +12,13 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import Program_GUI.gui_theme
+import gui_theme_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1224, 724)
+        MainWindow.resize(1228, 733)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"")
@@ -654,7 +654,7 @@ class Ui_MainWindow(object):
         icon9 = QIcon()
         icon9.addFile(u":/Icons/icons/logo.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_11.setIcon(icon9)
-        self.pushButton_11.setIconSize(QSize(400, 400))
+        self.pushButton_11.setIconSize(QSize(680, 680))
 
         self.horizontalLayout_101.addWidget(self.pushButton_11, 0, Qt.AlignVCenter)
 
@@ -672,7 +672,7 @@ class Ui_MainWindow(object):
         self.label_82.setObjectName(u"label_82")
         self.label_82.setStyleSheet(u"font: 75 10pt \"Calibri\" bold;")
 
-        self.verticalLayout_231.addWidget(self.label_82)
+        self.verticalLayout_231.addWidget(self.label_82, 0, Qt.AlignRight)
 
         self.label_83 = QLabel(self.frame_293)
         self.label_83.setObjectName(u"label_83")
@@ -681,7 +681,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_231.addWidget(self.label_83, 0, Qt.AlignRight)
 
 
-        self.verticalLayout_230.addWidget(self.frame_293, 0, Qt.AlignRight)
+        self.verticalLayout_230.addWidget(self.frame_293)
 
 
         self.horizontalLayout_93.addWidget(self.frame_287)
@@ -1249,12 +1249,14 @@ class Ui_MainWindow(object):
 
         self.ResultsBox = QComboBox(self.frame_59)
         self.ResultsBox.setObjectName(u"ResultsBox")
+        self.ResultsBox.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_45.addWidget(self.ResultsBox)
 
         self.pushButton_12 = QPushButton(self.frame_59)
         self.pushButton_12.setObjectName(u"pushButton_12")
         self.pushButton_12.setMaximumSize(QSize(120, 16777215))
+        self.pushButton_12.setStyleSheet(u"color :rgb(255, 255, 255);")
 
         self.horizontalLayout_45.addWidget(self.pushButton_12)
 
@@ -1410,7 +1412,7 @@ class Ui_MainWindow(object):
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
         self.AddedCategoriesContents.setEnabled(True)
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 28))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 222))
         self.AddedCategoriesContents.setMaximumSize(QSize(16777215, 16777215))
         self.AddedCategoriesContents.setStyleSheet(u"QWidget {\n"
 "	background-color: rgb(100, 100, 100);\n"
@@ -7564,9 +7566,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
-        self.AllMatchesWraper.setCurrentIndex(4)
+        self.AllMatchesWraper.setCurrentIndex(3)
         self.match_16.setCurrentIndex(1)
         self.match_10.setCurrentIndex(0)
         self.Grup_I_Under10_G1.setCurrentIndex(2)
@@ -7598,7 +7600,7 @@ class Ui_MainWindow(object):
         self.Button_3_competitors.setText(QCoreApplication.translate("MainWindow", u"3", None))
         self.Button_2_competitors.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.label_75.setText(QCoreApplication.translate("MainWindow", u"Sumo match maker", None))
+        self.label_75.setText(QCoreApplication.translate("MainWindow", u"Sumo Match Maker", None))
         self.label_84.setText(QCoreApplication.translate("MainWindow", u"Program umo\u017cliwiaj\u0105cy prowadzenie", None))
         self.label_85.setText(QCoreApplication.translate("MainWindow", u"zawod\u00f3w sumo", None))
         self.pushButton_5.setText("")

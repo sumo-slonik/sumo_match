@@ -233,6 +233,7 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentWidget(self.ui.RandomCompetitors)
         if go_to == 'RapportBrowserPage':
             self.ui.stackedWidget.setCurrentWidget(self.ui.SummaryPage)
+            self.RapportBrowser = RapportBrowser(self)
 
     def top_menu_function(self, go_to):
         if go_to == "Eliminations":

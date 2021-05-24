@@ -35,6 +35,7 @@ class Opener:
         # connect_gui_to_engine(self.window, engine)
 
     def add_category_buttons(self):
+        self.category_files = os.walk(self.path, False).__next__()[2]
         for file_name in self.category_files:
             if file_name not in self.used:
                 new_button = QPushButton(self.window.ui.Second_left_menu)

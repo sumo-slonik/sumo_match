@@ -6,21 +6,21 @@ from DataStructures.personal_competitor import *
 from Matches.types_of_matches import TypeOFMatch
 
 
-def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[]):
+def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[],size = 13):
     is_personal = isinstance(competitors_list[0], PersonalCompetitor)
     for node, competitor in zip(nodes_names, competitors_list):
         main_window.ui.__dict__[node].clear()
         main_window.ui.__dict__[node].setAlignment(Qt.AlignCenter)
         if is_personal:
             main_window.ui.__dict__[node].append(competitor.get_name())
-            main_window.ui.__dict__[node].append(competitor.get_club())
+            #main_window.ui.__dict__[node].append(competitor.get_club())
         else:
             main_window.ui.__dict__[node].append(competitor.get_club_name())
-        main_window.ui.__dict__[node].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
+        main_window.ui.__dict__[node].setStyleSheet("font: 75 "+str(size)+"pt \"MS Shell Dlg 2\";text-align: center;")
     for node in copy_nodes:
         tmp = main_window.ui.__dict__[node[:-4]].toPlainText()
         main_window.ui.__dict__[node].setPlainText(tmp)
-        main_window.ui.__dict__[node].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
+        main_window.ui.__dict__[node].setStyleSheet("font: 75 "+str(size)+"pt \"MS Shell Dlg 2\";text-align: center;")
 
 
 def load_values_to_nodes(nodes_names, values, main_window):
@@ -137,36 +137,36 @@ def print_bronze_medals(bronze_fights, main_window):
     main_window.ui.__dict__["rep_16_node_2_cpy"].clear()
     main_window.ui.__dict__["rep_16_node_2_cpy"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["rep_16_node_2_cpy"].append(bronze_fights[0].get_left_child().get_name())
-    main_window.ui.__dict__["rep_16_node_2_cpy"].append(bronze_fights[0].get_left_child().get_club())
+    #main_window.ui.__dict__["rep_16_node_2_cpy"].append(bronze_fights[0].get_left_child().get_club())
     main_window.ui.__dict__["rep_16_node_2_cpy"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].clear()
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].append(bronze_fights[0].get_right_child().get_name())
-    main_window.ui.__dict__["firstBronzeFinalist_16_node"].append(bronze_fights[0].get_right_child().get_club())
+    #main_window.ui.__dict__["firstBronzeFinalist_16_node"].append(bronze_fights[0].get_right_child().get_club())
     main_window.ui.__dict__["firstBronzeFinalist_16_node"].setStyleSheet(
-        "font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+        "font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["textEdit_4"].clear()
     main_window.ui.__dict__["textEdit_4"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["textEdit_4"].append(bronze_fights[0].get_competitor().get_name())
-    main_window.ui.__dict__["textEdit_4"].append(bronze_fights[0].get_competitor().get_club())
+    #main_window.ui.__dict__["textEdit_4"].append(bronze_fights[0].get_competitor().get_club())
     main_window.ui.__dict__["textEdit_4"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
 
     # second bronze match
     main_window.ui.__dict__["rep_16_node_3_cpy"].clear()
     main_window.ui.__dict__["rep_16_node_3_cpy"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["rep_16_node_3_cpy"].append(bronze_fights[1].get_left_child().get_name())
-    main_window.ui.__dict__["rep_16_node_3_cpy"].append(bronze_fights[1].get_left_child().get_club())
+    #main_window.ui.__dict__["rep_16_node_3_cpy"].append(bronze_fights[1].get_left_child().get_club())
     main_window.ui.__dict__["rep_16_node_3_cpy"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].clear()
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].append(bronze_fights[1].get_right_child().get_name())
-    main_window.ui.__dict__["secondBronzeFinalist_16_node"].append(bronze_fights[1].get_right_child().get_club())
+    #main_window.ui.__dict__["secondBronzeFinalist_16_node"].append(bronze_fights[1].get_right_child().get_club())
     main_window.ui.__dict__["secondBronzeFinalist_16_node"].setStyleSheet(
-        "font: 75 10pt \"MS Shell Dlg 2\";text-align: center;")
+        "font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
     main_window.ui.__dict__["textEdit_5"].clear()
     main_window.ui.__dict__["textEdit_5"].setAlignment(Qt.AlignCenter)
     main_window.ui.__dict__["textEdit_5"].append(bronze_fights[1].get_competitor().get_name())
-    main_window.ui.__dict__["textEdit_5"].append(bronze_fights[1].get_competitor().get_club())
+    #main_window.ui.__dict__["textEdit_5"].append(bronze_fights[1].get_competitor().get_club())
     main_window.ui.__dict__["textEdit_5"].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";text-align: center;")
 
 
@@ -205,9 +205,9 @@ def colorNodeBorder(node_number, main_window):
     main_window.ui.__dict__["el_16_node_" + str(node_number)].setStyleSheet("border: 2px solid red;")
 
 
-def color_borders(elements, colors, main_window):
+def color_borders(elements, colors, main_window,size=13):
     for color, element in zip(colors, elements):
-        main_window.ui.__dict__[element].setStyleSheet("font: 75 13pt \"MS Shell Dlg 2\";"
+        main_window.ui.__dict__[element].setStyleSheet("font: 75 "+str(size)+"pt \"MS Shell Dlg 2\";"
                                                        "text-align: center;"
                                                        "border: 3px solid " + color + ";"
                                                        )
@@ -446,8 +446,8 @@ def print_team_match(team_match, main_window):
     main_window.ui.AllMatchesWraper.setCurrentWidget(main_window.ui.TeemMatch)
     team1_nodes = ['team_1_competitor_' + str(x) for x in range(1, 5)]
     team2_nodes = ['team_2_competitor_' + str(x) for x in range(1, 5)]
-    load_competitors_to_nodes(team1_nodes, team_match.team1.get_competitors_list(), main_window)
-    load_competitors_to_nodes(team2_nodes, team_match.team2.get_competitors_list(), main_window)
+    load_competitors_to_nodes(team1_nodes, team_match.team1.get_competitors_list(), main_window,size=20)
+    load_competitors_to_nodes(team2_nodes, team_match.team2.get_competitors_list(), main_window,size=20)
     main_window.ui.team_1_score.setText(str(team_match.score[0]))
     main_window.ui.team_1_score.setAlignment(Qt.AlignCenter)
     main_window.ui.team_2_score.setText(str(team_match.score[1]))
@@ -456,7 +456,7 @@ def print_team_match(team_match, main_window):
     main_window.ui.TeamName_1.setText(str(team_match.team1.get_club_name()))
     main_window.ui.TeamName_2.setText(str(team_match.team2.get_club_name()))
 
-    color_borders(['team_1_competitor_' + str(team_match.actual_match_id + 1), 'team_2_competitor_' + str(team_match.actual_match_id + 1)], ['yellow', 'yellow'], main_window)
+    color_borders(['team_1_competitor_' + str(team_match.actual_match_id + 1), 'team_2_competitor_' + str(team_match.actual_match_id + 1)], ['yellow', 'yellow'], main_window,size=20)
 
 
 def hide_wind_buttons(main_window, hide):
