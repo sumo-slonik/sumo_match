@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowNjcshL.ui'
+## Form generated from reading UI file 'main_windowoQedBf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,7 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import gui_theme_rc
+import Program_GUI.gui_theme
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1412,7 +1412,7 @@ class Ui_MainWindow(object):
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
         self.AddedCategoriesContents.setEnabled(True)
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 222))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 221))
         self.AddedCategoriesContents.setMaximumSize(QSize(16777215, 16777215))
         self.AddedCategoriesContents.setStyleSheet(u"QWidget {\n"
 "	background-color: rgb(100, 100, 100);\n"
@@ -1597,6 +1597,14 @@ class Ui_MainWindow(object):
 
         self.CompetitorWeightInput = QTextEdit(self.frame_128)
         self.CompetitorWeightInput.setObjectName(u"CompetitorWeightInput")
+        font3 = QFont()
+        font3.setFamily(u"MS Shell Dlg 2")
+        font3.setPointSize(28)
+        font3.setBold(False)
+        font3.setItalic(False)
+        font3.setWeight(50)
+        self.CompetitorWeightInput.setFont(font3)
+        self.CompetitorWeightInput.setStyleSheet(u"font: 28pt \"MS Shell Dlg 2\";")
 
         self.horizontalLayout_53.addWidget(self.CompetitorWeightInput)
 
@@ -3108,13 +3116,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
         self.label_7 = QLabel(self.frame_53)
         self.label_7.setObjectName(u"label_7")
-        font3 = QFont()
-        font3.setFamily(u"Calibri")
-        font3.setPointSize(18)
-        font3.setBold(False)
-        font3.setItalic(False)
-        font3.setWeight(9)
-        self.label_7.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Calibri")
+        font4.setPointSize(18)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setWeight(9)
+        self.label_7.setFont(font4)
         self.label_7.setStyleSheet(u"font: 75 18pt \"Calibri\";")
 
         self.horizontalLayout_29.addWidget(self.label_7, 0, Qt.AlignHCenter)
@@ -3174,7 +3182,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
         self.label_5 = QLabel(self.frame_50)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font3)
+        self.label_5.setFont(font4)
         self.label_5.setStyleSheet(u"font: 75 18pt \"Calibri\";")
 
         self.horizontalLayout_28.addWidget(self.label_5, 0, Qt.AlignHCenter)
@@ -7165,14 +7173,14 @@ class Ui_MainWindow(object):
         self.team_1_score = QTextEdit(self.frame_215)
         self.team_1_score.setObjectName(u"team_1_score")
         self.team_1_score.setMaximumSize(QSize(100, 16777215))
-        font4 = QFont()
-        font4.setFamily(u"Calibri")
-        font4.setPointSize(40)
-        font4.setBold(True)
-        font4.setItalic(False)
-        font4.setWeight(75)
-        font4.setStyleStrategy(QFont.PreferDefault)
-        self.team_1_score.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Calibri")
+        font5.setPointSize(40)
+        font5.setBold(True)
+        font5.setItalic(False)
+        font5.setWeight(75)
+        font5.setStyleStrategy(QFont.PreferDefault)
+        self.team_1_score.setFont(font5)
         self.team_1_score.setStyleSheet(u"text-align: center;")
         self.team_1_score.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.team_1_score.setReadOnly(True)
@@ -7182,13 +7190,13 @@ class Ui_MainWindow(object):
         self.label_56 = QLabel(self.frame_215)
         self.label_56.setObjectName(u"label_56")
         self.label_56.setMaximumSize(QSize(10, 16777215))
-        font5 = QFont()
-        font5.setFamily(u"Calibri")
-        font5.setPointSize(25)
-        font5.setBold(False)
-        font5.setItalic(False)
-        font5.setWeight(9)
-        self.label_56.setFont(font5)
+        font6 = QFont()
+        font6.setFamily(u"Calibri")
+        font6.setPointSize(25)
+        font6.setBold(False)
+        font6.setItalic(False)
+        font6.setWeight(9)
+        self.label_56.setFont(font6)
         self.label_56.setStyleSheet(u"font: 75 25pt \"Calibri\";\n"
 "color:rgb(255, 255, 255);")
 
@@ -7417,13 +7425,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.pushButton = QPushButton(self.DisplayCompetitors)
         self.pushButton.setObjectName(u"pushButton")
-        font6 = QFont()
-        font6.setFamily(u"Calibri")
-        font6.setPointSize(11)
-        font6.setBold(False)
-        font6.setItalic(False)
-        font6.setWeight(9)
-        self.pushButton.setFont(font6)
+        font7 = QFont()
+        font7.setFamily(u"Calibri")
+        font7.setPointSize(11)
+        font7.setBold(False)
+        font7.setItalic(False)
+        font7.setWeight(9)
+        self.pushButton.setFont(font7)
 
         self.verticalLayout_18.addWidget(self.pushButton)
 
@@ -7436,7 +7444,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.DisplayCompetitors)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setFont(font6)
+        self.pushButton_2.setFont(font7)
 
         self.verticalLayout_18.addWidget(self.pushButton_2)
 
@@ -7675,6 +7683,11 @@ class Ui_MainWindow(object):
         self.CompetitorBornDate.setText(QCoreApplication.translate("MainWindow", u"Rok urodzenia:", None))
         self.CompetitorLicenceNo.setText(QCoreApplication.translate("MainWindow", u"Nr licencji:", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"Waga", None))
+        self.CompetitorWeightInput.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:28pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Kategorie", None))
         ___qtablewidgetitem16 = self.CompetitorCategories.horizontalHeaderItem(0)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Grupa wiekowa", None));
