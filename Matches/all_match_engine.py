@@ -15,12 +15,10 @@ from Matches.match_for_teams import TeamMatch
 from random_functions.random_function_16 import random_function_16
 
 
-
-
-
 class AllMatchEngine(AbstractMatchesMaker):
 
-    def __init__(self, competitors, window):
+    def __init__(self, competitors, window, name):
+        self.name = name
         self.competitors = competitors
         self.match_type = correctTypeFromLength(len(self.competitors))
         self.engine = None
@@ -127,7 +125,7 @@ class AllMatchEngine(AbstractMatchesMaker):
     def generate_result(self):
         if self.match_type == TypeOFMatch.Under16:
             print("weszło")
-            generator = RaportGenerator(sum(self.engine.results, []), "tmp_name")
+            generator = RaportGenerator(sum(self.engine.results, []), self.name)
             generator.generate_pdf()
 
 

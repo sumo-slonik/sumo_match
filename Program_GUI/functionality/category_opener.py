@@ -30,7 +30,7 @@ class Opener:
                 else:
                     competitors = personal_competitor_txt_input('Categories/' + patch)
                 break
-        engine = AllMatchEngine(competitors,self.window)
+        engine = AllMatchEngine(competitors,self.window,patch[:-4])
         self.window.AllMatchEngine = engine
         # connect_gui_to_engine(self.window, engine)
 

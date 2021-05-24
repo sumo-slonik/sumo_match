@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1263</width>
+    <width>1224</width>
     <height>724</height>
    </rect>
   </property>
@@ -805,7 +805,7 @@ QComboBox QAbstractItemView {
 </string>
             </property>
             <property name="currentIndex">
-             <number>5</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
@@ -1861,12 +1861,25 @@ QTableWidget {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox">
+                     <widget class="QComboBox" name="ResultsBox">
                       <property name="currentText">
                        <string/>
                       </property>
                       <property name="placeholderText">
                        <string>Kategoria</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButton_12">
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Pokaż</string>
                       </property>
                      </widget>
                     </item>
@@ -1881,6 +1894,32 @@ QTableWidget {
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_102">
+                    <item>
+                     <widget class="QTableWidget" name="ResultsTable">
+                      <column>
+                       <property name="text">
+                        <string>Imię</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Nazwisko</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Klub</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Numer Licencji</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
@@ -2112,7 +2151,7 @@ background: transparent;
                             <x>0</x>
                             <y>0</y>
                             <width>248</width>
-                            <height>198</height>
+                            <height>28</height>
                            </rect>
                           </property>
                           <property name="maximumSize">
@@ -3686,7 +3725,7 @@ QPushButton:hover{
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>3</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="MatchUnder16">
                     <layout class="QVBoxLayout" name="verticalLayout_118">

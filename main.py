@@ -19,6 +19,7 @@ from Bookmarks.category_adder import CategoryAdder
 from Bookmarks.settings import Settings
 from Program_GUI.functionality.GUI_manipulation import print_team_match
 from Bookmarks.RanomFunctionsWrapper import RandomFunctionWrapper
+from Bookmarks.raports_browser import RapportBrowser
 
 WINDOW_SIZE = 0
 
@@ -36,6 +37,7 @@ class MainWindow(QMainWindow):
         self.settings = Settings(self)
         self.categories_adder = CategoryAdder(self, self.settings)
         self.CategoryOpener = Opener("Categories", self)
+        self.RapportBrowser = RapportBrowser(self)
         self.AllMatchEngine = None
         self.RandomFunctionWrapper = RandomFunctionWrapper(self)
         # Remove window tlttle bar
@@ -69,6 +71,7 @@ class MainWindow(QMainWindow):
         self.ui.InfoButton.clicked.connect(lambda: self.slide_communicate())
         self.ui.RandomFunctionsButton.clicked.connect(lambda: self.menu_button_function("RandomCompetitors"))
         self.ui.AddCategoriesButton.clicked.connect(lambda: self.menu_button_function("CompetitorInputPage"))
+        self.ui.AccountButton_3.clicked.connect(lambda: self.menu_button_function("RapportBrowserPage"))
         # close communicate
         self.ui.CloseCommunicateButton.clicked.connect(lambda: self.slide_communicate())
 
@@ -119,7 +122,8 @@ class MainWindow(QMainWindow):
         self.ui.MakeRandomize.clicked.connect(lambda: self.RandomFunctionWrapper.make_randomization())
         self.ui.SaveRandomRes.clicked.connect(lambda: self.RandomFunctionWrapper.save_to_txt())
 
-
+        #raportBrowser
+        self.ui.pushButton_12.clicked.connect(lambda: self.RapportBrowser.open_pdf())
         # Show window
         self.showFullScreen()
         self.show()
@@ -227,6 +231,8 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentWidget(self.ui.CompetitorInputPage)
         if go_to == 'RandomCompetitors':
             self.ui.stackedWidget.setCurrentWidget(self.ui.RandomCompetitors)
+        if go_to == 'RapportBrowserPage':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.SummaryPage)
 
     def top_menu_function(self, go_to):
         if go_to == "Eliminations":
@@ -313,7 +319,7 @@ if __name__ == "__main__":
     # competitors = random_function_16.random_function_16(teams, len(competitors) - 4)
     competitors = [PersonalCompetitor("Kuba " + str(x)) for x in range(5)]
     window = MainWindow()
-    engine = AllMatchEngine(competitors, window)
+    engine = AllMatchEngine(competitors, window,"start")
     connect_gui_to_engine(window, engine)
 
     sys.exit(app.exec_())
