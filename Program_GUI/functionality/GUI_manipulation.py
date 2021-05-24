@@ -456,6 +456,8 @@ def print_team_match(team_match, main_window):
     main_window.ui.TeamName_1.setText(str(team_match.team1.get_club_name()))
     main_window.ui.TeamName_2.setText(str(team_match.team2.get_club_name()))
 
+    color_borders(['team_1_competitor_' + str(team_match.actual_match_id + 1), 'team_2_competitor_' + str(team_match.actual_match_id + 1)], ['yellow', 'yellow'], main_window)
+
 
 def hide_wind_buttons(main_window, hide):
     main_window.ui.win_left.setVisible(not hide)
