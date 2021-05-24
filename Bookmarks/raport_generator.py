@@ -16,21 +16,16 @@ class RaportGenerator:
         self.category_name = category_name
 
     def generate_pdf(self):
-        pdfmetrics.registerFont(TTFont('polishFont', 'AbhayaLibre-Regular.ttf'))
+        path = os.getcwd() + "\\Reports\\Results\\"
+        path = r"{}".format(path)
+
+        print(path)
+
+        pdfmetrics.registerFont(TTFont('polishFont', 'Bookmarks\\AbhayaLibre-Regular.ttf'))
 
         styles = getSampleStyleSheet()
         styles.add(ParagraphStyle(name='RegularDownloaded', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=12))
         styles.add(ParagraphStyle(name='WeightName', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=17))
-
-        # ??????????????????????????????????????
-        #  ??????????????????????????????????????
-        # zmienić ścieżkę
-        #  ??????????????????????????????????????
-        #  ??????????????????????????????????????
-        #  ??????????????????????????????????????
-
-        path = os.getcwd()[:-9] + "\\Reports\\Results\\"
-        path = r"{}".format(path)
 
         pdf = SimpleDocTemplate(
             path + self.category_name + ".pdf", pagesize=letter,
@@ -48,11 +43,11 @@ class RaportGenerator:
         pdf.build(body)
 
 
-if __name__ == "__main__":
-    Competitors = [personal_competitor.PersonalCompetitor("Kuba1 N"), personal_competitor.PersonalCompetitor("Kuba2 N"),
-                   personal_competitor.PersonalCompetitor("Marcin1 W"), personal_competitor.PersonalCompetitor("Marcin2 W"),
-                   personal_competitor.PersonalCompetitor("pojedynczy1 X"),
-                   personal_competitor.PersonalCompetitor("pojedynczy2 X")]
-
-    raport = RaportGenerator(Competitors, "kategoria próbna")
-    raport.generate_pdf()
+# if __name__ == "__main__":
+    # Competitors = [personal_competitor.PersonalCompetitor("Kuba1 N"), personal_competitor.PersonalCompetitor("Kuba2 N"),
+    #                personal_competitor.PersonalCompetitor("Marcin1 W"), personal_competitor.PersonalCompetitor("Marcin2 W"),
+    #                personal_competitor.PersonalCompetitor("pojedynczy1 X"),
+    #                personal_competitor.PersonalCompetitor("pojedynczy2 X")]
+    #
+    # raport = RaportGenerator(Competitors, "kategoria próbna")
+    # raport.generate_pdf()
