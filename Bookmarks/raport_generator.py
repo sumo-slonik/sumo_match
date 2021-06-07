@@ -36,6 +36,20 @@ class RaportGenerator:
                           styles["WeightName"]), Spacer(1, 10)]
 
         for idx, competitor in enumerate(self.competitors):
+            if idx in [2,3]:
+                idx = 2
+            if idx in [4,5]:
+                idx = 4
+            if idx in [6,7]:
+                idx = 6
+            if idx in [8,9]:
+                idx = 8
+            if idx in [8,9]:
+                idx = 10
+            if idx in [10,11]:
+                idx = 12
+            if idx in [12,13]:
+                idx = 14
             body.append(Paragraph(str(idx+1) + ". " + competitor.get_first_name() + " " + competitor.get_surname() + "  |  "
                                   + competitor.get_club() + '|' + competitor.get_licence_no(),
                                   styles["RegularDownloaded"]))
