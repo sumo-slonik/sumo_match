@@ -1,23 +1,15 @@
 import sys
-from random import choice
-from time import sleep
-
 from PySide2 import QtCore, QtGui
 from PySide2.QtCore import (QPropertyAnimation)
 from PySide2.QtGui import (QColor)
 # Import user interface file
-from DataStructures.club_competitor import ClubCompetitor
-from Matches.match_for_teams import TeamMatch
 from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from Program_GUI.ui_main_window import *
 from Program_GUI.functionality.GUI_manipulation import *
-from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, \
-    divide_competitors_to_teams
 from Matches.all_match_engine import AllMatchEngine
 from Program_GUI.functionality.category_opener import Opener
 from Bookmarks.category_adder import CategoryAdder
 from Bookmarks.settings import Settings
-from Program_GUI.functionality.GUI_manipulation import print_team_match
 from Bookmarks.RanomFunctionsWrapper import RandomFunctionWrapper
 from Bookmarks.raports_browser import RapportBrowser
 

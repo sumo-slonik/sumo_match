@@ -59,30 +59,40 @@ class AllMatchEngine(AbstractMatchesMaker):
         self.print_match()
 
     def go_to_all_matches(self):
-        self.in_match = False
-        change_match_buttons(self.window, True, False)
-        if self.teamEngine.is_end:
-            # if we done team match we can give results to all matches
-            self.make_match(self.teamEngine.score[0] > 1)
-        self.teamEngine = None
-        self.print_match()
+        try:
+            self.in_match = False
+            change_match_buttons(self.window, True, False)
+            if self.teamEngine.is_end:
+                # if we done team match we can give results to all matches
+                self.make_match(self.teamEngine.score[0] > 1)
+            self.teamEngine = None
+            self.print_match()
+        except IndexError:
+            print("koniec meczy")
+
 
     def make_match(self, left_win):
-        print('_____________________________________________________________________________________________________')
+        try:
+            print('_____________________________________________________________________________________________________')
 
-        if self.in_match:
-            self.teamEngine.make_match(left_win)
-        else:
-            self.engine.make_match(left_win)
+            if self.in_match:
+                self.teamEngine.make_match(left_win)
+            else:
+                self.engine.make_match(left_win)
 
-        print("*************************************")
-        print(self.engine.results)
-        if self.match_type == TypeOFMatch.Under16 and len(self.engine.results) != 0:
-            print("_____________________________________")
-            self.generate_result()
+            print("*************************************")
+            print(self.engine.results)
+            if self.match_type == TypeOFMatch.Under16 and len(self.engine.results) != 0:
+                print("_____________________________________")
+                self.generate_result()
+        except IndexError:
+            print('Koniec meczy')
 
     def go_to_next_round(self):
-        self.engine.go_to_next_round()
+        try:
+            self.engine.go_to_next_round()
+        except IndexError:
+            print('rozgrywka zakończona')
 
     def go_to_prev_round(self):
         self.engine.go_to_prev_round()
@@ -102,25 +112,28 @@ class AllMatchEngine(AbstractMatchesMaker):
         print_actual_competitors(*competitors, self.window)
 
     def print_match(self):
-        if self.in_match and self.teamMatch:
-            print_team_match(self.teamEngine, self.window)
-            change_match_buttons(self.window, True, True)
-            if self.teamEngine.is_end:
-                hide_wind_buttons(self.window, True)
-        else:
-            if self.match_type == TypeOFMatch.Under16:
-                print_match_under_16(self.engine, self.window)
-            elif self.match_type == TypeOFMatch.Under5:
-                print_match_under_5_wrapper(self.engine, self.window)
-            elif self.match_type == TypeOFMatch.Under10:
-                print_match_under_10(self.engine, self.window)
-
-            if self.teamMatch:
-                change_match_buttons(self.window, True, False)
+        try:
+            if self.in_match and self.teamMatch:
+                print_team_match(self.teamEngine, self.window)
+                change_match_buttons(self.window, True, True)
+                if self.teamEngine.is_end:
+                    hide_wind_buttons(self.window, True)
             else:
-                change_match_buttons(self.window, False, False)
-                hide_wind_buttons(self.window, False)
-            self.print_fighters()
+                if self.match_type == TypeOFMatch.Under16:
+                    print_match_under_16(self.engine, self.window)
+                elif self.match_type == TypeOFMatch.Under5:
+                    print_match_under_5_wrapper(self.engine, self.window)
+                elif self.match_type == TypeOFMatch.Under10:
+                    print_match_under_10(self.engine, self.window)
+
+                if self.teamMatch:
+                    change_match_buttons(self.window, True, False)
+                else:
+                    change_match_buttons(self.window, False, False)
+                    hide_wind_buttons(self.window, False)
+                self.print_fighters()
+        except :
+            print('Koniec meczów')
 
     def generate_result(self):
         if self.match_type == TypeOFMatch.Under16:
