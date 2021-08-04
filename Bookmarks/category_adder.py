@@ -94,7 +94,44 @@ class CategoryAdder:
             new_repr.setObjectName(name + "repr")
             self.window.ui.verticalLayout_93.addWidget(new_repr)
             new_repr.show()
+
+        self.sort_combo_boxes()
         self.show_in_table(self.competitors_list)
+
+    def sort_combo_boxes(self):
+        GenderComboBox = self.window.ui.GenderComboBox
+        AgeComboBox = self.window.ui.AgeComboBox
+        CategoryComboBox = self.window.ui.CategoryComboBox
+        ClubComboBox = self.window.ui.ClubComboBox
+
+        genders = [GenderComboBox.itemText(i) for i in range(GenderComboBox.count())]
+        genders = sorted(genders)
+
+        ages = [AgeComboBox.itemText(i) for i in range(AgeComboBox.count())]
+        ages = sorted(ages)
+
+        categories = [CategoryComboBox.itemText(i) for i in range(CategoryComboBox.count())]
+        categories = sorted(categories)
+
+        clubs = {ClubComboBox.itemText(i) for i in range(ClubComboBox.count())} - {"Wszystko"}
+        clubs = sorted(list(clubs))
+        clubs = clubs + ["Wszystko"]
+
+        GenderComboBox.clear()
+        GenderComboBox.addItems(genders)
+        GenderComboBox.setCurrentText("Wszystko")
+
+        AgeComboBox.clear()
+        AgeComboBox.addItems(ages)
+        AgeComboBox.setCurrentText("Wszystko")
+
+        CategoryComboBox.clear()
+        CategoryComboBox.addItems(categories)
+        CategoryComboBox.setCurrentText("Wszystko")
+
+        ClubComboBox.clear()
+        ClubComboBox.addItems(clubs)
+        ClubComboBox.setCurrentText("Wszystko")
 
     def parse_pdf(self, pdf):
         lines = []
@@ -312,6 +349,7 @@ class CategoryAdder:
         self.actual_competitor.category = categories
         self.actual_competitor.weight = weight
 
+    #TODO
     def filter(self):
         pass
 
@@ -333,10 +371,6 @@ class CategoryAdder:
         self.window.ui.AgeComboBox.addItems(ages)
         self.window.ui.CategoryComboBox.addItems(categories)
         self.window.ui.ClubComboBox.addItems(clubs)
-        self.window.ui.GenderComboBox.setCurrentText("Wszystko")
-        self.window.ui.AgeComboBox.setCurrentText("Wszystko")
-        self.window.ui.CategoryComboBox.setCurrentText("Wszystko")
-        self.window.ui.ClubComboBox.setCurrentText("Wszystko")
 
     def categories_to_txt(self):
         categories_dict = {key: [] for key in self.available_categories}
