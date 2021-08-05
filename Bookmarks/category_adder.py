@@ -64,6 +64,17 @@ def create_pdf_repr(Form, name):
     return wrapper
 
 
+def sort_combo_box(comboBox):
+    items = [comboBox.itemText(i) for i in range(comboBox.count())]
+    items.remove("Wszystko")
+
+    items = sorted(items) + ["Wszystko"]
+
+    comboBox.clear()
+    comboBox.addItems(items)
+    comboBox.setCurrentText("Wszystko")
+
+
 class CategoryAdder:
 
     def __init__(self, window, settings):
@@ -99,39 +110,10 @@ class CategoryAdder:
         self.show_in_table(self.competitors_list)
 
     def sort_combo_boxes(self):
-        GenderComboBox = self.window.ui.GenderComboBox
-        AgeComboBox = self.window.ui.AgeComboBox
-        CategoryComboBox = self.window.ui.CategoryComboBox
-        ClubComboBox = self.window.ui.ClubComboBox
-
-        genders = [GenderComboBox.itemText(i) for i in range(GenderComboBox.count())]
-        genders = sorted(genders)
-
-        ages = [AgeComboBox.itemText(i) for i in range(AgeComboBox.count())]
-        ages = sorted(ages)
-
-        categories = [CategoryComboBox.itemText(i) for i in range(CategoryComboBox.count())]
-        categories = sorted(categories)
-
-        clubs = {ClubComboBox.itemText(i) for i in range(ClubComboBox.count())} - {"Wszystko"}
-        clubs = sorted(list(clubs))
-        clubs = clubs + ["Wszystko"]
-
-        GenderComboBox.clear()
-        GenderComboBox.addItems(genders)
-        GenderComboBox.setCurrentText("Wszystko")
-
-        AgeComboBox.clear()
-        AgeComboBox.addItems(ages)
-        AgeComboBox.setCurrentText("Wszystko")
-
-        CategoryComboBox.clear()
-        CategoryComboBox.addItems(categories)
-        CategoryComboBox.setCurrentText("Wszystko")
-
-        ClubComboBox.clear()
-        ClubComboBox.addItems(clubs)
-        ClubComboBox.setCurrentText("Wszystko")
+        sort_combo_box(self.window.ui.GenderComboBox)
+        sort_combo_box(self.window.ui.AgeComboBox)
+        sort_combo_box(self.window.ui.CategoryComboBox)
+        sort_combo_box(self.window.ui.ClubComboBox)
 
     def parse_pdf(self, pdf):
         lines = []
