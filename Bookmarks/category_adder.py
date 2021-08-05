@@ -64,6 +64,17 @@ def create_pdf_repr(Form, name):
     return wrapper
 
 
+def sort_combo_box(comboBox):
+    items = [comboBox.itemText(i) for i in range(comboBox.count())]
+    items.remove("Wszystko")
+
+    items = sorted(items) + ["Wszystko"]
+
+    comboBox.clear()
+    comboBox.addItems(items)
+    comboBox.setCurrentText("Wszystko")
+
+
 class CategoryAdder:
 
     def __init__(self, window, settings):
@@ -94,7 +105,15 @@ class CategoryAdder:
             new_repr.setObjectName(name + "repr")
             self.window.ui.verticalLayout_93.addWidget(new_repr)
             new_repr.show()
+
+        self.sort_combo_boxes()
         self.show_in_table(self.competitors_list)
+
+    def sort_combo_boxes(self):
+        sort_combo_box(self.window.ui.GenderComboBox)
+        sort_combo_box(self.window.ui.AgeComboBox)
+        sort_combo_box(self.window.ui.CategoryComboBox)
+        sort_combo_box(self.window.ui.ClubComboBox)
 
     def parse_pdf(self, pdf):
         lines = []
@@ -312,6 +331,7 @@ class CategoryAdder:
         self.actual_competitor.category = categories
         self.actual_competitor.weight = weight
 
+    #TODO
     def filter(self):
         pass
 
@@ -333,10 +353,6 @@ class CategoryAdder:
         self.window.ui.AgeComboBox.addItems(ages)
         self.window.ui.CategoryComboBox.addItems(categories)
         self.window.ui.ClubComboBox.addItems(clubs)
-        self.window.ui.GenderComboBox.setCurrentText("Wszystko")
-        self.window.ui.AgeComboBox.setCurrentText("Wszystko")
-        self.window.ui.CategoryComboBox.setCurrentText("Wszystko")
-        self.window.ui.ClubComboBox.setCurrentText("Wszystko")
 
     def categories_to_txt(self):
         categories_dict = {key: [] for key in self.available_categories}
