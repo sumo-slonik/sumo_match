@@ -150,7 +150,7 @@ class RandomFunctionWrapper():
         table = self.window.ui.CategoriesTable
         table.setItem(self.actual_category_row, 3, QTableWidgetItem("TAK"))
         if self.actual_results is not None:
-            with open('Categories_ready_for_matches/' + self.actual_name + '.txt', "w", encoding="utf-8") as file:
+            with open('User_Files/Categories_ready_for_matches/' + self.actual_name + '.txt', "w", encoding="utf-8") as file:
                 to_print = []
                 if isinstance(self.actual_results[0], list):
                     to_print = self.actual_results[0] + self.actual_results[1]

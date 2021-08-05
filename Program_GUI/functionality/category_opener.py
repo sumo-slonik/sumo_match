@@ -21,14 +21,14 @@ class Opener:
 
     def open_category(self, patch):
         print('____________', patch)
-        with open('Categories_ready_for_matches/'+patch, "r", encoding="utf-8") as file:
+        with open('User_Files/Categories_ready_for_matches/'+patch, "r", encoding="utf-8") as file:
             for line in file:
                 line = line.strip()
                 line = line.split()
                 if line[0] == 'klub':
-                    competitors = club_competitor_txt_input('Categories_ready_for_matches/' + patch)
+                    competitors = club_competitor_txt_input('User_Files/Categories_ready_for_matches/' + patch)
                 else:
-                    competitors = personal_competitor_txt_input('Categories_ready_for_matches/' + patch)
+                    competitors = personal_competitor_txt_input('User_Files/Categories_ready_for_matches/' + patch)
                 break
         engine = AllMatchEngine(competitors,self.window,patch[:-4])
         self.window.AllMatchEngine = engine

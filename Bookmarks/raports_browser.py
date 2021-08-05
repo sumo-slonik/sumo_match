@@ -18,7 +18,7 @@ class RapportBrowser:
 
 
     def open_pdf(self):
-        name = 'Reports/Results/' + self.window.ui.ResultsBox.currentText()
+        name = 'User_Files/Reports/Results/' + self.window.ui.ResultsBox.currentText()
         self.print_competitors_in_table(self.parse_pdf(name))
 
     def print_competitors_in_table(self, competitors):
