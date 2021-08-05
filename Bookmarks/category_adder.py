@@ -64,7 +64,7 @@ def create_pdf_repr(Form, name):
     return wrapper
 
 
-def sort_combo_box(comboBox):
+def sort_combo_box(comboBox: QComboBox):
     items = [comboBox.itemText(i) for i in range(comboBox.count())]
     items.remove("Wszystko")
 
@@ -360,7 +360,7 @@ class CategoryAdder:
             for category in competitor.get_category():
                 categories_dict[category].append(competitor)
         for key in categories_dict:
-            with open('Categories/' + key.file_name() + '.txt', 'w', encoding="utf-8") as category_file:
+            with open('User_Files/Categories_ready_for_matches/' + key.file_name() + '.txt', 'w', encoding="utf-8") as category_file:
                 for competitor in categories_dict[key]:
                     category_file.write(
                         competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
@@ -396,7 +396,7 @@ class CategoryAdder:
         styles.add(ParagraphStyle(name='RegularDownloaded', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=12))
         styles.add(ParagraphStyle(name='WeightName', alignment=TA_JUSTIFY, fontName='polishFont', fontSize=17))
 
-        path = os.getcwd() + "\\Reports\\"
+        path = os.getcwd() + "\\User_Files\\Categories_to_draw_lots\\"
         path = r"{}".format(path)
 
         for pdf_data in categories_for_pdf:

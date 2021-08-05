@@ -9,7 +9,7 @@ from DataStructures.personal_competitor import PersonalCompetitor, Category
 class RapportBrowser:
     def __init__(self, window):
         self.rapport_set = set()
-        self.category_files = os.walk('Reports/Results', False).__next__()[2]
+        self.category_files = os.walk('User_Files/Reports/Results', False).__next__()[2]
         print(self.category_files)
         self.window = window
         self.window.ui.ResultsBox.clear()
