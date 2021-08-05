@@ -9,7 +9,7 @@ from DataStructures.personal_competitor import PersonalCompetitor, Category
 class RapportBrowser:
     def __init__(self, window):
         self.rapport_set = set()
-        self.category_files = os.walk('Reports/Results', False).__next__()[2]
+        self.category_files = os.walk('User_Files/Reports/Results', False).__next__()[2]
         print(self.category_files)
         self.window = window
         self.window.ui.ResultsBox.clear()
@@ -18,7 +18,7 @@ class RapportBrowser:
 
 
     def open_pdf(self):
-        name = 'Reports/Results/' + self.window.ui.ResultsBox.currentText()
+        name = 'User_Files/Reports/Results/' + self.window.ui.ResultsBox.currentText()
         self.print_competitors_in_table(self.parse_pdf(name))
 
     def print_competitors_in_table(self, competitors):

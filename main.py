@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
         self.SecondLeftMenuAnimation = None
         self.settings = Settings(self)
         self.categories_adder = CategoryAdder(self, self.settings)
-        self.CategoryOpener = Opener("Categories", self)
+        self.CategoryOpener = Opener("User_Files/Categories_ready_for_matches", self)
         self.RapportBrowser = RapportBrowser(self)
         self.AllMatchEngine = None
         self.RandomFunctionWrapper = RandomFunctionWrapper(self)

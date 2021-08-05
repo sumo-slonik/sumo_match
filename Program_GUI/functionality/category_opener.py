@@ -21,14 +21,14 @@ class Opener:
 
     def open_category(self, patch):
         print('____________', patch)
-        with open('Categories/'+patch, "r", encoding="utf-8") as file:
+        with open('User_Files/Categories_ready_for_matches/'+patch, "r", encoding="utf-8") as file:
             for line in file:
                 line = line.strip()
                 line = line.split()
                 if line[0] == 'klub':
-                    competitors = club_competitor_txt_input('Categories/' + patch)
+                    competitors = club_competitor_txt_input('User_Files/Categories_ready_for_matches/' + patch)
                 else:
-                    competitors = personal_competitor_txt_input('Categories/' + patch)
+                    competitors = personal_competitor_txt_input('User_Files/Categories_ready_for_matches/' + patch)
                 break
         engine = AllMatchEngine(competitors,self.window,patch[:-4])
         self.window.AllMatchEngine = engine
@@ -51,5 +51,5 @@ class Opener:
 
 
 if __name__ == '__main__':
-    a = Opener("Categories", None)
+    a = Opener("Categories_ready_for_matches", None)
     a.add_category_buttons()

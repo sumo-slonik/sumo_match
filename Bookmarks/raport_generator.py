@@ -16,7 +16,7 @@ class RaportGenerator:
         self.category_name = category_name
 
     def generate_pdf(self):
-        path = os.getcwd() + "\\Reports\\Results\\"
+        path = os.getcwd() + "\\User_Files\\Reports\\Results\\"
         path = r"{}".format(path)
 
         print(path)
