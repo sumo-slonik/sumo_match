@@ -89,7 +89,7 @@ class CategoryAdder:
         self.category_repr = dict()
 
     def add_category(self):
-        files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd(), "Plik PDF (*.pdf)")
+        files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd() + "/User_Files/Categories_to_add", "Plik PDF (*.pdf)")
         self.to_add = files[0]
         self.window.ui.CategoriesToAdd.setText(str(files[0]))
 
@@ -353,17 +353,6 @@ class CategoryAdder:
         self.window.ui.AgeComboBox.addItems(ages)
         self.window.ui.CategoryComboBox.addItems(categories)
         self.window.ui.ClubComboBox.addItems(clubs)
-
-    def categories_to_txt(self):
-        categories_dict = {key: [] for key in self.available_categories}
-        for competitor in self.competitors_list:
-            for category in competitor.get_category():
-                categories_dict[category].append(competitor)
-        for key in categories_dict:
-            with open('User_Files/Categories_ready_for_matches/' + key.file_name() + '.txt', 'w', encoding="utf-8") as category_file:
-                for competitor in categories_dict[key]:
-                    category_file.write(
-                        competitor.get_surname() + ' ' + competitor.get_first_name() + ';' + competitor.get_club() + ';\n')
 
     def prepare_categories_to_pdf(self):
         categories_dict = {key: [] for key in self.available_categories}

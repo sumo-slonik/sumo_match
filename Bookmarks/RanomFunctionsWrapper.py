@@ -28,7 +28,7 @@ class RandomFunctionWrapper():
         self.runner_up_row = 0
 
     def add_category(self):
-        files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd(), "Plik PDF (*.pdf)")
+        files = QFileDialog.getOpenFileNames(self.window, "Dodaj kategorię", os.getcwd() + "/User_Files/Categories_to_draw_lots", "Plik PDF (*.pdf)")
         self.to_add = files[0]
         self.window.ui.CategoriesToAdd_2.setText(str(files[0]))
 
