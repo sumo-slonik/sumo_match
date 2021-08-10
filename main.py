@@ -99,7 +99,6 @@ class MainWindow(QMainWindow):
             (lambda: self.categories_adder.add_category_to_competitor()))
         self.ui.SaveCompetitorButton.clicked.connect(
             (lambda: self.categories_adder.save_competitor_changes()))
-        self.ui.SaveCategoriesToTxt.clicked.connect(lambda: self.categories_adder.categories_to_txt())
         self.ui.SaveCategoriesToPdf.clicked.connect(lambda: self.categories_adder.create_pdfs())
         self.ui.FilterCattegoryButton.clicked.connect(lambda: self.categories_adder.show_filter())
 

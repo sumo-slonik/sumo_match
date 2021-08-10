@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowoQedBf.ui'
+## Form generated from reading UI file 'main_windowTlUAdQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1412,7 +1412,7 @@ class Ui_MainWindow(object):
         self.AddedCategoriesContents = QWidget()
         self.AddedCategoriesContents.setObjectName(u"AddedCategoriesContents")
         self.AddedCategoriesContents.setEnabled(True)
-        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 221))
+        self.AddedCategoriesContents.setGeometry(QRect(0, 0, 248, 207))
         self.AddedCategoriesContents.setMaximumSize(QSize(16777215, 16777215))
         self.AddedCategoriesContents.setStyleSheet(u"QWidget {\n"
 "	background-color: rgb(100, 100, 100);\n"
@@ -1716,11 +1716,6 @@ class Ui_MainWindow(object):
         self.SaveCompetitorButton.setIcon(icon12)
 
         self.verticalLayout_92.addWidget(self.SaveCompetitorButton)
-
-        self.SaveCategoriesToTxt = QPushButton(self.frame_119)
-        self.SaveCategoriesToTxt.setObjectName(u"SaveCategoriesToTxt")
-
-        self.verticalLayout_92.addWidget(self.SaveCategoriesToTxt)
 
         self.SaveCategoriesToPdf = QPushButton(self.frame_119)
         self.SaveCategoriesToPdf.setObjectName(u"SaveCategoriesToPdf")
@@ -7698,8 +7693,7 @@ class Ui_MainWindow(object):
         self.DeleteCompetitorCategoryButton.setText("")
         self.AddCompetitorCategoryButton.setText("")
         self.SaveCompetitorButton.setText(QCoreApplication.translate("MainWindow", u"               Zapisz zmiany dla zawodnika", None))
-        self.SaveCategoriesToTxt.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki txt, tylko po co?", None))
-        self.SaveCategoriesToPdf.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki do loswa\u0144", None))
+        self.SaveCategoriesToPdf.setText(QCoreApplication.translate("MainWindow", u"Generuj pliki podsumowuj\u0105ce", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Dziecko", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"M\u0142odzik (u12)", None))
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"Kadet (u16)", None))

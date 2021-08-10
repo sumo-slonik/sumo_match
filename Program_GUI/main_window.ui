@@ -805,7 +805,7 @@ QComboBox QAbstractItemView {
 </string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="HomePage">
              <property name="styleSheet">
@@ -2157,7 +2157,7 @@ background: transparent;
                             <x>0</x>
                             <y>0</y>
                             <width>248</width>
-                            <height>221</height>
+                            <height>207</height>
                            </rect>
                           </property>
                           <property name="maximumSize">
@@ -2622,13 +2622,6 @@ p, li { white-space: pre-wrap; }
                          <property name="icon">
                           <iconset resource="gui_theme.qrc">
                            <normaloff>:/Icons/icons/cil-save.png</normaloff>:/Icons/icons/cil-save.png</iconset>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QPushButton" name="SaveCategoriesToTxt">
-                         <property name="text">
-                          <string>Generuj pliki do loswań</string>
                          </property>
                         </widget>
                        </item>
