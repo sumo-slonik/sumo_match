@@ -13,7 +13,7 @@ def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_n
         main_window.ui.__dict__[node].setAlignment(Qt.AlignCenter)
         if is_personal:
             main_window.ui.__dict__[node].append(competitor.get_name())
-            #main_window.ui.__dict__[node].append(competitor.get_club())
+            main_window.ui.__dict__[node].append(competitor.get_club())
         else:
             main_window.ui.__dict__[node].append(competitor.get_club_name())
         main_window.ui.__dict__[node].setStyleSheet("font: 75 "+str(size)+"pt \"MS Shell Dlg 2\";text-align: center;")

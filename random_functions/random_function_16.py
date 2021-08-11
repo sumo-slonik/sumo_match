@@ -97,7 +97,8 @@ def random_function_16(competitors, number_of_competitors, master=None, runner_u
             order[place_in_order] = chosen
             number_of_competitors -= 1
 
-    order[[place[0] for place in free_places if place][0]] = [competitor[0] for competitor in competitors if competitor][0]
+    # order[[place[0] for place in free_places if place][0]] = [competitor[0] for competitor in competitors if
+    #                                                           competitor][0]
 
     order = sorted(list(order.items()), key=lambda x: x[0])
 
@@ -106,7 +107,10 @@ def random_function_16(competitors, number_of_competitors, master=None, runner_u
 
 if __name__ == "__main__":
     competitors = [
-        [personal_competitor.PersonalCompetitor("Kuba1"), personal_competitor.PersonalCompetitor("Kuba2"), personal_competitor.PersonalCompetitor("Kuba3"), personal_competitor.PersonalCompetitor("Kuba4"), personal_competitor.PersonalCompetitor("Marcin1"), personal_competitor.PersonalCompetitor("Marcin2"), personal_competitor.PersonalCompetitor("Marcin3")],
+        [personal_competitor.PersonalCompetitor("Kuba1"), personal_competitor.PersonalCompetitor("Kuba2"),
+         personal_competitor.PersonalCompetitor("Kuba3"), personal_competitor.PersonalCompetitor("Kuba4"),
+         personal_competitor.PersonalCompetitor("Marcin1"), personal_competitor.PersonalCompetitor("Marcin2"),
+         personal_competitor.PersonalCompetitor("Marcin3")],
         [personal_competitor.PersonalCompetitor("pojedynczy1")],
         [personal_competitor.PersonalCompetitor("pojedynczy2")],
         [personal_competitor.PersonalCompetitor("pojedynczy3")],
