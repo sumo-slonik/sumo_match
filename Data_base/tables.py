@@ -133,8 +133,9 @@ class Match(Base):
     match_id = Column(Integer, primary_key=True)
     winner = Column(String, ForeignKey('competitors.licence_no'))
 
-    def __init__(self, first_competitor, second_competitor, category_id, winner):
+    def __init__(self, first_competitor, second_competitor, category_id, winner,match_id):
         self.first_competitor = first_competitor
         self.second_competitor = second_competitor
         self.category_id = category_id
         self.winner = winner
+        self.match_id = match_id

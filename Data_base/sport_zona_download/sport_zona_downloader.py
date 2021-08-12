@@ -41,6 +41,11 @@ class SportZonaDownloader:
 
     def get_number_of_pages(self):
         try:
+            sleep(0.5)
+            if self.downloader_type == 'match':
+                fights_buttons = \
+                    self.driver.find_elements_by_xpath('//*[@id="top"]/article/div/div[2]/div/div[2]/div/ul/li[2]/a')[0]
+                fights_buttons.click()
             buttons_count = self.get_number_of_navi_buttons()
             last_button = self.driver.find_elements_by_xpath(
                 self.navi_patch + '[' + buttons_count.__str__() + ']/a')[0]
@@ -61,8 +66,17 @@ class SportZonaDownloader:
     def get_number_of_rows(self):
         # first two rows is with no content and they are counted to
         res = self.driver.find_elements_by_xpath(self.table_patch)
-        if self.downloader_type == 'match':
-            res = res[0:3] + self.driver.find_elements_by_xpath(self.table_patch)[2:len(res) + 1 :2]
+        count = 0
+        for row in range(len(res)):
+            if self.check_row(row + 1):
+                count += 1
+        # if self.downloader_type == 'match':
+        #     res = res[0:3] + self.driver.find_elements_by_xpath(self.table_patch)[2:len(res) + 1:2]
+        return count
+
+    def get_number_of_all_rows(self):
+        # first two rows is with no content and they are counted to
+        res = self.driver.find_elements_by_xpath(self.table_patch)
         return len(res)
 
     def got_to_next_page(self):
@@ -75,6 +89,15 @@ class SportZonaDownloader:
     def get_row_link(self, row_number):
         link = self.driver.find_elements_by_xpath(
             self.table_patch + '[' + (row_number + 2).__str__() + '] / td[1] / a')[0]
+        return link.get_attribute('href')
+
+    def get_row_column_link(self, row_number, column_number):
+        if self.downloader_type == 'event':
+            link = self.driver.find_elements_by_xpath(
+                self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] /div/ a')[0]
+        else:
+            link = self.driver.find_elements_by_xpath(
+                self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] / a')[0]
         return link.get_attribute('href')
 
     def get_row_column_value(self, row_number, column_number):
@@ -122,25 +145,27 @@ class SportZonaDownloader:
 
         return Competitor(name, surname, club, licence_no, born + '-01-01', '')
 
+    def check_row(self, row_number):
+        tds_in_row = self.driver.find_elements_by_xpath('//*[@id="fights"]/table/tbody/tr[' + str(row_number) + ']/td')
+        return len(tds_in_row) > 2
+
+    def get_row_column_td(self, row_number, column_number):
+        td = self.driver.find_elements_by_xpath(
+            self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + ']')[0]
+        return td
+
+    def get_row_winner(self, row_number):
+        return self.get_row_column_td(row_number, 3).get_attribute('class') == 'won success'
+
     def go_to_link(self, link):
         self.driver.get(link)
 
 
 if __name__ == '__main__':
-    # competitors_driver = WebDriver()
-    # club_driver = WebDriver()
-    # event_driver = WebDriver()
-    match_driver = WebDriver()
 
-    # club_driver.get('https://sportzona.pl/app/clubs/list/sumo')
-    # competitors_driver.get('https://sportzona.pl/app/clubs/view/sumo/979')
-    # event_driver.get('https://sportzona.pl/app/events/list/sumo')
-    match_driver.get('https://sportzona.pl/app/events/view/sumo/3174')
-    #
-    # club_downloader = SportZonaDownloader('club', club_driver)
-    # competitors_downloader = SportZonaDownloader('competitors', competitors_driver)
-    # event_downloader = SportZonaDownloader('event', event_driver)
-    match_downloader = SportZonaDownloader('match', match_driver)
+    pass
+
+
 
     # print('clubs:')
     # print('number of navi buttons:', club_downloader.get_number_of_navi_buttons())
@@ -163,11 +188,18 @@ if __name__ == '__main__':
     # if event_downloader.get_number_of_pages() > 1:
     #     event_downloader.got_to_next_page()
 
-    print('matches:')
-    print('number of navi buttons:', match_downloader.get_number_of_navi_buttons())
-    print('number of pages:', match_downloader.get_number_of_pages())
-    print('rows:', match_downloader.get_number_of_rows())
-    if match_downloader.get_number_of_pages() > 1:
-        match_downloader.got_to_next_page()
-    for i in range(1, match_downloader.get_number_of_rows()):
-        print(match_downloader.get_row_column_value(i, 2))
+    # print('matches:')
+    # print('number of navi buttons:', match_downloader.get_number_of_navi_buttons())
+    # print('number of pages:', match_downloader.get_number_of_pages())
+    # print('rows:', match_downloader.get_number_of_rows())
+    # if match_downloader.get_number_of_pages() > 1:
+    #     match_downloader.got_to_next_page()
+    # for i in range(1, match_downloader.get_number_of_all_rows() - 1):
+    #     sleep(0.1)
+    #     if match_downloader.check_row(i):
+    #         print(match_downloader.get_row_column_value(i, 2))
+    #         print(match_downloader.get_row_column_link(i, 3))
+    #         print(match_downloader.get_row_column_link(i, 10))
+    #         print('first win:',match_downloader.get_row_winner(i))
+
+
