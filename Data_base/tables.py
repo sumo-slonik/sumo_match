@@ -112,6 +112,9 @@ class Competition(Base):
         self.competition_type = competition_type
         self.competition_id = competition_id
 
+    def __str__(self):
+        return self.competition_name +' '+  self.city+' '+ self.start_date+' '+ self.end_date
+
 
 class CategoryAtCompetitions(Base):
     __tablename__ = 'categories_at_competitions'
@@ -120,9 +123,10 @@ class CategoryAtCompetitions(Base):
     category_at_competition_id = Column(Integer, primary_key=True)
     match = relationship("Match")
 
-    def __init__(self, category_id, competition_id):
+    def __init__(self, category_id, competition_id, category_at_competition_id):
         self.category_id = category_id
         self.competition_id = competition_id
+        self.category_at_competition_id = category_at_competition_id
 
 
 class Match(Base):
@@ -132,10 +136,12 @@ class Match(Base):
     category_id = Column(Integer, ForeignKey('categories_at_competitions.category_at_competition_id'))
     match_id = Column(Integer, primary_key=True)
     winner = Column(String, ForeignKey('competitors.licence_no'))
+    description = Column(String)
 
-    def __init__(self, first_competitor, second_competitor, category_id, winner,match_id):
+    def __init__(self, first_competitor, second_competitor, category_id, winner, match_id, description):
         self.first_competitor = first_competitor
         self.second_competitor = second_competitor
         self.category_id = category_id
         self.winner = winner
         self.match_id = match_id
+        self.description = description

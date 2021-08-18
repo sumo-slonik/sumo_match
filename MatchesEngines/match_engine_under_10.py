@@ -1,8 +1,8 @@
 from abc import ABC
 
 from DataStructures import personal_competitor
-from Matches.match_under_5 import MatchUnder5Wrapper
-from Matches.abstractMatchesMaker import AbstractMatchesMaker
+from MatchesEngines.match_engine_under_5 import MatchUnder5Wrapper
+from MatchesEngines.abstractMatchesMaker import AbstractMatchesMaker
 from DataStructures.tree_node import Node
 
 

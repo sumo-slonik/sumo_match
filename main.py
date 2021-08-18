@@ -6,7 +6,7 @@ from PySide2.QtGui import (QColor)
 from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from Program_GUI.ui_main_window import *
 from Program_GUI.functionality.GUI_manipulation import *
-from Matches.all_match_engine import AllMatchEngine
+from MatchesEngines.all_match_engine import AllMatchEngine
 from Program_GUI.functionality.category_opener import Opener
 from Bookmarks.category_adder import CategoryAdder
 from Bookmarks.settings import Settings
@@ -165,7 +165,7 @@ class MainWindow(QMainWindow):
         self.topMenuAnimation.setDuration(350)
         self.topMenuAnimation.setStartValue(actual_menu_size)
         self.topMenuAnimation.setEndValue(new_menu_size)
-        self.topMenuAnimation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.topMenuAnimation.se22tEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.topMenuAnimation.start()
 
     def slide_left_menu(self):

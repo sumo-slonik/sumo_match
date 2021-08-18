@@ -4,7 +4,7 @@ from PySide2.QtCore import QCoreApplication
 from PySide2.QtWidgets import QPushButton
 from DataStructures.SupportingFunctions.competitors_txt_input import personal_competitor_txt_input, \
     club_competitor_txt_input
-from Matches.all_match_engine import AllMatchEngine
+from MatchesEngines.all_match_engine import AllMatchEngine
 from Program_GUI.functionality.ConnectGuiToEngine import connect_gui_to_engine
 from functools import partial
 from copy import copy

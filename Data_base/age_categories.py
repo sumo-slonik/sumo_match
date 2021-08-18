@@ -15,9 +15,26 @@ class AgeCategoriesUpdater:
                       ("Młodzierzowiec (u23)", 16, 23),
                       ("Senior ", 17, 100))
 
-    def __init__(self, DATABSE_URI):
+    def get_age_categories(self, age_categories):
+        if '12' in age_categories.lower():
+            return self.age_categories[0][0]
+        elif '14' in age_categories.lower():
+            return self.age_categories[1][0]
+        elif '16' in age_categories.lower():
+            return self.age_categories[2][0]
+        elif '18' in age_categories.lower():
+            return self.age_categories[3][0]
+        elif '21' in age_categories.lower():
+            return self.age_categories[4][0]
+        elif '23' in age_categories.lower():
+            return self.age_categories[5][0]
+        elif 'senior' in age_categories.lower():
+            return self.age_categories[6][0]
+
+    def __init__(self, DATABSE_URI=None):
         self.actual_year = datetime.datetime.now().year
-        self.db = create_engine(DATABSE_URI)
+        if DATABSE_URI:
+            self.db = create_engine(DATABSE_URI)
 
     def add_categories(self):
         session_maker = sessionmaker(self.db)

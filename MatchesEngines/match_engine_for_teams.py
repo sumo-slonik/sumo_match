@@ -4,7 +4,7 @@ from DataStructures.club_competitor import ClubCompetitor
 from DataStructures.personal_competitor import PersonalCompetitor
 from random import choice
 
-from Matches.abstractMatchesMaker import AbstractMatchesMaker
+from MatchesEngines.abstractMatchesMaker import AbstractMatchesMaker
 
 
 class TeamMatch(AbstractMatchesMaker, ABC):

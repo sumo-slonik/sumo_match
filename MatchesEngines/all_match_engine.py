@@ -1,17 +1,17 @@
 from Bookmarks.raport_generator import RaportGenerator
 from DataStructures.tree_node import Node
-from Matches.abstractMatchesMaker import AbstractMatchesMaker
-from Matches.types_of_matches import TypeOFMatch, correctTypeFromLength
+from MatchesEngines.abstractMatchesMaker import AbstractMatchesMaker
+from MatchesEngines.types_of_match_engines import TypeOFMatch, correctTypeFromLength
 
 from enum import Enum
 
-from Matches.match_under_10 import MatchUnder10
-from Matches.match_under_16 import MatchUnder16
-from Matches.match_under_5 import MatchUnder5Wrapper
+from MatchesEngines.match_engine_under_10 import MatchUnder10
+from MatchesEngines.match_engine_under_16 import MatchUnder16
+from MatchesEngines.match_engine_under_5 import MatchUnder5Wrapper
 from Program_GUI.functionality.GUI_manipulation import *
 from Program_GUI.functionality.GUI_manipulation import print_match_under_5_wrapper
 from DataStructures.club_competitor import ClubCompetitor
-from Matches.match_for_teams import TeamMatch
+from MatchesEngines.match_engine_for_teams import TeamMatch
 from random_functions.random_function_16 import random_function_16
 
 
