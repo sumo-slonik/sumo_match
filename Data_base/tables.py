@@ -1,7 +1,16 @@
+import hashlib
+
 from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import Column, Integer, String, Date, ForeignKey
 
 Base = declarative_base()
+
+
+def generate_hash(*description):
+    res = ''
+    for i in description:
+        res += str(i)
+    return int(hashlib.sha1(res.encode("utf-8")).hexdigest(), 16) % (10 ** 8)
 
 
 class Club(Base):
@@ -21,7 +30,7 @@ class Club(Base):
         self.province = province
 
     def __str__(self) -> str:
-        return self.club_name + ' ' + self.club_id
+        return self.club_name + ' ' + str(self.club_id)
 
 
 class Competitor(Base):
@@ -49,6 +58,9 @@ class Competitor(Base):
         return self.name + ' ' + self.surname + ' ' + str(self.club) + ' ' + str(self.licence_no) + ' ' + str(
             self.born_date) + ' ' + \
                self.gender
+
+    def __hash__(self):
+        return generate_hash(self.club, self.licence_no, self.name, self.surname, self.gender, self.born_date)
 
 
 class AgeCategory(Base):
@@ -113,7 +125,7 @@ class Competition(Base):
         self.competition_id = competition_id
 
     def __str__(self):
-        return self.competition_name +' '+  self.city+' '+ self.start_date+' '+ self.end_date
+        return self.competition_name + ' ' + self.city + ' ' + self.start_date + ' ' + self.end_date
 
 
 class CategoryAtCompetitions(Base):

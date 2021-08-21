@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 
 from Data_base.age_categories import AgeCategoriesUpdater
 from Data_base.sport_zona_download.sport_zona_downloader import SportZonaDownloader
-from Data_base.tables import Competition, Match, Competitor, CategoryAtCompetitions
+from Data_base.tables import Competition, Match, Competitor, CategoryAtCompetitions, WeightCategory
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import hashlib
@@ -30,6 +30,7 @@ class CompetitionDownloader:
         self.ageCategoriesUpdater = AgeCategoriesUpdater()
         self.close_counter = 5
         self.skip_counter = 0
+        self.start_page = 0
 
     def generate_id(self):
         description = self.competition_name + self.start_date + self.end_date + self.competition_type + self.city
@@ -89,7 +90,7 @@ class CompetitionDownloader:
         for pages in range(competitions_iterator.get_number_of_pages()):
             for row in range(1, competitions_iterator.get_number_of_all_rows()):
                 if first_time:
-                    for _ in range(29):
+                    for _ in range(self.start_page):
                         competitions_iterator.got_to_next_page()
                     sleep(0.5)
                     first_time = False
@@ -98,15 +99,15 @@ class CompetitionDownloader:
                         competitions_link = competitions_iterator.get_row_column_link(row, 1)
                         print(competitions_link)
                         self.driver.get(competitions_link)
-                        new_competitions = self.download_competitions()
-                        if 'Międzywojewódzkie' in new_competitions.competition_name:
-                            self.download_matches()
+                        self.download_competitions()
+                        self.download_matches()
                     except Exception as ex:
                         print(ex)
                 else:
                     self.skip_counter -= 1
             competitions_iterator.got_to_next_page()
-        self.driver.close()
+            self.driver.close()
+            self.driver = WebDriver()
 
     def update_gender(self, competitor, gender):
         print(competitor)
@@ -142,6 +143,7 @@ class CompetitionDownloader:
                             sport_zona_downloader.get_row_column_value(row, 1).lower(),
                             str(category_id),
                             self.competition_name)
+                        category = WeightCategory(category, self.age, category_id, self.gender)
                         category_at_competition = CategoryAtCompetitions(category_id, self.competition_id,
                                                                          category_at_competition_id)
                         print(fight_round, self.competition_name, self.gender, self.age, category)
@@ -165,6 +167,7 @@ class CompetitionDownloader:
 
                         session_maker = sessionmaker(self.db)
                         session = session_maker()
+                        session.merge(category)
                         session.merge(category_at_competition)
                         session.merge(new_match)
                         session.commit()
@@ -172,14 +175,10 @@ class CompetitionDownloader:
                     except Exception as ex:
                         print(ex)
             sport_zona_downloader.got_to_next_page()
-            if self.close_counter == 0:
-                self.close_counter = 5
-                competitor_1_driver.close()
-                competitor_2_driver.close()
-                competitor_1_driver = WebDriver()
-                competitor_2_driver = WebDriver()
-            else:
-                self.close_counter -= 1
+            competitor_1_driver.close()
+            competitor_2_driver.close()
+            competitor_1_driver = WebDriver()
+            competitor_2_driver = WebDriver()
 
 
 if __name__ == '__main__':
@@ -187,11 +186,4 @@ if __name__ == '__main__':
                                                                                         server='localhost',
                                                                                         database='sumo_match_maker')
     downloader = CompetitionDownloader(DATABSE_URI)
-    #
-    # # session_maker = sessionmaker(downloader.db)
-    # # session = session_maker()
-    # # category_at_competition = CategoryAtCompetitions(788791, 990308, 1)
-    # # session.merge(category_at_competition)
-    # # session.commit()
-    # # session.close()
     downloader.iterate_by_competition()

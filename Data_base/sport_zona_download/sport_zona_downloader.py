@@ -45,7 +45,7 @@ class SportZonaDownloader:
             if self.downloader_type == 'match':
                 #for old competitions li =1 for curent li = 2
                 fights_buttons = \
-                    self.driver.find_elements_by_xpath('//*[@id="top"]/article/div/div[2]/div/div[2]/div/ul/li[1]/a')[0]
+                    self.driver.find_elements_by_xpath('//*[@id="top"]/article/div/div[2]/div/div[2]/div/ul/li[2]/a')[0]
                 fights_buttons.click()
             buttons_count = self.get_number_of_navi_buttons()
             last_button = self.driver.find_elements_by_xpath(
