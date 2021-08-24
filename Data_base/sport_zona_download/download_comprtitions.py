@@ -122,40 +122,62 @@ class CompetitionDownloader:
         competitor_1_link = ''
         competitor_2_link = ''
         sport_zona_downloader = SportZonaDownloader('match', self.driver)
-        competitor_1_driver = WebDriver()
-        competitor_2_driver = WebDriver()
+        actual_category = None
+        category_at_competition_id = None
+        category_id = None
+        category_obj = None
+        category_at_competition = None
         for page in range(sport_zona_downloader.get_number_of_pages()):
+            sleep(0.3)
             for row in range(1, sport_zona_downloader.get_number_of_all_rows() - 1):
                 if sport_zona_downloader.check_row(row):
                     try:
                         fight_round = sport_zona_downloader.get_row_column_value(row, 2)
-                        competitor_1_link = sport_zona_downloader.get_row_column_link(row, 3)
-                        competitor_2_link = sport_zona_downloader.get_row_column_link(row, 10)
-                        first_win = sport_zona_downloader.get_row_winner(row)
                         self.gender = self.gender.lower()
                         self.age = self.ageCategoriesUpdater.get_age_categories(self.age)
                         category = sport_zona_downloader.get_row_column_value(row, 1).lower()
                         category = category.replace('kg', '')
                         category = category.replace(' ', '')
-                        category_id = generate_id(category, self.age,
-                                                  self.gender)
-                        category_at_competition_id = generate_id(
-                            sport_zona_downloader.get_row_column_value(row, 1).lower(),
-                            str(category_id),
-                            self.competition_name)
-                        category = WeightCategory(category, self.age, category_id, self.gender)
-                        category_at_competition = CategoryAtCompetitions(category_id, self.competition_id,
-                                                                         category_at_competition_id)
+                        if category != actual_category:
+                            actual_category = category
+                            category_id = generate_id(category, self.age,
+                                                      self.gender)
+                            category_at_competition_id = generate_id(
+                                sport_zona_downloader.get_row_column_value(row, 1).lower(),
+                                str(category_id),
+                                str(self.competition_id))
+                            category_obj = WeightCategory(category, self.age, category_id, self.gender)
+                            category_at_competition = CategoryAtCompetitions(category_id, self.competition_id,
+                                                                             category_at_competition_id)
+                        session_maker = sessionmaker(self.db)
+                        session = session_maker()
+                        session.add(category_at_competition)
+                        session.commit()
+                        session.close()
+                        # Get competitors from db if can do this by name and club
+                        # else get licence_no from profile page in sport_zona
+                        description_competitor_1 = sport_zona_downloader.get_row_column_link_text(row, 3)
+                        description_competitor_2 = sport_zona_downloader.get_row_column_link_text(row, 10)
+                        competitor_1_link = sport_zona_downloader.get_row_column_link(row, 3)
+                        competitor_2_link = sport_zona_downloader.get_row_column_link(row, 10)
+                        first_win = sport_zona_downloader.get_row_winner(row)
+                        competitor_1 = self.check_competitor_in_db(description_competitor_1)
+                        competitor_2 = self.check_competitor_in_db(description_competitor_2)
+                        if not competitor_1:
+                            competitor_1_driver = WebDriver()
+                            competitor_1_driver.get(competitor_1_link)
+                            competitor_1_downloader = SportZonaDownloader('competitors', competitor_1_driver)
+                            competitor_1 = competitor_1_downloader.download_competitor_data()
+                            competitor_1_driver.close()
+                        if not competitor_2:
+                            competitor_2_driver = WebDriver()
+                            competitor_2_driver.get(competitor_2_link)
+                            competitor_2_downloader = SportZonaDownloader('competitors', competitor_2_driver)
+                            competitor_2 = competitor_2_downloader.download_competitor_data()
+                            competitor_2_driver.close()
+
                         print(fight_round, self.competition_name, self.gender, self.age, category)
                         print(competitor_1_link, competitor_2_link, first_win, category_id)
-                        competitor_1_driver.get(competitor_1_link)
-                        competitor_2_driver.get(competitor_2_link)
-
-                        competitor_1_downloader = SportZonaDownloader('competitors', competitor_1_driver)
-                        competitor_2_downloader = SportZonaDownloader('competitors', competitor_2_driver)
-
-                        competitor_1 = competitor_1_downloader.download_competitor_data()
-                        competitor_2 = competitor_2_downloader.download_competitor_data()
                         # self.update_gender(competitor_1, self.gender)
                         # self.update_gender(competitor_2, self.gender)
                         winner = competitor_1 if first_win else competitor_2
@@ -164,21 +186,28 @@ class CompetitionDownloader:
                                           generate_id(str(competitor_1.licence_no), str(competitor_2.licence_no),
                                                       str(self.match_no)), fight_round)
                         self.match_no += 1
-
                         session_maker = sessionmaker(self.db)
                         session = session_maker()
-                        session.merge(category)
-                        session.merge(category_at_competition)
+                        session.merge(category_obj)
                         session.merge(new_match)
                         session.commit()
                         session.close()
                     except Exception as ex:
+                        session.close()
                         print(ex)
+            sleep(0.3)
             sport_zona_downloader.got_to_next_page()
-            competitor_1_driver.close()
-            competitor_2_driver.close()
-            competitor_1_driver = WebDriver()
-            competitor_2_driver = WebDriver()
+
+    def check_competitor_in_db(self, description: str):
+        description = description.split('.')[1]
+        name = description.split(' ')[2]
+        surname = description.split(' ')[1]
+        club = description.split(' ')[1].replace('(', '').replace(')', '')
+        session_maker = sessionmaker(self.db)
+        session = session_maker()
+        res = session.query(Competitor).filter_by(name=name, surname=surname).all()
+        session.close()
+        return res[0] if len(res) == 1 else None
 
 
 if __name__ == '__main__':

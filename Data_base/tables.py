@@ -62,6 +62,23 @@ class Competitor(Base):
     def __hash__(self):
         return generate_hash(self.club, self.licence_no, self.name, self.surname, self.gender, self.born_date)
 
+    def __eq__(self, other):
+        if not isinstance(other, Competitor):
+            return False
+        if self.club != other.club:
+            return False
+        if self.licence_no != other.licence_no:
+            return False
+        if self.name != other.name:
+            return False
+        if self.surname != other.surname:
+            return False
+        if self.gender != other.gender:
+            return False
+        if self.born_date != other.born_date:
+            return False
+        return True
+
 
 class AgeCategory(Base):
     __tablename__ = 'age_categories'

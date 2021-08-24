@@ -45,7 +45,7 @@ class SportZonaDownloader:
             if self.downloader_type == 'match':
                 #for old competitions li =1 for curent li = 2
                 fights_buttons = \
-                    self.driver.find_elements_by_xpath('//*[@id="top"]/article/div/div[2]/div/div[2]/div/ul/li[2]/a')[0]
+                    self.driver.find_element_by_partial_link_text('Walki')
                 fights_buttons.click()
             buttons_count = self.get_number_of_navi_buttons()
             last_button = self.driver.find_elements_by_xpath(
@@ -100,6 +100,15 @@ class SportZonaDownloader:
             link = self.driver.find_elements_by_xpath(
                 self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] / a')[0]
         return link.get_attribute('href')
+
+    def get_row_column_link_text(self, row_number, column_number):
+        if self.downloader_type == 'event':
+            result = self.driver.find_elements_by_xpath(
+                self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] /div/ a')[0].text
+        else:
+            result = self.driver.find_elements_by_xpath(
+                self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] / a')[0].text
+        return result
 
     def get_row_column_value(self, row_number, column_number):
         label = self.driver.find_elements_by_xpath(
