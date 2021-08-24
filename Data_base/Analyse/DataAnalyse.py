@@ -203,6 +203,17 @@ if __name__ == '__main__':
     print('new competitors in years')
     for year in competitors_new_in_years:
         print(year, len(competitors_new_in_years[year]))
+
+    print('__________________________________________________________________')
+    print('new competitors in years in age categories')
+    for year in competitors_new_in_years:
+        for age_category in competitors_in_age_categories_in_years[year]:
+            print(year,age_category, len(competitors_new_in_years[year] & competitors_in_age_categories_in_years[year][age_category]))
+
+
+
+
+
     # print('activity levels of competitors')
     # for year in competitors_active_in_years:
     #     print(year, ':')

@@ -43,7 +43,7 @@ class SportZonaDownloader:
         try:
             sleep(0.5)
             if self.downloader_type == 'match':
-                #for old competitions li =1 for curent li = 2
+                # for old competitions li =1 for curent li = 2
                 fights_buttons = \
                     self.driver.find_element_by_partial_link_text('Walki')
                 fights_buttons.click()
@@ -104,7 +104,8 @@ class SportZonaDownloader:
     def get_row_column_link_text(self, row_number, column_number):
         if self.downloader_type == 'event':
             result = self.driver.find_elements_by_xpath(
-                self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] /div/ a')[0].text
+                self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] /div/ a')[
+                0].text
         else:
             result = self.driver.find_elements_by_xpath(
                 self.table_patch + '[' + (row_number + 2).__str__() + '] / td[' + str(column_number) + '] / a')[0].text
@@ -170,12 +171,29 @@ class SportZonaDownloader:
     def go_to_link(self, link):
         self.driver.get(link)
 
+    def download_new_competitor(self, link):
+        self.driver.get(link)
+        self.downloader_type = 'competitor'
+        competitor = self.download_competitor_data()
+        sleep(0.1)
+        club_button = self.driver.find_elements_by_xpath(
+            '//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[2]/a')[0]
+        club_button.click()
+        club = self.download_club_data()
+        country = self.driver.find_elements_by_xpath('//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[4]/td[2]/strong')[0].text
+        if country != 'POL':
+            return False
+        else:
+            return (competitor, club)
+
 
 if __name__ == '__main__':
-
     pass
-
-
+    driver = WebDriver()
+    donwloader = SportZonaDownloader('competitors', driver)
+    res = donwloader.download_new_competitor('https://sportzona.pl/app/players/view/sumo/37582')
+    for i in res:
+        print(i)
 
     # print('clubs:')
     # print('number of navi buttons:', club_downloader.get_number_of_navi_buttons())
@@ -211,5 +229,3 @@ if __name__ == '__main__':
     #         print(match_downloader.get_row_column_link(i, 3))
     #         print(match_downloader.get_row_column_link(i, 10))
     #         print('first win:',match_downloader.get_row_winner(i))
-
-

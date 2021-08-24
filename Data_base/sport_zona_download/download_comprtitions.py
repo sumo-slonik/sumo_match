@@ -128,7 +128,7 @@ class CompetitionDownloader:
         category_obj = None
         category_at_competition = None
         for page in range(sport_zona_downloader.get_number_of_pages()):
-            sleep(0.3)
+            sleep(0.2)
             for row in range(1, sport_zona_downloader.get_number_of_all_rows() - 1):
                 if sport_zona_downloader.check_row(row):
                     try:
@@ -150,10 +150,10 @@ class CompetitionDownloader:
                             category_at_competition = CategoryAtCompetitions(category_id, self.competition_id,
                                                                              category_at_competition_id)
                         session_maker = sessionmaker(self.db)
-                        session = session_maker()
-                        session.add(category_at_competition)
-                        session.commit()
-                        session.close()
+                        # session = session_maker()
+                        # # session.add(category_at_competition)
+                        # # session.commit()
+                        # session.close()
                         # Get competitors from db if can do this by name and club
                         # else get licence_no from profile page in sport_zona
                         description_competitor_1 = sport_zona_downloader.get_row_column_link_text(row, 3)
@@ -186,21 +186,21 @@ class CompetitionDownloader:
                                           generate_id(str(competitor_1.licence_no), str(competitor_2.licence_no),
                                                       str(self.match_no)), fight_round)
                         self.match_no += 1
-                        session_maker = sessionmaker(self.db)
-                        session = session_maker()
-                        session.merge(category_obj)
-                        session.merge(new_match)
-                        session.commit()
-                        session.close()
+                        # session_maker = sessionmaker(self.db)
+                        # session = session_maker()
+                        # session.merge(category_obj)
+                        # session.merge(new_match)
+                        # session.commit()
+                        # session.close()
                     except Exception as ex:
-                        session.close()
+                        # session.close()
                         print(ex)
-            sleep(0.3)
+            # sleep(0.3)
             sport_zona_downloader.got_to_next_page()
 
     def check_competitor_in_db(self, description: str):
         description = description.split('.')[1]
-        name = description.split(' ')[2]
+        name = description.split(' ')[4] if '-' in description else description.split(' ')[2]
         surname = description.split(' ')[1]
         club = description.split(' ')[1].replace('(', '').replace(')', '')
         session_maker = sessionmaker(self.db)
