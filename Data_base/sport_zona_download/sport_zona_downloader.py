@@ -180,18 +180,20 @@ class SportZonaDownloader:
             '//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[2]/a')[0]
         club_button.click()
         club = self.download_club_data()
-        country = self.driver.find_elements_by_xpath('//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[4]/td[2]/strong')[0].text
+        country = self.driver.find_elements_by_xpath(
+            '//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[4]/td[2]/strong')[
+            0].text
         if country != 'POL':
             return False
         else:
-            return (competitor, club)
+            return competitor, club
 
 
 if __name__ == '__main__':
     pass
     driver = WebDriver()
     donwloader = SportZonaDownloader('competitors', driver)
-    res = donwloader.download_new_competitor('https://sportzona.pl/app/players/view/sumo/37582')
+    res = donwloader.download_new_competitor('https://sportzona.pl/app/players/view/sumo/28406')
     for i in res:
         print(i)
 

@@ -32,6 +32,15 @@ class Club(Base):
     def __str__(self) -> str:
         return self.club_name + ' ' + str(self.club_id)
 
+    def __hash__(self):
+        return generate_hash(self.club_name, self.club_id)
+
+    def __eq__(self, other):
+        if isinstance(other, Club):
+            return self.__hash__() == other.__hash__()
+        else:
+            return False
+
 
 class Competitor(Base):
     __tablename__ = 'competitors'
@@ -111,7 +120,31 @@ class WeightCategory(Base):
         self.gender = gender
 
     def __str__(self):
-        return str(self.age_category) + ' ' + self.weight_category
+        return str(self.age_category) + ' ' + self.weight_category + ' ' + self.gender
+
+    def __hash__(self):
+        return generate_hash(self.__str__().split(' '))
+
+    def __eq__(self, other):
+        return self.__str__() == other.__str__()
+
+    def __lt__(self, other):
+        first = first = self.weight_category
+        second = other.weight_category
+        first = first.split('(')[0]
+        second = second.split('(')[0]
+        if 'open' in second:
+            return True
+        if 'open' in first:
+            return False
+        elif '+' in second:
+            if '+' in first:
+                first = first.replace('+', '')
+                second = second.replace('+', '')
+                return int(first) < int(second)
+            return True
+        else:
+            return int(first) < int(second)
 
 
 class CompetitionType(Base):
@@ -144,6 +177,13 @@ class Competition(Base):
     def __str__(self):
         return self.competition_name + ' ' + self.city + ' ' + self.start_date + ' ' + self.end_date
 
+    def __hash__(self):
+        return generate_hash(self.__str__())
+
+    def __eq__(self, other):
+        if not isinstance(other,Competition):
+            return False
+        return self.__str__() == other.__str__()
 
 class CategoryAtCompetitions(Base):
     __tablename__ = 'categories_at_competitions'
