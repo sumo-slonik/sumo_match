@@ -93,8 +93,6 @@ class DataAnalyser:
         self.close_session()
         return sorted(result)
 
-    """""""
-
     def get_competitors_in_year_in_age_category_in_weight_category(self, year, age_category, weight_category):
         self.create_session()
         result = self.session.query(Competitor).outerjoin(Match, or_(Competitor.licence_no == Match.second_competitor

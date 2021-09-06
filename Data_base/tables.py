@@ -54,6 +54,8 @@ class Competitor(Base):
     first_competitor_match = relationship('Match', foreign_keys='Match.first_competitor', lazy='dynamic')
     second_competitor_match = relationship('Match', foreign_keys='Match.second_competitor', lazy='dynamic')
     winner_match = relationship('Match', foreign_keys='Match.winner', lazy='dynamic')
+    competitor = relationship('ApplicationsForCompetitions', foreign_keys='ApplicationsForCompetitions.competitor',
+                              lazy='dynamic')
 
     def __init__(self, name, surname, club, licence_no, born_date, gender):
         self.name = name
@@ -175,15 +177,16 @@ class Competition(Base):
         self.competition_id = competition_id
 
     def __str__(self):
-        return self.competition_name + ' ' + self.city + ' ' + self.start_date + ' ' + self.end_date
+        return self.city + ' ' + self.start_date + ' ' + self.end_date
 
     def __hash__(self):
         return generate_hash(self.__str__())
 
     def __eq__(self, other):
-        if not isinstance(other,Competition):
+        if not isinstance(other, Competition):
             return False
         return self.__str__() == other.__str__()
+
 
 class CategoryAtCompetitions(Base):
     __tablename__ = 'categories_at_competitions'
@@ -191,6 +194,7 @@ class CategoryAtCompetitions(Base):
     competition_id = Column(Integer, ForeignKey('competitions.competition_id'))
     category_at_competition_id = Column(Integer, primary_key=True)
     match = relationship("Match")
+    application = relationship("ApplicationsForCompetitions")
 
     def __init__(self, category_id, competition_id, category_at_competition_id):
         self.category_id = category_id
@@ -214,3 +218,16 @@ class Match(Base):
         self.winner = winner
         self.match_id = match_id
         self.description = description
+
+
+class ApplicationsForCompetitions(Base):
+    __tablename__ = 'applications_for_competitions'
+
+    def __init__(self, competitor, category_at_competition, application_id):
+        self.competitor = competitor
+        self.category_at_competition = category_at_competition
+        self.application_id = application_id
+
+    competitor = Column(String, ForeignKey('competitors.licence_no', ))
+    category_at_competition = Column(Integer, ForeignKey('categories_at_competitions.category_at_competition_id'))
+    application_id = Column(Integer, primary_key=True)
