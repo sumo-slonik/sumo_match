@@ -5,7 +5,7 @@ from PySide2.QtGui import QColor
 from PySide2.QtWidgets import QFileDialog, QTableWidgetItem
 
 from DataStructures.personal_competitor import Category, PersonalCompetitor
-from Matches.types_of_matches import TypeOFMatch, correctTypeFromLength
+from MatchesEngines.types_of_match_engines import TypeOFMatch, correctTypeFromLength
 # from Program_GUI.functionality.GUI_manipulation import print_randomisation_results
 from Program_GUI.functionality.GUI_manipulation import print_randomisation_results
 from random_functions.random_function_10 import random_function_10

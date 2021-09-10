@@ -3,7 +3,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 from DataStructures.personal_competitor import *
-from Matches.types_of_matches import TypeOFMatch
+from MatchesEngines.types_of_match_engines import TypeOFMatch
 
 
 def load_competitors_to_nodes(nodes_names, competitors_list, main_window, copy_nodes=[],size = 13):
