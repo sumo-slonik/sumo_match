@@ -15,7 +15,7 @@ class DeclaredCompetitorsGetter(DataBaseConnector):
             .join(CategoryAtCompetitions,
                   CategoryAtCompetitions.category_at_competition_id == ApplicationsForCompetitions.category_at_competition) \
             .join(Competition, Competition.competition_id == CategoryAtCompetitions.competition_id) \
-            .filter_by(competition_id=competition) \
+            .filter_by(competition_id=competition.competition_id) \
             .all()
         self.close_session()
         return res
@@ -25,16 +25,14 @@ class DeclaredCompetitorsGetter(DataBaseConnector):
         res = self.session.query(WeightCategory).join(CategoryAtCompetitions,
                                                 CategoryAtCompetitions.category_id == WeightCategory.category_id) \
             .join(Competition, Competition.competition_id == CategoryAtCompetitions.competition_id) \
-            .filter_by(competition_id=competition) \
+            .filter_by(competition_id=competition.competition_id) \
             .join(ApplicationsForCompetitions,
                   ApplicationsForCompetitions.category_at_competition == CategoryAtCompetitions.category_at_competition_id) \
             .join(Competitor, Competitor.licence_no == ApplicationsForCompetitions.competitor) \
-            .filter_by(licence_no=competitor).all()
+            .filter_by(licence_no=competitor.licence_no).all()
         self.close_session()
         return res
 
 
 if __name__ == '__main__':
-    getter = DeclaredCompetitorsGetter('mysql+mysqlconnector://{user}:{password}@{server}/{database}', 'root', 'admin')
-    print(getter.get_declared_competitors(2215))
-    print(getter.get_competitor_categories('1500112',2215))
+    pass
