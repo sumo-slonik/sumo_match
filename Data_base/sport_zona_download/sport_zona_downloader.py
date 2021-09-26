@@ -1,3 +1,4 @@
+from datetime import date
 from time import sleep
 
 from selenium.common.exceptions import ElementNotInteractableException
@@ -117,7 +118,7 @@ class SportZonaDownloader:
             column_number.__str__() + ']')[0].text
         return label
 
-    def download_club_data(self):
+    def download_club_data(self, download_licence_data=False):
         name = self.driver.find_elements_by_xpath(
             '//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[2]/strong')[
             0].text
@@ -134,11 +135,21 @@ class SportZonaDownloader:
         province = self.driver.find_elements_by_xpath(
             '//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[3]/td[2]/strong')[
             0].text.split(' ')[0]
+        licence_date = self.driver.find_elements_by_xpath(
+            '//*[@id="top"]/article/div/div[2]/div/div[2]/div/div[1]/div[2]/div[3]/table/tbody/tr[8]/td[2]/strong')[
+            0].text.split('-')
+        if not licence_date:
+            licence_date = None
+        else:
+            licence_date = date(year=int(licence_date[0]), month=int(licence_date[1]), day=int(licence_date[2]))
         if not year:
             year = None
         else:
             year = (str(year) + '-01-01')
-        return Club(str(name), str(city), year, str(licence_no), province)
+        if download_licence_data:
+            return Club(str(name), str(city), year, str(licence_no), province), licence_date
+        else:
+            return Club(str(name), str(city), year, str(licence_no), province)
 
     def download_competitor_data(self, club=''):
         name = self.driver.find_elements_by_xpath(
@@ -158,7 +169,8 @@ class SportZonaDownloader:
 
     def check_row(self, row_number):
         tds_in_row = self.driver.find_elements_by_xpath('//*[@id="fights"]/table/tbody/tr[' + str(row_number) + ']/td')
-        return len(tds_in_row) > 2
+        # return len(tds_in_row) > 2
+        return True
 
     def get_row_column_td(self, row_number, column_number):
         td = self.driver.find_elements_by_xpath(

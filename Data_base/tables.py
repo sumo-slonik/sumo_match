@@ -21,6 +21,7 @@ class Club(Base):
     club_id = Column(Integer, primary_key=True)
     province = Column(String)
     competitors = relationship("Competitor")
+    licences = relationship("ClubsLicences")
 
     def __init__(self, club_name, city, foundation_date, club_id, province):
         self.club_name = club_name
@@ -30,7 +31,7 @@ class Club(Base):
         self.province = province
 
     def __str__(self) -> str:
-        return self.club_name + ' ' + str(self.club_id)
+        return self.club_name + ' ' + self.city
 
     def __hash__(self):
         return generate_hash(self.club_name, self.club_id)
@@ -231,3 +232,20 @@ class ApplicationsForCompetitions(Base):
     competitor = Column(String, ForeignKey('competitors.licence_no', ))
     category_at_competition = Column(Integer, ForeignKey('categories_at_competitions.category_at_competition_id'))
     application_id = Column(Integer, primary_key=True)
+
+
+class ClubsLicences(Base):
+    __tablename__ = 'club_licences'
+
+    def __init__(self, competitor, date):
+        self.club = competitor
+        self.date = date
+
+    def __eq__(self, other):
+        return self.club == other.club
+
+    def __hash__(self):
+        return self.club
+
+    club = Column(Integer, ForeignKey('clubs.club_id'), primary_key=True)
+    date = Column(Date)

@@ -23,7 +23,7 @@ class DeclaredCompetitorsGetter(DataBaseConnector):
     def get_competitor_categories(self, competitor, competition):
         self.create_session()
         res = self.session.query(WeightCategory).join(CategoryAtCompetitions,
-                                                CategoryAtCompetitions.category_id == WeightCategory.category_id) \
+                                                      CategoryAtCompetitions.category_id == WeightCategory.category_id) \
             .join(Competition, Competition.competition_id == CategoryAtCompetitions.competition_id) \
             .filter_by(competition_id=competition.competition_id) \
             .join(ApplicationsForCompetitions,
@@ -32,6 +32,23 @@ class DeclaredCompetitorsGetter(DataBaseConnector):
             .filter_by(licence_no=competitor.licence_no).all()
         self.close_session()
         return res
+
+
+class ApplicationForCompetitorGetter(DataBaseConnector):
+
+    def __init__(self, address, user, password):
+        super(ApplicationForCompetitorGetter, self).__init__(address, user, password)
+
+    def get_categories_for_competitor(self, competitor):
+        self.create_session()
+        result = self.session.query(WeightCategory).join(CategoryAtCompetitions,
+                                                         CategoryAtCompetitions.category_id == WeightCategory.category_id) \
+            .join(ApplicationsForCompetitions,
+                  ApplicationsForCompetitions.category_at_competition == CategoryAtCompetitions.category_at_competition_id) \
+            .filter(ApplicationsForCompetitions.competitor == competitor.licence_no) \
+            .all()
+        self.close_session()
+        return result
 
 
 if __name__ == '__main__':

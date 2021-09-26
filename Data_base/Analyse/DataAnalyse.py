@@ -53,9 +53,12 @@ if __name__ == '__main__':
         competitors_active_in_years[year] = analyser.get_competitors_in_year(year)
     ages = sorted(competitors_active_in_years.keys())
 
-    # print('active competitors in each years:')
-    # for year in competitors_active_in_years:
-    #     print(year, len(competitors_active_in_years[year]))
+    print('active competitors in each years:')
+    for year in competitors_active_in_years:
+        print(year, len(competitors_active_in_years[year]))
+
+    for i in sorted(competitors_active_in_years[2021],key=lambda x:int(x.born_date.year)):
+        print(i.name,i.surname,i.born_date.year)
     #
     # one_value_per_label("Aktywni zawodnicy w latach 2014-2021",
     #                     "Liczba aktywnych zawodników",
@@ -221,7 +224,6 @@ if __name__ == '__main__':
     #         for gender in separated_genders:
     #             print(gender, len(separated_genders[gender]))
 
-
     # print('activity levels of competitors in age categories')
     # for age_category in analyser.get_age_categories():
     #     print(age_category)
@@ -258,26 +260,46 @@ if __name__ == '__main__':
     #         clubs_in_regions[club.province] += 1
     #     plot_on_poland_regions_map(clubs_in_regions, "Aktywne kluby w roku " + str(year))
     #
+    # print('___________________________')
+    # print('active clubs')
+    # for i in clubs_active_in_years[2021]:
+    #     print(i)
+    # print('___________________________')
     # clubs_in_regions = {region: 0 for region in analyser.get_regions()}
     # for club in analyser.get_all_clubs():
     #     clubs_in_regions[club.province] += 1
     # plot_on_poland_regions_map(clubs_in_regions, "Aktywne kluby w latach 2014-2021")
+    #
+    # all_competitions_in_regions = {region.upper(): 0 for region in analyser.get_regions()}
+    # for year in ages:
+    #     competitions_in_year[year] = analyser.get_competitions_in_year(year)
+    # for year in ages:
+    #     year_competitions_in_regions = {region.upper(): 0 for region in analyser.get_regions()}
+    #     for competition in competitions_in_year[year]:
+    #         year_competitions_in_regions[get_region_for_city(competition.city).upper()] += 1
+    #         all_competitions_in_regions[get_region_for_city(competition.city).upper()] += 1
+    #         if year == 2017 and get_region_for_city(competition.city).upper() == "MAZOWIECKIE":
+    #             print(competition)
+    #     plot_on_poland_regions_map(year_competitions_in_regions,
+    #                                "Liczba imprez w roku " + str(year) + "\nz podziałem na województwa")
+    # plot_on_poland_regions_map(all_competitions_in_regions,
+    #                            "Liczba imprez w latach 2014-2021")
+    # values = []
+    # for year in ages:
+    #     values.append(len(competitions_in_year[year]))
+    # one_value_per_label("Liczba imprez sportowych w latach 2014-2021", "Liczba imprez", ages, values)
 
-    all_competitions_in_regions = {region.upper(): 0 for region in analyser.get_regions()}
-    for year in ages:
-        competitions_in_year[year] = analyser.get_competitions_in_year(year)
-    for year in ages:
-        year_competitions_in_regions = {region.upper(): 0 for region in analyser.get_regions()}
-        for competition in competitions_in_year[year]:
-            year_competitions_in_regions[get_region_for_city(competition.city).upper()] += 1
-            all_competitions_in_regions[get_region_for_city(competition.city).upper()] += 1
-            if year == 2017 and get_region_for_city(competition.city).upper() == "MAZOWIECKIE":
-                print(competition)
-        plot_on_poland_regions_map(year_competitions_in_regions,
-                                   "Liczba imprez w roku " + str(year) + "\nz podziałem na województwa")
-    plot_on_poland_regions_map(all_competitions_in_regions,
-                               "Liczba imprez w latach 2014-2021")
-    values = []
-    for year in ages:
-        values.append(len(competitions_in_year[year]))
-    one_value_per_label("Liczba imprez sportowych w latach 2014-2021", "Liczba impraz", ages, values)
+    # clubs_with_licence = analyser.get_clubs_with_licence_in_year(2021)
+    # print(len(clubs_with_licence))
+    # no_active_club_with_licence = clubs_with_licence - clubs_active_in_years[2021]
+    # print("niekatyne kluby z licencją", len(no_active_club_with_licence))
+    # for i, club in enumerate(no_active_club_with_licence):
+    #     print(i+1, '. ', club,sep='')
+    # clubs_in_regions = {region: 0 for region in analyser.get_regions()}
+    # for club in clubs_with_licence:
+    #     clubs_in_regions[club.province] += 1
+    # plot_on_poland_regions_map(clubs_in_regions, "Kluby posiadające licencję PZS w 2021")
+    # clubs_in_regions = {region: 0 for region in analyser.get_regions()}
+    # for club in no_active_club_with_licence:
+    #     clubs_in_regions[club.province] += 1
+    # plot_on_poland_regions_map(clubs_in_regions, "Nieaktywne kluby posiadające licencję PZS w 2021")

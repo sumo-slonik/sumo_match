@@ -1,8 +1,10 @@
 import hashlib
-
+from Data_base import tables
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+
+from Data_base.tables import Competitor
 
 
 class DataBaseConnector:
@@ -28,3 +30,6 @@ class DataBaseConnector:
             res += str(i)
         return int(hashlib.sha1(res.encode("utf-8")).hexdigest(), 16) % (10 ** 8)
 
+
+if __name__ == '__main__':
+    pass

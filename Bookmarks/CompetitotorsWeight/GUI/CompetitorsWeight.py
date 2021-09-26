@@ -1,8 +1,10 @@
-from Bookmarks.CompetitotorsWeight.GUI.main_window import Ui_MainWindow
+from Bookmarks.CompetitotorsWeight.GUI.StyleSheets.CustomCalendar import CustomCalendarWidget
+from Bookmarks.CompetitotorsWeight.GUI.main_window import Ui_MainWindow, QTableWidgetItem
 from Bookmarks.CompetitotorsWeight.GUI.ui_competitiorsWeight import *
 from Bookmarks.CompetitotorsWeight.GetingCompetitions import CompetitionsGetter
-from Bookmarks.CompetitotorsWeight.GetingDeclaredCompetitors import DeclaredCompetitorsGetter
-from Data_base.tables import Competitor, Match, CategoryAtCompetitions, Competition
+from Bookmarks.CompetitotorsWeight.GetingDeclaredCompetitors import DeclaredCompetitorsGetter, \
+    ApplicationForCompetitorGetter
+from Data_base.tables import Competitor, Match, CategoryAtCompetitions, Competition, WeightCategory
 
 
 class MainWindow(QMainWindow):
@@ -16,12 +18,20 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         self.gettingDeclaredCompetitors = DeclaredCompetitorsGetter(*self.db_address)
         self.gettingCompetitions = CompetitionsGetter(*self.db_address)
+        self.applicationForCompetitorGetter = ApplicationForCompetitorGetter(*self.db_address)
         # self.showFullScreen()
         self.hide_profile_panel()
         self.connect_buttons_to_functions()
+        self.change_calender_widget_to_custom()
         self.connect_widget_to_functions()
-
         self.show()
+
+    def change_calender_widget_to_custom(self):
+        self.ui.calendarWidget.setVisible(False)
+        self.ui.verticalLayout_3.removeWidget(self.ui.calendarWidget)
+        self.ui.calendarWidget = CustomCalendarWidget(self.ui.CompetitionPanel)
+        self.ui.calendarWidget.setObjectName(u"calendarWidget")
+        self.ui.verticalLayout_3.addWidget(self.ui.calendarWidget)
 
     def hide_profile_panel(self):
         self.ui.SingleCompetitorPanel.setVisible(False)
@@ -85,6 +95,17 @@ class MainWindow(QMainWindow):
         self.ui.CompetitorBornDate.setText(str(competitor.born_date))
         self.ui.CompetitorClub.setText(str(competitor.club))
         self.ui.CompetitorLicenceNo.setText(str(competitor.licence_no))
-        categories = self.gettingDeclaredCompetitors.get_competitor_categories(competitor,self.selected_competition)
+        self.show_categories_for_competitor(competitor)
+        categories = self.gettingDeclaredCompetitors.get_competitor_categories(competitor, self.selected_competition)
         for i in categories:
             print(i)
+
+    def show_categories_for_competitor(self,competitor):
+        categories = self.applicationForCompetitorGetter.get_categories_for_competitor(competitor)
+        table = self.ui.competitorsCategoriesTable
+        table.setRowCount(len(categories))
+        category:WeightCategory
+        for row, category in enumerate(categories):
+            table.setItem(row, 0, QTableWidgetItem(category.age_category))
+            table.setItem(row, 1, QTableWidgetItem(category.weight_category))
+

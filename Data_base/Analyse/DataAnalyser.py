@@ -2,7 +2,8 @@ import sqlalchemy
 from sqlalchemy import create_engine, or_
 from sqlalchemy.orm import sessionmaker
 
-from Data_base.tables import Competition, Competitor, Match, CategoryAtCompetitions, Club, AgeCategory, WeightCategory
+from Data_base.tables import Competition, Competitor, Match, CategoryAtCompetitions, Club, AgeCategory, WeightCategory, \
+    ClubsLicences
 from copy import deepcopy
 from Data_base.Analyse.DataVisualiser import one_value_per_label, two_value_per_label, tree_value_per_label, \
     six_value_per_label, plot_on_poland_regions_map, get_region_for_city
@@ -173,6 +174,13 @@ class DataAnalyser:
         result = self.session.query(Club.province).distinct().all()
         self.close_session()
         return [x[0] for x in result]
+
+    def get_clubs_with_licence_in_year(self, year):
+        self.create_session()
+        res = self.session.query(Club).join(ClubsLicences)\
+            .filter(sqlalchemy.extract('year', ClubsLicences.date) == year).all()
+        self.close_session()
+        return set(res)
 
     def create_session(self):
         session_maker = sessionmaker(self.engine)

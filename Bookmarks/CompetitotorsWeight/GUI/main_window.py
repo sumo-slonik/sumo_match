@@ -12,6 +12,8 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+from Bookmarks.CompetitotorsWeight.GUI.StyleSheets.CustomCalendar import CustomCalendarWidget
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -70,7 +72,7 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_2)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.calendarWidget = QCalendarWidget(self.frame_2)
+        self.calendarWidget = CustomCalendarWidget(self.frame_2)
         self.calendarWidget.setObjectName(u"calendarWidget")
 
         self.verticalLayout_3.addWidget(self.calendarWidget)
